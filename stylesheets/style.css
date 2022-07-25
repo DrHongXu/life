@@ -141,9 +141,8 @@
   /* Mobile */
   @media only screen and (max-width: 767px) {
     body{
-      padding-top: 10px; 
       width: 90%;
-      max-width: 110%;
+      max-width: 113%;
    }
    img {
     max-width: 113%;
