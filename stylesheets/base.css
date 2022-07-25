@@ -368,16 +368,16 @@ img.with_border{
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 12px;
   border: none;
   outline: none;
   background-color: rgb(237, 118, 7);
   color: white;
   cursor: pointer;
-  padding: 10px;
+  padding: 7px;
   border-radius: 4px;
 }
 
