@@ -140,6 +140,19 @@
 
   /* Mobile */
   @media only screen and (max-width: 767px) {
+    body{
+      width: 90%;
+      max-width: 110%;
+   }
+   img {
+    max-width: 113%;
+    height: auto; }
+
+   p {
+    width: 113%;
+
+   }
+   
     header h1 { font-size: 34px; line-height: 37px; }
     nav { position: relative; }
     nav ul,
