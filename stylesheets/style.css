@@ -175,7 +175,12 @@
   }
 
   /* Mobile/Browser */
-  @media only screen and (max-width: 767px) {}
+  @media only screen and (max-width: 767px) {
+    .view {
+      width: 500px;
+  }
+
+  }
 
   /* Mobile Landscape/Browser */
   @media only screen and (min-width: 480px) and (max-width: 767px) {}
