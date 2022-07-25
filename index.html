@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="stylesheets/skeleton.css">
   <link rel="stylesheet" href="stylesheets/layout.css">
   <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/navi5.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -74,7 +76,10 @@
 </head>
 <body>
 
+<!-- Top Navigation Menu -->
 
+
+<!-- partial:index.partial.html -->
 
   <!-- Primary Page Layout
   ================================================== -->
@@ -91,6 +96,7 @@
       <nav>
       <h3 id="logo" style="text-align:center;">
       <img id="optionalstuff" src="images/hong2.png" width="155" /> 
+
       <h3 class="hidden-mobile" align="left">Dr. Hong Xu</h3>
       
 
@@ -101,8 +107,8 @@
         <!--<li><a href="#work">Work</a></li>-->
         <!--<li><a href="#project">Projects</a></li>-->
          <!--<li><a href="#activities">Activities</a></li>  -->   
+         <li><a href="#publications">Publications</a></li>
         <li><a href="#patents">Patents</a></li>  
-        <li><a href="#publications">Publications</a></li>
         <li><a href="#presentations">Conferences</a></li>
         <li><a href="#awards">Awards</a></li>
         <li><a href="#training">Training</a></li>
@@ -140,12 +146,37 @@
       <img class="hidden-mobile" src="images/banner.png" width="800" />
       <img class="display-mobile" src="images/banner_mobile.png" width="800" />
 
+
       <p class="hidden-mobile"></p>
       <h3 class="hidden-mobile">Who am I?</h3> 
       <p class="hidden-mobile"></p>
       <p class="display-mobile"></p>
-        <h3 class="display-mobile">Dr. Hong Xu</h3> 
+        
 
+        <div class="topnav" >
+          <a href="index.html" class="active"><h3 class="display-mobile">Dr. Hong Xu</h3></a>
+          <div id="myLinks">
+            <ul>
+        
+              <!--<li><a href="#whoami">Who am I?</a></li>-->
+              <li><a href="#education"><small>- Education</small></a></li>
+              <!--<li><a href="#work">Work</a></li>-->
+              <!--<li><a href="#project">Projects</a></li>-->
+               <!--<li><a href="#activities">Activities</a></li>  -->   
+               <li><a href="#publications"><small>- Publications</small></a></li>
+              <li><a href="#patents"><small>- Patents</small></a></li>  
+              <li><a href="#presentations"><small>- Conferences</small></a></li>
+              <li><a href="#awards"><small>- Awards</small></a></li>
+              <li><a href="#training"><small>- Training</small></a></li>
+              <!--<li><a href="#fund">Funding</a></li>-->
+              <li><a href="#skills"><small>- Skills</small></a></li>
+            </ul>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        
 
         <p class="display-mobile" style="text-align:left;">
           <text style="color:rgb(236, 123, 2)">____</text>
@@ -315,7 +346,7 @@
 -->
 
         <hr />
-        <div class="doc-section" id="Publications">
+        <div class="doc-section" id="publications">
             <h3>Publications</h3>
             <ol>
             <!--
@@ -657,7 +688,7 @@
         </div>          
 -->
         <hr />
-        <div class="doc-section" id="Skills">
+        <div class="doc-section" id="skills">
           <h3>Skills</h3>
           <ol>
               <strong>English</strong> (fluent, C1), <strong>Chinese</strong> (native, C2), <strong>German</strong> (in-progress, A2-B1), <strong>French</strong> (basic, A2)</strong><br/>
@@ -680,7 +711,19 @@
     </footer>
     
   </div><!-- container -->
+<!-- js partial -->
 
+<script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  
 <!-- End Document
 ================================================== -->
 </body>
