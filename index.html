@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="stylesheets/layout.css">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/navi5.css">
+  <link rel="stylesheet" href="stylesheets/type.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -74,6 +75,8 @@
         }
     </script>
 
+<script src="js/language.js"></script>
+
 </head>
 <body>
 
@@ -113,7 +116,7 @@
         <!--<li><a href="#fund">Funding</a></li>-->
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
-        <p>_____</p>
+        <p>____</p>
         <!-- <li><a href="#services">Services</a></li> -->
         <!-- <li><a href="#contact">Contact</a></li> -->
         <li><a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>LinkedIn</span></a></li>
@@ -121,9 +124,9 @@
         <!--<li><a href="https://XuHongCN.github.io/files/Hong_XU_CV_github.io.pdf" target="_blank" target="_blank"><span class='blue'>CV</span></a></li>-->
         <!-- <li><a href="http://www.linkedin.com/in/" target="_blank" target="_blank"><span class='blue'>LinkedIn Profile</span></a></li> -->
         <li><a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu [at] tum.de</span></a></li>
-        <p>_____</p>
-        <li><a href="index.html" target="_self">EN</a> | <a href="zh.html" target="_self">中文</br> 
-          <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a></li>
+        <p>____</p>
+        <!--<li><a href="index.html" target="_self">EN</a> | <a href="cn.html" target="_self">中文</br> 
+          <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a></li>-->
         <p></p>
         <img src="images/logo.png" width="45" />    
         
@@ -137,10 +140,25 @@
         
       <img class="hidden-mobile" src="images/banner_en.png" width="800" />
       <img class="display-mobile" src="images/banner_mobile_en.png" width="800" />
-
-
       <p class="hidden-mobile"></p>
-      <h3 class="hidden-mobile">Hey, Welcome!</h3> 
+      <h3 class="hidden-mobile">
+        <span >
+          Hey, Welcome!
+        </span>
+        <span style="float:right;font-family:verdana">
+       
+        <select id="languages" name="languages" style="width: 100px; color:inherit;" onchange="window.location.href=this.options [this.selectedIndex].value">
+          <option value="index.html" select> 🇬🇧 English</option>
+          <option value="de.html">🇩🇪 Deutsch</option>
+          <option value="fr.html">🇫🇷 Français</option>
+          <option value="cn.html">🇨🇳 中文/简繁</option>
+          <option value="jp.html">🇯🇵 日本語</option>
+        </select>
+      </span>
+        <!-- <span style="float:right;font-family:verdana"> <small><small><small>
+          <a href="index.html" target="_self">EN</a> | <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a> | <a href="cn.html" target="_self">中文</a> </small></small></small>
+        </span>-->
+      </h3> 
       <p class="hidden-mobile"></p>
       <p class="display-mobile"></p>
         
@@ -172,14 +190,14 @@
         
 
         <p class="display-mobile" style="text-align:left;">
-          <text style="color:rgb(236, 123, 2)">____</text>
+          <text style="color:rgb(236, 123, 2)">➔ Hey, Welcome! </text>
           <span style="float:right;"> 
-            <a href="index.html" target="_self">EN</a> | <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a> | <a href="zh.html" target="_self">中文</a>
+            <a href="index.html" target="_self">EN</a> | <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a> | <a href="jp.html" target="_self">日</a> | <a href="cn.html" target="_self">中</a>
           </span>
       </p>
       
 
-        <p  align="justify">
+        <p  align="justify"> 
           Currently, Mr. Hong Xu is working as a <strong>Development Engineer</strong> for Commerical Fuel Cell Vehicles in Automotive Industry based in Munich, Germany. His academic and industrial interdisplinary interests are focused on <strong>Renewable Energy</strong>, <strong>Sustainability</strong>, <strong>Functional Materials</strong> and Equity Research.
         </p> 
   
@@ -690,7 +708,7 @@
     </div><!-- Content -->
     
     <footer class="eleven center-column">
-        <hr class="large"/><p>Copyright © 2016-2022 | Dr. Hong Xu | Update: 09.2022<br/><small>A <strong>Finite Game</strong> is Played for the Purpose of <strong>Winning</strong>, An <strong>Infinite Game</strong> for the Purpose of <strong>Continuing</strong> the Play.</small>
+        <hr class="large"/><p>A <strong>finite game</strong> is played for <strong>winning</strong>, while an <strong>infinite game</strong> is played for <strong>continuing</strong> the play.<br/><small>Copyright © 2016-2022 | Dr. Hong Xu | Updated: 11.2022</small>
 
         </p>
     </footer>
