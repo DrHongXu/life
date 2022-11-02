@@ -147,25 +147,14 @@
           嗨，你好！
         </span>
         <span  style="float:right; font-family:verdana">  
-        <table>
-          <tr>
-          <td>
-            <select id="languages" name="languages" style="width: 70px; color:inherit;" onchange="window.location.href=this.options [this.selectedIndex].value">
-              <option value="cn.html" select>🇨🇳 中文</option>
-              <option value="index.html">🇬🇧 English</option>
-              <option value="de.html">🇩🇪 Deutsch</option>
-              <option value="fr.html">🇫🇷 Français</option>
-              <option value="jp.html">🇯🇵 日本語</option>
-            </select> 
-          </td>
-          <td>&nbsp;<label style="display:inline-block" for="languages" ><a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' class="d-inline-block p-3">简</a>/<a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a></label>
-
-          </td>
-          </tr>
-          </table>
-        
-
-        </span>
+          <span style="display:inline-block;margin-bottom:0px;font-size:small" for="languages" ><a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' class="d-inline-block p-3">简</a>/<a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a></span>&nbsp;<select id="languages" name="languages" style="width:75px;display:inline-block;color:inherit;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
+            <option value="cn.html" select>🇨🇳 中文</option>
+            <option value="jp.html" >🇯🇵 日本語</option>
+            <option value="index.html">🇬🇧 English</option>
+            <option value="de.html">🇩🇪 Deutsch</option>
+            <option value="fr.html">🇫🇷 Français</option>
+          </select> 
+      </span>
       
       </h3> 
       <p class="hidden-mobile"></p>
