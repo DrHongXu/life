@@ -202,11 +202,19 @@
       </div>
         
 
-        <p class="display-mobile" style="text-align:left;">
-          <text style="color:rgb(236, 123, 2)">➔ 嗨，你好！ </text>
-          <span style="float:right;"> 
-            <a href="index.html" target="_self">EN</a> | <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a> | <a href="jp.html" target="_self">日</a> | <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' class="d-inline-block p-3">简</a> | <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a></a>
-          </span>
+        <p class="display-mobile" style="text-align:left;margin-bottom:18.5px;">
+          <text style="color:rgb(236, 123, 2)">➔ 嗨，你好！ </text> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span style="display:inline-block;" for="languages" ><a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' class="d-inline-block p-3">简</a>/<a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a></span>
+          <span  style="float:right; font-family:verdana">  
+            <select id="languages" name="languages" style="width: 70px; color:inherit;" onchange="window.location.href=this.options [this.selectedIndex].value">
+              <option value="cn.html" select>🇨🇳 中文</option>
+              <option value="jp.html" >🇯🇵 日本語</option>
+              <option value="index.html">🇬🇧 English</option>
+              <option value="de.html">🇩🇪 Deutsch</option>
+              <option value="fr.html">🇫🇷 Français</option>
+            </select> 
+        </span>
       </p>
       
 
@@ -573,7 +581,7 @@
 </ol>
 </div>       
 <hr />   
---->
+-->
 <div class="doc-section" id="talks">
   <h3>演讲 & 主持</h3>
   <ol>
