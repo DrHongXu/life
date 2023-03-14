@@ -47,7 +47,22 @@
   </script>
   -->
 
-
+  <script type="text/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      var url = "https://ipapi.co/" + ip + "/json/";
+      var request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var data = request.response;
+        var city = data.city;
+        var country = data.country_name;
+        document.getElementById("city").innerHTML = "" + city;
+      }
+    }
+  </script>
     <!-- block save as
       ================================================== -->
       <script type="text/javascript">
@@ -270,19 +285,19 @@
           </span>
       </p>
 
-        <p  align="justify"> 
-          
-          В настоящее время доктор Хун Сюй работает инженером-разработчиком по коммерческим транспортным средствам на топливных элементах в автомобильной промышленности в Мюнхене, Германия. Его академические и промышленные междисциплинарные интересы сосредоточены на возобновляемой энергетике, устойчивом развитии, функциональных материалах и исследованиях акционерного капитала.
-        </p> 
-  <!---
-        <p  align="justify">
-          He received his PhD with research focus on <strong>Carbon Neutral Technologies</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> (Prof. <a href="https://electrochemistry.ethz.ch/people/person-detail.html?persid=177926" target="_blank">Schmidt</a>) in 2021, and engaged in 2 years Industrial and 4 years Academic collaborative  projects for R&D of automotive hydrogen fuel cells. In 2016, he obtained EU dual master degrees in <strong>Materials Science</strong> from the <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong> (Prof. <a href="https://www.professoren.tum.de/en/mueller-buschbaum-peter" target="_blank">Müller-Buschbaum</a>), and <strong>Physics</strong> from the <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes I</a></strong> (Prof. <a href="https://ipr.univ-rennes1.fr/interlocuteurs/philippe-rabiller" target="_blank">Rabiller</a>) with industrial practices at German Companies and training at French Institute. He went to university at a young age of 16 years old, and he finished the bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> (Prof. <a href="http://faculty.bjtu.edu.cn/7498/" target="_blank">Zhang</a>) with 3 patents granted in 2013. In parallel to academic research, he developed professional education as a part-time <strong>MBA fellow</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> with internships at Venture Capital and Securities Companies in China. 
-        </p>   
- -->       
-        <p  align="justify">
-          В 2021 году получил степень доктора философии с исследовательским фокусом на углеродно-нейтральные технологии в Швейцарском федеральном технологическом институте Цюриха и участвовал в двухлетних промышленных и четырехлетних академических совместных проектах по исследованию и разработке автомобильных водородных топливных элементов. В 2016 году получил европейскую двойную степень магистра в области материаловедения в Техническом университете Мюнхена и физики в Университете Ренна I с производственной практикой в немецких компаниях и обучением во французском институте. Он поступил в университет в юном возрасте 16 лет и закончил бакалавриат в Пекинском транспортном университете, получив 3 патента в 2013 году. Параллельно с академическими исследованиями он развивал профессиональное образование в качестве заочного стипендиата MBA в Школе бизнеса Quantic со стажировками в венчурных компаниях и компаниях по ценным бумагам в Китае.
-        </p>           
-         <p> PEK (Nǐ Hǎo) -> CDG (Bonjour) -> HAM (Moin Moin) -> MUC (Servus) -> ZRH (Grüezi) -> ? </p> 
+      <p align="justify">
+        В настоящее время доктор Хун Сюй занимает должность <strong>инженера по НИОКР</strong> в крупной автомобильной компании в Мюнхене, Германия, где он фокусируется на корпоративных исследованиях в области <strong>зеленых электроэнергетических систем</strong>. В то же время он также работает в качестве <strong>рецензента</strong> для 7 высокоуважаемых журналов в области энергетики и транспорта, а также в качестве <strong>академического жюри</strong> для Симпозиума Святого Галлена, швейцарского мыслительного центра. Его междисциплинарные интересы охватывают широкий спектр областей, включая <strong>возобновляемую энергию</strong>, <strong>функциональные материалы</strong>, вычислительное изображение, низкоуглеродный транспорт, экономику энергии, ESG и устойчивость.
+        
+        </p>
+        <p align="justify">
+        Он получил свой докторат с фокусом на <strong>возобновляемой энергии</strong> в <strong><a href="https://ethz.ch/ru.html" target="_blank">Швейцарский федеральный технологический институт</a></strong> в 2021 году и участвовал в 2- и 4-летних проектах в области НИОКР автомобильных водородных топливных элементов на базе Дивизиона <strong>Энергия и окружающая среда</strong> <strong><a href="https://www.psi.ch/ru" target="_blank">Пауль Шеррер Института</a></strong>, федерального учреждения Швейцарии. В 2016 году он получил два магистерских диплома ЕС в области <strong>науки о материалах</strong> в <strong><a href="https://www.tum.de/ru/" target="_blank">Техническом университете Мюнхена</a></strong> и в <strong>физике</strong> в <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Университете Ренна I</a></strong>, проходя индустриальную практику в European XFEL и Infineon в Германии и обучение в ENPC ParisTech во Франции. Он поступил в университет в юном возрастев 16 лет и закончил бакалавриат в <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Университете транспорта Пекина</a></strong>, где ему было выдано 3 патента в 2013 году. Параллельно со своей академической карьерой, он развивал свое профессиональное образование, работая на частичную ставку как <strong>стипендиат МВА</strong> в <strong><a href="https://quantic.edu/mba" target="_blank">Квантовая школа бизнеса</a></strong> с практическим опытом в венчурном капитале с двойной валютой и ведущей компании по ценным бумагам в Китае.
+
+      </p>
+        <p style="text-align:left;">
+          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT       
+          <span>(<script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>)?
+          </span>
+           </p>  
 
 <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
@@ -347,21 +362,25 @@
         <div class="doc-section" id="research-interests">
             <h3>Научные интересы</h3>
             <ul class="square">
-              <li><strong>Возобновляемые источники энергии</strong>, ESG и устойчивое развитие, Декарбонизация транспорта <br/>
-                <li><strong>Функциональные материалы</strong>, характеристика, оценка жизненного цикла<br/>
-                <li><strong>Вычислительная визуализация</strong>, рентгеновские методы, обработка изображений <br/>
-                <li><strong>Анализ акций</strong>, анализ больших данных, бизнес-аналитика<br/>
-
-            </ul>
+              <li><strong>Возобновляемая энергия</strong>, водород, топливные элементы, электролизер, PV, батареи<br/> 
+              <li><strong>Функциональные материалы</strong>, полупроводники, полимеры, металлические оксиды<br/>
+              <li><strong>Вычислительная томография</strong>, рентгеновские технологии, компьютерное зрение <br/> 
+              <li><strong>Энергетическая экономика</strong>, энергетическая политика, ESG-инвестирование, устойчивость<br/> 
+              <li><strong>Исследование акций</strong>, анализ больших данных, бизнес-аналитика<br/>
+              </ul>
         </div>
         <hr />
         <div class="doc-section" id="academic-services">
             <h3>Академические услуги</h3>
             <ul class="square">
               <li><strong>Рецензент: </strong> <br/>
+                – <strong>Преобразование энергии и управление ею</strong> (импакт-фактор = 11,2, 2021 г.)<br/>
                 – <strong>Журнал источников энергии</strong> (IF=9.13, 2022 г.)<br/>
                 – <strong>Международный журнал водородной энергетики</strong> (IF=7.14, 2021 г.) <br/>
                 – <strong>Энергия для устойчивого развития</strong> (IF=5.76, 2021 г.) <br/>
+                – <strong>Международный журнал тепло- и массообмена</strong> (IF=5.58, 2022 г.) <br/>
+                – <strong>Зеленые технологии и устойчивость</strong> (Новый журнал, 2022 г.) <br/>
+                – <strong>Зеленая энергетика и интеллектуальный транспорт</strong> (Новый журнал, 2022 г.) <br/>
               <li><strong>Ассистент преподавателя</strong>: <br/>
                 - <strong>Технологии возобновляемых источников энергии</strong> II (магистерский курс, ETH Zurich, 2017–2019) <br/>
                 <li><strong>Научный сотрудник</strong>: <br/>
@@ -617,7 +636,7 @@
         </ol>
         </div>       
         <hr />   
---->
+
         <div class="doc-section" id="talks">
           <h3>Дискуссии и модератор</h3>
           <ol>
@@ -734,6 +753,7 @@
         </div>  
 
         <hr />
+--->
         <div class="doc-section" id="visiting">
           <h3>Посещение</h3>
           <ul class="square">
@@ -759,9 +779,10 @@
             <ul class="square">
               <li><strong>Азия</strong>: Китай (материк), Тайвань, Россия, Турция, Таиланд</li>
               <li><strong>Европа</strong>: Австрия, Бельгия, Босния и Герцеговина, Хорватия,
-                Чехия, Дания, Эстония, Финляндия, Франция, Германия (25+ городов), Венгрия, Исландия, Италия, Лихтенштейн, Люксембург, Нидерланды, Норвегия, Польша, Сербия, Словения, Испания, Швеция, Швейцария (30+ городов)</ ли>
+                Чехия, Дания, Эстония, Финляндия, Франция, Германия (25+ городов), Венгрия, Исландия, Ирландия, Италия, Лихтенштейн, Люксембург, Мальта, Нидерланды, Норвегия, Португалия, Польша, Сербия, Словения, Испания, Швеция, Швейцария (30+ городов), Великобритания</li>
               <li><strong>Северная Америка</strong>: США, Канада</li>
               <li><strong>Африка</strong>: Гран-Канария (Испания)</li>
+              <li><strong>Всего</strong>: посетили 35 из 197 стран/регионов мира.</li>
               </ul>
             </div>
 

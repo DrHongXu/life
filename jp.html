@@ -47,7 +47,22 @@
   </script>
   -->
 
-
+  <script type="text/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      var url = "https://ipapi.co/" + ip + "/json/";
+      var request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var data = request.response;
+        var city = data.city;
+        var country = data.country_name;
+        document.getElementById("city").innerHTML = "" + city;
+      }
+    }
+  </script>
     <!-- block save as
       ================================================== -->
       <script type="text/javascript">
@@ -278,13 +293,16 @@
       
 
       <p align="justify">
+        現在、徐泓博士 (30歲) はドイツ・ミュンヘンの自動車産業において、専門家チームの<strong>R&Dエンジニア</strong>として、<strong>エネルギーと交通</strong>領域の<strong>カーボンニュートラル</strong>を実現することに尽力しています。彼の交差領域研究の関心は、<strong>新エネルギー技術</strong>、<strong>低炭素スマートトランスポート</strong>、<strong>エネルギー経済学</strong>、<strong>ESG＆サステナビリティ</strong>などに集中しています。学位取得中には、国内外の企業や中欧の学術機関と協力して、<strong>1つの一次論文と10を超える共同論文</strong>を発表し、<strong>3つの特許を取得</strong>しました。また、彼は<strong>多数のエネルギーおよび交通分野の高引用率のジャーナルの査読者</strong>、および瑞士のシンクタンクである<strong>サンクトガレン国際経済フォーラム</strong>の<strong>学術審査員</strong>を務めています。彼は、アメリカ電気化学会の<strong>論文招待</strong>と<strong>旅行賞</strong>、欧州連合の<strong>エラスムス奨学金</strong>、学部生の<strong>イノベーション奨学金</strong>を受賞しました。</br></br>
+        
+        彼は2021年に<strong><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ連邦工科大学</a></strong>で科学博士号を取得し、その期間中は<strong>スイス連邦研究所</strong>（PSI）の<strong>エネルギーおよび環境部門</strong>に勤務し、<strong>カーボンニュートラル/新エネルギー技術</strong>に注力して、業界リーダーの自動車メーカーやスイス同時放射光源と協力して、2年間の水素エネルギー自動車の研究開発や企業との技術転移プロジェクトに参加しました。彼は2016年に、ドイツの<strong><a href="https://www.tum.de/en/" target="_blank">ミュンへル工業大学</a></strong>で<strong>材料科学</strong>の修士号を取得し、フランスの<strong><a href="https://www.univ-rennes1.fr/" target="_blank">レンヌ第一大学</a></strong>で<strong>物理学</strong>の修士号を取得し、ドイツの<strong>インフィニオン半導体</strong>の技術本部や<strong>欧州自由電子レーザー</strong>有限会社で業界のインターン経験を積みました。修士課程中は、中仏枠組み協定に基づいて、フランスの<strong>道路橋大学</strong>と天津河委員会が共同で行った環境技術トレーニングを担当しました。彼は16歳で<strong><a href="http://www.bjtu.edu.cn/" target="_blank">北京交通大学</a></strong>に入学し、材料学を学び、2013年に理学士号を取得し、北京市のイノベーション実験プロジェクトを率いて、国際緑エネルギーコンテストに参加し、国家レベルのブロンズメダルを受賞しました。また、学術研究と並行して、アメリカの<strong><a href="https://quantic.edu/mba" target="_blank">クアンティックビジネススクール</a></strong>に遠隔学習で入学し、<strong>経営管理修士</strong>（MBA）の学位を取得し、中国の上場証券研究所での株式深層/業界研究レポートの執筆や、新エネルギー投資でのデュアルカレンシーベンチャーキャピタル企業とトップ証券会社での実務経験を積みました。
 
-        現在、徐泓 博士 (29歳) はドイツ・ミュンヘンの自動車産業で<strong>研究開発エンジニア</strong>として働いている。 <strong>新エネルギー、持続可能な開発、機能性材料、</strong>コンピュータ画像・視覚、ビジネス・アナリティクスなど、横断的な研究を行っている。 学位取得期間中に、国内外の企業や学術機関と共同で10以上の筆頭著者および共著論文を発表し、3つの中国特許を取得しています。 アメリカ電気化学学会会議旅行賞、欧州エラスムス奨学金、学部イノベーション奨学金などを受賞している。</br></br>
-
-        2021年<strong><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ工科大学</a></strong>にてカーボンニュートラル技術に焦点を当てた研究で博士号を取得し、自動車用水素燃料電池の研究開発で2年間の産業界と4年間の学術界の共同プロジェクトに携わる。2016年、<strong><a href="https://www.tum.de/en/" target="_blank">ミュンヘン工科大学</a></strong>で材料科学、<strong><a href="https://www.univ-rennes1.fr/" target="_blank">レンヌ第一大学</a></strong>で物理学のEUデュアル修士号を取得し、ドイツ企業での産業実習とフランス研究所での研修を行う。16歳という若さで大学に進学し、2013年に3つの特許を取得して<strong><a href="http://www.bjtu.edu.cn/" target="_blank">北京交通大学</a></strong>学士課程を修了。学術研究と並行して、<strong><a href="https://quantic.edu/mba" target="_blank">クアンティックビジネススクール</a></strong>の非常勤経営学修士号（MBA）フェローとして、中国のベンチャーキャピタルや証券会社でインターンシップを行いながら、専門的な教育を展開した。
-
-        </p> 
-        <p> PEK (Nǐ Hǎo) -> CDG (Bonjour) -> HAM (Moin Moin) -> MUC (Servus) -> ZRH (Grüezi) -> ? </p>  
+      </p>
+        <p style="text-align:left;">
+          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT       
+          <span>(<script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>)?
+          </span>
+           </p>  
 <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
           <strong><a class="display-mobile"href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank" target="_blank"><span class='blue'>G-Scholar</span></a></strong><text class="display-mobile"> | </text><strong><a class="display-mobile" href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>LinkedIn</span></a></strong> 
@@ -345,11 +363,12 @@
 <div class="doc-section" id="research-interests">
   <h3>研究関心</h3>
   <ul class="square">
-    <li><strong>新エネルギー</strong>、ESG と持続可能性、カーボン ニュートラル、低炭素輸送<br/>
-      <li><strong>機能性材料</strong>、材料特性評価、ライフ サイクル アセスメント<br/>
-      <li><strong>コンピューテッド イメージング</strong>、X 線技術、画像処理 <br/>
-      <li><strong>株式調査</strong>、ビッグデータ分析、ビジネス分析<br/>
-  </ul>
+    <li><strong>再生可能エネルギー</strong>、水素、燃料電池、電解装置、光発電、バッテリー<br/> 
+    <li><strong>機能材料</strong>、半導体、ポリマー、金属酸化物<br/>
+    <li><strong>コンピュータビジョン</strong>、X線技術、画像処理<br/> 
+    <li><strong>エネルギー経済学</strong>、エネルギー政策、ESG投資、持続可能性<br/> 
+    <li><strong>株式調査</strong>、ビッグデータ分析、ビジネスアナリティクス<br/>
+    </ul>
 </div>      
 
 
@@ -358,9 +377,13 @@
     <h3>学術サービス</h3>
     <ul class="square">
     <li><strong>査読者: </strong> <br/>
-      - <strong>電源ジャーナル</strong> (影響因子=9.13, 2022)<br/>
-      - <strong>水素エネルギーの国際ジャーナル</strong> (影響因子=7.14, 2021) <br/>
-      - <strong>持続可能な開発のためのエネルギー</strong> (影響因子=5.76, 2021) <br/>
+      - <strong>エネルギーの変換と管理</strong> (インパクト ファクター = 11.2、2021)<br/>
+      - <strong>電源のジャーナル</strong> (IF=9.13, 2022)<br/>
+      - <strong>水素エネルギーの国際ジャーナル</strong> (IF=7.14, 2021) <br/>
+      - <strong>持続可能な開発のためのエネルギー</strong> (IF=5.76, 2021) <br/>
+      - <strong>国際熱質量移動ジャーナル</strong> (IF=5.58, 2022) <br/>
+      - <strong>グリーン テクノロジーとサステナビリティ</strong> (ニュー ジャーナル、2022) <br/>
+      - <strong>グリーン エネルギーとインテリジェント輸送</strong> (ニュー ジャーナル、2022) <br/>
     <li><strong>教育助手</strong>: <br/>
       - <strong>再生可能エネルギー技術</strong> II (マスター コース、チューリッヒ工科大学、2017-2019) <br/>
       <li><strong>研究助手</strong>: <br/>
@@ -620,7 +643,7 @@
 </ol>
 </div>       
 <hr />   
---->
+
 <div class="doc-section" id="talks">
   <h3>スピーチとモデレーター</h3>
   <ol>
@@ -740,6 +763,7 @@
 </div>  
 
 <hr />
+--->
 <div class="doc-section" id="visiting">
   <h3>訪問</h3>
   <ul class="square">
@@ -766,11 +790,12 @@
   <div class="doc-section" id="travel">
     <h3>旅行</h3>
     <ul class="square">
-      <li><strong>アジア</strong>: 中国本土 (13 以上の省/都市)、台湾、ロシア、トルコ、タイ</li>
-      <li><strong>ヨーロッパ</strong>: オーストリア、ベルギー、ボスニア・ヘルツェゴビナ、クロアチア、
-        チェコ共和国、デンマーク、エストニア、フランス (5 以上の都市)、フィンランド、ドイツ (25 以上の都市)、ハンガリー、アイスランド、イタリア、リヒテンシュタイン、ルクセンブルグ、オランダ、ノルウェー、ポーランド、セルビア、スロベニア、スペイン、スウェーデン、スイス (30 以上の都市)</li>
-      <li><strong>北米</strong>: カナダ、アメリカ合衆国</li>
+      <li><strong>アジア</strong>: 中国 (本土)、台湾、ロシア、トルコ、タイ</li>
+      <li><strong>ヨーロッパ</strong>: オーストリア、ベルギー、ボスニア ヘルツェゴビナ、クロアチア、
+        チェコ共和国、デンマーク、エストニア、フィンランド、フランス、ドイツ (25 以上の都市)、ハンガリー、アイスランド、アイルランド、イタリア、リヒテンシュタイン、ルクセンブルグ、マルタ、オランダ、ノルウェー、ポルトガル、ポーランド、セルビア、スロベニア、スペイン、スウェーデン、スイス (30 以上の都市)、英国</li>
+      <li><strong>北米</strong>: 米国、カナダ</li>
       <li><strong>アフリカ</strong>: グラン カナリア島 (スペイン)</li>
+      <li><strong>合計</strong>: 世界の 197 か国/地域のうち 35 か国を訪問</li>
       </ul>
     </div>
 

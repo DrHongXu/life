@@ -47,7 +47,22 @@
   </script>
   -->
 
-
+  <script type="text/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      var url = "https://ipapi.co/" + ip + "/json/";
+      var request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var data = request.response;
+        var city = data.city;
+        var country = data.country_name;
+        document.getElementById("city").innerHTML = "" + city;
+      }
+    }
+  </script>
     <!-- block save as
       ================================================== -->
       <script type="text/javascript">
@@ -273,13 +288,18 @@
       
 
       <p align="justify">
-        Actualmente, el Sr. Hong Xu trabaja como <strong>ingeniero de desarrollo</strong> para vehículos comerciales de celdas de combustible en la industria automotriz en Munich, Alemania. Sus intereses académicos e industriales interdisciplinarios se centran en <strong>energía renovable</strong>, <strong>sostenibilidad</strong>, <strong>materiales funcionales</strong> e investigación de equidad.
-      </p>
-  
-        <p align="justify">
-          Obtuvo su doctorado con especialización en investigación sobre <strong>tecnologías neutras en carbono</strong> de la <strong><a href="https://ethz.ch/en.html" target="_blank ">Escuela Politécnica Federal de Zúrich</a></strong> en 2021, y participó en proyectos de colaboración industriales de 2 años y académicos de 4 años para I+D de celdas de combustible de hidrógeno para automóviles. En 2016, obtuvo una doble maestría europea en <strong>ciencia de materiales</strong> en la <strong><a href="https://www.tum.de/en/" target="_blank" >Universidad Técnica de Munich</a></strong>, y <strong>Física</strong> de la <strong><a href="https://www.univ-rennes1.fr/" target=" _blank">Universidad de Rennes I</a></strong> con prácticas industriales en empresas alemanas y formación en el Instituto Francés. Fue a la universidad a la edad de 16 años y completó su licenciatura en <strong><a href="http://en.bjtu.edu.cn/" target="_blank" >Universidad de Transporte de Beijing</a></strong> con 3 patentes concedidas en 2013. Junto a la investigación académica ha desarrollado una formación profesional como <strong>MBA Fellow</strong> a tiempo parcial de la '<strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong> con pasantías en capital de riesgo y firmas de valores en China.
+        Actualmente, el Dr. Hong Xu ocupa el cargo de <strong>Ingeniero de I+D</strong> en una destacada empresa automotriz en Munich, Alemania, donde se enfoca en la investigación corporativa en <strong>sistemas de energía verde e</strong>. Al mismo tiempo, también se desempeña como <strong>Revisor</strong> para 7 revistas altamente consideradas en los campos de la Energía y el Transporte, y como <strong>Jurado Académico</strong> para el Simposio de St. Gallen, un think-tank suizo. Sus intereses interdisciplinarios abarcan una amplia gama de áreas, incluyendo <strong>Energía Renovable</strong>, <strong>Materiales Funcionales</strong>, Imaging Computacional, Transporte de Bajo Carbono, Economía de la Energía, ESG y Sostenibilidad.
+        
         </p>
-         <p> PEK (Nǐ Hǎo) -> CDG (Bonjour) -> HAM (Moin Moin) -> MUC (Servus) -> ZRH (Grüezi) -> ? </p> 
+        <p align="justify">
+        Obtuvo su doctorado con un enfoque en <strong>Energía Renovable</strong> de la <strong><a href="https://ethz.ch/es.html" target="_blank">Escuela Politécnica Federal de Zúrich</a></strong> en 2021, y participó en proyectos colaborativos industriales y académicos de 2 y 4 años para la I+D de celdas de combustible de hidrógeno automotrices en la División de <strong>Energía y Medio Ambiente</strong> del <strong><a href="https://www.psi.ch/es" target="_blank">Instituto Paul Scherrer</a></strong>, una institución federal suiza. En 2016, obtuvo títulos de doble máster de la UE en <strong>Ciencia de Materiales</strong> en la <strong><a href="https://www.tum.de/es/" target="_blank">Universidad Técnica de Múnich</a></strong> y en <strong>Física</strong> en la <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Universidad de Rennes I</a></strong>, con prácticas industriales en European XFEL e Infineon en Alemania y formación en ENPC ParisTech en Francia. Ingresó a la universidad a una edad temprana de 16 años y completó sus estudios de licenciatura en la <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Universidad de Transporte de Beijing</a></strong> con 3 patentes otorgadas en 2013. Paralelamente a su trayectoria académica, desarrolló una educación profesional como <strong>fellow MBA a tiempo parcial</strong> en la <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong> con experiencia práctica en una empresa de capital de riesgo de doble moneda y una empresa líder de valores mobiliarios en China.
+        
+        </p>
+        <p style="text-align:left;">
+          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT       
+          <span>(<script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>)?
+          </span>
+           </p>  
 <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
           <strong><a class="display-mobile"href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank" target="_blank"><span class='blue'>G-Scholar</span></a></strong><text class="display-mobile"> | </text><strong><a class="display-mobile" href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>LinkedIn</span></a></strong> 
@@ -343,11 +363,11 @@
         <div class="doc-section" id="research-interests">
           <h3>Intereses de investigación</h3>
           <ul class="square">
-          <li><strong>Energía renovable</strong>, ESG y sostenibilidad, Descarbonización del transporte <br/>
-          <li><strong>Materiales Funcionales</strong>, Caracterización, Análisis de Ciclo de Vida<br/>
-          <li><strong>Imágenes por ordenador</strong>, técnicas de rayos X, procesamiento de imágenes <br/>
-          <li><strong>Investigación bursátil</strong>, Análisis de Big Data, Análisis de Negocios<br/>
-
+            <li><strong>Energías renovables</strong>, hidrógeno, células de combustible, electrólisis, PV, baterías<br/> 
+            <li><strong>Materiales funcionales</strong>, semiconductores, polímeros, óxidos metálicos<br/>
+            <li><strong>Imagen computacional</strong>, técnicas de rayos X, visión por computadora <br/> 
+            <li><strong>Economía energética</strong>, política energética, inversión ESG, sostenibilidad<br/> 
+            <li><strong>Investigación de acciones</strong>, análisis de big data, análisis empresarial<br/>
             </ul>
         </div>
         <hr />
@@ -355,9 +375,13 @@
           <h3>Servicios Académicos</h3>
           <ul class="square">
           <li><strong>Revisor: </strong> <br/>
+            - <strong>Gestión y conversión de energía</strong> (Factor de impacto=11,2, 2021)<br/>
             - <strong>Revista de fuentes de energía</strong> (IF=9.13, 2022)<br/>
             - <strong>Revista internacional de energía de hidrógeno</strong> (IF=7.14, 2021) <br/>
             - <strong>Energía para el Desarrollo Sostenible</strong> (IF=5.76, 2021) <br/>
+            - <strong>Revista internacional de transferencia de calor y masa</strong> (IF=5.58, 2022) <br/>
+            - <strong>Tecnologías verdes y sostenibilidad</strong> (Nuevo Diario, 2022) <br/>
+            - <strong>Energía verde y transporte inteligente</strong> (Nuevo Diario, 2022) <br/>
           <li><strong>Asistente de enseñanza</strong>: <br/>
             - <strong>Tecnologías de energías renovables</strong> II (Máster, ETH Zurich, 2017-2019) <br/>
             <li><strong>Asistente de búsqueda</strong>: <br/>
@@ -613,7 +637,7 @@
         </ol>
         </div>       
         <hr />   
---->
+
         <div class="doc-section" id="talks">
           <h3>Discusiones y Moderador</h3>
           <ol>
@@ -730,6 +754,7 @@
         </div>  
 
         <hr />
+--->
         <div class="doc-section" id="visiting">
           <h3>Visitando</h3>
           <ul class="square">
@@ -745,7 +770,7 @@
           <h3>Competencias</h3>
           <ul class="square">
             <li><strong>Inglés</strong> (fluido, C1), <strong>Chinois</strong> (natif, C2), <strong>Allemand</strong> (en progreso, B1), <strong >Français</strong> (básico, A2)</strong><br/></li>
-            <li><a href="https://xgraphy.github.io" target="_blank">Photographie</a>, écriture, montage vidéo, randonnée, cyclisme, tennis de table, cuisines chinoises<br/></li>
+            <li><a href="https://xgraphy.github.io" target="_blank">Photographie</a>, écriture, montage vidéo, randonnée, cyclisme, tennis de table, cuisines<br/></li>
             </ul>
           </div>
 
@@ -753,11 +778,12 @@
           <div class="doc-section" id="travel">
             <h3>Viaje</h3>
             <ul class="square">
-              <li><strong>Asia</strong> : China (continental), Taiwán, Rusia, Turquía, Tailandia</li>
-              <li><strong>Europa</strong> : Autriche, Bélgica, Bosnia y Herzegovina, Croacia,
-                République tchèque, Danemark, Estonia, Finlande, France, Allemagne (más de 25 villes), Hongrie, Islande, Italie, Liechtenstein, Luxembourg, Pays-Bas, Norvège, Pologne, Serbie, Slovénie, Espagne, Suède, Suisse (más de 30 villas)</li>
-              <li><strong>Amérique du Nord</strong> : États-Unis, Canadá</li>
-              <li><strong>África</strong> : Gran Canaria (España)</li>
+              <li><strong>Asia</strong>: China (continental), Taiwán, Rusia, Turquía, Tailandia</li>
+              <li><strong>Europa</strong>: Austria, Bélgica, Bosnia y Herzegovina, Croacia,
+                República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania (más de 25 ciudades), Hungría, Islandia, Irlanda, Italia, Liechtenstein, Luxemburgo, Malta, Países Bajos, Noruega, Portugal, Polonia, Serbia, Eslovenia, España, Suecia, Suiza (más de 30 ciudades), Reino Unido</li>
+              <li><strong>América del Norte</strong>: Estados Unidos, Canadá</li>
+              <li><strong>África</strong>: Gran Canaria (España)</li>
+              <li><strong>En total</strong>: visitó 35 de 197 países/regiones en todo el mundo</li>
               </ul>
             </div>
 

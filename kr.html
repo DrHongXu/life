@@ -47,6 +47,22 @@
   </script>
   -->
 
+  <script type="text/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      var url = "https://ipapi.co/" + ip + "/json/";
+      var request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var data = request.response;
+        var city = data.city;
+        var country = data.country_name;
+        document.getElementById("city").innerHTML = "" + city;
+      }
+    }
+  </script>
 
     <!-- block save as
       ================================================== -->
@@ -285,18 +301,15 @@
       </p>
 
         <p  align="justify"> 
-          
-          현재 쉬홍 (29세) 박사 독일 뮌헨에 소재한 자동차 산업의 상업용 연료 전지 차량의 <strong>개발 엔지니어</strong>로 일하고 있습니다. 그의 학계 및 산업 분야 간 관심 분야는 <strong>재생 에너지</strong>, <strong>지속 가능성</strong>, <strong>기능성 재료</strong> 및 주식 연구입니다.
-        </p> 
-  <!---
-        <p  align="justify">
-          He received his PhD with research focus on <strong>Carbon Neutral Technologies</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> (Prof. <a href="https://electrochemistry.ethz.ch/people/person-detail.html?persid=177926" target="_blank">Schmidt</a>) in 2021, and engaged in 2 years Industrial and 4 years Academic collaborative  projects for R&D of automotive hydrogen fuel cells. In 2016, he obtained EU dual master degrees in <strong>Materials Science</strong> from the <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong> (Prof. <a href="https://www.professoren.tum.de/en/mueller-buschbaum-peter" target="_blank">Müller-Buschbaum</a>), and <strong>Physics</strong> from the <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes I</a></strong> (Prof. <a href="https://ipr.univ-rennes1.fr/interlocuteurs/philippe-rabiller" target="_blank">Rabiller</a>) with industrial practices at German Companies and training at French Institute. He went to university at a young age of 16 years old, and he finished the bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> (Prof. <a href="http://faculty.bjtu.edu.cn/7498/" target="_blank">Zhang</a>) with 3 patents granted in 2013. In parallel to academic research, he developed professional education as a part-time <strong>MBA fellow</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> with internships at Venture Capital and Securities Companies in China. 
-        </p>   
- -->       
-        <p  align="justify">
-          2021년 취히히 연방 공과대학교에서 탄소중립기술 연구로 박사학위를 받았고, 자동차 수소연료전지 연구개발을 위해 산업 2년, 학술 4년 협력 프로젝트에 참여했다. 2016년에 그는 독일 회사에서 산업 실무를 수행하고 프랑스 연구소에서 교육을 받아 뮌헨 공과 대학에서 재료 과학 분야의 유럽 이중 석사 학위를, 렌 1 대학에서 물리학 석사 학위를 취득했습니다. 16세의 어린 나이에 대학에 진학하여 2013년 3건의 특허를 취득하며 북경운수대학교에서 학사과정을 마쳤습니다. 학술연구와 병행하여 Quantic에서 파트타임 MBA 펠로우로 전문교육을 발전시켰습니다. 중국 벤처 캐피탈 및 증권 회사에서 인턴십을 한 경영대학원.
+        현재, 쉬홍 (29세) 박사는 독일 뮌헨 자동차 산업에서 전문가 그룹의 <strong>연구 개발 엔지니어</strong>로 재직하며, <strong>에너지와 교통</strong> 분야의 <strong>탄소 중립</strong>을 추구하고 있습니다. 그의 교차 분야 연구 관심사는 <strong>신재생 에너지 기술</strong>, <strong>저탄소 스마트 교통</strong>, <strong>에너지 경제학</strong>, <strong>ESG & 지속가능 발전</strong> 등에 집중되어 있습니다. 학위 과정에서 국내외 기업 및 중·유럽 학술 기관과 협력하여 <strong>일자리와 공동 저자 논문 10편</strong>을 출판하였으며, <strong>3개의 특허를 취득</strong>했습니다. 동시에 그는 다수의 에너지 및 교통 분야 <strong>고인용 학술지의 심사위원</strong>으로 활동하고 있으며, 샌트 갈렌 국제 경제 포럼 (스위스 지식재산권)의 <strong>학술 심사위원</strong>을 맡고 있습니다. 미국 전기화학회<strong> 논문 초대</strong>와<strong> 여행 장학금</strong>, 유럽 연합 <strong>에라스무스 장학금</strong>, 대학 <strong>창의성 상</strong> 등을 수상한 바 있습니다.</br></br>
+
+        그는 2021년 초에 <strong><a href="https://ethz.ch/en.html" target="_blank">취리히 연방공과대학교</a></strong>에서 과학 박사 학위를 취득하였으며, 박사 기간 동안 <strong>스위스 연방 연구소</strong> (PSI) <strong>에너지 및 환경 부서</strong>에서<strong>탄소 중립/신재생 에너지 기술</strong>에 집중한 연구를 수행하였다. 또한, 자동차 기업 및 스위스 동기 빛원과 2년간 수소 에너지 차량 연구 및 기술 이전 프로젝트를 진행했다. 그는 2016년 독일 <strong><a href="https://www.tum.de/en/" target="_blank">뮌헨공과대학교</a></strong>에서 <strong>재료공학</strong> 석사 학위를 취득하였으며, 프랑스 <strong><a href="https://www.univ-rennes1.fr/" target="_blank">랑스 1대학교</a></strong>에서 학위를 받았다. 석사 과정 중에는 <strong>뉴런스 반도체</strong> 기술 본부와 <strong>EU Free Electron Laser</strong>에서 산업 인턴십을 수행했다. 석사 과정에서는 프랑스 루앙 1대학교와 텐진 하이호위원회가 공동 주최한 환경 기술 교육을 책임지기도 했다. 그는 16세 때 <strong><a href="http://www.bjtu.edu.cn/" target="_blank">베이징 교통 대학교</a></strong>에 입학하여 재료 공학을 공부하였으며, 2013년 학사 학위를 받았다. 학부 과정에서는 베이징 시 창의실험 프로젝트를 이끌어 국제 녹색 에너지 대회에 참가하여 국가급 동상을 수상했다. 그는 미국 <strong><a href="https://quantic.edu/mba" target="_blank">퀀틱 비즈니스 스쿨</a></strong>에서 원격으로 <strong>경영학 석사 (MBA)</strong> 학위를 수여받았으며, 주식 시장과 쌍화 투자펀드에서 신재생 에너지 분야 투자실습을 진행하였다. 또한, 그는 주식연구소에서 주식과 산업 연.
         </p>           
-         <p> PEK (Nǐ Hǎo) -> CDG (Bonjour) -> HAM (Moin Moin) -> MUC (Servus) -> ZRH (Grüezi) -> ? </p> 
+        <p style="text-align:left;">
+        PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT       
+        <span>(<script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>)?
+        </span>
+         </p>  
 
 <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
@@ -361,20 +374,25 @@
         <div class="doc-section" id="research-interests">
             <h3>연구 관심사</h3>
             <ul class="square">
-              <li><strong>재생 에너지</strong>, ESG 및 지속 가능성, 운송 탈탄소화 <br/>
-                <li><strong>기능성 재료</strong>, 특성화, 수명 주기 평가<br/>
-                <li><strong>전산 이미징</strong>, X선 기술, 이미지 처리 <br/>
-                <li><strong>주식 리서치</strong>, 빅 데이터 분석, 비즈니스 분석<br/>
-            </ul>
+              <li><strong>재생 에너지</strong>, 수소, 연료전지, 전해질, 태양광, 배터리<br/> 
+              <li><strong>기능성 물질</strong>, 반도체, 폴리머, 금속 산화물<br/>
+              <li><strong>컴퓨터 비전</strong>, X선 기술, 컴퓨터 비전<br/> 
+              <li><strong>에너지 경제학</strong>, 에너지 정책, ESG 투자, 지속 가능성<br/> 
+              <li><strong>주식 연구</strong>, 빅데이터 분석, 비즈니스 분석<br/>
+              </ul>
         </div>
         <hr />
         <div class="doc-section" id="academic-services">
             <h3>학업 서비스</h3>
             <ul class="square">
               <li><strong>동료 검토자: </strong> <br/>
-                - <strong>저널 오브 파워 소스</strong> (IF=9.13, 2022)<br/>
-                - <strong>국제 수소 에너지 저널</strong> (IF=7.14, 2021) <br/>
-                - <strong>지속 가능한 발전을 위한 에너지</strong> (IF=5.76, 2021) <br/>
+                - <strong>파워 소스 학술지</strong> (IF=9.13, 2022)<br/> 
+                - <strong>국제 수소 에너지 학술지</strong> (IF=7.14, 2021)<br/> 
+                - <strong>지속가능한 에너지 학술지</strong> (IF=5.76, 2021)<br/> 
+                - <strong>열 및 질량 전달 국제 학술지</strong> (IF=5.58, 2022)<br/> 
+                - <strong>녹색 기술 및 지속가능성 학술지</strong> (새로운 학술지, 2022)<br/> 
+                - <strong>녹색 에너지 및 지능형 교통 학술지</strong> (새로운 학술지, 2022)<br/> 
+                <hr>
               <li><strong>조교</strong>: <br/>
                 - <strong>재생 에너지 기술</strong> II(석사 과정, 취리히 연방 공과대학교, 2017-2019) <br/>
                 <li><strong>연구원</strong>: <br/>
@@ -628,7 +646,7 @@
         </ol>
         </div>       
         <hr />   
---->
+
         <div class="doc-section" id="talks">
           <h3>토크 및 사회자</h3>
           <ol>
@@ -745,6 +763,7 @@
         </div>  
 
         <hr />
+      --->
         <div class="doc-section" id="visiting">
           <h3>방문</h3>
           <ul class="square">
@@ -770,9 +789,10 @@
             <ul class="square">
               <li><strong>아시아</strong>: 중국(본토), 대만, 러시아, 터키, 태국</li>
               <li><strong>유럽</strong>: 오스트리아, 벨기에, 보스니아 헤르체고비나, 크로아티아,
-                체코, 덴마크, 에스토니아, 핀란드, 프랑스, 독일(25개 이상의 도시), 헝가리, 아이슬란드, 이탈리아, 리히텐슈타인, 룩셈부르크, 네덜란드, 노르웨이, 폴란드, 세르비아, 슬로베니아, 스페인, 스웨덴, 스위스(30개 이상의 도시)</li>
+                체코, 덴마크, 에스토니아, 핀란드, 프랑스, 독일(25개 이상의 도시), 헝가리, 아이슬란드, 아일랜드, 이탈리아, 리히텐슈타인, 룩셈부르크, 몰타, 네덜란드, 노르웨이, 포르투갈, 폴란드, 세르비아, 슬로베니아, 스페인, 스웨덴, 스위스(30개 이상의 도시), 영국</li>
               <li><strong>북미</strong>: 미국, 캐나다</li>
               <li><strong>아프리카</strong>: 그란 카나리아(스페인)</li>
+              <li><strong>전체</strong>: 전 세계 197개 국가/지역 중 35개 방문</li>
               </ul>
             </div>
 

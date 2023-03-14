@@ -47,7 +47,22 @@
   </script>
   -->
 
-
+  <script type="text/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      var url = "https://ipapi.co/" + ip + "/json/";
+      var request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var data = request.response;
+        var city = data.city;
+        var country = data.country_name;
+        document.getElementById("city").innerHTML = "" + city;
+      }
+    }
+  </script>
     <!-- block save as
       ================================================== -->
       <script type="text/javascript">
@@ -276,17 +291,17 @@
 
         <p  align="justify"> 
           
-          Currently, Mr. Hong Xu is working as a <strong>R&D Engineer</strong> in Expert Team for commercial Fuel Cell Vehicles in automotive industry based in Munich, Germany. His academic and industrial interdisplinary interests are focused on <strong>Green Technologies</strong>, <strong>Low-carbon Transportation</strong>, <strong>Energy Economics</strong>, <strong>Sustainability & ESG</strong>, and Equity Research.
+          Currently, Dr. Hong Xu holds the position of <strong>R&D Engineer</strong> at a prominent automotive company in Munich, Germany, where he focuses on corporate research in <strong>Green e-Power Systems</strong>. Meanwhile, he is serving also as a <strong>Reviewer</strong> for 7 highly regarded journals in the Energy and Transport fields, and as <strong>Academic Jury</strong> for the St. Gallen Symposium, a Swiss Think-tank. His interdisciplinary interests span a wide range of areas, including <strong>Renewable Energy</strong>, <strong>Functional Materials</strong>, Computational Imaging, Low-carbon Transport, Energy Economics, ESG & Sustainability.
         </p> 
-  <!---
+    
         <p  align="justify">
-          He received his PhD with research focus on <strong>Carbon Neutral Technologies</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> (Prof. <a href="https://electrochemistry.ethz.ch/people/person-detail.html?persid=177926" target="_blank">Schmidt</a>) in 2021, and engaged in 2 years Industrial and 4 years Academic collaborative  projects for R&D of automotive hydrogen fuel cells. In 2016, he obtained EU dual master degrees in <strong>Materials Science</strong> from the <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong> (Prof. <a href="https://www.professoren.tum.de/en/mueller-buschbaum-peter" target="_blank">Müller-Buschbaum</a>), and <strong>Physics</strong> from the <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes I</a></strong> (Prof. <a href="https://ipr.univ-rennes1.fr/interlocuteurs/philippe-rabiller" target="_blank">Rabiller</a>) with industrial practices at German Companies and training at French Institute. He went to university at a young age of 16 years old, and he finished the bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> (Prof. <a href="http://faculty.bjtu.edu.cn/7498/" target="_blank">Zhang</a>) with 3 patents granted in 2013. In parallel to academic research, he developed professional education as a part-time <strong>MBA fellow</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> with internships at Venture Capital and Securities Companies in China. 
-        </p>   
- -->       
-        <p  align="justify">
-          He received his PhD with research focus on <strong>Renewable Energy</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> in 2021, and engaged in 2 years Industrial and 4 years Academic collaborative  projects for R&D of automotive hydrogen fuel cells at <strong>Energy and Environment</strong> Division of <strong>Paul Scherrer Institute</strong> (Swiss Federal). In 2016, he obtained EU dual master degrees in <strong>Materials Science</strong> from the <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong>, and <strong>Physics</strong> from the <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes I</a></strong> with industrial practices at German Companies and training at French Institute. He went to university at a young age of 16 years old, and he finished the bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> with 3 patents granted in 2013. In parallel to academic research, he developed professional education as a part-time <strong>MBA fellow</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> with internships at Venture Capital and Securities Companies in China. 
+          He received his PhD with research focus on <strong>Renewable Energy</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> in 2021, and engaged in 2 years Industrial and 4 years Academic collaborative  projects for R&D of automotive hydrogen fuel cells at <strong>Energy and Environment</strong> Division of <strong><a href="https://www.psi.ch/en" target="_blank">Paul Scherrer Institute</a></strong>, a Swiss Federal Institution. In 2016, he obtained EU dual master degrees in <strong>Materials Science</strong> from the <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong>, and <strong>Physics</strong> from the <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes I</a></strong>, alongside industrial practices at European XFEL and Infineon in Germany and training at ENPC ParisTech in France. He went to university at a young age of 16, and he finished the bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> with 3 patents granted in 2013. In parallel to academic journey, he developed professional education as a part-time <strong>MBA fellow</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> with practical experience at dual-currency Venture Capital firm and top Securities Company in China. 
         </p>           
-         <p> PEK (Nǐ Hǎo) -> CDG (Bonjour) -> HAM (Moin Moin) -> MUC (Servus) -> ZRH (Grüezi) -> ? </p> 
+        <p style="text-align:left;">
+          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT       
+          <span>(<script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>)?
+          </span>
+           </p>  
 
 <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
@@ -353,12 +368,11 @@
         <div class="doc-section" id="research-interests">
             <h3>Research Interests</h3>
             <ul class="square">
-            <li><strong>Renewable Energy</strong>, Carbon Neutrality, Low-carbon Smart Transport<br/> 
-              <li><strong>Energy Economics</strong>, ESG Investing, Sustainability<br/> 
-              <li><strong>Functional Materials</strong>, Characterization, Life Cycle Assessment<br/>
-            <li><strong>Computational Imaging</strong>, X-ray Techniques, Image Processing <br/> 
+            <li><strong>Renewable Energy</strong>, Hydrogen, Fuel Cells, Eletrolyser, PV, Batteries<br/> 
+            <li><strong>Functional Materials</strong>, Semiconductors, Polymers, Metal Oxides<br/>
+            <li><strong>Computational Imaging</strong>, X-ray Techniques, Computer Vision <br/> 
+            <li><strong>Energy Economics</strong>, Energy Policy, ESG Investing, Sustainability<br/> 
             <li><strong>Equity Research</strong>, Big Data Analysis, Business Analytics<br/>
-
             </ul>
         </div>
         <hr class="display-mobile" style="width:113%">
@@ -369,6 +383,7 @@
             <h3>Academic Services</h3>
             <ul class="square">
             <li><strong>Peer Reviewer: </strong> <br/> 
+              - <strong>Energy Conversion and Management</strong> (Impact Factor=11.2, 2021)<br/> 
               - <strong>Journal of Power Sources</strong> (IF=9.13, 2022)<br/> 
               - <strong>International Journal of Hydrogen Energy</strong> (IF=7.14, 2021)  <br/> 
               - <strong>Energy for Sustainable Development</strong> (IF=5.76, 2021)  <br/> 
@@ -655,7 +670,7 @@
         </ol>
         </div>       
         <hr />   
---->
+
         <div class="doc-section" id="talks">
           <h3>Talks & Moderator</h3>
           <ol>
@@ -785,6 +800,7 @@
 
         <hr class="display-mobile" style="width:113%">
         <hr class="hidden-mobile">
+--->
         <div class="doc-section" id="visiting">
           <h3>Visiting</h3>
           <ul class="square">
@@ -802,7 +818,7 @@
           <h3>Skills</h3>
           <ul class="square">
             <li><strong>English</strong> (fluent, C1), <strong>Chinese</strong> (native, C2), <strong>German</strong> (in-progress, B1), <strong>French</strong> (basic, A2)</strong><br/></li>
-              <li><a href="https://xgraphy.github.io" target="_blank">Photography</a>, Writing, Video Editing, hiking, Cycling, Table Tennis, Chinese Cuisines<br/></li>
+              <li><a href="https://xgraphy.github.io" target="_blank">Photography</a>, Writing, Video Editing, Hiking, Cycling, Table Tennis, Asian/European Cuisines<br/></li>
             </ul>
           </div>
 
