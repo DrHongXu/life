@@ -47,22 +47,19 @@
   </script>
   -->
   <script type="text/javascript">
-    function getIP(json) {
-      var ip = json.ip;
-      var url = "https://ipapi.co/" + ip + "/json/";
-      var request = new XMLHttpRequest();
-      request.open('GET', url);
-      request.responseType = 'json';
-      request.send();
-      request.onload = function() {
-        var data = request.response;
-        var city = data.city;
-        var country = data.country_name;
-        document.getElementById("city").innerHTML = "" + city;
-        document.getElementById("city2").innerHTML = "" + city;
-        document.getElementById("country").innerHTML = "" + country;
-      }
-    }
+    var ip = '';
+    var city = '';
+    var country = '';
+    fetch('https://ipinfo.io/json?token=228a7bb192c4fc')
+      .then(response => response.json())
+      .then(data => {
+        ip = data.ip;
+        city = data.city;
+        city2 = data.city;
+        country = data.country;
+        document.getElementById("location").innerHTML = city;
+        document.getElementById("location2").innerHTML = city2;
+      });
   </script>
 
     <!-- block save as
@@ -222,7 +219,7 @@
       <img class="hidden-mobile" src="images/banner_de2.png" width="800" />
       <img class="display-mobile" src="images/banner_mobile_de2.png" width="800" />
       <p class="hidden-mobile"></p>
-      <h3 class="hidden-mobile">Servus! Grüezi! <small><small><small> Willkommen Freunde aus <script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text> :-)</small></small> </small>          
+      <h3 class="hidden-mobile">Servus! Grüezi! <small><small><small> Willkommen Freunde aus <span id="location"></span>  :-)</small></small> </small>          
         <span style="float:right;font-family:verdana;"> 
           <img src="images/flag_de.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> <img src="images/flag_ch.png" alt="flag" style="height:16px;display:inline-block;top:3px;position:relative;">
           <select id="languages" name="languages" style="width: 85px; color:inherit;display:inline-block;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
@@ -269,7 +266,7 @@
         
 
         <p class="display-mobile" style="text-align:left;margin-bottom:20px;">
-          <text style="color:rgb(237, 118, 7);font-size:15px">➔ Servus! Grüezi! </text>
+          <text style="color:rgb(237, 118, 7);font-size:15px">➔ Servus! Grüezi!</text>
           <span style="float:right;"> 
             <span style="float:right;font-family:verdana"> 
         <select id="languages" name="languages" style="width: 100px;color:inherit;display:inline-block;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
@@ -287,7 +284,7 @@
           </span>
 
       </p>
-      <span class="display-mobile">Willkommen Freunde aus <script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city2"></text>, <text id="country"></text> :-)</br></br></span>
+      <span class="display-mobile">Willkommen Freunde aus <span id="location2"></span> :-)</br></br></span>
       <p align="justify">
         Derzeit ist Dr. Hong Xu als <strong>R&D-Ingenieur</strong> bei einem führenden Automobilunternehmen in München, Deutschland, tätig, wo er sich auf die Unternehmensforschung im Bereich <strong>grüner e-Power Systeme</strong> konzentriert. Gleichzeitig arbeitet er als <strong>Reviewer</strong> für 7 hoch angesehene Zeitschriften in den Bereichen Energie und Transport und als <strong>Akademisches Jurymitglied</strong> für das St. Gallen Symposium, ein Schweizer Think-Tank. Seine interdisziplinären Interessen umfassen ein breites Spektrum an Themen, darunter <strong>Erneuerbare Energien</strong>, <strong>Funktionale Materialien</strong>, Computational Imaging, Low-Carbon Transport, Energieökonomie, ESG und Nachhaltigkeit.
         

@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+<head>
+<style type="text/css">
+#text1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: white;
+  font-size: 20px;
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+#text2 {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color: white;
+  font-size: 20px;
 }
-</script>
+</style>
+</head>
 
 
-<script type="text/javascript" src="//100widgets.com/js_data.php?id=234"></script>
+
+<body>
+
+
+<div id="container">
+  <img id="image" src="images/banner_cns.png" width="1200" height="400">
+  <div id="text1">This is the first text to be added to the image.</div>
+  <div id="text2">This is the second text to be added to the image.</div>
+</div>
+
+
+
 
 </body>
 </html>

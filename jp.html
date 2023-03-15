@@ -48,22 +48,19 @@
   -->
 
   <script type="text/javascript">
-    function getIP(json) {
-      var ip = json.ip;
-      var url = "https://ipapi.co/" + ip + "/json/";
-      var request = new XMLHttpRequest();
-      request.open('GET', url);
-      request.responseType = 'json';
-      request.send();
-      request.onload = function() {
-        var data = request.response;
-        var city = data.city;
-        var country = data.country_name;
-        document.getElementById("city").innerHTML = "" + city;
-        document.getElementById("city2").innerHTML = "" + city;
-        document.getElementById("country").innerHTML = "" + country;
-      }
-    }
+    var ip = '';
+    var city = '';
+    var country = '';
+    fetch('https://ipinfo.io/json?token=228a7bb192c4fc')
+      .then(response => response.json())
+      .then(data => {
+        ip = data.ip;
+        city = data.city;
+        city2 = data.city;
+        country = data.country;
+        document.getElementById("location").innerHTML = city;
+        document.getElementById("location2").innerHTML = city2;
+      });
   </script>
     <!-- block save as
       ================================================== -->
@@ -227,7 +224,7 @@
       <p class="hidden-mobile"></p>
         <h3 class="hidden-mobile">         
         <span>
-          <ruby>こんにちは！<rt><text style="color:rgb(255, 255, 255)">Kon‘ ni chi wa！</text></rt></ruby> <ruby><rt><text style="color:rgb(255, 255, 255)"></text> </rt></ruby><small><small><small><script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city"></text>からの歓迎の友人:-)</small></small> </small>          
+          <ruby>こんにちは！<rt><text style="color:rgb(255, 255, 255)">Kon‘ ni chi wa！</text></rt></ruby> <ruby><rt><text style="color:rgb(255, 255, 255)"></text> </rt></ruby><small><small><small><span id="location"></span>からの歓迎の友人:-)</small></small> </small>          
         </span>
         <span  style="float:right; font-family:verdana">  
           <img src="images/flag_jp.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;">
@@ -277,7 +274,7 @@
         
 
         <p class="display-mobile" style="text-align:left;margin-bottom:20px;">
-          <text style="color:rgb(237, 118, 7);font-size:15px">➔ こんにちは！ </text>
+          <text style="color:rgb(237, 118, 7);font-size:15px">➔ こんにちは！</text>
           <span  style="float:right; font-family:verdana">  
             <select id="languages" name="languages" style="width: 90px; color:inherit;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
               <option value="jp.html" select>🇯🇵 日本語</option>
@@ -295,7 +292,7 @@
       
 
       <p align="justify">
-        <span class="display-mobile"><script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="country"></text>/<text id="city2"></text>からの歓迎の友人 :-)</br></br></span>
+        <span class="display-mobile"><span id="location2"></span>からの歓迎の友人 :-)</br></br></span>
         現在、徐泓博士 (30歲) はドイツ・ミュンヘンの自動車産業において、専門家チームの<strong>R&Dエンジニア</strong>として、<strong>エネルギーと交通</strong>領域の<strong>カーボンニュートラル</strong>を実現することに尽力しています。彼の交差領域研究の関心は、<strong>新エネルギー技術</strong>、<strong>低炭素スマートトランスポート</strong>、<strong>エネルギー経済学</strong>、<strong>ESG＆サステナビリティ</strong>などに集中しています。学位取得中には、国内外の企業や中欧の学術機関と協力して、<strong>1つの一次論文と10を超える共同論文</strong>を発表し、<strong>3つの特許を取得</strong>しました。また、彼は<strong>多数のエネルギーおよび交通分野の高引用率のジャーナルの査読者</strong>、および瑞士のシンクタンクである<strong>サンクトガレン国際経済フォーラム</strong>の<strong>学術審査員</strong>を務めています。彼は、アメリカ電気化学会の<strong>論文招待</strong>と<strong>旅行賞</strong>、欧州連合の<strong>エラスムス奨学金</strong>、学部生の<strong>イノベーション奨学金</strong>を受賞しました。</br></br>
         
         彼は2021年に<strong><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ連邦工科大学</a></strong>で科学博士号を取得し、その期間中は<strong>スイス連邦研究所</strong>（PSI）の<strong>エネルギーおよび環境部門</strong>に勤務し、<strong>カーボンニュートラル/新エネルギー技術</strong>に注力して、業界リーダーの自動車メーカーやスイス同時放射光源と協力して、2年間の水素エネルギー自動車の研究開発や企業との技術転移プロジェクトに参加しました。彼は2016年に、ドイツの<strong><a href="https://www.tum.de/en/" target="_blank">ミュンへル工業大学</a></strong>で<strong>材料科学</strong>の修士号を取得し、フランスの<strong><a href="https://www.univ-rennes1.fr/" target="_blank">レンヌ第一大学</a></strong>で<strong>物理学</strong>の修士号を取得し、ドイツの<strong>インフィニオン半導体</strong>の技術本部や<strong>欧州自由電子レーザー</strong>有限会社で業界のインターン経験を積みました。修士課程中は、中仏枠組み協定に基づいて、フランスの<strong>道路橋大学</strong>と天津河委員会が共同で行った環境技術トレーニングを担当しました。彼は16歳で<strong><a href="http://www.bjtu.edu.cn/" target="_blank">北京交通大学</a></strong>に入学し、材料学を学び、2013年に理学士号を取得し、北京市のイノベーション実験プロジェクトを率いて、国際緑エネルギーコンテストに参加し、国家レベルのブロンズメダルを受賞しました。また、学術研究と並行して、アメリカの<strong><a href="https://quantic.edu/mba" target="_blank">クアンティックビジネススクール</a></strong>に遠隔学習で入学し、<strong>経営管理修士</strong>（MBA）の学位を取得し、中国の上場証券研究所での株式深層/業界研究レポートの執筆や、新エネルギー投資でのデュアルカレンシーベンチャーキャピタル企業とトップ証券会社での実務経験を積みました。
