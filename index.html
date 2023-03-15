@@ -60,6 +60,8 @@
         var city = data.city;
         var country = data.country_name;
         document.getElementById("city").innerHTML = "" + city;
+        document.getElementById("city2").innerHTML = "" + city;
+        document.getElementById("country").innerHTML = "" + city;
       }
     }
   </script>
@@ -271,7 +273,7 @@
         
 
         <p class="display-mobile" style="text-align:left;margin-bottom:20px;">
-          <text style="color:rgb(237, 118, 7);font-size:15px">➔ Hey, Welcome! </text>
+          <text style="color:rgb(237, 118, 7);font-size:15px">➔ Hey, Hello! </text>
           <span style="float:right;"> 
             <span style="float:right;font-family:verdana"> 
         <select id="languages" name="languages" style="width: 100px;color:inherit;display:inline-block;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
@@ -290,7 +292,7 @@
       </p>
 
         <p  align="justify"> 
-          
+          <span class="display-mobile">Welcome to your visit from <script type="application/javascript" src="https://jsonip.com/?callback=getIP"></script><text id="city2"></text>/<text id="country"></text> :-)</br></br></span>
           Currently, Dr. Hong Xu holds the position of <strong>R&D Engineer</strong> at a prominent automotive company in Munich, Germany, where he focuses on corporate research in <strong>Green e-Power Systems</strong>. Meanwhile, he is serving also as a <strong>Reviewer</strong> for 7 highly regarded journals in the Energy and Transport fields, and as <strong>Academic Jury</strong> for the St. Gallen Symposium, a Swiss Think-tank. His interdisciplinary interests span a wide range of areas, including <strong>Renewable Energy</strong>, <strong>Functional Materials</strong>, Computational Imaging, Low-carbon Transport, Energy Economics, ESG & Sustainability.
         </p> 
     
