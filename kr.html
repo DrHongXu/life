@@ -49,18 +49,19 @@
 
   <script type="module">
     async function fetchCountries() {
-      const response = await fetch('/js/countries.json');
+      const response = await fetch('/js/world.json');
       const countries = await response.json();
       return countries;
     }
   
-    function getCountryNameByCode(countries, code, language = 'english') {
-      const country = countries.find(country => country.abbr === code);
+    function getCountryNameByCode(countries, code, language = 'en') {
+      const lowerCaseCode = code.toLowerCase();
+      const country = countries.find(country => country.alpha2 === lowerCaseCode);
   
       if (country) {
-        return country[language] || country.english;
+        return country[language] || country.en;
       } else {
-        return 'Earth';
+        return '지구';
       }
     }
   
@@ -69,7 +70,7 @@
       const response = await fetch('https://ipinfo.io/json?token=228a7bb192c4fc');
       const data = await response.json();
       const countryCode = data.country;
-      const language = 'english'; // 更改为您想要显示的语言
+      const language = 'ko'; // 更改为您想要显示的语言，这里使用 'zh' 代表简体中文
       const countryName = getCountryNameByCode(countries, countryCode, language);
       document.getElementById("location").textContent = countryName;
       document.getElementById("location2").textContent = countryName;
