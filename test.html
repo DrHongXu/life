@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periodic Table</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 0 auto;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>Stylish Chat Bubble Animation</title>
+	<style>
+		.chat-bubble {
+			position: absolute;
+			bottom: 100px;
+			left: 50px;
+			width: 250px;
+			height: 80px;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 20px;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			opacity: 0;
+			animation: bounceIn 0.5s ease-in-out forwards;
+		}
+
+		.chat-bubble:before {
+			content: "";
+			position: absolute;
+			bottom: -20px;
+			left: 20px;
+			border-top: 20px solid transparent;
+			border-right: 20px solid rgba(255, 255, 255, 0.8);
+			border-bottom: 20px solid transparent;
+		}
+
+		.chat-bubble p {
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			color: #333;
+			line-height: 1.5;
+		}
+
+		@keyframes bounceIn {
+			from {
+				bottom: -80px;
+				opacity: 0;
+				transform: scale(0.5);
+			}
+			to {
+				bottom: 100px;
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	</style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td><a href="https://en.wikipedia.org/wiki/Hydrogen" target="_blank">H</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="https://en.wikipedia.org/wiki/Helium" target="_blank">He</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://en.wikipedia.org/wiki/Lithium" target="_blank">Li</a></td>
-            <td><a href="https://en.wikipedia.org/wiki/Beryllium" target="_blank">Be</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="https://en.wikipedia.org/wiki/Boron" target="_blank">B</a></td>
-            <td><a href="https://en.wikipedia.org/wiki/Carbon" target="_blank">C</a></td>
-        </tr>
-        <!-- 更多元素行 -->
-    </table>
+	<div style="position: relative;">
+		<img src="images/banner.png" alt="Your Image" />
+		<div class="chat-bubble">
+			<p>This is the text content of the chat bubble.</p>
+		</div>
+	</div>
 </body>
 </html>
-
