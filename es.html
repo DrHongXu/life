@@ -2,7 +2,10 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
 <head>
 
   <!-- Basic Page Needs
@@ -14,7 +17,7 @@
 
   <!-- Mobile Specific Metas
   ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- CSS
   ================================================== -->
@@ -36,7 +39,7 @@
 
   <!-- Google Analytics Tracking Code
   ================================================== -->
-   <!-- 
+  <!-- 
    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,17 +56,17 @@
       const countries = await response.json();
       return countries;
     }
-  
+
     function getCountryNameByCode(countries, code, language = 'english') {
       const country = countries.find(country => country.abbr === code);
-  
+
       if (country) {
         return country[language] || country.english;
       } else {
         return 'mundo';
       }
     }
-  
+
     async function displayCountryName() {
       const countries = await fetchCountries();
       const response = await fetch('https://ipinfo.io/json?token=228a7bb192c4fc');
@@ -74,248 +77,283 @@
       document.getElementById("location").textContent = countryName;
       document.getElementById("location2").textContent = countryName;
     }
-  
+
     document.addEventListener('DOMContentLoaded', displayCountryName);
   </script>
 
-    <!-- block save as
+  <!-- block save as
       ================================================== -->
-      <script type="text/javascript">
-        window.onload = function() {
-            document.onkeydown = function() {
-                var e = window.event || arguments[0];
-                //屏蔽F12
-                if(e.keyCode == 123) {
-    
-                    return false;
-                 //屏蔽Ctrl+Shift+I
-                } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-    
-                    return false;
-                    //屏蔽Shift+F10
-                } else if((e.shiftKey) && (e.keyCode == 121)){
-    
-                    return false;
-                }
-            };
-            //屏蔽右键单击
-            document.oncontextmenu = function() {
-    
-                return false;
-            }
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
         }
-    </script>
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
 
-<nav class="display-mobile">
- 
-  <div class='nav-container'>
-    <div>
-      <a class='slide' href='#'>
-        <span class='element'>H</span>
-        <span class='name'>Hóng</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href='#education'>
-        <span class='element'>Ed</span>
-        <span class='name'>Educación</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href='#research-interests'>
-        <span class='element'>In</span>
-        <span class='name'>Investigación</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href='#publications'>
-        <span class='element'>Pb</span>
-        <span class='name'>Publicaciones</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href='#awards'>
-        <span class='element'>Pr</span>
-        <span class='name'>Premios</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href='#contact'>
-        <span class='element'>C</span>
-        <span class='name'>Contact</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href="https://www.linkedin.com/in/xuhong/" target="_blank">
-        <span class='element'>Li</span>
-        <span class='name'>LinkedIn</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href="mailto:h.xu@tum.de" target="_blank">
-        <span class='element'>Em</span>
-        <span class='name'>Email</span>
-      </a>
-    </div>
-    <div>
-      <a class='slide' href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank">
-        <span class='element'>Sc</span>
-        <span class='name'>Scholar</span>
-      </a>
-    </div>
+        return false;
+      }
+    }
+  </script>
+
+  <nav class="display-mobile">
+
+    <div class='nav-container'>
+      <div>
+        <a class='slide' href='#'>
+          <span class='element'>H</span>
+          <span class='name'>Hóng</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#education'>
+          <span class='element'>Ed</span>
+          <span class='name'>Educación</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#research-interests'>
+          <span class='element'>In</span>
+          <span class='name'>Investigación</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#publications'>
+          <span class='element'>Pb</span>
+          <span class='name'>Publicaciones</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#awards'>
+          <span class='element'>Pr</span>
+          <span class='name'>Premios</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#contact'>
+          <span class='element'>C</span>
+          <span class='name'>Contact</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href="https://www.linkedin.com/in/xuhong/" target="_blank">
+          <span class='element'>Li</span>
+          <span class='name'>LinkedIn</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href="mailto:h.xu@tum.de" target="_blank">
+          <span class='element'>Em</span>
+          <span class='name'>Email</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank">
+          <span class='element'>Sc</span>
+          <span class='name'>Scholar</span>
+        </a>
+      </div>
 
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
 </head>
+
 <body>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
 
-<!-- Top Navigation Menu -->
+  <!-- Top Navigation Menu -->
 
 
-<!-- partial:index.partial.html -->
+  <!-- partial:index.partial.html -->
 
   <!-- Primary Page Layout
   ================================================== -->
 
   <!-- Delete everything in this .container and get started on your own site! -->
 
-  
+
   <div class="container">
 
     <!-- Sidebar -->
     <div class="hidden-mobile" class="three columns sidebar">
       <nav>
-      <h3 id="logo" style="text-align:center;">
-      <img id="optionalstuff" src="images/hong6.png" width="155" /> 
-      <h3 class="hidden-mobile" align="left">Dr. Hong Xú</h3>
-  
-      <ul>
-        <li><a href="#" > <span class='blue'>Investigador</span> :: <span class='blue'>Ingeniero</span> :: <span class='blue'>Analista</span></a></li>
-        <p>____</p>
-        <!--<li><a href="#whoami">¿Quién soy?</a></li>-->
-        <li><a href="#educación">Educación</a></li>
-        <!--<li><a href="#trabajo">Trabajo</a></li>-->
-        <!--<li><a href="#proyecto">Proyectos</a></li>-->
-         <!--<li><a href="#activities">Actividades</a></li> -->
-         <li><a href="#posts">Publicaciones</a></li>
-        <!--<li><a href="#patents">Patentes</a></li>-->
-        <!--<li><a href="#presentaciones">Conferencias</a></li>-->
-        <li><a href="#awards">Premios</a></li>
-        <!--<li><a href="#entrenamiento">Entrenamiento</a></li>-->
-        <!--<li><a href="#fund">Financiación</a></li>-->
-        <!--<li><a href="#skills">Habilidades</a></li>-->
-        <li><a href="#contacto">Contacto</a></li>
-        <p>____</p>
-        <!-- <li><a href="#services">Services</a></li> -->
-        <!-- <li><a href="#contact">Contact</a></li> -->
-        <li><a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>LinkedIn</span></a></li>
-        <li><a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank" target="_blank"><span class='blue'>Google Académico</span></a></li>
-        <!--<li><a href="https://unknown/files/Hong_XU_CV_github.io.pdf" target="_blank" target="_blank"><span class='blue'>CV</span></a></li>-->
-        <!-- <li><a href="http://www.linkedin.com/in/" target="_blank" target="_blank"><span class='blue'>LinkedIn Profile</span></a></li> -->
-        <li><a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu [at] tum.de</span></a></li>
-        <p>____</p>
-        <!--<li><a href="index.html" target="_self">EN</a> | <a href="cn.html" target="_self">中文</br> 
+        <h3 id="logo" style="text-align:center;">
+          <img id="optionalstuff" src="images/hong6.png" width="155" />
+          <h3 class="hidden-mobile" align="left">Dr. Hong Xú</h3>
+
+          <ul>
+            <li><a href="#"> <span class='blue'>Investigador</span> :: <span class='blue'>Ingeniero</span> :: <span
+                  class='blue'>Analista</span></a></li>
+            <p>____</p>
+            <!--<li><a href="#whoami">¿Quién soy?</a></li>-->
+            <li><a href="#educación">Educación</a></li>
+            <!--<li><a href="#trabajo">Trabajo</a></li>-->
+            <!--<li><a href="#proyecto">Proyectos</a></li>-->
+            <!--<li><a href="#activities">Actividades</a></li> -->
+            <li><a href="#posts">Publicaciones</a></li>
+            <!--<li><a href="#patents">Patentes</a></li>-->
+            <!--<li><a href="#presentaciones">Conferencias</a></li>-->
+            <li><a href="#awards">Premios</a></li>
+            <!--<li><a href="#entrenamiento">Entrenamiento</a></li>-->
+            <!--<li><a href="#fund">Financiación</a></li>-->
+            <!--<li><a href="#skills">Habilidades</a></li>-->
+            <li><a href="#contacto">Contacto</a></li>
+            <p>____</p>
+            <!-- <li><a href="#services">Services</a></li> -->
+            <!-- <li><a href="#contact">Contact</a></li> -->
+            <li><a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span
+                  class='blue'>LinkedIn</span></a></li>
+            <li><a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank"
+                target="_blank"><span class='blue'>Google Académico</span></a></li>
+            <!--<li><a href="https://unknown/files/Hong_XU_CV_github.io.pdf" target="_blank" target="_blank"><span class='blue'>CV</span></a></li>-->
+            <!-- <li><a href="http://www.linkedin.com/in/" target="_blank" target="_blank"><span class='blue'>LinkedIn Profile</span></a></li> -->
+            <li><a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu [at]
+                  tum.de</span></a></li>
+            <p>____</p>
+            <!--<li><a href="index.html" target="_self">EN</a> | <a href="cn.html" target="_self">中文</br> 
           <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a></li>-->
-        <p></p>
-        <img src="images/logo.png" width="45" />    
-        
-      </ul>  
+            <p></p>
+            <img src="images/logo.png" width="45" />
+
+          </ul>
       </nav>
-    
+
     </div>
-    
+
     <!-- Content -->
     <div class="twelve columns offset-by-four content">
-        
+
       <img class="hidden-mobile" src="images/banner_es2.png" width="800" />
       <img class="display-mobile" src="images/banner_mobile_es2.png" width="800" />
 
 
       <p class="hidden-mobile"></p>
-      <h3 class="hidden-mobile">¡Hola, Buenos Días! <small><small> <small>Bienvenidos amigos de <span id="location"></span> :-)</small></small> </small>          
-        <span style="float:right;font-family:verdana"> 
-          <img src="images/flag_es.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> <img src="images/flag_ar.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> 
-          <select id="languages" name="languages" style="width: 85px; color:inherit;display:inline-block;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
+      <h3 class="hidden-mobile">¡Hola, Buenos Días! <small><small> <small>Bienvenidos amigos de <span
+                id="location"></span> :-)</small></small> </small>
+        <span style="float:right;font-family:verdana">
+          <img src="images/flag_es.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;">
+          <img src="images/flag_ar.png" alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;">
+          <select id="languages" name="languages"
+            style="width: 85px; color:inherit;display:inline-block;margin-bottom:0px;"
+            onchange="window.location.href=this.options [this.selectedIndex].value">
             <option value="es.html" select>Español</option>
-            <option value="de.html" >Deutsch</option>
+            <option value="de.html">Deutsch</option>
             <option value="index.html">English</option>
-            <option value="fr.html" >Français</option>
+            <option value="fr.html">Français</option>
             <option value="it.html">Italiano</option>
             <option value="ru.html">Русский</option>
-                <option value="cn.html">中文</option>
-                <option value="jp.html">日本語</option>
-                <option value="kr.html">한국어</option>
-        </select>
+            <option value="cn.html">中文</option>
+            <option value="jp.html">日本語</option>
+            <option value="kr.html">한국어</option>
+          </select>
         </span>
-      </h3> 
+      </h3>
       <p class="hidden-mobile"></p>
       <p class="display-mobile"></p>
-        
 
-        <div class="topnav" >
-          <a href="es.html" class="active"><h3 class="display-mobile">Dr. Hong Xú</h3></a>
-          <div id="myLinks">
-            <ul>
-        
-              <!--<li><a href="#whoami">Who am I?</a></li>-->
-              <li><img src="images/logo.png" style="float:right" width="45" ><a href="#education"><small>- Educación</small></a></li>
-                <!--<li><a href="#work">Trabajo</a></li>-->
-                <!--<li><a href="#project">Proyectos</a></li>-->
-                 <!--<li><a href="#activities">Actividades</a></li> -->
-                 <li><a href="#publicaciones"><small>- Publicaciones</small></a></li>
-                <li><a href="#patents"><small>- Brevets</small></a></li>
-                <li><a href="#presentations"><small>- Conferencias</small></a></li>
-                <li><a href="#awards"><small>- Recompensas</small></a></li>
-                <li><a href="#formación"><small>- Formación</small></a></li>
-                <!--<li><a href="#fund">Financiamiento</a></li>-->
-                <li><a href="#skills"><small>- Competencias</small></a></li>
-                <li><a href="#contacto"><small>- Contacto</small></a></li>
-            </ul>
-          </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+
+      <div class="topnav">
+        <a href="es.html" class="active">
+          <h3 class="display-mobile">Dr. Hong Xú</h3>
+        </a>
+        <div id="myLinks">
+          <ul>
+
+            <!--<li><a href="#whoami">Who am I?</a></li>-->
+            <li><img src="images/logo.png" style="float:right" width="45"><a href="#education"><small>-
+                  Educación</small></a></li>
+            <!--<li><a href="#work">Trabajo</a></li>-->
+            <!--<li><a href="#project">Proyectos</a></li>-->
+            <!--<li><a href="#activities">Actividades</a></li> -->
+            <li><a href="#publicaciones"><small>- Publicaciones</small></a></li>
+            <li><a href="#patents"><small>- Brevets</small></a></li>
+            <li><a href="#presentations"><small>- Conferencias</small></a></li>
+            <li><a href="#awards"><small>- Recompensas</small></a></li>
+            <li><a href="#formación"><small>- Formación</small></a></li>
+            <!--<li><a href="#fund">Financiamiento</a></li>-->
+            <li><a href="#skills"><small>- Competencias</small></a></li>
+            <li><a href="#contacto"><small>- Contacto</small></a></li>
+          </ul>
         </div>
-        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
 
-        <p class="display-mobile" style="text-align:left;margin-bottom:20px;">
-          <text style="color:rgb(237, 118, 7);font-size:15px">➔ ¡Hola, Buenos Días! </text>
-          <span style="float:right;"> 
-            <span style="float:right;font-family:verdana"> 
-        <select id="languages" name="languages" style="width: 100px; color:inherit;display:inline-block;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
-          <option value="es.html" select>🇪🇸 Español</option>
-          <option value="de.html" >🇩🇪 Deutsch</option>
-          <option value="index.html">🇬🇧 English</option>
-          <option value="fr.html" >🇫🇷 Français</option>
-          <option value="it.html">🇮🇹 Italiano</option>
-          <option value="ru.html">🇷🇺 Русский</option>
+
+      <p class="display-mobile" style="text-align:left;margin-bottom:20px;">
+        <text style="color:rgb(237, 118, 7);font-size:15px">➔ ¡Hola, Buenos Días! </text>
+        <span style="float:right;">
+          <span style="float:right;font-family:verdana">
+            <select id="languages" name="languages"
+              style="width: 100px; color:inherit;display:inline-block;margin-bottom:0px;"
+              onchange="window.location.href=this.options [this.selectedIndex].value">
+              <option value="es.html" select>🇪🇸 Español</option>
+              <option value="de.html">🇩🇪 Deutsch</option>
+              <option value="index.html">🇬🇧 English</option>
+              <option value="fr.html">🇫🇷 Français</option>
+              <option value="it.html">🇮🇹 Italiano</option>
+              <option value="ru.html">🇷🇺 Русский</option>
               <option value="cn.html">🇨🇳 中文</option>
               <option value="jp.html">🇯🇵 日本語</option>
               <option value="kr.html">🇰🇷 한국어</option>
             </select>
-            </span>
           </span>
+        </span>
       </p>
-      
+
 
       <p align="justify">
         <span class="display-mobile">Bienvenidos amigos de <span id="location2"></span> :-)</br></br></span>
-        Actualmente, el Dr. Hong Xu ocupa el cargo de <strong>Ingeniero de I+D</strong> en una destacada empresa automotriz en Munich, Alemania, donde se enfoca en la investigación corporativa en <strong>sistemas de energía verde e</strong>. Al mismo tiempo, también se desempeña como <strong>Revisor</strong> para 7 revistas altamente consideradas en los campos de la Energía y el Transporte, y como <strong>Jurado Académico</strong> para el Simposio de St. Gallen, un think-tank suizo. Sus intereses interdisciplinarios abarcan una amplia gama de áreas, incluyendo <strong>Energía Renovable</strong>, <strong>Materiales Funcionales</strong>, Imaging Computacional, Transporte de Bajo Carbono, Economía de la Energía, ESG y Sostenibilidad.
-        
-        </p>
-        <p align="justify">
-        Obtuvo su doctorado con un enfoque en <strong>Energía Renovable</strong> de la <strong><a href="https://ethz.ch/es.html" target="_blank">Escuela Politécnica Federal de Zúrich</a></strong> en 2021, y participó en proyectos colaborativos industriales y académicos de 2 y 4 años para la I+D de celdas de combustible de hidrógeno automotrices en la División de <strong>Energía y Medio Ambiente</strong> del <strong><a href="https://www.psi.ch/es" target="_blank">Instituto Paul Scherrer</a></strong>, una institución federal suiza. En 2016, obtuvo títulos de doble máster de la UE en <strong>Ciencia de Materiales</strong> en la <strong><a href="https://www.tum.de/es/" target="_blank">Universidad Técnica de Múnich</a></strong> y en <strong>Física</strong> en la <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Universidad de Rennes I</a></strong>, con prácticas industriales en European XFEL e Infineon en Alemania y formación en ENPC ParisTech en Francia. Ingresó a la universidad a una edad temprana de 16 años y completó sus estudios de licenciatura en la <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Universidad de Transporte de Beijing</a></strong> con 3 patentes otorgadas en 2013. Paralelamente a su trayectoria académica, desarrolló una educación profesional como <strong>fellow MBA a tiempo parcial</strong> en la <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong> con experiencia práctica en una empresa de capital de riesgo de doble moneda y una empresa líder de valores mobiliarios en China.
-        
-        </p>
-        <p style="text-align:left;">
-          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> ?
-          </span>
-           </p>  
-<!---
+        Actualmente, el Dr. Hong Xu ocupa el cargo de <strong>Ingeniero de I+D</strong> en una destacada empresa
+        automotriz en Munich, Alemania, donde se enfoca en la investigación corporativa en <strong>sistemas de energía
+          verde e</strong>. Al mismo tiempo, también se desempeña como <strong>Revisor</strong> para 7 revistas
+        altamente consideradas en los campos de la Energía y el Transporte, y como <strong>Jurado Académico</strong>
+        para el Simposio de St. Gallen, un think-tank suizo. Sus intereses interdisciplinarios abarcan una amplia gama
+        de áreas, incluyendo <strong>Energía Renovable</strong>, <strong>Materiales Funcionales</strong>, Imaging
+        Computacional, Transporte de Bajo Carbono, Economía de la Energía, ESG y Sostenibilidad.
+
+      </p>
+      <p align="justify">
+        Obtuvo su doctorado con un enfoque en <strong>Energía Renovable</strong> de la <strong><a
+            href="https://ethz.ch/es.html" target="_blank">Escuela Politécnica Federal de Zúrich</a></strong> en 2021, y
+        participó en proyectos colaborativos industriales y académicos de 2 y 4 años para la I+D de celdas de
+        combustible de hidrógeno automotrices en la División de <strong>Energía y Medio Ambiente</strong> del <strong><a
+            href="https://www.psi.ch/es" target="_blank">Instituto Paul Scherrer</a></strong>, una institución federal
+        suiza. En 2016, obtuvo títulos de doble máster de la UE en <strong>Ciencia de Materiales</strong> en la
+        <strong><a href="https://www.tum.de/es/" target="_blank">Universidad Técnica de Múnich</a></strong> y en
+        <strong>Física</strong> en la <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Universidad de
+            Rennes I</a></strong>, con prácticas industriales en European XFEL e Infineon en Alemania y formación en
+        ENPC ParisTech en Francia. Ingresó a la universidad a una edad temprana de 16 años y completó sus estudios de
+        licenciatura en la <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Universidad de Transporte de
+            Beijing</a></strong> con 3 patentes otorgadas en 2013. Paralelamente a su trayectoria académica, desarrolló
+        una educación profesional como <strong>fellow MBA a tiempo parcial</strong> en la <strong><a
+            href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong> con experiencia
+        práctica en una empresa de capital de riesgo de doble moneda y una empresa líder de valores mobiliarios en
+        China.
+
+      </p>
+      <p style="text-align:left;">
+        PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> ?
+        </span>
+      </p>
+      <!---
          <p class="display-mobile" style="text-align:left; padding: 0px; margin: 0px;">
           <strong><a class="display-mobile"href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank" target="_blank"><span class='blue'>G-Scholar</span></a></strong><text class="display-mobile"> | </text><strong><a class="display-mobile" href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>LinkedIn</span></a></strong> 
           <span style="float:right;">
@@ -324,297 +362,388 @@
         </p>
 -->
 
-<p class="hidden-mobile" style="text-align:left;">
-  <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24" id="tz24-1658678414-c1268-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjAiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9" title="World Clock :: Zurich" target="_blank" rel="nofollow">Hora de Europa [CET] </a></strong> 
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script> 
-  <span style="float:right;">
-    <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24" id="tz24-1658678453-c133-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjAiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9" title="actual time Beijing" target="_blank" rel="nofollow">Hora de Beijing [CST] </a></strong> 
-      <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-  </span>
-</p>
+      <p class="hidden-mobile" style="text-align:left;">
+        <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+            id="tz24-1658678414-c1268-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjAiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9"
+            title="World Clock :: Zurich" target="_blank" rel="nofollow">Hora de Europa [CET] </a></strong>
+        <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        <span style="float:right;">
+          <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24"
+              id="tz24-1658678453-c133-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjAiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9"
+              title="actual time Beijing" target="_blank" rel="nofollow">Hora de Beijing [CST] </a></strong>
+          <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        </span>
+      </p>
 
 
-<p class="display-mobile" style="text-align:left;">
-  <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24" id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="timezone - Zurich" target="_blank" rel="nofollow">Europa</a></strong>
-  <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-  <span style="float:right;">
-    <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24" id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Time - Beijing" target="_blank" rel="nofollow">Beijing</a></strong>
-    <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-  </span>
-</p>
+      <p class="display-mobile" style="text-align:left;">
+        <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+            id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="timezone - Zurich" target="_blank" rel="nofollow">Europa</a></strong>
+        <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        <span style="float:right;">
+          <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24"
+              id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="Time - Beijing" target="_blank" rel="nofollow">Beijing</a></strong>
+          <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        </span>
+      </p>
 
 
 
 
 
 
-        <div class="doc-section" id="whoami">
+      <div class="doc-section" id="whoami">
 
-        </div>
-        
-        <hr />
-        <div class="doc-section" id="education">
-          <h3>Educación</h3>
-          <ul class="square">
-            <li>2017-2021 | <strong>Doctorado, Energías renovables</strong> (Financiación total)<br/>
-              <strong><a href="https://ethz.ch/en.html" target="_blank">Escuela Politécnica Federal de Zúrich</a></strong>, Suiza</p>
+      </div>
 
-            <li>2014-2016 | <strong>MSc, Materiales y Física</strong> (doble titulación de la UE)<br/>
-             <strong><a href="https://www.tum.de/en/" target="_blank">Universidad Técnica de Múnich</a></strong>, Alemania<br/>
-             <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Universidad de Rennes 1</a></strong>, Francia<br/></p>
-             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Tesis</a>]-->
-              
-            <li>2009-2013 | <strong>BSc, Química de materiales</strong> (Patentes otorgadas)<br/>
-              <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Universidad de Transporte de Beijing</a></strong>, China<br/>
-              <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Tesis</a>]-->
+      <hr />
+      <div class="doc-section" id="education">
+        <h3>Educación</h3>
+        <ul class="square">
+          <li>2017-2021 | <strong>Doctorado, Energías renovables</strong> (Financiación total)<br />
+            <strong><a href="https://ethz.ch/en.html" target="_blank">Escuela Politécnica Federal de
+                Zúrich</a></strong>, Suiza</p>
+
+          <li>2014-2016 | <strong>MSc, Materiales y Física</strong> (doble titulación de la UE)<br />
+            <strong><a href="https://www.tum.de/en/" target="_blank">Universidad Técnica de Múnich</a></strong>,
+            Alemania<br />
+            <strong><a href="https://www.univ-rennes1.fr/" target="_blank">Universidad de Rennes 1</a></strong>,
+            Francia<br /></p>
+            <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Tesis</a>]-->
+
+          <li>2009-2013 | <strong>BSc, Química de materiales</strong> (Patentes otorgadas)<br />
+            <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Universidad de Transporte de Beijing</a></strong>,
+            China<br />
+            <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Tesis</a>]-->
             <p>____</p>
-              <li>2020-2021 | <strong>MBA, Administración de Empresas</strong> (tiempo parcial)<br/>
-                <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong>, Washington D.C.<br/></p>
-                
-            </ul>
-        </div>
+          <li>2020-2021 | <strong>MBA, Administración de Empresas</strong> (tiempo parcial)<br />
+            <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong>,
+            Washington D.C.<br /></p>
 
-        <hr />
-        <div class="doc-section" id="research-interests">
-          <h3>Intereses de investigación</h3>
-          <ul class="square">
-            <li><strong>Energías renovables</strong>, hidrógeno, células de combustible, electrólisis, PV, baterías<br/> 
-            <li><strong>Materiales funcionales</strong>, semiconductores, polímeros, óxidos metálicos<br/>
-            <li><strong>Imagen computacional</strong>, técnicas de rayos X, visión por computadora <br/> 
-            <li><strong>Economía energética</strong>, política energética, inversión ESG, sostenibilidad<br/> 
-            <li><strong>Investigación de acciones</strong>, análisis de big data, análisis empresarial<br/>
-            </ul>
-        </div>
-        <hr />
-        <div class="doc-section" id="academic-services">
-          <h3>Servicios Académicos</h3>
-          <ul class="square">
-          <li><strong>Revisor: </strong> <br/>
-            - <strong>Gestión y conversión de energía</strong> (Factor de impacto=11,2, 2021)<br/>
-            - <strong>Revista de fuentes de energía</strong> (IF=9.13, 2022)<br/>
-            - <strong>Revista internacional de energía de hidrógeno</strong> (IF=7.14, 2021) <br/>
-            - <strong>Energía para el Desarrollo Sostenible</strong> (IF=5.76, 2021) <br/>
-            - <strong>Revista internacional de transferencia de calor y masa</strong> (IF=5.58, 2022) <br/>
-            - <strong>Tecnologías verdes y sostenibilidad</strong> (Nuevo Diario, 2022) <br/>
-            - <strong>Energía verde y transporte inteligente</strong> (Nuevo Diario, 2022) <br/>
-          <li><strong>Asistente de enseñanza</strong>: <br/>
-            - <strong>Tecnologías de energías renovables</strong> II (Máster, ETH Zurich, 2017-2019) <br/>
-            <li><strong>Asistente de búsqueda</strong>: <br/>
-              - <strong>Hydrogen & Fuel Cells</strong> (Departamento de Energía y Ambiente, Paul Scherrer Institute, CH, 2016-2021) <br/>
-              - <strong>Sensores de polímero</strong> (Departamento de Física, Universidad Técnica de Munich, DE, 2015-2016) <br/>
-              - <strong>Células solares & baterías</strong> (Facultad de Ciencias, Universidad de Transporte de Beijing, CN, 2012-2013) <br/>
-          <li><strong>Organización</strong>: <br/>
-            - Artículo invitado/beneficiario de una subvención, <strong>La Sociedad Electroquímica</strong> (2019, USA) <br/>
-            - Miembro, <strong>Sociedad Internacional de Electroquímica</strong> (2019, IT) <br/>
+        </ul>
+      </div>
+
+      <hr />
+      <div class="doc-section" id="research-interests">
+        <h3>Intereses de investigación</h3>
+        <ul class="square">
+          <li><strong>Energías renovables</strong>, hidrógeno, células de combustible, electrólisis, PV, baterías<br />
+          <li><strong>Materiales funcionales</strong>, semiconductores, polímeros, óxidos metálicos<br />
+          <li><strong>Imagen computacional</strong>, técnicas de rayos X, visión por computadora <br />
+          <li><strong>Economía energética</strong>, política energética, inversión ESG, sostenibilidad<br />
+          <li><strong>Investigación de acciones</strong>, análisis de big data, análisis empresarial<br />
+        </ul>
+      </div>
+      <hr />
+      <div class="doc-section" id="academic-services">
+        <h3>Servicios Académicos</h3>
+        <ul class="square">
+          <li><strong>Revisor: </strong> <br />
+            - <strong>Gestión y conversión de energía</strong> (Factor de impacto=11,2, 2021)<br />
+            - <strong>Revista de fuentes de energía</strong> (IF=9.13, 2022)<br />
+            - <strong>Revista internacional de energía de hidrógeno</strong> (IF=7.14, 2021) <br />
+            - <strong>Energía para el Desarrollo Sostenible</strong> (IF=5.76, 2021) <br />
+            - <strong>Revista internacional de transferencia de calor y masa</strong> (IF=5.58, 2022) <br />
+            - <strong>Tecnologías verdes y sostenibilidad</strong> (Nuevo Diario, 2022) <br />
+            - <strong>Energía verde y transporte inteligente</strong> (Nuevo Diario, 2022) <br />
+          <li><strong>Asistente de enseñanza</strong>: <br />
+            - <strong>Tecnologías de energías renovables</strong> II (Máster, ETH Zurich, 2017-2019) <br />
+          <li><strong>Asistente de búsqueda</strong>: <br />
+            - <strong>Hydrogen & Fuel Cells</strong> (Departamento de Energía y Ambiente, Paul Scherrer Institute, CH,
+            2016-2021) <br />
+            - <strong>Sensores de polímero</strong> (Departamento de Física, Universidad Técnica de Munich, DE,
+            2015-2016) <br />
+            - <strong>Células solares & baterías</strong> (Facultad de Ciencias, Universidad de Transporte de Beijing,
+            CN, 2012-2013) <br />
+          <li><strong>Organización</strong>: <br />
+            - Artículo invitado/beneficiario de una subvención, <strong>La Sociedad Electroquímica</strong> (2019, USA)
+            <br />
+            - Miembro, <strong>Sociedad Internacional de Electroquímica</strong> (2019, IT) <br />
             - Miembro, <strong>Sociedad Alemana de Física</strong> (2016, DE)
-              
 
 
-            </ul>
-        </div>
-        <hr />
-        <div class="doc-section" id="publications">
-            <h3>Publicaciones</h3>
-            <ol>
-            
-              <li>
-                  <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br/>
-                  Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ liquid water desaturation via evaporation [J] <br/>
-                  2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:red">[Nuevo!]</text>
-              </li>            
 
-            
-              <li> 
-                S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S. Haussener [EPFL]<br/>
-                Conductive heat transfer in partially saturated gas diffusion layers with evaporative cooling [J] <br/>
-                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[EPFL]</text>
-            </li>
-     
-            <li>
-              <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J. Eller [PSI]<br/>
-              Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond operando X-ray tomographic microscopy. [J] <br/>
-              2021 | <em><strong>J. Power Sources  </strong></em> [<a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>  
+        </ul>
+      </div>
+      <hr />
+      <div class="doc-section" id="publications">
+        <h3>Publicaciones</h3>
+        <ol>
+
+          <li>
+            <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br />
+            Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ liquid water
+            desaturation via evaporation [J] <br />
+            2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:red">[Nuevo!]</text>
           </li>
-          <li> 
-            M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni [ETH], F. Marone<br/>
-            Deep learning based classification of dynamic processes in time-resolved XTM [J] <br/>
-           2021 | <em><strong>Scientific Reports </strong></em> [<a href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(191, 9, 228)">[CWI.Ámsterdam]</text> 
-        </li>                   
-              <li>
-                  <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller [PSI]<br/>
-                  Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando liquid water saturation and gas diffusion properties [J] <br/>
-                  2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
-              </li>
-           
 
-            
-              <li>
-               M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, J. Sijbers, Prof. M. Stampanoni [ETH], F. Marone [SLS]<br/>
-               Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data [J] <br />
-               2021 | <em><strong>Scientific Reports </strong></em> [<a href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(104, 9, 228)">[U.Antwerp]</text>
-             </li>
-            
 
-          <li> 
-              C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br/>
-              Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell Performance [J] <br/>
-              2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
-          </li>                 
-     <li>
-                  <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller [PSI]<br/>
-                  Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers. [J] <br />
-                  2020 | <em><strong>J. Electrochem. Soc. </strong></em> [<a href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
-               </li>
-              
-               <li>
-                 <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. N. Büchi, J. Eller [PSI]<br/>
-                 <strong>(Invited)</strong> Exploring sub-second and sub-micron XTM imaging of liquid water in PEFC GDLs.[J] <br />
-                 2019 | <em><strong>ECS Transactions </strong></em> [<a href="https://iopscience.iop.org/article/10.1149/09208.0011ecst" target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text> <text style="color:rgb(14, 97, 250)">[Beca de viaje ECS]</text>
-             </li>
-             
-             <li>
-               Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, A. Kato, F. Marone, <strong>H. Xu*</strong> [PSI], F. N. Büchi. <br/>
-               Improving water management in fuel cells through microporous layer modifications: Fast operando tomographic imaging of liquid water. [J] <br/>
-               2019 | <em><strong>J. Power Sources </strong></em> [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943" target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text> 
-           </li> 
-           
-               <li>
-                   <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller [PSI]<br/>
-                   Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of PEFC. [J] <br />
-                   2017 | <em><strong>ECS Transactions </strong></em><strong></strong></em> [<a href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830" target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(14, 97, 250)">[Precio del cartel ModVal]</text>
-               </li>
-               
-               <li>
-                   Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT], T. Zhang <br/>
-                   A simple spray reaction synthesis and characterization of hierarchically porous SnO2 microspheres for an enhanced dye sensitized solar cell. [J] <br />
-                   2017 | <em><strong>RSC Advances</strong></em> [<a href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract" target="_blank">Link</Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
-               </li>
-               
-               <li>
-                   Prof. H. Zhang [BJTU], <strong>H. Xu*</strong> [BJTU], J. Wan, Prof. L. Yan, C. Dai  <br/>
-                   Preparations of new porous oxides spherical powders by spray reaction technique.[J] <br/>
-                   2012 | <em><strong>Vacuum & Cryogenics</strong></em> [<a href="https://tow.cnki.net/kcms/detail/detail.aspx?filename=ZKDW201203005&dbcode=CRJT_CJFD&dbname=CJFD2012&v=" target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
-               </li> 
-               
-               <li>
-                   X. Qi, <strong>H. Xu*</strong> [BJTU], X. Zhou <br/>
-                   Degradation of highly active cypermethrin via ultrasonic irradiation combined with TiO2 photocatalysis.[J] <br/>
-                   2012 | <em><strong>Chem. Res.</strong></em></em> [<a href="http://hxya.chinajournal.net.cn/WKB/WebPublication/paperDigest.aspx?paperID=10f49d02-6d79-49d1-93cf-d1d7a98f9887" target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
-               </li>            </ol>
-        </div>
-  
-        <hr />
-        <div class="doc-section" id="patents">
-          <h3>Patentes</h3>
-          <ol>
-            <li>
-              <strong>Annular gas-liquid interface jigging magnetic separation device [P]</strong><br/>
-              Inventores: Prof. M. Fu, Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. L. Yan<br/>
-              Patente china n°: CN102441489B, Concedida el 11/10/2013. [<a href="https://patents.google.com/patent/CN102441489B/en" target="_blank">Conceder</a>]
-            </li>
-            <li>
-              <strong>Continuously operating annular gas-liquid interface jigging magnetic separation device [P]</strong><br/>
-              Inventores: Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. M. Fu, Prof. L. Yan<br/>
-              Patente china n°: CN102441490A, Concedida el 11/01/2013. [<a href="https://patents.google.com/patent/CN102441490A/en" target="_blank">Conceder</a>]
-            </li>
-            <li>
-              <strong>Ultrasonic-photocatalytic oxidation coupled fruit and vegetable cleaning device [P]</strong><br/>
-              Inventores: X. Zhou, <strong>H. Xu</strong> (BJTU), Prof. H. Jiang, X. Qi<br/>
-              Patente china n°: CN202311136U, Concedida el 09/05/2012. [<a href="https://patents.google.com/patent/CN202311136U/en" target="_blank">Conceder</a>]
-            </li>
-          </ol>
-        </div>
-
-        <hr />
-         <div class="doc-section" id="Dissertations">
-            <h3>Tesis</h3>
-            <ol> 
-
-              <li>
-                <strong>H. Xu</strong> [ETH], Prof. T. J. Schmidt (examiner), Prof. M. Stampanoni (co-examiner), Dr. J. Eller (advisor)<br/>
-                Subsecond Operando X-ray Tomographic Microscopy of Liquid Water in Polymer Electrolyte Fuel Cells [D] <br/>
-                <em><strong>Tesis de doctorado</strong>. Doctor en Ciencias. ETH ZURICH, Zúrich, Suiza, 2021.</em> [<a href="https://doi.org/10.3929/ethz-b-000487441" target="_blank">PDF</a>]
-            </li>
-              
-                <li>
-                    <strong>H. Xu</strong> [TUM], Prof. P. Müller-Buschbaum (examiner), Prof. W. Schmahl (co-examiner), Dr. E. Metwalli <br/>
-                    Structure & Properties of Thermoresponsive DBC Embedded with Metal Oxide Nanoparticles. [D] <br/>
-                    <em><strong>Tesis de maestría</strong>. Maestro de la ciencia. LMU y TU MUNICH, Múnich, Alemania, 2016.</em> [<a href="https://arxiv.org/abs/2007.10111" target="_blank">PDF</a>]
-                </li>
-
-                <li>
-                    <strong>H. Xu</strong> [BJTU], Prof. H. Zhang (examiner) <br/>
-                    Application of Mesoporous SnO2 Materials in Dye-sensitized Solar Cells and Lithium Batteries. [D] <br/>
-                    <em><strong>Tesis de licenciatura</strong>. Licenciado en Ciencias. Universidad de transporte en Beijing, China, 2013.</em> [<a href="" target="_blank">PDF</a>]
-                </li>
-            </ol>
-        </div>
-
-        <hr />
-         <div class="doc-section" id="Teaching">
-            <h3>Asistente de enseñanza</h3>
-            <ol>
-              <li>
-                <strong>Tecnologías de energía renovable II, almacenamiento y conversión de energía</strong><br/>
-                 ETH Zúrich, Curso de Maestría (529-0191-01L)<br>
-                 2017-2019 | Semestre de primavera [<a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en" target="_blank">Link</a>]
-              </li> 
-            </ol>
-        </div>
-
-        <hr />
-        <div class="doc-section" id="presentations">
-          <h3>Conferencias</h3>
-          <ol>
-            <li>
-              <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br/>
-               Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br />
-              <em>236th Electrochemical Society Meeting (ECS)</em>, Atlanta, USA. 2019. <strong>[Oral]</strong> [<a href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">Link</a>]
+          <li>
+            S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S. Haussener
+            [EPFL]<br />
+            Conductive heat transfer in partially saturated gas diffusion layers with evaporative cooling [J] <br />
+            2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[EPFL]</text>
           </li>
-            <li>
-              <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br/>
-               Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC. <br />
-              <em>8th Int. Conference on Fundamentals & Devel. of Fuel Cells (FDFC)</em>, Nantes, France. 2018. <strong>[Oral]</strong> [<a href="" target="_blank">Link</a>]
-            </li>
-            <li>
-                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br/>
-                Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray Tomographic Microscopy <br />
-                <em>69th Annual Meeting of the Int. Society of Electrochemistry (ISE)</em>, Bologna, Italy. 2018. <strong>[Poster]</strong> [<a href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">Link</a>]
-              </li>
-            <li>
-                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br/>
-                Water Distribution in the Gas Diffusion Layer of PEFCs: X-ray Tomographic Microscopy Studies <br />
-                <em>15th Symposium on Modeling & Exp. Validation (ModVal)</em>, Aarau, Switzerland. 2018. <strong>[Poster Prize]</strong> [<a href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">Link</a>]
-              </li>  
-            <li>
-              <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br/>
-               Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of PEFC. <br />
-              <em>21st European Fuel Cell & Electrolyser Forum (EFCF)</em>, Luzern, Switzerland. 2017. <strong>[Oral]</strong>[<a href="" target="_blank">Link</Link></a>]
-            </li>
-            <li>
-                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br/>
-                Contrast-to-Noise Ratio Evaluation for X-ray Computed Tomographic Imaging of Water in Polymer Electrolyte Fuel Cells <br />
-                <em>14th Symposium on Modeling & Exp. Validation (ModVal)</em>, Karlsruhe, Germany.  2017. <strong>[Poster]</strong>[<a href="https://unknown/files/ModVal2017_Hong_Xu_Final.pdf" target="_blank">Link</Link></a>]
-              </li>
-            <li>
-              <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br/>
-               Nanoparticles Embeded Thermoresponsive Diblock Copolymers for Magnetic Sensor Application. <br />
-              <em>2016 Erasmus MaMaSELF Program Status Meeting</em>, Rigi Kulm, Switzerland. 2016. <strong>[Oral]</strong> [<a href="" target="_blank">Link</a>]
-            </li>
-            <li>
-                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br/>
-                Magnetic properties and structure of thermoresponsive polystyrene-block-poly(N-isopropylacrylamide)/iron oxide nanocomposite thin films. <br />
-                <em>80th Annual Meeting of German Physical Society (DPG)</em>, Regensburg, Germany. 2016. <strong>[Poster]</strong> [<a href="https://unknown/files/Poster_DPG2016_Hong Xu.pdf" target="_blank">Link</a>]
-              </li>
-              <li>
-                  <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu <br/>
-                  Mesoporous SnO2Microspheres: Synthesis, Characterization, and Application in Enhanced Dye-sensitized Solar Cells and Lithium Batteries. <br />
-                  <em>2013 Energy Particles Frontier Seminar at Tsinghua University</em>, Beijing, China. 2013. <strong>[Poster]</strong> [<a href="https://unknown/files/2013_Bachelor_Thesis_Poster.pdf" target="_blank">Link</a>]
-                </li>           
-          </ol>
-        </div>       
-        <hr />        
-<!---
+
+          <li>
+            <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J.
+            Eller [PSI]<br />
+            Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond operando
+            X-ray tomographic microscopy. [J] <br />
+            2021 | <em><strong>J. Power Sources </strong></em> [<a
+              href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
+          </li>
+          <li>
+            M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni [ETH],
+            F. Marone<br />
+            Deep learning based classification of dynamic processes in time-resolved XTM [J] <br />
+            2021 | <em><strong>Scientific Reports </strong></em> [<a
+              href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(191, 9, 228)">[CWI.Ámsterdam]</text>
+          </li>
+          <li>
+            <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+            [PSI]<br />
+            Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando liquid water saturation
+            and gas diffusion properties [J] <br />
+            2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text>
+          </li>
+
+
+
+          <li>
+            M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, J. Sijbers, Prof. M. Stampanoni [ETH], F. Marone
+            [SLS]<br />
+            Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data [J] <br />
+            2021 | <em><strong>Scientific Reports </strong></em> [<a
+              href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(104, 9, 228)">[U.Antwerp]</text>
+          </li>
+
+
+          <li>
+            C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br />
+            Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell Performance [J] <br />
+            2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a
+              href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">Link</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text>
+          </li>
+          <li>
+            <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+            [PSI]<br />
+            Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers. [J] <br />
+            2020 | <em><strong>J. Electrochem. Soc. </strong></em> [<a
+              href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text>
+          </li>
+
+          <li>
+            <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. N. Büchi, J.
+            Eller [PSI]<br />
+            <strong>(Invited)</strong> Exploring sub-second and sub-micron XTM imaging of liquid water in PEFC GDLs.[J]
+            <br />
+            2019 | <em><strong>ECS Transactions </strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/09208.0011ecst" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text> <text
+              style="color:rgb(14, 97, 250)">[Beca de viaje ECS]</text>
+          </li>
+
+          <li>
+            Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, A. Kato, F. Marone, <strong>H. Xu*</strong>
+            [PSI], F. N. Büchi. <br />
+            Improving water management in fuel cells through microporous layer modifications: Fast operando tomographic
+            imaging of liquid water. [J] <br />
+            2019 | <em><strong>J. Power Sources </strong></em> [<a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943" target="_blank">Link</a>]
+            <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
+          </li>
+
+          <li>
+            <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+            [PSI]<br />
+            Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of PEFC. [J] <br />
+            2017 | <em><strong>ECS Transactions </strong></em><strong></strong></em> [<a
+              href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830" target="_blank">Link</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(14, 97, 250)">[Precio del cartel
+              ModVal]</text>
+          </li>
+
+          <li>
+            Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT], T. Zhang <br />
+            A simple spray reaction synthesis and characterization of hierarchically porous SnO2 microspheres for an
+            enhanced dye sensitized solar cell. [J] <br />
+            2017 | <em><strong>RSC Advances</strong></em> [<a
+              href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract" target="_blank">Link
+              </Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+          </li>
+
+          <li>
+            Prof. H. Zhang [BJTU], <strong>H. Xu*</strong> [BJTU], J. Wan, Prof. L. Yan, C. Dai <br />
+            Preparations of new porous oxides spherical powders by spray reaction technique.[J] <br />
+            2012 | <em><strong>Vacuum & Cryogenics</strong></em> [<a
+              href="https://tow.cnki.net/kcms/detail/detail.aspx?filename=ZKDW201203005&dbcode=CRJT_CJFD&dbname=CJFD2012&v="
+              target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+          </li>
+
+          <li>
+            X. Qi, <strong>H. Xu*</strong> [BJTU], X. Zhou <br />
+            Degradation of highly active cypermethrin via ultrasonic irradiation combined with TiO2 photocatalysis.[J]
+            <br />
+            2012 | <em><strong>Chem. Res.</strong></em></em> [<a
+              href="http://hxya.chinajournal.net.cn/WKB/WebPublication/paperDigest.aspx?paperID=10f49d02-6d79-49d1-93cf-d1d7a98f9887"
+              target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+          </li>
+        </ol>
+      </div>
+
+      <hr />
+      <div class="doc-section" id="patents">
+        <h3>Patentes</h3>
+        <ol>
+          <li>
+            <strong>Annular gas-liquid interface jigging magnetic separation device [P]</strong><br />
+            Inventores: Prof. M. Fu, Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. L. Yan<br />
+            Patente china n°: CN102441489B, Concedida el 11/10/2013. [<a
+              href="https://patents.google.com/patent/CN102441489B/en" target="_blank">Conceder</a>]
+          </li>
+          <li>
+            <strong>Continuously operating annular gas-liquid interface jigging magnetic separation device
+              [P]</strong><br />
+            Inventores: Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. M. Fu, Prof. L. Yan<br />
+            Patente china n°: CN102441490A, Concedida el 11/01/2013. [<a
+              href="https://patents.google.com/patent/CN102441490A/en" target="_blank">Conceder</a>]
+          </li>
+          <li>
+            <strong>Ultrasonic-photocatalytic oxidation coupled fruit and vegetable cleaning device [P]</strong><br />
+            Inventores: X. Zhou, <strong>H. Xu</strong> (BJTU), Prof. H. Jiang, X. Qi<br />
+            Patente china n°: CN202311136U, Concedida el 09/05/2012. [<a
+              href="https://patents.google.com/patent/CN202311136U/en" target="_blank">Conceder</a>]
+          </li>
+        </ol>
+      </div>
+
+      <hr />
+      <div class="doc-section" id="Dissertations">
+        <h3>Tesis</h3>
+        <ol>
+
+          <li>
+            <strong>H. Xu</strong> [ETH], Prof. T. J. Schmidt (examiner), Prof. M. Stampanoni (co-examiner), Dr. J.
+            Eller (advisor)<br />
+            Subsecond Operando X-ray Tomographic Microscopy of Liquid Water in Polymer Electrolyte Fuel Cells [D] <br />
+            <em><strong>Tesis de doctorado</strong>. Doctor en Ciencias. ETH ZURICH, Zúrich, Suiza, 2021.</em> [<a
+              href="https://doi.org/10.3929/ethz-b-000487441" target="_blank">PDF</a>]
+          </li>
+
+          <li>
+            <strong>H. Xu</strong> [TUM], Prof. P. Müller-Buschbaum (examiner), Prof. W. Schmahl (co-examiner), Dr. E.
+            Metwalli <br />
+            Structure & Properties of Thermoresponsive DBC Embedded with Metal Oxide Nanoparticles. [D] <br />
+            <em><strong>Tesis de maestría</strong>. Maestro de la ciencia. LMU y TU MUNICH, Múnich, Alemania, 2016.</em>
+            [<a href="https://arxiv.org/abs/2007.10111" target="_blank">PDF</a>]
+          </li>
+
+          <li>
+            <strong>H. Xu</strong> [BJTU], Prof. H. Zhang (examiner) <br />
+            Application of Mesoporous SnO2 Materials in Dye-sensitized Solar Cells and Lithium Batteries. [D] <br />
+            <em><strong>Tesis de licenciatura</strong>. Licenciado en Ciencias. Universidad de transporte en Beijing,
+              China, 2013.</em> [<a href="" target="_blank">PDF</a>]
+          </li>
+        </ol>
+      </div>
+
+      <hr />
+      <div class="doc-section" id="Teaching">
+        <h3>Asistente de enseñanza</h3>
+        <ol>
+          <li>
+            <strong>Tecnologías de energía renovable II, almacenamiento y conversión de energía</strong><br />
+            ETH Zúrich, Curso de Maestría (529-0191-01L)<br>
+            2017-2019 | Semestre de primavera [<a
+              href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+              target="_blank">Link</a>]
+          </li>
+        </ol>
+      </div>
+
+      <hr />
+      <div class="doc-section" id="presentations">
+        <h3>Conferencias</h3>
+        <ol>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br />
+            Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br />
+            <em>236th Electrochemical Society Meeting (ECS)</em>, Atlanta, USA. 2019. <strong>[Oral]</strong> [<a
+              href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br />
+            Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC. <br />
+            <em>8th Int. Conference on Fundamentals & Devel. of Fuel Cells (FDFC)</em>, Nantes, France. 2018.
+            <strong>[Oral]</strong> [<a href="" target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br />
+            Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray Tomographic Microscopy <br />
+            <em>69th Annual Meeting of the Int. Society of Electrochemistry (ISE)</em>, Bologna, Italy. 2018.
+            <strong>[Poster]</strong> [<a href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf"
+              target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller <br />
+            Water Distribution in the Gas Diffusion Layer of PEFCs: X-ray Tomographic Microscopy Studies <br />
+            <em>15th Symposium on Modeling & Exp. Validation (ModVal)</em>, Aarau, Switzerland. 2018. <strong>[Poster
+              Prize]</strong> [<a href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br />
+            Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of PEFC. <br />
+            <em>21st European Fuel Cell & Electrolyser Forum (EFCF)</em>, Luzern, Switzerland. 2017.
+            <strong>[Oral]</strong>[<a href="" target="_blank">Link</Link></a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br />
+            Contrast-to-Noise Ratio Evaluation for X-ray Computed Tomographic Imaging of Water in Polymer Electrolyte
+            Fuel Cells <br />
+            <em>14th Symposium on Modeling & Exp. Validation (ModVal)</em>, Karlsruhe, Germany. 2017.
+            <strong>[Poster]</strong>[<a href="https://unknown/files/ModVal2017_Hong_Xu_Final.pdf" target="_blank">Link
+              </Link></a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br />
+            Nanoparticles Embeded Thermoresponsive Diblock Copolymers for Magnetic Sensor Application. <br />
+            <em>2016 Erasmus MaMaSELF Program Status Meeting</em>, Rigi Kulm, Switzerland. 2016. <strong>[Oral]</strong>
+            [<a href="" target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br />
+            Magnetic properties and structure of thermoresponsive polystyrene-block-poly(N-isopropylacrylamide)/iron
+            oxide nanocomposite thin films. <br />
+            <em>80th Annual Meeting of German Physical Society (DPG)</em>, Regensburg, Germany. 2016.
+            <strong>[Poster]</strong> [<a href="https://unknown/files/Poster_DPG2016_Hong Xu.pdf"
+              target="_blank">Link</a>]
+          </li>
+          <li>
+            <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu <br />
+            Mesoporous SnO2Microspheres: Synthesis, Characterization, and Application in Enhanced Dye-sensitized Solar
+            Cells and Lithium Batteries. <br />
+            <em>2013 Energy Particles Frontier Seminar at Tsinghua University</em>, Beijing, China. 2013.
+            <strong>[Poster]</strong> [<a href="https://unknown/files/2013_Bachelor_Thesis_Poster.pdf"
+              target="_blank">Link</a>]
+          </li>
+        </ol>
+      </div>
+      <hr />
+      <!---
         <div class="doc-section" id="equity-research">
           <h3>Recherche Actions</h3>
           <ol>
@@ -770,88 +899,107 @@
 
         <hr />
 --->
-        <div class="doc-section" id="visiting">
-          <h3>Visitando</h3>
-          <ul class="square">
-            <li><strong>Sincrotrón</strong>: SOLEIL (París, 2015), Sincrotrón electrónico alemán (Hamburgo, 2016), XFEL Europea (Hamburgo, 2016), ELETTRA (Trieste, 2016), Fuente de Luz Suiza (Villigen, 2017) </li>
-            <li><strong>Reactor</strong>: CEA Centro de Investigaciones Nucleares Saclay (París, 2015), Fuente de neutrones de investigación Heinz Maier-Leibnitz (Munich, 2016), Central nuclear de Beznau (Aargau, 2018) </li>
-            <li><strong>Organización</strong>: Oficina de las Naciones Unidas (Nueva York, 2019), Agencia del Agua Sena-Normandía (París, 2016), Oficina de Planificación Urbana de Suzhou (Jiangsu, 2016), Oficina del Medio Ambiente Ecológico de Zhengzhou (Henan, 2014), Oficina de Protección Ambiental de Kaifeng (Henan, 2014)</li>
-            </ul>
-          </div>
+      <div class="doc-section" id="visiting">
+        <h3>Visitando</h3>
+        <ul class="square">
+          <li><strong>Sincrotrón</strong>: SOLEIL (París, 2015), Sincrotrón electrónico alemán (Hamburgo, 2016), XFEL
+            Europea (Hamburgo, 2016), ELETTRA (Trieste, 2016), Fuente de Luz Suiza (Villigen, 2017) </li>
+          <li><strong>Reactor</strong>: CEA Centro de Investigaciones Nucleares Saclay (París, 2015), Fuente de
+            neutrones de investigación Heinz Maier-Leibnitz (Munich, 2016), Central nuclear de Beznau (Aargau, 2018)
+          </li>
+          <li><strong>Organización</strong>: Oficina de las Naciones Unidas (Nueva York, 2019), Agencia del Agua
+            Sena-Normandía (París, 2016), Oficina de Planificación Urbana de Suzhou (Jiangsu, 2016), Oficina del Medio
+            Ambiente Ecológico de Zhengzhou (Henan, 2014), Oficina de Protección Ambiental de Kaifeng (Henan, 2014)</li>
+        </ul>
+      </div>
 
 
-        <hr />
-        <div class="doc-section" id="skills">
-          <h3>Competencias</h3>
-          <ul class="square">
-            <li><strong>Inglés</strong> (fluido, C1), <strong>Chinois</strong> (natif, C2), <strong>Allemand</strong> (en progreso, B1), <strong >Français</strong> (básico, A2)</strong><br/></li>
-            <li><a href="https://xgraphy.github.io" target="_blank">Photographie</a>, écriture, montage vidéo, randonnée, cyclisme, tennis de table, cuisines<br/></li>
-            </ul>
-          </div>
+      <hr />
+      <div class="doc-section" id="skills">
+        <h3>Competencias</h3>
+        <ul class="square">
+          <li><strong>Inglés</strong> (fluido, C1), <strong>Chinois</strong> (natif, C2), <strong>Allemand</strong> (en
+            progreso, B1), <strong>Français</strong> (básico, A2)</strong><br /></li>
+          <li><a href="https://xgraphy.github.io" target="_blank">Photographie</a>, écriture, montage vidéo, randonnée,
+            cyclisme, tennis de table, cuisines<br /></li>
+        </ul>
+      </div>
 
-          <hr />
-          <div class="doc-section" id="travel">
-            <h3>Viaje</h3>
-            <ul class="square">
-              <li><strong>Asia</strong>: China (continental), Taiwán, Rusia, Turquía, Tailandia</li>
-              <li><strong>Europa</strong>: Austria, Bélgica, Bosnia y Herzegovina, Croacia,
-                República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania (más de 25 ciudades), Hungría, Islandia, Irlanda, Italia, Liechtenstein, Luxemburgo, Malta, Países Bajos, Noruega, Portugal, Polonia, Serbia, Eslovenia, España, Suecia, Suiza (más de 30 ciudades), Reino Unido</li>
-              <li><strong>América del Norte</strong>: Estados Unidos, Canadá</li>
-              <li><strong>África</strong>: Gran Canaria (España)</li>
-              <li><strong>En total</strong>: visitó 35 de 197 países/regiones en todo el mundo</li>
-              </ul>
-            </div>
+      <hr />
+      <div class="doc-section" id="travel">
+        <h3>Viaje</h3>
+        <ul class="square">
+          <li><strong>Asia</strong>: China (continental), Taiwán, Rusia, Turquía, Tailandia</li>
+          <li><strong>Europa</strong>: Austria, Bélgica, Bosnia y Herzegovina, Croacia,
+            República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania (más de 25 ciudades), Hungría, Islandia,
+            Irlanda, Italia, Liechtenstein, Luxemburgo, Malta, Países Bajos, Noruega, Portugal, Polonia, Serbia,
+            Eslovenia, España, Suecia, Suiza (más de 30 ciudades), Reino Unido</li>
+          <li><strong>América del Norte</strong>: Estados Unidos, Canadá</li>
+          <li><strong>África</strong>: Gran Canaria (España)</li>
+          <li><strong>En total</strong>: visitó 35 de 197 países/regiones en todo el mundo</li>
+        </ul>
+      </div>
 
-              <hr />
-              <div class="doc-section" id="contact">
-                <h3>Contacto</h3>
-                <ul class="square">
-                  <li><strong>Email</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu [at] tum.de</span></a><br/></li>
-                    <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br/></li>
-                    <li><strong>Google Académico</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br/></li>
+      <hr />
+      <div class="doc-section" id="contact">
+        <h3>Contacto</h3>
+        <ul class="square">
+          <li><strong>Email</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span
+                class='blue'>h.xu [at] tum.de</span></a><br /></li>
+          <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
+              target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
+          <li><strong>Google Académico</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
+              target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
 
-              <br/>
+          <br />
 
-              <a href="https://info.flagcounter.com/D897"><img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" border="0"></a>
-          
-            </ul>
-          </div>
+          <a href="https://info.flagcounter.com/D897"><img
+              src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+              border="0"></a>
+
+        </ul>
+      </div>
 
 
 
-<br>
+      <br>
 
 
     </div><!-- Content -->
-    
+
     <footer class="eleven center-column">
       <!--<img src="images/logoline.png" width="80%" />-->
-        <hr class="large"/><p><strong>Un juego finito</strong> se juega para ganar, mientras que <strong>un juego infinito</strong> se juega para continuar el juego.<br/><small>Copyright © 2016-<script>const currentYear = new Date().getFullYear();document.write(currentYear);</script> | Dra. Hong Xú | Actualizado: 03.2023
-        </pequeño></p>
+      <hr class="large" />
+      <p><strong>Un juego finito</strong> se juega para ganar, mientras que <strong>un juego infinito</strong> se juega
+        para continuar el juego.<br /><small>Copyright © 2016-
+          <script>const currentYear = new Date().getFullYear(); document.write(currentYear);</script> | Dra. Hong Xú |
+          Actualizado: 03.2023
+          </pequeño>
+      </p>
     </footer>
-    
+
   </div><!-- container -->
-<!-- js partial -->
+  <!-- js partial -->
 
 
-<script>
-  function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
     }
-  }
   </script>
-  
+
   <script>
     //Get the button
     var mybutton = document.getElementById("myBtn");
-    
+
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
+    window.onscroll = function () { scrollFunction() };
+
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -859,16 +1007,16 @@
         mybutton.style.display = "none";
       }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    </script>
+  </script>
 
-<!-- End Document
+  <!-- End Document
 ================================================== -->
 </body>
-</html>
 
+</html>
