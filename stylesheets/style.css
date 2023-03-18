@@ -151,6 +151,13 @@ div.doc-section {
   margin: 0.7rem;
 }
 
+.box-wrapper-mobile {
+  position: relative;
+  width: calc(100% / 4 - 2rem);
+  padding-bottom: calc(100% / 4 - 2rem);
+  margin: 1rem;
+}
+
 .box {
   position: absolute;
   top: 0;
