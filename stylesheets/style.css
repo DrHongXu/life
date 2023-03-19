@@ -153,9 +153,9 @@ div.doc-section {
 
 .box-wrapper-mobile {
   position: relative;
-  width: calc(100% / 4 - 2.5rem);
-  padding-bottom: calc(100% / 4 - 2.5rem);
-  margin: 0.9rem;
+  width: calc(100% / 4 - 2.1rem);
+  padding-bottom: calc(100% / 4 - 2.1rem);
+  margin: 1rem;
 }
 
 .box {
