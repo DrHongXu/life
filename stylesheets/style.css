@@ -242,9 +242,10 @@ div.doc-section {
 
 
 .box-mobile:hover {
-  background-image: linear-gradient(to bottom right, #ff616d 0%, #ffc171 100%);
-  color: #fff;
-  border-color: #ff616d;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom right, #ff616e00 0%, #ffc17100 100%);
+  color: rgb(55, 55, 55);
+  border-color: rgb(55, 55, 55);
 }
 
 .box-mobile a {
@@ -277,7 +278,7 @@ div.doc-section {
 
 .box-mobile:hover h2,
 .box-mobile:hover p {
-  color: #fff;
+  color: rgb(55, 55, 55);
   text-shadow: none;
 }
 
