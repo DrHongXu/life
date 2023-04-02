@@ -286,8 +286,7 @@ div.doc-section {
 
 @media (max-width: 768px) {
   footer p {
-    margin-left: -30px;
-    margin-right: 3px;
+    margin-left: -2em;
   }
 }
 
