@@ -282,6 +282,27 @@ div.doc-section {
   text-shadow: none;
 }
 
+footer hr.large {
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  footer hr.large {
+    margin: 0em 0em;
+  }
+
+  footer p {
+    margin: 1em -2em;
+    text-align: center;
+  }
+}
+
 
 
 
