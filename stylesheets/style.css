@@ -283,19 +283,6 @@ div.doc-section {
 }
 
 
-@media (max-width: 768px) {
-  footer hr.large {
-    margin: 0em 0em;
-  }
-
-  footer p {
-    margin: 1em -2em;
-    text-align: center;
-  }
-}
-
-
-
 
 /* Grid */
 #grid .column,
