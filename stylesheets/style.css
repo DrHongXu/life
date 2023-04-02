@@ -387,6 +387,15 @@ ul ul ul li {
 }
 
 
+@media (max-width: 768px) {
+  footer hr.large {
+    display: block;
+    width: 110vw; /* 设置 hr 元素的宽度为屏幕宽度 */
+    margin: 1em -5em;
+  }
+}
+
+
 /* Mobile */
 @media only screen and (max-width: 767px) {
   body {
