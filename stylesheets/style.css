@@ -282,15 +282,6 @@ div.doc-section {
   text-shadow: none;
 }
 
-footer hr.large {
-  width: 100%;
-  text-align: center;
-}
-
-footer p {
-  text-align: center;
-}
-
 
 @media (max-width: 768px) {
   footer hr.large {

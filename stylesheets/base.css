@@ -53,12 +53,6 @@
   }
 
 
-  html,
-  body {
-    height: 100%;
-    overflow-y: auto;
-  }
-
 /* #Basic Styles
 ================================================== */
   body {
