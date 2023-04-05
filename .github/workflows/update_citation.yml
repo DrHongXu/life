@@ -1,0 +1,33 @@
+name: Update Citation Count
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_citation_count:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4 requests
+
+    - name: Update citation count
+      run: python update_citation.py
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Update citation count" || true
+        git push
