@@ -733,7 +733,7 @@
 
 
       <div class="doc-section" id="publications">
-        <h3>学术论文 <small><small>(引用数: 194)</small></small></h3>
+        <h3>学术论文 <small><small>(引用数: <span id="citation-number-container">Loading...</span>)</small></small></h3>
         <ol>
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br />
@@ -1292,7 +1292,7 @@
     </div><!-- container -->
     <!-- js partial -->
     <script src="./js/navi7.js"></script>
-
+    <script src="./js/fetch_citation_number.js"></script>
     <script>
       const orangeDots = document.querySelectorAll('.orange-dot');
       const tooltips = document.querySelectorAll('.tooltip');
