@@ -53,7 +53,23 @@
   -->
 
 
-
+  <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+        overflow: hidden;
+    }
+    
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
 
   <!-- block save as
       ================================================== -->
@@ -448,7 +464,7 @@
           <span class="display-mobile">欢迎来自<span id="location2"></span>的朋友 :-）</br></br></span>
           目前，徐泓博士在德国慕尼黑汽车行业担任专家组<strong>研发工程师</strong>一职，致力于实现<strong>能源与交通</strong>领域<strong>碳中和</strong>。他的交叉领域研究兴趣集中在<strong>新能源技术</strong>、<strong>低碳智慧交通</strong>、<strong>能源经济学</strong>、<strong>ESG
             &
-            可持续发展</strong>等。攻读学位期间与海外企业及中欧学术机构合作发表一作和共同作者<strong>论文10余篇</strong>，并获得<strong>3项专利授权</strong>。同时他还担任多项能源和交通领域高引期刊的<strong>审稿人</strong>,
+            可持续发展</strong>等。曾在<strong>联合国波恩气候变化大会</strong>圆满主持“中国能源转型与技术创新”主题的会议。攻读学位期间与海外企业及中欧学术机构合作发表一作和共同作者<strong>论文10余篇</strong>，并获得<strong>3项专利授权</strong>。同时他还担任多项能源和交通领域高引期刊的<strong>审稿人</strong>, 
           以及圣加仑国际经济论坛 (瑞士智库)
           的<strong>学术评审</strong>。曾获得美国电化学学会<strong>论文邀请</strong>及<strong>旅行奖</strong>、欧盟<strong>伊拉斯谟奖学金</strong>和本科生<strong>创新奖学金</strong>。</br></br>
 
@@ -464,7 +480,7 @@
           学位，并曾在头部证券研究所 (A股&美股) 撰写个股深度/行业研究报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实习。
         </p>
         <p style="text-align:left;">
-          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT?
+          PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> ?
           </span>
         </p>
         <!---
@@ -569,6 +585,20 @@
       </div>
       <hr class="hidden-mobile">
 
+      <div class="video-container hidden-mobile">
+        <video controls>
+            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/UN_Bonn_Climate_Change_Moderator_Xu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
+        <video controls>
+            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/UN_Bonn_Climate_Change_Moderator_Xu.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
 
       <div class="doc-section display-mobile" id="Carbon-Neutral" style="width:113%">
         <h3 class="display-mobile" style="display:inline-block">"碳中和"战略</h3>
@@ -624,6 +654,9 @@
         </span>
       </div>
       <hr class="display-mobile" style="width:113%">
+
+
+
 
 
       <div class="doc-section" id="education">
@@ -686,6 +719,7 @@
 
             <hr>
           <li><strong>国际组织/智库: </strong><br />
+            - <strong>联合国波恩气候变化大会</strong> 青年代表 (UN Bonn Climate Change Conference, 2023)<br />
             - <strong>瑞士圣加仑国际经济论坛</strong> 学术评审 (St. Gallen Symposium, 2023)
             <hr>
           <li><strong>学术协会: </strong><br />
