@@ -50,7 +50,23 @@
   </script>
   -->
 
-
+  <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+        overflow: hidden;
+    }
+    
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
 
   <script type="module">
     async function fetchCountries() {
@@ -391,14 +407,14 @@
 
       <p align="justify">
 
-        <span class="display-mobile">Hello to friends from <span id="location2"></span> :-)</br></br></span>
-        Currently, Dr. Hong Xu holds the position of <strong>R&D Engineer</strong> at a prominent automotive company in
-        Munich, Germany, where he focuses on corporate research in <strong>Green e-Power Systems</strong>. Meanwhile, he
-        is serving also as a <strong>Reviewer</strong> for 7 highly regarded journals in the Energy and Transport
-        fields, and as <strong>Academic Jury</strong> for the St. Gallen Symposium, a Swiss Think-tank. His
-        interdisciplinary interests span a wide range of areas, including <strong>Renewable Energy</strong>,
-        <strong>Functional Materials</strong>, Computational Imaging, Low-carbon Transport, Energy Economics, ESG &
-        Sustainability.
+        <span class="display-mobile">Greetings, friends from <span id="location2"></span>! </br></br></span>
+        <!---At present, Dr. Hong Xu is working as an <strong>R&D Engineer</strong> within the automotive industry in Munich, where he conducts specialized corporate research on <strong>Green e-Power Systems</strong>. Concurrently, he is a <strong>Visiting Research Fellow</strong> at the <strong><a href="https://www.oxfordenergy.org/" target="_blank">Oxford Institute of Energy Studies</a></strong> in the UK, researching Energy Economics and Policies in the EU and China. --->
+        At present, Dr. Hong Xu is working as an <strong>R&D Engineer</strong> within the automotive industry in Munich, where he specializes in corporate research on <strong>Green e-Power Systems</strong>. Concurrently, he is serving also as a Reviewer for seven highly regarded journals in the Energy and Transport fields.
+
+
+        Notably, Dr. Xu chaired a session entitled "Chinese Energy Transition and Technology Innovation" at the <strong>United Nations</strong> Bonn Climate Change Conference, and contributed his expertise as an <strong>Academic Jury</strong> member at the St. Gallen Symposium, a historical Swiss Think-tank. 
+        
+        As an interdisciplinary scholar, Dr. Xu's research interests extend across multiple sectors, including <strong>Clean Energy</strong>, Functional Materials, Energy Economics and Policies, Low-carbon Transport, and Digital Sustainability.
       </p>
 
       <p align="justify">
@@ -419,7 +435,7 @@
         Company in China.
       </p>
       <p style="text-align:left;">
-        PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT?
+        PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> OXF (Hello)-> ?
         </span>
       </p>
 
@@ -526,7 +542,23 @@
         </span>
       </div>
 
+      <hr class="hidden-mobile">
 
+      <div class="video-container hidden-mobile">
+        <video controls>
+            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/UN_Bonn_Climate_Change_Moderator_Xu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
+        <video controls>
+            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/UN_Bonn_Climate_Change_Moderator_Xu.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
 
       <div class="doc-section display-mobile" id="Carbon-Neutral" style="width:120%">
@@ -580,8 +612,10 @@
               <p>Social</br>Engaging</p>
             </div>
           </div>
+      
         </span>
       </div>
+
 
       <hr class="display-mobile" style="width:113%">
 
@@ -647,7 +681,11 @@
             - <strong>Green Energy and Intelligent Transportation</strong> (New Journal, 2022) <br />
             <hr>
           <li><strong>Int. Organization/Thinktank</strong>: <br />
-            - Member of Academic Jury, <strong>St. Gallen Symposium</strong> (Economics and Management, 2023, CH)
+            <!---- Visiting Research Fellow, <strong>Oxford Institute of Energy Studies</strong> (Energy Economics and Policy, 2023, UK)
+            <br />--->
+            - Youth Delegate, <strong>United Nations Bonn Climate Change Conference</strong> (Climate and Energy, 2023, DE)
+            <br />
+            - Member of Academic Jury, <strong>St. Gallen Symposium</strong> (Swiss Think-tank, Economics and Policy, 2023, CH)
             <br />
           <li><strong>Academic Society</strong>: <br />
             - Invited Paper/Grant Receiver, <strong>The Electrochemical Society</strong> (2019, USA) <br />
@@ -655,7 +693,7 @@
             - Member, <strong>Germany Physics Society</strong> (2016, DE)
             <hr>
           <li><strong>Research Assistant: </strong><br />
-            - <strong>Hydrogen & Fuel Cells</strong> (Ministry of Energy and Environment, Swiss Federal Institute |
+            - <strong>Hydrogen & Fuel Cells</strong> (Energy and Environment Division, Paul Scherrer Institute |
             2016-2021)<br />
             - <strong>Semiconductors & Sensors</strong> (Department of Physics, Technical University of Munich |
             2015-2016)<br />
@@ -683,7 +721,7 @@
 
           <li><strong>Student Tutoring: </strong><br />
             - <strong>TUM Alumni Mentoring Program, Mentor</strong> (TUM Alumni Mentoring Program | 2021-present)<br />
-            - <strong>Paul Scherrer Institute, Internship Tutor</strong> (Cristina Cretu, TU Delft Master, PolyU
+            - <strong>Paul Scherrer Institute, Internship Tutor</strong> (Cristina Crețu, TU Delft Master, PolyU
             Bucharest Undergraduate | 2018-2019)<br />
             <!---
         - Member of <strong>International Association of Energy Economics</strong> (IAEE, 2023)
@@ -918,6 +956,11 @@
       <div class="doc-section" id="presentations">
         <h3>Conferences</h3>
         <ol>
+          <li>
+            <strong>H. Xu</strong>, Chinese Energy Transition and Technology Innovation <br />
+            <em>United Nations Climate Change Conference</em>, Bonn, Germany. 2023. <strong>[Moderator/Speaker]</strong> [<a
+              href="https://unfccc.int/sb58" target="_blank">Link</a>]
+          </li>
            <li>
             <strong>H. Xu</strong>, Global Tech Conference: Where Business Innovation Makes a Difference<br />
             <em>ICT Spring Meeting 2023</em>, Luxembourg City. 2023. <strong>[Participant]</strong> [<a
