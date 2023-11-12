@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="stylesheets/navi7.css">
   <link rel="stylesheet" href="stylesheets/footer.css">
   <link rel="stylesheet" href="stylesheets/type.css">
+  <link rel="stylesheet" href="stylesheets/slider.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -516,7 +517,7 @@
       <hr class="hidden-mobile">
 
       <div class="doc-section hidden-mobile" id="Carbon-Neutral">
-        <h3 class="hidden-mobile" style="display:inline-block">碳中和战略</h3>
+        <h3 class="hidden-mobile" style="display:inline-block">可持续发展目标 2030</h3>
         <div style="float: right">
           <h3>
             <!-- weather widget start --><a class="hidden-mobile" id="weather" target="_blank"
@@ -577,28 +578,15 @@
           </div>
         </span>
       </div>
-      <hr class="hidden-mobile">
-      <h3 class="hidden-mobile" style="display:inline-block">联合国公开演讲</h3>
-      <div class="video-container hidden-mobile">
-        <video controls>
-            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
-        <video controls>
-            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
-        </video>
-      </div>
 
 
-      <hr class="display-mobile" style="width:113%">
-      <hr class="hidden-mobile">
+      <!---<hr class="display-mobile" style="width:113%">--->
+       <!---<hr class="hidden-mobile">--->
 
       <div class="doc-section display-mobile" id="Carbon-Neutral" style="width:113%">
-        <h3 class="display-mobile" style="display:inline-block">"碳中和"战略</h3>
+        <h3 class="display-mobile" style="display:inline-block">可持续发展目标 2030</h3>
+        
+        <!---
         <span class="chemicals display-mobile">
           <div class="box-wrapper-mobile display-mobile">
             <div class="box-mobile display-mobile">
@@ -648,13 +636,75 @@
               <p>Society</br>社会参与</p>
             </div>
           </div>
-        </span>
+        </span>-->
       </div>
-      <hr class="display-mobile" style="width:113%">
+
+     <div class="doc-section" id="sdgs">
+        <div class="slideshow-container" >
+
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+           
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg7_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg8_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg9_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg11_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg13_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/slider_sdg14_cn.png" style="width:100%">
+            <div class="text"></div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          </div>
+          
+          
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+          </div>
+        </div>
 
 
-
-
+        <hr class="display-mobile" style="width:113%">
+        <hr class="hidden-mobile">
 
       <div class="doc-section" id="education">
 
@@ -1148,6 +1198,23 @@
         </ol>
       </div>
 
+      <hr class="hidden-mobile">
+      <h3 class="hidden-mobile" style="display:inline-block">联合国公开演讲</h3>
+      <div class="video-container hidden-mobile">
+        <video controls>
+            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
+        <video controls>
+            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
 
@@ -1294,9 +1361,9 @@
       <div class="doc-section" id="visiting">
         <h3>参访</h3>
         <ul class="square">
-          <li><strong>政府/国际机构</strong>：联合国欧洲总部 (日内瓦, 2023)、联合国波恩分部 (波恩, 2023)、联合国总部 (纽约, 2019)、法国塞纳河-诺曼底水务局 (巴黎, 2016)、苏州市城市规划局 (江苏, 2016)、郑州市生态环境局 (河南,
+          <li><strong>政府/国际机构</strong>：联合国欧洲总部 (日内瓦, 2023)、联合国维也纳分部 (维也纳, 2023)、联合国波恩分部 (波恩, 2023)、联合国总部 (纽约, 2019)、法国塞纳河-诺曼底水务局 (巴黎, 2016)、苏州市城市规划局 (江苏, 2016)、郑州市生态环境局 (河南,
             2014)、开封市环境保护局 (河南, 2014)</li>
-          <li><strong>同步辐射加速器</strong>：瑞士光源 (菲利根, 2017)、意大利Elettra同步加速器 (的里雅斯特, 2016)、欧盟自由电子激光器 (汉堡, 2016)、德国电子加速器 (汉堡, 2016)、法国SOLEIL同步辐射加速器 (巴黎, 2015)</li>
+          <li><strong>同步辐射加速器</strong>：欧洲核子研究中心/CERN (日内瓦, 2023)、瑞士光源/SLS (菲利根, 2017)、意大利同步加速器/Elettra (的里雅斯特, 2016)、欧盟自由电子激光器/EUXFEL (汉堡, 2016)、德国电子加速器/DESY (汉堡, 2016)、法国同步辐射加速器/SOLEIL (巴黎, 2015)</li>
           <li><strong>核能反应堆</strong>：瑞士贝茨瑙核电站 (阿尔高州, 2018)、法国萨克雷核研究中心 (巴黎, 2015)海因茨·莱布尼茨中子源研究院 (慕尼黑, 2016)</li>
         </ul>
       </div>
@@ -1331,11 +1398,15 @@
           <li><strong>非洲</strong>：大加那利群岛 (西属)</li>
           <li><strong>合计</strong>：到访35个国家/地区 (全球共197个)</li>
         </ul>
+
+        <hr class="display-mobile" style="width:113%">
+        <hr class="hidden-mobile">
+
+
       </div>
 
-      <hr class="display-mobile" style="width:113%">
-      <hr class="hidden-mobile">
 
+      
       <h3 class="hidden-mobile" style="display:inline-block">博士毕业典礼</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls>
@@ -1449,6 +1520,49 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Auto transition the slides every 1.5 seconds
+  let slideInterval = setInterval(() => {
+    plusSlides(1);
+  }, 3500);
+  
+  function plusSlides(n) {
+    clearInterval(slideInterval);
+    showSlides(slideIndex += n);
+    slideInterval = setInterval(() => {
+      plusSlides(1);
+    }, 3500);
+  }
+  
+  function currentSlide(n) {
+    clearInterval(slideInterval);
+    showSlides(slideIndex = n);
+    slideInterval = setInterval(() => {
+      plusSlides(1);
+    }, 3500);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+  </script>
 
     <!-- End Document
 ================================================== -->
