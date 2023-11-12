@@ -385,3 +385,17 @@ img.with_border{
 #myBtn:hover {
   background-color: rgb(14, 18, 93);
 }
+
+
+
+/* 默认情况下，设置为100%宽度 */
+.doc-section {
+  width: 100%;
+}
+
+/* 在手机端（假设最大宽度为某个像素值，比如 768px），设置宽度为113% */
+@media only screen and (max-width: 768px) {
+  .doc-section {
+    width: 113%;
+  }
+}
