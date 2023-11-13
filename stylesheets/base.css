@@ -399,3 +399,14 @@ img.with_border{
     width: 113%;
   }
 }
+
+.education-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-edu {
+  width: 50%;
+  padding: 0 0px;
+  box-sizing: border-box;
+}
