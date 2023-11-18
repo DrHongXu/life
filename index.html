@@ -1414,13 +1414,9 @@
     }
   </script>
 
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
       var userLang = navigator.language || navigator.userLanguage; 
-      var languageSelect = document.getElementById('languages');
-
-      // Map the browser language to the value used in the select options
       var languageMap = {
           'en': 'index.html',
           'de': 'de.html',
@@ -1433,15 +1429,15 @@
           'ko': 'kr.html'
       };
 
-      // Shorten the userLang to the first two characters to match the keys in the map
       var shortLang = userLang.substring(0, 2);
 
-      // Set the select value if the language is in the map
+      // Check if the language is supported and redirect
       if (languageMap[shortLang]) {
-          languageSelect.value = languageMap[shortLang];
+          window.location.href = languageMap[shortLang];
       }
   });
 </script>
+
 
 
   <!-- End Document
