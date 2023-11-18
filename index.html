@@ -1431,10 +1431,21 @@
 
       var shortLang = userLang.substring(0, 2);
 
-      // Check if the language is supported and redirect
-      if (languageMap[shortLang]) {
+      // Check if the user has a preferred language saved
+      var savedLang = localStorage.getItem('preferredLang');
+
+      // Redirect only if there is no saved preference
+      if (!savedLang && languageMap[shortLang]) {
           window.location.href = languageMap[shortLang];
       }
+
+      // Update the preferred language when the user selects a new one
+      var languageSelect = document.getElementById('languages');
+      languageSelect.addEventListener('change', function() {
+          var selectedLang = this.options[this.selectedIndex].value;
+          localStorage.setItem('preferredLang', selectedLang);
+          window.location.href = selectedLang;
+      });
   });
 </script>
 
