@@ -1416,7 +1416,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var userLang = navigator.language || navigator.userLanguage; 
       var languageMap = {
           'en': 'index.html',
           'de': 'de.html',
@@ -1429,13 +1428,21 @@
           'ko': 'kr.html'
       };
 
-      var shortLang = userLang.substring(0, 2);
+      // Function to get the language code from the URL
+      function getLangFromURL() {
+          var currentURL = window.location.href;
+          var urlParts = currentURL.split('/');
+          var page = urlParts[urlParts.length - 1];
+          return Object.keys(languageMap).find(key => languageMap[key] === page);
+      }
 
       // Check if the user has a preferred language saved
       var savedLang = localStorage.getItem('preferredLang');
+      var userLang = navigator.language || navigator.userLanguage; 
+      var shortLang = userLang.substring(0, 2);
 
-      // Redirect only if there is no saved preference
-      if (!savedLang && languageMap[shortLang]) {
+      // If there's no saved language, and the browser language is different from the current page, redirect
+      if (!savedLang && getLangFromURL() !== shortLang && languageMap[shortLang]) {
           window.location.href = languageMap[shortLang];
       }
 
@@ -1448,6 +1455,7 @@
       });
   });
 </script>
+
 
 
 
