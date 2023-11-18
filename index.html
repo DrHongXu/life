@@ -946,6 +946,26 @@
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
+
+      <h3 class="hidden-mobile" style="display:inline-block">Doctoral Awards Ceremony</h3>
+      <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
+        <video controls poster="images/graduation_preview.png">
+            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
+        <video controls poster="images/graduation_preview.png">
+            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
       <div class="doc-section" id="presentations">
         <h3>Conferences</h3>
         <ol>
@@ -1286,6 +1306,7 @@
           <li><strong>In total</strong>: Visited 35 out of 197 Countries/Regions Worldwide</li>
         </ul>
         
+        <img src="images/travel.png" width="100%" alt="">
         <!--<div style="max-width:540px; text-align: center;margin:0px auto 0px auto;font-size:10px;"><div style="position:relative;padding: 0 0 67% 0;height:0;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="//www.fla-shop.com/visited-countries/embed/?st=AT%2CBA%2CBE%2CCA%2CCH%2CCN%2CCY%2CCZ%2CDE%2CDK%2CEE%2CES%2CFI%2CFR%2CGB%2CGI%2CGR%2CHK%2CHR%2CHU%2CIE%2CIS%2CIT%2CLI%2CLU%2CMC%2CMO%2CMT%2CNL%2CNO%2CPL%2CPT%2CRS%2CRU%2CSE%2CSI%2CSK%2CSM%2CTH%2CTW%2CUS%2CVA&vc=f9761f&uc=b3c3ca&hc=0977ec&bc=ffffff&ss=on" frameborder="0" scrolling="no"></iframe></div><a href="https://www.fla-shop.com/visited-countries/"></a></div>--->
 
        
@@ -1293,23 +1314,6 @@
 
 
 
-      <hr class="display-mobile" style="width:113%">
-      <hr class="hidden-mobile">
-
-      <h3 class="hidden-mobile" style="display:inline-block">Doctoral Awards Ceremony</h3>
-      <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
-        <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
-        <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
-        </video>
-      </div>
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
@@ -1409,6 +1413,35 @@
       document.documentElement.scrollTop = 0;
     }
   </script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var userLang = navigator.language || navigator.userLanguage; 
+      var languageSelect = document.getElementById('languages');
+
+      // Map the browser language to the value used in the select options
+      var languageMap = {
+          'en': 'index.html',
+          'de': 'de.html',
+          'fr': 'fr.html',
+          'es': 'es.html',
+          'it': 'it.html',
+          'ru': 'ru.html',
+          'zh': 'cn.html',
+          'ja': 'jp.html',
+          'ko': 'kr.html'
+      };
+
+      // Shorten the userLang to the first two characters to match the keys in the map
+      var shortLang = userLang.substring(0, 2);
+
+      // Set the select value if the language is in the map
+      if (languageMap[shortLang]) {
+          languageSelect.value = languageMap[shortLang];
+      }
+  });
+</script>
 
 
   <!-- End Document
