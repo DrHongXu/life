@@ -437,7 +437,7 @@
     "spanish": "Chad",
     "japanese": "チャド",
     "russian": "Чад",
-    "germen": "Tschad"
+    "germen": "dem Tschad"
 },
 {
     "abbr": "CL",
@@ -506,7 +506,7 @@
     "spanish": "Congo",
     "japanese": "コンゴ共和国",
     "russian": "Конго - Браззавиль",
-    "germen": "Kongo"
+    "germen": "dem Kongo"
 },
 {
     "abbr": "CD",
@@ -519,7 +519,7 @@
     "spanish": "Congo (Rep. Dem.)",
     "japanese": "コンゴ民主共和国",
     "russian": "Конго - Киншаса",
-    "germen": "Kongo (Dem. Rep.)"
+    "germen": "dem Kongo (Dem. Rep.)"
 },
 {
     "abbr": "CR",
@@ -1003,7 +1003,7 @@
     "spanish": "Iran",
     "japanese": "イラン・イスラム共和国",
     "russian": "Иран",
-    "germen": "Iran"
+    "germen": "dem Iran"
 },
 {
     "abbr": "IQ",
@@ -1017,7 +1017,7 @@
     "spanish": "Irak",
     "japanese": "イラク",
     "russian": "Ирак",
-    "germen": "Irak"
+    "germen": "dem Irak"
 },
 {
     "abbr": "IE",
@@ -1238,7 +1238,7 @@
     "spanish": "Líbano",
     "japanese": "レバノン",
     "russian": "Ливан",
-    "germen": "Libanon"
+    "germen": "dem Libanon"
 },
 {
     "abbr": "LS",
@@ -1500,7 +1500,7 @@
     "spanish": "Mongolia",
     "japanese": "モンゴル",
     "russian": "Монголия",
-    "germen": "Mongolei"
+    "germen": "der Mongolei"
 },
 {
     "abbr": "ME",
@@ -1638,7 +1638,7 @@
     "spanish": "Níger",
     "japanese": "ニジェール",
     "russian": "Нигер",
-    "germen": "Niger"
+    "germen": "dem Niger"
 },
 {
     "abbr": "NG",
@@ -1970,7 +1970,7 @@
     "spanish": "República Eslovaca",
     "japanese": "スロバキア",
     "russian": "Словакия",
-    "germen": "Slowakei"
+    "germen": "der Slowakei"
 },
 {
     "abbr": "SI",
@@ -2052,7 +2052,7 @@
     "spanish": "Sudán",
     "japanese": "スーダン",
     "russian": "Судан",
-    "germen": "Sudan"
+    "germen": "dem Sudan"
 },
 {
     "abbr": "SR",
@@ -2106,7 +2106,7 @@
     "spanish": "Suiza",
     "japanese": "スイス",
     "russian": "Швейцария",
-    "germen": "Schweiz"
+    "germen": "der Schweiz"
 },
 {
     "abbr": "SY",
@@ -2243,7 +2243,7 @@
     "spanish": "Turquía",
     "japanese": "トルコ",
     "russian": "Турция",
-    "germen": "Türkei"
+    "germen": "der Türkei"
 },
 {
     "abbr": "TM",
@@ -2298,7 +2298,7 @@
     "spanish": "Ucrania",
     "japanese": "ウクライナ",
     "russian": "Украина",
-    "germen": "Ukraine"
+    "germen": "der Ukraine"
 },
 {
     "abbr": "AE",
@@ -2424,7 +2424,7 @@
     "spanish": "Yemen",
     "japanese": "イエメン",
     "russian": "Йемен",
-    "germen": "Jemen"
+    "germen": "dem Jemen"
 },
 {
     "abbr": "YU",
@@ -2447,12 +2447,12 @@
     "english": "Zaire",
     "spell": "zhayier",
     "state": "非洲",
-    "french": "Congo (Rép. dém.)",
-    "italian": "Congo (Rep. Dem.)",
-    "spanish": "Congo (Rep. Dem.)",
-    "japanese": "コンゴ民主共和国",
+    "french": "Zaïre",
+    "italian": "Zaire",
+    "spanish": "Zaire",
+    "japanese": "ザイール共和国",
     "russian": "Заир",
-    "germen": "Kongo (Dem. Rep.)"
+    "germen": "Zaire"
 },
 {
     "abbr": "ZM",
