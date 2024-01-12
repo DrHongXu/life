@@ -72,49 +72,36 @@
     }
     </style>
 
+
+
   <!-- block save as
       ================================================== -->
-  <script type="text/javascript">
-    window.onload = function () {
-      document.onkeydown = function () {
-        var e = window.event || arguments[0];
-        //屏蔽F12
-        if (e.keyCode == 123) {
-
-          return false;
-          //屏蔽Ctrl+Shift+I
-        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-
-          return false;
-          //屏蔽Shift+F10
-        } else if ((e.shiftKey) && (e.keyCode == 121)) {
-
-          return false;
+      <script type="text/javascript">
+        window.onload = function () {
+          document.onkeydown = function () {
+            var e = window.event || arguments[0];
+            //屏蔽F12
+            if (e.keyCode == 123) {
+    
+              return false;
+              //屏蔽Ctrl+Shift+I
+            } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+    
+              return false;
+              //屏蔽Shift+F10
+            } else if ((e.shiftKey) && (e.keyCode == 121)) {
+    
+              return false;
+            }
+          };
+          //屏蔽右键单击
+          document.oncontextmenu = function () {
+    
+            return false;
+          }
         }
-      };
-      //屏蔽右键单击
-      document.oncontextmenu = function () {
+      </script>
 
-        return false;
-      }
-    }
-
-    /*
-    // 阻止用户复制和粘贴
-    document.addEventListener('copy', function (e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener('cut', function (e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener('paste', function (e) {
-      e.preventDefault();
-    });
-    */
-
-  </script>
 
   <nav class="display-mobile">
 
@@ -278,6 +265,7 @@
             <p>____</p>
             <!--<li><a href="index.html" target="_self">EN</a> | <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' class="d-inline-block p-3">简</a> /  <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a> </br><a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a> </li> -->
             <p></p>
+            <span id="greetings" style="display: none; color: rgb(92, 91, 90); font-weight: bold;"></span>
             <img src="images/logo.png" width="45" />
 
           </ul>
@@ -1765,29 +1753,85 @@
   window.onload = loadAppropriateScript;
 </script>
 
+
 <script>
-// Function to fetch and parse the profile page
-async function getCitationNumbers() {
-    try {
-        const response = await fetch(scholarProfileURL);
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        
-        // Select the second element with the class 'gsc_rsb_std' that is a direct child of a <tr> element
-        const citationElement = doc.querySelector('tr > td.gsc_rsb_std:nth-of-type(2)');
-        const citationNumbers = citationElement.innerText;
+  let holidays = [
+  // Fixed-date holidays
+  { date: '01-01', greeting: '元旦快乐, 万事顺意！<br>', range: 5 },
+  { date: '01-06', greeting: '博士毕业周年纪念！<br>', range: 1 },
+  { date: '04-05', greeting: '今天是我的生日！<br>', range: 1 },
+  { date: '05-01', greeting: '五一劳动节快乐！<br>', range: 1 },
+  { date: '10-31', greeting: '万圣节快乐！<br>', range: 2 },
+  { date: '12-25', greeting: '圣诞节快乐！<br>', range: 5 },
+  // Lunar calendar holidays for specific years
+  { date: '2024-02-10', greeting: '新年快乐, 龙行天下！<br>', range: 7, lunar: true },
+  { date: '2025-01-29', greeting: '新年快乐, 银蛇劲舞！<br>', range: 7, lunar: true },
+  { date: '2026-02-17', greeting: '新年快乐, 马到成功！<br>', range: 7, lunar: true },
+  { date: '2027-02-06', greeting: '新年快乐, 三羊开泰！<br>', range: 7, lunar: true },
+  { date: '2028-01-26', greeting: '新年快乐, 金猴送福！<br>', range: 7, lunar: true },
+  { date: '2029-02-13', greeting: '新年快乐, 雄鸡晓唱！<br>', range: 7, lunar: true },
+  { date: '2030-02-03', greeting: '新年快乐, 狗年旺旺！！<br>', range: 7, lunar: true },
 
-        // Display the citation numbers on your webpage
-        document.getElementById('citationDisplay').innerText = citationNumbers;
-    } catch (error) {
-        console.error('Error fetching or parsing Google Scholar profile:', error);
-    }
-}
+  { date: '2024-02-24', greeting: '元宵节快乐！<br>', range: 1, lunar: true },
 
-getCitationNumbers();
+  { date: '2024-03-29', greeting: '复活节快乐！<br>', range: 4, lunar: true },
+  { date: '2025-04-18', greeting: '复活节快乐！<br>', range: 4, lunar: true },
+  { date: '2026-04-03', greeting: '复活节快乐！<br>', range: 4, lunar: true },
 
+  { date: '2024-06-10', greeting: '端午节快乐！<br>', range: 3, lunar: true },
+
+  { date: '2024-09-15', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+  { date: '2025-10-06', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+  { date: '2026-09-25', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+
+  { date: '2024-10-01', greeting: '国庆快乐！<br>', range: 1, lunar: true },
+
+  { date: '2024-08-27', greeting: '留欧十年纪念日！<br>', range: 1, lunar: true },
+
+      ];
+
+  function isHolidayNear(today, holiday) {
+      const todayDate = new Date(today);
+      let holidayDate = new Date(holiday.date);
+
+      if (!holiday.lunar) {
+          holidayDate.setFullYear(todayDate.getFullYear());
+      }
+
+      const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
+      const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
+
+      return todayDate >= startRange && todayDate <= endRange;
+  }
+
+  function checkHoliday() {
+      const today = new Date().toISOString().slice(0, 10);
+      let greetingElement = document.getElementById("greetings");
+      greetingElement.style.display = 'none'; // Initially hide the greeting
+
+      // Check lunar holidays first
+      for (let holiday of holidays) {
+          if (holiday.lunar && isHolidayNear(today, holiday)) {
+              greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+              greetingElement.style.display = 'block'; // Show the greeting
+              return;
+          }
+      }
+
+      // Check fixed-date holidays
+      for (let holiday of holidays) {
+          if (!holiday.lunar && isHolidayNear(today, holiday)) {
+              greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+              greetingElement.style.display = 'block'; // Show the greeting
+              return;
+          }
+      }
+  }
+
+  window.onload = checkHoliday;
 </script>
+
+
 
 
     <!-- End Document

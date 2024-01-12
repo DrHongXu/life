@@ -222,7 +222,8 @@
             <span style="display: block; height: 6px;"></span>
             <li><a href="#"> <span class='blue'>Researcher</span> :: <span class='blue'>Engineer</span> :: <span
                   class='blue'>Analyst</span></a></li>
-            <p>____</p>
+
+           <p>____</p>
             <!--<li><a href="#whoami">Researcher</a></li>
         <li><a href="#whoami">Engineer</a></li>
         <li><a href="#whoami">Analyst</a></li>-->
@@ -254,6 +255,8 @@
             <!--<li><a href="index.html" target="_self">EN</a> | <a href="cn.html" target="_self">中文</br> 
           <a href="de.html" target="_self">DE</a> | <a href="fr.html" target="_self">FR</a></li>-->
             <p></p>
+            <span id="greetings" style="display: none; color: rgb(92, 91, 90); font-weight: bold;"></span>
+
             <img src="images/logo.png" width="45" />
 
           </ul>
@@ -414,6 +417,7 @@
       </p>
 
       <p align="justify">
+
         <span class="display-mobile">Greetings, friends from <span id="location2"></span>! </br></br></span>
         Dr. Hong Xu is a passionate Green Tech <strong>Researcher</strong>, e-Power System <strong>Engineer</strong>, and <strong>Analyst</strong> specializing in Energy Economics and Policy. He chaired a parallel session at the <strong><a href="" target="_blank">United Nations Climate Change Conference</a></strong></strong> (UNFCCC), and contributed his expertise as an <strong>Academic Jury</strong> at the <strong><a href="https://symposium.org/" target="_blank">St. Gallen Symposium</a></strong> (Swiss Think-tank). He is serving as Peer Reviewer for several high impact journals across <strong>Energy, Transport</strong>, and <strong>Sustainability</strong> sectors. As an interdisciplinary scholar, Dr. Xu's efforts were rewarded with Santander Bank Scholarship, ECS Travel Grant, Intel Edge AI Scholarship, Erasmus Scholarship, Chinese patent grants, and etc.
       </p>
@@ -421,9 +425,11 @@
       <p align="justify">
         He received his PhD in <strong>Renewable Energy</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> and Masters' Degree in Materials Science from the <strong><a href="https://tum.de" target="_blank">Technical University of Munich</a></strong>, in collaboration with the <strong><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></strong> in Switzerland and the <strong><a href="https://xfel.eu" target="_blank">European XFEL</a></strong> in Germany. His passion for impactful research in energy and transport fields, has led to extensive R&D collaborations with industry leaders such as <strong>Toyota</strong> and <strong>Infineon</strong>. Beyond his research endeavors, he pursued an <strong>MBA</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> and received grant-based Executive Education at the <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></strong>, encompassing practical experience at dual-currency venture capital firm and top securities company in China.
       </p>
+
       <p style="text-align:left;">
+        
         PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT??
-        </span>
+       
       </p>
 
       <!---
@@ -461,6 +467,8 @@
           <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
         </span>
       </p>
+
+
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
@@ -1422,6 +1430,81 @@
   </script>
 
 
+    <script>
+      let holidays = [
+          // Fixed-date holidays
+          { date: '01-01', greeting: 'Happy New Year!<br>', range: 5 },
+          { date: '01-06', greeting: 'Happy PhD Graduation Anniversary!<br>', range: 1 },
+          { date: '04-05', greeting: 'Today is My Birthday!<br>', range: 1 },
+          { date: '05-01', greeting: 'Happy International Labor Day!<br>', range: 1 },
+          { date: '10-31', greeting: 'Happy Halloween!<br>', range: 2 },
+          { date: '12-25', greeting: 'Merry Christmas!<br>', range: 5 },
+          // Lunar calendar holidays for specific years
+          { date: '2024-02-10', greeting: 'Happy Chinese New Year of Dragon!<br>', range: 7, lunar: true },
+          { date: '2025-01-29', greeting: 'Happy Chinese New Year of Snake!<br>', range: 7, lunar: true },
+          { date: '2026-02-17', greeting: 'Happy Chinese New Year of Horse!<br>', range: 7, lunar: true },
+          { date: '2027-02-06', greeting: 'Happy Chinese New Year of Goat!<br>', range: 7, lunar: true },
+          { date: '2028-01-26', greeting: 'Happy Chinese New Year of Monday!<br>', range: 7, lunar: true },
+          { date: '2029-02-13', greeting: 'Happy Chinese New Year of Rooster!<br>', range: 7, lunar: true },
+          { date: '2030-02-03', greeting: 'Happy Chinese New Year of Dog!<br>', range: 7, lunar: true },
+
+          { date: '2024-03-29', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+          { date: '2025-04-18', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+          { date: '2026-04-03', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+
+          { date: '2024-06-10', greeting: 'Happy Dragon Boat Festival!<br>', range: 3, lunar: true },
+
+          { date: '2024-09-15', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+          { date: '2025-10-06', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+          { date: '2026-09-25', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+
+          { date: '2024-02-24', greeting: 'Happy Lantern Festival!<br>', range: 1, lunar: true },
+
+          { date: '2024-10-01', greeting: 'Happy Chinese National Day!<br>', range: 1, lunar: true },
+
+          { date: '2024-08-27', greeting: 'Today Marks My 10th Year in Europe!<br>', range: 1, lunar: true },
+          ];
+
+      function isHolidayNear(today, holiday) {
+          const todayDate = new Date(today);
+          let holidayDate = new Date(holiday.date);
+
+          if (!holiday.lunar) {
+              holidayDate.setFullYear(todayDate.getFullYear());
+          }
+
+          const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
+          const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
+
+          return todayDate >= startRange && todayDate <= endRange;
+      }
+
+      function checkHoliday() {
+          const today = new Date().toISOString().slice(0, 10);
+          let greetingElement = document.getElementById("greetings");
+          greetingElement.style.display = 'none'; // Initially hide the greeting
+
+          // Check lunar holidays first
+          for (let holiday of holidays) {
+              if (holiday.lunar && isHolidayNear(today, holiday)) {
+                  greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+                  greetingElement.style.display = 'block'; // Show the greeting
+                  return;
+              }
+          }
+
+          // Check fixed-date holidays
+          for (let holiday of holidays) {
+              if (!holiday.lunar && isHolidayNear(today, holiday)) {
+                  greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+                  greetingElement.style.display = 'block'; // Show the greeting
+                  return;
+              }
+          }
+      }
+
+      window.onload = checkHoliday;
+    </script>
 
 
 
