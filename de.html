@@ -52,72 +52,85 @@
 
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
   <script type="module">
     async function fetchCountries() {
@@ -311,19 +324,22 @@
     <!-- Content -->
     <div class="twelve columns offset-by-four content">
 
-      
+
       <!--<img class="hidden-mobile" src="images/banner_de2.png" width="800" />-->
 
       <div class="image-wrapper hidden-mobile">
         <img src="images/banner_de3.png" width="800" alt="banner Image" />
+
         <div class="orange-dot" alt="Hamburg" style="top: 23.1%; left: 50.9%;"></div>
         <div class="orange-dot" alt="Paris" style="top: 29.5%; left: 48.4%;"></div>
+        <div class="orange-dot" alt="Munich" style="top: 31.3%; left: 51.6%;"></div>
         <div class="orange-dot" alt="Rennes" style="top: 32.3%; left: 47.2%;"></div>
         <div class="orange-dot" alt="Zurich" style="top: 33.5%; left: 50.6%;"></div>
         <div class="orange-dot" alt="Beijing" style="top: 43.6%; left: 90.2%;"></div>
         <div class="orange-dot" alt="Anqing" style="top: 54.9%; left: 90.8%;"></div>
         <div class="orange-dot" alt="DC" style="top: 44.9%; left: 18%;"></div>
         <div class="red-dot" alt="Munich" style="top: 31.3%; left: 51.6%;"></div>
+        
         <div class="tooltip" style="top:50%; left: 65%;">
           <h6><img src="images/flag_de.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
@@ -374,6 +390,7 @@
             Washington, D.C., USA</h6>
           <p>2019-21 QSB MBA</p>
         </div>
+
       </div>
       <p class="hidden-mobile"></p>
       <h3 class="hidden-mobile">Servus! Grüezi! <small><small><small> Willkommen Freunde aus <span id="location"></span>
@@ -457,11 +474,31 @@
       </p>
       <span class="display-mobile">Willkommen Freunde aus <span id="location2"></span> :-)</br></br></span>
       <p align="justify">
-        Dr. Hong Xu ist ein leidenschaftlicher <strong>Forscher</strong> im Bereich Grüne Technologie, e-Power System <strong>Ingenieur</strong> und <strong>Analyst</strong> mit Spezialisierung in Energieökonomie und -politik. Er leitete eine parallele Sitzung auf der <strong><a href="" target="_blank">Konferenz der Vereinten Nationen über Klimawandel</a></strong> (UNFCCC) und trug sein Fachwissen als Akademisches Gremiumsmitglied beim <strong><a href="https://symposium.org/" target="_blank">St. Gallen Symposium</a></strong> (Schweizer Think-Tank) bei. Er ist als Gutachter für mehrere hochrangige Zeitschriften in den Bereichen <strong>Energie, Verkehr</strong> und <strong>Nachhaltigkeit</strong> tätig. Als interdisziplinärer Wissenschaftler wurde Dr. Xu mit einem Stipendium der Santander Bank, einem Reisestipendium des ECS, einem Stipendium von Intel Edge AI, einem Erasmus-Stipendium sowie chinesischen Patentzuschüssen belohnt.
+        Dr. Hong Xu ist ein leidenschaftlicher <strong>Forscher</strong> im Bereich Grüne Technologie, e-Power System
+        <strong>Ingenieur</strong> und <strong>Analyst</strong> mit Spezialisierung in Energieökonomie und -politik. Er
+        leitete eine parallele Sitzung auf der <strong><a href="" target="_blank">Konferenz der Vereinten Nationen über
+            Klimawandel</a></strong> (UNFCCC) und trug sein Fachwissen als Akademisches Gremiumsmitglied beim <strong><a
+            href="https://symposium.org/" target="_blank">St. Gallen Symposium</a></strong> (Schweizer Think-Tank) bei.
+        Er ist als Gutachter für mehrere hochrangige Zeitschriften in den Bereichen <strong>Energie, Verkehr</strong>
+        und <strong>Nachhaltigkeit</strong> tätig. Als interdisziplinärer Wissenschaftler wurde Dr. Xu mit einem
+        Stipendium der Santander Bank, einem Reisestipendium des ECS, einem Stipendium von Intel Edge AI, einem
+        Erasmus-Stipendium sowie chinesischen Patentzuschüssen belohnt.
       </p>
-      
+
       <p align="justify">
-          Er erhielt seinen Doktortitel in <strong>Erneuerbaren Energien</strong> von der <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></strong> und seinen Master-Abschluss in Materialwissenschaften von der <strong><a href="https://tum.de" target="_blank">Technischen Universität München</a></strong> in Zusammenarbeit mit dem <strong><a href="https://psi.ch" target="_blank">Paul Scherrer Institut</a></strong> in der Schweiz und dem <strong><a href="https://xfel.eu" target="_blank">European XFEL</a></strong> in Deutschland. Seine Leidenschaft für wirkungsvolle Forschung in den Bereichen Energie und Verkehr führte zu umfangreichen Forschungs- und Entwicklungsprojekten in Zusammenarbeit mit Branchenführern wie <strong>Toyota</strong> und <strong>Infineon</strong>. Neben seinen Forschungsaktivitäten verfolgte er ein <strong>MBA-Studium</strong> an der <strong><a href="https://quantic.edu/mba" target="_blank">Quantische Schule für Wirtschaft</a></strong> und erhielt eine grantbasierte Executive Education an der <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Judge Business School der Universität Cambridge</a></strong>, einschließlich praktischer Erfahrungen bei einem Dualwährungs-Venture-Capital-Unternehmen und einer führenden Wertpapierfirma in China.
+        Er erhielt seinen Doktortitel in <strong>Erneuerbaren Energien</strong> von der <strong><a
+            href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></strong> und seinen Master-Abschluss in
+        Materialwissenschaften von der <strong><a href="https://tum.de" target="_blank">Technischen Universität
+            München</a></strong> in Zusammenarbeit mit dem <strong><a href="https://psi.ch" target="_blank">Paul
+            Scherrer Institut</a></strong> in der Schweiz und dem <strong><a href="https://xfel.eu"
+            target="_blank">European XFEL</a></strong> in Deutschland. Seine Leidenschaft für wirkungsvolle Forschung in
+        den Bereichen Energie und Verkehr führte zu umfangreichen Forschungs- und Entwicklungsprojekten in
+        Zusammenarbeit mit Branchenführern wie <strong>Toyota</strong> und <strong>Infineon</strong>. Neben seinen
+        Forschungsaktivitäten verfolgte er ein <strong>MBA-Studium</strong> an der <strong><a
+            href="https://quantic.edu/mba" target="_blank">Quantische Schule für Wirtschaft</a></strong> und erhielt
+        eine grantbasierte Executive Education an der <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Judge
+            Business School der Universität Cambridge</a></strong>, einschließlich praktischer Erfahrungen bei einem
+        Dualwährungs-Venture-Capital-Unternehmen und einer führenden Wertpapierfirma in China.
       </p>
       <p style="text-align:left;">
         PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT?
@@ -511,10 +548,10 @@
         <div style="float: right">
           <h3>
             <!-- weather widget start --><a class="hidden-mobile" id="weather" target="_blank"
-            href="https://www.booked.net/weather/munich-18260"><img
-            src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
-            width="100px" alt="booked.net" style="margin-left: 110px; margin-top: -10px;" /></a>
-        <!-- weather widget end -->
+              href="https://www.booked.net/weather/munich-18260"><img
+                src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                width="100px" alt="booked.net" style="margin-left: 110px; margin-top: -10px;" /></a>
+            <!-- weather widget end -->
           </h3>
         </div>
         <span class="chemicals hidden-mobile">
@@ -572,7 +609,7 @@
 
       <hr class="hidden-mobile">
 
-    <!---
+      <!---
       <div class="video-container hidden-mobile">
         <video controls>
             <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
@@ -610,8 +647,9 @@
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Thesis</a>]-->
             <p>____</p>
           <li>2023-2023 | <strong>Führungskräfteausbildung, Grüner Übergang</strong> (Stipendium)<br />
-              <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Schule für Wirtschaft der Universität Cambridge</a></strong>,
-              Großbritannien<br />
+            <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Schule für Wirtschaft der Universität
+                Cambridge</a></strong>,
+            Großbritannien<br />
           <li>2020-2021 | <strong>MBA, Betriebswirtschaftslehre </strong>(teilzeit)<br />
             <strong><a href="https://quantic.edu/mba" target="_blank">Quantische Schule für Wirtschaft</a></strong>,
             Washington D.C.<br /></p>
@@ -636,70 +674,74 @@
       <div class="doc-section" id="academic-services">
         <h3>Akademische Dienstleistungen</h3>
         <ul class="square">
-            <li><strong>Gutachter:</strong><br />
-                - <strong>Energieumwandlung und -management</strong> (Impact-Faktor=11,2, 2021)<br />
-                - <strong>Applied Energy</strong> (IF=11.4, 2022)<br />
-                - <strong>Journal of Power Sources</strong> (IF=9,13, 2022)<br />
-                - <strong>Internationale Zeitschrift für Wasserstoffenergie</strong> (IF=7,14, 2021)<br />
-                - <strong>Energie für nachhaltige Entwicklung</strong> (IF=5,76, 2021)<br />
-                - <strong>Internationale Zeitschrift für Wärme- und Massentransport</strong> (IF=5,58, 2022)<br />
-                - <strong>Grüne Technologien und Nachhaltigkeit</strong> (Neue Zeitschrift, 2022)<br />
-                - <strong>Grüne Energie und intelligenter Verkehr</strong> (Neue Zeitschrift, 2022)<br />
+          <li><strong>Gutachter:</strong><br />
+            - <strong>Energieumwandlung und -management</strong> (Impact-Faktor=11,2, 2021)<br />
+            - <strong>Applied Energy</strong> (IF=11.4, 2022)<br />
+            - <strong>Journal of Power Sources</strong> (IF=9,13, 2022)<br />
+            - <strong>Internationale Zeitschrift für Wasserstoffenergie</strong> (IF=7,14, 2021)<br />
+            - <strong>Energie für nachhaltige Entwicklung</strong> (IF=5,76, 2021)<br />
+            - <strong>Internationale Zeitschrift für Wärme- und Massentransport</strong> (IF=5,58, 2022)<br />
+            - <strong>Grüne Technologien und Nachhaltigkeit</strong> (Neue Zeitschrift, 2022)<br />
+            - <strong>Grüne Energie und intelligenter Verkehr</strong> (Neue Zeitschrift, 2022)<br />
             <hr>
-            <li><strong>Internationale Organisation/Denkfabrik:</strong><br />
-                <!---- Besuchsforschungsstipendiat, <strong>Oxford Institute of Energy Studies</strong> (Energieökonomie und -politik, 2023, UK)
+          <li><strong>Internationale Organisation/Denkfabrik:</strong><br />
+            <!---- Besuchsforschungsstipendiat, <strong>Oxford Institute of Energy Studies</strong> (Energieökonomie und -politik, 2023, UK)
                 <br />--->
-                <!----- Jugenddelegierter, <strong>United Nations Bonn Climate Change Conference</strong> (Klima und Energie, 2023, DE)
+            <!----- Jugenddelegierter, <strong>United Nations Bonn Climate Change Conference</strong> (Klima und Energie, 2023, DE)
                 <br/>--->
-                <!------ Mitbegründer, <strong>Digital Sustainability Association</strong> (ESG und SDGs, 2023, CH)
+            <!------ Mitbegründer, <strong>Digital Sustainability Association</strong> (ESG und SDGs, 2023, CH)
                 <br />--->
-                - Akademische Jury, <strong>St. Galler Symposium</strong> (Schweizer Denkfabrik, Wirtschaft und Politik, 2023, CH)
-                <br />
-            <li><strong>Akademische Gesellschaft:</strong><br />
-                - Mitglied, <strong>Verein Deutscher Ingenieure</strong> (2023, DE)<br />
-                - Eingeladener Autor/Stipendiat, <strong>Die Elektrochemische Gesellschaft</strong> (2019, USA) <br />
-                - Mitglied, <strong>Internationale Gesellschaft für Elektrochemie</strong> (2018, IT) <br />
-                - Mitglied, <strong>Deutsche Physikalische Gesellschaft</strong> (2016, DE)
+            - Akademische Jury, <strong>St. Galler Symposium</strong> (Schweizer Denkfabrik, Wirtschaft und Politik,
+            2023, CH)
+            <br />
+          <li><strong>Akademische Gesellschaft:</strong><br />
+            - Mitglied, <strong>Verein Deutscher Ingenieure</strong> (2023, DE)<br />
+            - Eingeladener Autor/Stipendiat, <strong>Die Elektrochemische Gesellschaft</strong> (2019, USA) <br />
+            - Mitglied, <strong>Internationale Gesellschaft für Elektrochemie</strong> (2018, IT) <br />
+            - Mitglied, <strong>Deutsche Physikalische Gesellschaft</strong> (2016, DE)
             <hr>
-            <li><strong>Forschungsaktivitäten:</strong><br />
-                - <strong>Wasserstoff & Brennstoffzellen</strong> (Energie- und Umweltabteilung, Paul Scherrer Institut |
-                2016-2021)<br />
-                - <strong>Halbleiter & Sensoren</strong> (Fachbereich Physik, Technische Universität München |
-                2015-2016)<br />
-                - <strong>Solarzellen & Lithium-Ionen-Batterien</strong> (Fakultät für Naturwissenschaften, Verkehrsuniversität Peking |
-                2012-2013)<br />
-                - <strong>4D Röntgen-CT-Bildgebung</strong> (Röntgentomographiegruppe, Schweizer Lichtquelle |
-                2017-2020)<br />
-                - <strong>Kleine Winkel-Röntgenstreuung</strong> (Röntgenstreuungsstrahlungslinie, Deutsches Elektronen-Synchrotron |
-                2015-2016)<br />
-                - <strong>Hochenergie-Röntgenbildgebung</strong> (Materialbildgebung und Dynamikgruppe, European XFEL | 2015)
-                <br />
-    
+          <li><strong>Forschungsaktivitäten:</strong><br />
+            - <strong>Wasserstoff & Brennstoffzellen</strong> (Energie- und Umweltabteilung, Paul Scherrer Institut |
+            2016-2021)<br />
+            - <strong>Halbleiter & Sensoren</strong> (Fachbereich Physik, Technische Universität München |
+            2015-2016)<br />
+            - <strong>Solarzellen & Lithium-Ionen-Batterien</strong> (Fakultät für Naturwissenschaften,
+            Verkehrsuniversität Peking |
+            2012-2013)<br />
+            - <strong>4D Röntgen-CT-Bildgebung</strong> (Röntgentomographiegruppe, Schweizer Lichtquelle |
+            2017-2020)<br />
+            - <strong>Kleine Winkel-Röntgenstreuung</strong> (Röntgenstreuungsstrahlungslinie, Deutsches
+            Elektronen-Synchrotron |
+            2015-2016)<br />
+            - <strong>Hochenergie-Röntgenbildgebung</strong> (Materialbildgebung und Dynamikgruppe, European XFEL |
+            2015)
+            <br />
+
         </ul>
-    </div>
-    <hr class="display-mobile" style="width:113%">
-    <hr class="hidden-mobile">
-    
-    <div class="doc-section" id="teaching-services">
+      </div>
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
+
+      <div class="doc-section" id="teaching-services">
         <h3>Lehre und Mentoring</h3>
         <ul class="square">
-            <li><strong>Lehrassistent:</strong><br />
-                - <strong>Erneuerbare Energietechnologien II</strong> (ETH Zürich, Frühjahrs-Masterprogramm, 2017-2019 [<a
-                  href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=de"
-                  target="_blank">Link</a>])
-    
+          <li><strong>Lehrassistent:</strong><br />
+            - <strong>Erneuerbare Energietechnologien II</strong> (ETH Zürich, Frühjahrs-Masterprogramm, 2017-2019 [<a
+              href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=de"
+              target="_blank">Link</a>])
+
             <hr>
-    
-            <li><strong>Studentisches Mentoring:</strong><br />
-                - <strong>TUM Alumni Mentoring Program, Mentor</strong> (TUM Alumni Mentoring Program | 2021-heute)<br />
-                - <strong>Paul Scherrer Institut, Praktikumsbetreuer</strong> (Cristina Crețu, TU Delft Master, PolyU
-                Bukarest Bachelor | 2018-2019)<br />
-                <!---
+
+          <li><strong>Studentisches Mentoring:</strong><br />
+            - <strong>TUM Alumni Mentoring Program, Mentor</strong> (TUM Alumni Mentoring Program | 2021-heute)<br />
+            - <strong>Paul Scherrer Institut, Praktikumsbetreuer</strong> (Cristina Crețu, TU Delft Master, PolyU
+            Bukarest Bachelor | 2018-2019)<br />
+            <!---
             - Mitglied der <strong>International Association of Energy Economics</strong> (IAEE, 2023)
             -->
         </ul>
-    </div>
-    
+      </div>
+
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
       <div class="doc-section" id="publications">
@@ -904,15 +946,17 @@
       <h3 class="hidden-mobile" style="display:inline-block">ETH-Promotionsfeier </h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls poster="images/graduation_preview.png">
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls poster="images/graduation_preview.png">
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1144,22 +1188,25 @@
 
         <hr />
 --->
-<div class="doc-section" id="visiting">
-  <h3>Besuch</h3>
-  <ul class="square">
-    <li><strong>Organisation</strong>: Vereinte Nationen (Genf, 2023), Vereinte Nationen (New York, 2019), Wasseragentur Seine-Normandie
-      (Paris, 2016), Stadtplanungsbüro Suzhou (Jiangsu, 2016), Städtisches Büro für Ökologische Umwelt Zhengzhou
-      (Henan, 2014), Städtisches Umweltschutzbüro Kaifeng (Henan, 2014)</li>
-    <li><strong>Synchrotron</strong>: CERN (Genf, 2023), Swiss Light Source (Villigen, 2017), SOLEIL (Paris, 2015), Deutsches Elektronen-Synchrotron (Hamburg, 2016), European XFEL (Hamburg, 2016), ELETTRA (Triest, 2016)</li>
-    <li><strong>Reaktor</strong>: Kernkraftwerk Beznau (Aargau, 2018), Forschungsneutronenquelle
-      Heinz Maier-Leibnitz (München, 2016), Kernforschungszentrum CEA Saclay (Paris, 2015) </li>
-  </ul>
-</div>
+      <div class="doc-section" id="visiting">
+        <h3>Besuch</h3>
+        <ul class="square">
+          <li><strong>Organisation</strong>: Vereinte Nationen (Genf, 2023), Vereinte Nationen (New York, 2019),
+            Wasseragentur Seine-Normandie
+            (Paris, 2016), Stadtplanungsbüro Suzhou (Jiangsu, 2016), Städtisches Büro für Ökologische Umwelt Zhengzhou
+            (Henan, 2014), Städtisches Umweltschutzbüro Kaifeng (Henan, 2014)</li>
+          <li><strong>Synchrotron</strong>: CERN (Genf, 2023), Swiss Light Source (Villigen, 2017), SOLEIL (Paris,
+            2015), Deutsches Elektronen-Synchrotron (Hamburg, 2016), European XFEL (Hamburg, 2016), ELETTRA (Triest,
+            2016)</li>
+          <li><strong>Reaktor</strong>: Kernkraftwerk Beznau (Aargau, 2018), Forschungsneutronenquelle
+            Heinz Maier-Leibnitz (München, 2016), Kernforschungszentrum CEA Saclay (Paris, 2015) </li>
+        </ul>
+      </div>
 
 
 
-<hr class="display-mobile" style="width:113%">
-<hr class="hidden-mobile">
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
       <div class="doc-section" id="skills">
         <h3>Kompetenzen</h3>
         <ul class="square">
@@ -1180,7 +1227,8 @@
           <li><strong>Asien</strong>: China (Festland), Taiwan, Russland, Türkei, Thailand</li>
           <li><strong>Europa</strong>: Österreich, Belgien, Bosnien und Herzegowina, Kroatien,
             Tschechien, Dänemark, Estland, Finnland, Frankreich, Deutschland (über 25 Städte), Ungarn, Island, Irland,
-            Italien, Liechtenstein, Luxemburg, Malta, Niederlande, Norwegen, Portugal, Polen, Serbien, Slowakei, Slowenien,
+            Italien, Liechtenstein, Luxemburg, Malta, Niederlande, Norwegen, Portugal, Polen, Serbien, Slowakei,
+            Slowenien,
             Spanien, Schweden, Schweiz (über 30 Städte), Großbritannien</li>
           <li><strong>Nordamerika</strong>: USA, Kanada</li>
           <li><strong>Afrika</strong>: Gran Canaria (Spanien)</li>
@@ -1200,15 +1248,17 @@
         <h3>Kontakt</h3>
         <ul class="square">
           <li><strong>Email</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span
-                class='blue'>h.xu [at] tum.de</span></a><br />Bitte zögern Sie nicht, mir eine E-Mail zu senden, falls Sie Interesse an Kooperationen, Diskussionen und medienbezogenen Anfragen haben :- )</li>
+                class='blue'>h.xu [at] tum.de</span></a><br />Bei jeglichen Kooperationen oder Anfragen können Sie sich gerne an mich wenden :- )</li>
           <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
               target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
           <li><strong>Google-Scholar ID</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
-           <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->        </ul>
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+        </ul>
 
         </ul>
       </div>
@@ -1224,21 +1274,34 @@
       <!--<img src="images/logoline.png" width="80%" /> -->
       <div class="flex-container">
         <div id="date-display"></div>
-        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock - San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
-        
-
-        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">New York</a></div>
-      
-
-        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">London</a></div>
-       
-        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">Paris</a></div>
-    
-
-        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">Moskau</a></div>
+        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Clock - San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
 
 
-        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">Peking</a></div>
+        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+            title="時間 紐約市" target="_blank" rel="nofollow">New York</a></div>
+
+
+        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="time in London" target="_blank" rel="nofollow">London</a></div>
+
+        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Paris current time" target="_blank" rel="nofollow">Paris</a></div>
+
+
+        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="current time in Moscow" target="_blank" rel="nofollow">Moskau</a></div>
+
+
+        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Beijing time now" target="_blank" rel="nofollow">Peking</a></div>
         <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
       </div>
@@ -1304,17 +1367,17 @@
   </script>
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('date-display').innerHTML = getCurrentDateFormatted('de-DE');
-  });
+    });
 
-  function getCurrentDateFormatted(locale) {
+    function getCurrentDateFormatted(locale) {
       const options = {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          weekday: 'long'
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        weekday: 'long'
       };
 
       const currentDate = new Date().toLocaleDateString(locale, options);
@@ -1328,50 +1391,50 @@
       const formattedDate = date.replace(/\//g, '.');
 
       return `<span style="color:#f35212;">${weekday}</span> - ${formattedDate}`;
-  }
-</script>
+    }
+  </script>
 
 
-<script type="text/javascript">
-  window.onload = function () {
-    // Block certain keyboard shortcuts
-    document.onkeydown = function (e) {
-      e = e || window.event;
+  <script type="text/javascript">
+    window.onload = function () {
+      // Block certain keyboard shortcuts
+      document.onkeydown = function (e) {
+        e = e || window.event;
 
-      // Block F12
-      if (e.keyCode == 123) {
+        // Block F12
+        if (e.keyCode == 123) {
+          return false;
+        }
+        // Block Ctrl+Shift+I
+        else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+        // Block Shift+F10
+        else if (e.shiftKey && e.keyCode == 121) {
+          return false;
+        }
+        // Block Ctrl+S (Save As)
+        else if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+        // Block Ctrl+C (Copy)
+        else if (e.ctrlKey && e.keyCode == 67) {
+          return false;
+        }
+      };
+
+      // Block right-click context menu
+      document.oncontextmenu = function () {
         return false;
-      }
-      // Block Ctrl+Shift+I
-      else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      };
+
+      // Block text selection (Copy action)
+      document.onselectstart = function () {
         return false;
-      }
-      // Block Shift+F10
-      else if (e.shiftKey && e.keyCode == 121) {
-        return false;
-      }
-      // Block Ctrl+S (Save As)
-      else if (e.ctrlKey && e.keyCode == 83) {
-        e.preventDefault();
-        return false;
-      }
-      // Block Ctrl+C (Copy)
-      else if (e.ctrlKey && e.keyCode == 67) {
-        return false;
-      }
+      };
     };
-
-    // Block right-click context menu
-    document.oncontextmenu = function () {
-      return false;
-    };
-
-    // Block text selection (Copy action)
-    document.onselectstart = function () {
-      return false;
-    };
-  };
-</script>
+  </script>
 
   <!-- End Document
 ================================================== -->

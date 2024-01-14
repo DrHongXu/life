@@ -52,21 +52,22 @@
 
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-    </style>
+  </style>
 
   <script type="module">
     async function fetchCountries() {
@@ -199,52 +200,52 @@
   <div id="extracted-content"></div>
 
   <script>
-      // Function to load and extract content from another HTML file
-      function extractContent() {
-          // Replace 'source.html' with the path to the HTML file you want to extract content from
-          fetch('en.html')
-              .then(response => response.text())
-              .then(data => {
-                  const parser = new DOMParser();
-                  const doc = parser.parseFromString(data, 'text/html');
-                  const bodyContent = doc.querySelector('body').innerHTML;
-                  document.getElementById('extracted-content').innerHTML = bodyContent;
-              })
-              .catch(error => {
-                  console.error('Error loading the source HTML:', error);
-              });
-      }
+    // Function to load and extract content from another HTML file
+    function extractContent() {
+      // Replace 'source.html' with the path to the HTML file you want to extract content from
+      fetch('en.html')
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, 'text/html');
+          const bodyContent = doc.querySelector('body').innerHTML;
+          document.getElementById('extracted-content').innerHTML = bodyContent;
+        })
+        .catch(error => {
+          console.error('Error loading the source HTML:', error);
+        });
+    }
 
-      // Call the extractContent function when the page loads
-      window.addEventListener('load', extractContent);
+    // Call the extractContent function when the page loads
+    window.addEventListener('load', extractContent);
   </script>
 
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      var userLang = navigator.language || navigator.userLanguage; 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
       var languageMap = {
-          'ar': 'ar.html',
-          'en': 'en.html',
-          'de': 'de.html',
-          'fr': 'fr.html',
-          'es': 'es.html',
-          'it': 'it.html',
-          'ru': 'ru.html',
-          'zh': 'cn.html',
-          'ja': 'jp.html',
-          'ko': 'kr.html'
+        'ar': 'ar.html',
+        'en': 'en.html',
+        'de': 'de.html',
+        'fr': 'fr.html',
+        'es': 'es.html',
+        'it': 'it.html',
+        'ru': 'ru.html',
+        'zh': 'cn.html',
+        'ja': 'jp.html',
+        'ko': 'kr.html'
       };
 
       var shortLang = userLang.substring(0, 2);
 
       // Check if the language is supported and redirect
       if (languageMap[shortLang]) {
-          window.location.href = languageMap[shortLang];
+        window.location.href = languageMap[shortLang];
       }
-  });
-</script>
+    });
+  </script>
 
 
 

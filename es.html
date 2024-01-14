@@ -53,72 +53,85 @@
 
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
 
   <script type="module">
@@ -257,7 +270,7 @@
   ================================================== -->
 
   <!-- Delete everything in this .container and get started on your own site! -->
-  <img class="display-mobile" src="images/banner_mobile_es3.png" width="800" style="margin-top: -10px;"/>
+  <img class="display-mobile" src="images/banner_mobile_es3.png" width="800" style="margin-top: -10px;" />
 
   <div class="container">
 
@@ -312,13 +325,14 @@
     <!-- Content -->
     <div class="twelve columns offset-by-four content">
 
-      
+
       <!--<img class="hidden-mobile" src="images/banner_es2.png" width="800" />-->
 
       <div class="image-wrapper hidden-mobile">
         <img src="images/banner_es3.png" width="800" alt="banner Image" />
         <div class="orange-dot" alt="Hamburg" style="top: 23.1%; left: 50.9%;"></div>
         <div class="orange-dot" alt="Paris" style="top: 29.5%; left: 48.4%;"></div>
+        <div class="orange-dot" alt="Munich" style="top: 31.3%; left: 51.6%;"></div>
         <div class="orange-dot" alt="Rennes" style="top: 32.3%; left: 47.2%;"></div>
         <div class="orange-dot" alt="Zurich" style="top: 33.5%; left: 50.6%;"></div>
         <div class="orange-dot" alt="Beijing" style="top: 43.6%; left: 90.2%;"></div>
@@ -330,52 +344,52 @@
         <div class="tooltip" style="top:50%; left: 65%;">
           <h6><img src="images/flag_de.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Hamburgo, Alemania</h6>
-              <p>Prácticas EuXFEL 2015</p>
+            Hamburgo, Alemania</h6>
+          <p>Prácticas EuXFEL 2015</p>
         </div>
         <div class="tooltip" style="top:54%; left:41%;">
           <h6><img src="images/flag_fr.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              París, Francia</h6>
-              <p>Pasantía ENPC 2015</p>
+            París, Francia</h6>
+          <p>Pasantía ENPC 2015</p>
         </div>
         <div class="tooltip" style="top:60%; left: 70%;">
           <h6><img src="images/flag_de.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Múnich, Alemania</h6>
-              <p>2015-16 MSc TUM y LMU</p>
-              <p>2021-23 Ingeniero de I+D</p>
+            Múnich, Alemania</h6>
+          <p>2015-16 MSc TUM y LMU</p>
+          <p>2021-23 Ingeniero de I+D</p>
         </div>
         <div class="tooltip" style="top:58%; left: 39%;">
           <h6><img src="images/flag_fr.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Rennes, Francia</h6>
-              <p>2014-15 MSc UR1</p>
+            Rennes, Francia</h6>
+          <p>2014-15 MSc UR1</p>
         </div>
         <div class="tooltip" style="top:64%; left:68%;">
           <h6><img src="images/flag_ch.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Zúrich, Suiza</h6>
-              <p>2017-21 Doctorado ETH</p>
-              <p>2016-21 Investigador PSI</p>
+            Zúrich, Suiza</h6>
+          <p>2017-21 Doctorado ETH</p>
+          <p>2016-21 Investigador PSI</p>
         </div>
         <div class="tooltip" style="top:60%; left: 80%;">
           <h6><img src="images/flag_cn.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Pekín, China</h6>
-              <p>2009-13 BSc BJTU</p>
+            Pekín, China</h6>
+          <p>2009-13 BSc BJTU</p>
         </div>
         <div class="tooltip" style="top:80%; left: 80%;">
           <h6><img src="images/flag_cn.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Anqing, China</h6>
-              <p>1993–2009 Ciudad natal</p>
+            Anqing, China</h6>
+          <p>1993–2009 Ciudad natal</p>
         </div>
         <div class="tooltip" style="top:55%; left: 41%;">
           <h6><img src="images/flag_us.png" alt="Flagge"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              Washington D.C., EE.UU.</h6>
-              <p>MBA QSB 2019-21</p>
+            Washington D.C., EE.UU.</h6>
+          <p>MBA QSB 2019-21</p>
         </div>
       </div>
 
@@ -462,11 +476,30 @@
 
       <p align="justify">
         <span class="display-mobile">Bienvenidos amigos de <span id="location2"></span> :-)</br></br></span>
-        El Dr. Hong Xu es un apasionado <strong>Investigador</strong> en Tecnología Verde, <strong>Ingeniero</strong> de Sistemas de e-Power y <strong>Analista</strong> especializado en Economía y Política Energética. Presidió una sesión paralela en la <strong><a href="" target="_blank">Conferencia de las Naciones Unidas sobre el Cambio Climático</a></strong></strong> (UNFCCC) y contribuyó con su experiencia como miembro del Jurado Académico en el <strong><a href="https://symposium.org/" target="_blank">Simposio de St. Gallen</a></strong> (Think-tank suizo). Se desempeña como revisor por pares en varias revistas de alto impacto en los sectores de <strong>Energía, Transporte</strong> y <strong>Sostenibilidad</strong>. Como académico interdisciplinario, los esfuerzos del Dr. Xu fueron recompensados con una beca del Banco Santander, una subvención de viaje de ECS, una beca Intel Edge AI, una beca Erasmus, subvenciones de patentes chinas, y más.
+        El Dr. Hong Xu es un apasionado <strong>Investigador</strong> en Tecnología Verde, <strong>Ingeniero</strong> de
+        Sistemas de e-Power y <strong>Analista</strong> especializado en Economía y Política Energética. Presidió una
+        sesión paralela en la <strong><a href="" target="_blank">Conferencia de las Naciones Unidas sobre el Cambio
+            Climático</a></strong></strong> (UNFCCC) y contribuyó con su experiencia como miembro del Jurado Académico
+        en el <strong><a href="https://symposium.org/" target="_blank">Simposio de St. Gallen</a></strong> (Think-tank
+        suizo). Se desempeña como revisor por pares en varias revistas de alto impacto en los sectores de
+        <strong>Energía, Transporte</strong> y <strong>Sostenibilidad</strong>. Como académico interdisciplinario, los
+        esfuerzos del Dr. Xu fueron recompensados con una beca del Banco Santander, una subvención de viaje de ECS, una
+        beca Intel Edge AI, una beca Erasmus, subvenciones de patentes chinas, y más.
       </p>
-      
+
       <p align="justify">
-          Obtuvo su doctorado en <strong>Energías Renovables</strong> de la <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> y una Maestría en Ciencia de Materiales de la <strong><a href="https://tum.de" target="_blank">Universidad Técnica de Múnich</a></strong>, en colaboración con el <strong><a href="https://psi.ch" target="_blank">Instituto Paul Scherrer</a></strong> en Suiza y el <strong><a href="https://xfel.eu" target="_blank">European XFEL</a></strong> en Alemania. Su pasión por la investigación impactante en los campos de energía y transporte lo llevó a extensas colaboraciones en I+D con líderes de la industria como <strong>Toyota</strong> y <strong>Infineon</strong>. Más allá de sus esfuerzos de investigación, cursó un <strong>MBA</strong> en la <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Quantic</a></strong> y recibió una Educación Ejecutiva basada en subvenciones en la <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge de la Universidad de Cambridge</a></strong>, incluyendo experiencia práctica en una firma de capital de riesgo de doble moneda y en una destacada empresa de valores en China.
+        Obtuvo su doctorado en <strong>Energías Renovables</strong> de la <strong><a href="https://ethz.ch/en.html"
+            target="_blank">ETH Zurich</a></strong> y una Maestría en Ciencia de Materiales de la <strong><a
+            href="https://tum.de" target="_blank">Universidad Técnica de Múnich</a></strong>, en colaboración con el
+        <strong><a href="https://psi.ch" target="_blank">Instituto Paul Scherrer</a></strong> en Suiza y el <strong><a
+            href="https://xfel.eu" target="_blank">European XFEL</a></strong> en Alemania. Su pasión por la
+        investigación impactante en los campos de energía y transporte lo llevó a extensas colaboraciones en I+D con
+        líderes de la industria como <strong>Toyota</strong> y <strong>Infineon</strong>. Más allá de sus esfuerzos de
+        investigación, cursó un <strong>MBA</strong> en la <strong><a href="https://quantic.edu/mba"
+            target="_blank">Escuela de Negocios Quantic</a></strong> y recibió una Educación Ejecutiva basada en
+        subvenciones en la <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge de la
+            Universidad de Cambridge</a></strong>, incluyendo experiencia práctica en una firma de capital de riesgo de
+        doble moneda y en una destacada empresa de valores en China.
       </p>
 
       <p style="text-align:left;">
@@ -518,69 +551,69 @@
         <div style="float: right">
           <h3>
             <!-- weather widget start --><a class="hidden-mobile" id="weather" target="_blank"
-            href="https://www.booked.net/weather/munich-18260"><img
-            src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
-            width="100px" alt="booked.net" style="margin-left: 110px; margin-top: -10px;" /></a>
-        <!-- weather widget end -->
+              href="https://www.booked.net/weather/munich-18260"><img
+                src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                width="100px" alt="booked.net" style="margin-left: 110px; margin-top: -10px;" /></a>
+            <!-- weather widget end -->
           </h3>
-        </div>      
-      <span class="chemicals hidden-mobile">
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>H</h2>
-            <p>Hidrógeno</br>Energía</p>
-          </div>
         </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Li</h2>
-            <p>Litio</br>Baterías</p>
+        <span class="chemicals hidden-mobile">
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>H</h2>
+              <p>Hidrógeno</br>Energía</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>C</h2>
-            <p>Carbono</br>Neutralidad</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Li</h2>
+              <p>Litio</br>Baterías</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Si</h2>
-            <p>Silicio</br>Solar/PV</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>C</h2>
+              <p>Carbono</br>Neutralidad</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Re</h2>
-            <p>Investigación</br>Intereses</p>
-            <a href="#research-interests"></a>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Si</h2>
+              <p>Silicio</br>Solar/PV</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Tc</h2>
-            <p>Enseñanza</br>Actividades</p>
-            <a href="#teaching-services"></a>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Re</h2>
+              <p>Investigación</br>Intereses</p>
+              <a href="#research-interests"></a>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Pr</h2>
-            <p>Publicacion</br>Patentes</p>
-            <a href="#publications"></a>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Tc</h2>
+              <p>Enseñanza</br>Actividades</p>
+              <a href="#teaching-services"></a>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Cf</h2>
-            <p>Conferencia</br>Charlas</p>
-            <a href="#presentations"></a>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Pr</h2>
+              <p>Publicacion</br>Patentes</p>
+              <a href="#publications"></a>
+            </div>
           </div>
-        </div>
-      </span>
-    </div>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Cf</h2>
+              <p>Conferencia</br>Charlas</p>
+              <a href="#presentations"></a>
+            </div>
+          </div>
+        </span>
+      </div>
 
-    <!---
+      <!---
       <hr class="hidden-mobile">
       <div class="video-container hidden-mobile">
         <video controls>
@@ -599,7 +632,7 @@
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
 
-      
+
       <div class="doc-section" id="education">
         <h3>Educación</h3>
         <ul class="square">
@@ -620,8 +653,9 @@
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Tesis</a>]-->
             <p>____</p>
           <li>2023-2023 | <strong>Educación ejecutiva, Transición Verde</strong> (Beca)<br />
-              <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge de Cambridge</a></strong>,
-              Reino Unido<br />
+            <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge de
+                Cambridge</a></strong>,
+            Reino Unido<br />
           <li>2020-2021 | <strong>MBA, Administración de Empresas</strong> (tiempo parcial)<br />
             <strong><a href="https://quantic.edu/mba" target="_blank">Escuela de Negocios Cuántica</a></strong>,
             Washington D.C.<br /></p>
@@ -634,7 +668,7 @@
         <h3>Intereses de investigación</h3>
         <ul class="square">
           <li><strong>Energías renovables</strong>, hidrógeno, células de combustible, electrólisis, PV, baterías<br />
-            <li><strong>Economía energética</strong>, política energética, inversión ESG, sostenibilidad<br />
+          <li><strong>Economía energética</strong>, política energética, inversión ESG, sostenibilidad<br />
           <li><strong>Materiales funcionales</strong>, semiconductores, polímeros, óxidos metálicos<br />
           <li><strong>Imagen computacional</strong>, técnicas de rayos X, visión por computadora <br />
           <li><strong>Investigación de acciones</strong>, análisis de big data, análisis empresarial<br />
@@ -646,70 +680,78 @@
       <div class="doc-section" id="academic-services">
         <h3>Servicios Académicos</h3>
         <ul class="square">
-            <li><strong>Revisor por Pares:</strong><br />
-                - <strong>Conversión de Energía y Gestión</strong> (Factor de Impacto=11,2, 2021)<br />
-                - <strong>Energía Aplicada</strong> (IF=11.4, 2022)<br />
-                - <strong>Revista de Fuentes de Energía</strong> (FI=9,13, 2022)<br />
-                - <strong>Revista Internacional de Energía de Hidrógeno</strong> (FI=7,14, 2021)<br />
-                - <strong>Energía para el Desarrollo Sostenible</strong> (FI=5,76, 2021)<br />
-                - <strong>Revista Internacional de Transferencia de Calor y Masa</strong> (FI=5,58, 2022)<br />
-                - <strong>Tecnologías Verdes y Sostenibilidad</strong> (Nueva Revista, 2022)<br />
-                - <strong>Energía Verde y Transporte Inteligente</strong> (Nueva Revista, 2022)<br />
+          <li><strong>Revisor por Pares:</strong><br />
+            - <strong>Conversión de Energía y Gestión</strong> (Factor de Impacto=11,2, 2021)<br />
+            - <strong>Energía Aplicada</strong> (IF=11.4, 2022)<br />
+            - <strong>Revista de Fuentes de Energía</strong> (FI=9,13, 2022)<br />
+            - <strong>Revista Internacional de Energía de Hidrógeno</strong> (FI=7,14, 2021)<br />
+            - <strong>Energía para el Desarrollo Sostenible</strong> (FI=5,76, 2021)<br />
+            - <strong>Revista Internacional de Transferencia de Calor y Masa</strong> (FI=5,58, 2022)<br />
+            - <strong>Tecnologías Verdes y Sostenibilidad</strong> (Nueva Revista, 2022)<br />
+            - <strong>Energía Verde y Transporte Inteligente</strong> (Nueva Revista, 2022)<br />
             <hr>
-            <li><strong>Organización Internacional/Centro de Estudios:</strong><br />
-                <!---- Investigador Visitante, <strong>Instituto de Estudios de Energía de Oxford</strong> (Economía y Política Energética, 2023, Reino Unido)
+          <li><strong>Organización Internacional/Centro de Estudios:</strong><br />
+            <!---- Investigador Visitante, <strong>Instituto de Estudios de Energía de Oxford</strong> (Economía y Política Energética, 2023, Reino Unido)
                 <br />--->
-                <!----- Delegado Juvenil, <strong>Conferencia de Cambio Climático de las Naciones Unidas en Bonn</strong> (Clima y Energía, 2023, Alemania)
+            <!----- Delegado Juvenil, <strong>Conferencia de Cambio Climático de las Naciones Unidas en Bonn</strong> (Clima y Energía, 2023, Alemania)
                 <br/>--->
-                <!------ Cofundador, <strong>Asociación de Sostenibilidad Digital</strong> (ESG y ODS, 2023, Suiza)
+            <!------ Cofundador, <strong>Asociación de Sostenibilidad Digital</strong> (ESG y ODS, 2023, Suiza)
                 <br />--->
-                - Jurado Académico, <strong>Simpósio de St. Gallen</strong> (Think-tank Suizo, Economía y Política, 2023, Suiza)
-                <br />
-            <li><strong>Sociedad Académica:</strong><br />
-                - Miembro, <strong>Asociación de Ingenieros Alemanes</strong> (2023, Alemania)<br />
-                - Autor Invitado/Receptor de Subvenciones, <strong>La Sociedad Electroquímica</strong> (2019, EE. UU.) <br />
-                - Miembro, <strong>Sociedad Internacional de Electroquímica</strong> (2018, Italia) <br />
-                - Miembro, <strong>Sociedad Alemana de Física</strong> (2016, Alemania)
+            - Jurado Académico, <strong>Simpósio de St. Gallen</strong> (Think-tank Suizo, Economía y Política, 2023,
+            Suiza)
+            <br />
+          <li><strong>Sociedad Académica:</strong><br />
+            - Miembro, <strong>Asociación de Ingenieros Alemanes</strong> (2023, Alemania)<br />
+            - Autor Invitado/Receptor de Subvenciones, <strong>La Sociedad Electroquímica</strong> (2019, EE. UU.)
+            <br />
+            - Miembro, <strong>Sociedad Internacional de Electroquímica</strong> (2018, Italia) <br />
+            - Miembro, <strong>Sociedad Alemana de Física</strong> (2016, Alemania)
             <hr>
-            <li><strong>Actividades de Investigación:</strong><br />
-                - <strong>Hidrógeno y Celdas de Combustible</strong> (División de Energía y Medio Ambiente, Instituto Paul Scherrer |
-                2016-2021)<br />
-                - <strong>Semiconductores y Sensores</strong> (Departamento de Física, Universidad Técnica de Múnich |
-                2015-2016)<br />
-                - <strong>Celdas Solares y Baterías de Iones de Litio</strong> (Escuela de Ciencias, Universidad Jiaotong de Beijing |
-                2012-2013)<br />
-                - <strong>Imágenes CT de Rayos X en 4D</strong> (Grupo de Tomografía de Rayos X, Fuente de Luz Suiza |
-                2017-2020)<br />
-                - <strong>Difracción de Rayos X de Ángulo Pequeño</strong> (Línea de Difracción de Rayos X, Sincrotrón de Electrones Alemán |
-                2015-2016)<br />
-                - <strong>Imágenes de Rayos X de Alta Energía</strong> (Grupo de Imágenes y Dinámica de Materiales, European XFEL | 2015)
-                <br />
-    
+          <li><strong>Actividades de Investigación:</strong><br />
+            - <strong>Hidrógeno y Celdas de Combustible</strong> (División de Energía y Medio Ambiente, Instituto Paul
+            Scherrer |
+            2016-2021)<br />
+            - <strong>Semiconductores y Sensores</strong> (Departamento de Física, Universidad Técnica de Múnich |
+            2015-2016)<br />
+            - <strong>Celdas Solares y Baterías de Iones de Litio</strong> (Escuela de Ciencias, Universidad Jiaotong de
+            Beijing |
+            2012-2013)<br />
+            - <strong>Imágenes CT de Rayos X en 4D</strong> (Grupo de Tomografía de Rayos X, Fuente de Luz Suiza |
+            2017-2020)<br />
+            - <strong>Difracción de Rayos X de Ángulo Pequeño</strong> (Línea de Difracción de Rayos X, Sincrotrón de
+            Electrones Alemán |
+            2015-2016)<br />
+            - <strong>Imágenes de Rayos X de Alta Energía</strong> (Grupo de Imágenes y Dinámica de Materiales, European
+            XFEL | 2015)
+            <br />
+
         </ul>
-    </div>
-    <hr class="display-mobile" style="width:113%">
-    <hr class="hidden-mobile">
-    
-    <div class="doc-section" id="teaching-services">
+      </div>
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
+
+      <div class="doc-section" id="teaching-services">
         <h3>Enseñanza y Tutoría</h3>
         <ul class="square">
-            <li><strong>Asistente de Enseñanza:</strong><br />
-                - <strong>Tecnologías de Energía Renovable II</strong> (ETH Zurich, Programa de Maestría de Primavera, 2017-2019 [<a
-                  href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=es"
-                  target="_blank">enlace</a>])
-    
+          <li><strong>Asistente de Enseñanza:</strong><br />
+            - <strong>Tecnologías de Energía Renovable II</strong> (ETH Zurich, Programa de Maestría de Primavera,
+            2017-2019 [<a
+              href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=es"
+              target="_blank">enlace</a>])
+
             <hr>
-    
-            <li><strong>Tutoría de Estudiantes:</strong><br />
-                - <strong>Programa de Mentoría de Antiguos Alumnos de la TUM, Mentor</strong> (Programa de Mentoría de Antiguos Alumnos de la TUM | 2021-presente)<br />
-                - <strong>Instituto Paul Scherrer, Tutor de Prácticas</strong> (Cristina Crețu, Maestría TU Delft, PolyU
-                Licenciatura en Bucarest | 2018-2019)<br />
-                <!---
+
+          <li><strong>Tutoría de Estudiantes:</strong><br />
+            - <strong>Programa de Mentoría de Antiguos Alumnos de la TUM, Mentor</strong> (Programa de Mentoría de
+            Antiguos Alumnos de la TUM | 2021-presente)<br />
+            - <strong>Instituto Paul Scherrer, Tutor de Prácticas</strong> (Cristina Crețu, Maestría TU Delft, PolyU
+            Licenciatura en Bucarest | 2018-2019)<br />
+            <!---
             - Miembro de <strong>la Asociación Internacional de Economía de la Energía</strong> (IAEE, 2023)
             -->
         </ul>
-    </div>
-    
+      </div>
+
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
@@ -913,15 +955,17 @@
       <h3 class="hidden-mobile" style="display:inline-block">Ceremonia de entrega de premios doctorales</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls poster="images/graduation_preview.png">
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls poster="images/graduation_preview.png">
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1202,16 +1246,18 @@
         <h3>Contacto</h3>
         <ul class="square">
           <li><strong>Email</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span
-                class='blue'>h.xu [at] tum.de</span></a><br />No dudes en enviarme un correo electrónico en caso de colaboraciones, discusiones y consultas relacionadas con los medios :- )</li>
+                class='blue'>h.xu [at] tum.de</span></a><br />Siéntase libre de contactarme en caso de cualquier colaboración o solicitud :- )</li>
           <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
               target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
           <li><strong>Google Académico</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
 
-           <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->        </ul>
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+        </ul>
 
 
         </ul>
@@ -1228,17 +1274,30 @@
       <!--<img src="images/logoline.png" width="80%" />-->
       <div class="flex-container">
         <div id="date-display"></div>
-        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock-San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
-        
-        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">Nueva York</a></div>
-      
-        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">Londres</a></div>
-       
-        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">París</a></div>
+        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Clock-San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
 
-        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">Moscú</a></div>
+        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+            title="時間 紐約市" target="_blank" rel="nofollow">Nueva York</a></div>
 
-        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">Beijing</a></div>
+        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="time in London" target="_blank" rel="nofollow">Londres</a></div>
+
+        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Paris current time" target="_blank" rel="nofollow">París</a></div>
+
+        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="current time in Moscow" target="_blank" rel="nofollow">Moscú</a></div>
+
+        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Beijing time now" target="_blank" rel="nofollow">Beijing</a></div>
         <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
       </div>
@@ -1303,17 +1362,17 @@
   </script>
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('date-display').innerHTML = getCurrentDateFormatted('es-ES');
-  });
+    });
 
-  function getCurrentDateFormatted(locale) {
+    function getCurrentDateFormatted(locale) {
       const options = {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          weekday: 'long'
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        weekday: 'long'
       };
 
       let currentDate = new Date().toLocaleDateString(locale, options);
@@ -1324,53 +1383,53 @@
 
       // Construct the date as "Weekday - DD/MM/YYYY".
       return `<span style="color:#f35212;">${weekday}</span> - ${date}`;
-  }
+    }
 
-  function capitalizeFirstLetter(string) {
+    function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  }
-</script>
+    }
+  </script>
 
-<script type="text/javascript">
-  window.onload = function () {
-    // Block certain keyboard shortcuts
-    document.onkeydown = function (e) {
-      e = e || window.event;
+  <script type="text/javascript">
+    window.onload = function () {
+      // Block certain keyboard shortcuts
+      document.onkeydown = function (e) {
+        e = e || window.event;
 
-      // Block F12
-      if (e.keyCode == 123) {
+        // Block F12
+        if (e.keyCode == 123) {
+          return false;
+        }
+        // Block Ctrl+Shift+I
+        else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+        // Block Shift+F10
+        else if (e.shiftKey && e.keyCode == 121) {
+          return false;
+        }
+        // Block Ctrl+S (Save As)
+        else if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+        // Block Ctrl+C (Copy)
+        else if (e.ctrlKey && e.keyCode == 67) {
+          return false;
+        }
+      };
+
+      // Block right-click context menu
+      document.oncontextmenu = function () {
         return false;
-      }
-      // Block Ctrl+Shift+I
-      else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      };
+
+      // Block text selection (Copy action)
+      document.onselectstart = function () {
         return false;
-      }
-      // Block Shift+F10
-      else if (e.shiftKey && e.keyCode == 121) {
-        return false;
-      }
-      // Block Ctrl+S (Save As)
-      else if (e.ctrlKey && e.keyCode == 83) {
-        e.preventDefault();
-        return false;
-      }
-      // Block Ctrl+C (Copy)
-      else if (e.ctrlKey && e.keyCode == 67) {
-        return false;
-      }
+      };
     };
-
-    // Block right-click context menu
-    document.oncontextmenu = function () {
-      return false;
-    };
-
-    // Block text selection (Copy action)
-    document.onselectstart = function () {
-      return false;
-    };
-  };
-</script>
+  </script>
 
   <!-- End Document
 ================================================== -->

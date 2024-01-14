@@ -51,75 +51,89 @@
   -->
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
 
 
 
-<script type="module">
+  <script type="module">
     async function fetchCountries() {
       const response = await fetch('/js/world.json');
       const countries = await response.json();
@@ -263,7 +277,7 @@
   ================================================== -->
 
   <!-- Delete everything in this .container and get started on your own site! -->
-  <img class="display-mobile" src="images/banner_mobile_kr3.png" width="800" style="margin-top: -10px;"/>
+  <img class="display-mobile" src="images/banner_mobile_kr3.png" width="800" style="margin-top: -10px;" />
 
   <div class="container">
 
@@ -319,7 +333,7 @@
     <!-- Content -->
     <div class="twelve columns offset-by-four content">
 
-     
+
       <!--<img class="hidden-mobile" src="images/banner_kr2.png" width="800" />-->
 
       <div class="image-wrapper hidden-mobile">
@@ -336,54 +350,54 @@
         <div class="tooltip" style="top:50%; left: 65%;">
           <h6><img src="images/flag_de.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              독일 함부르크</h6>
-              <p>2015 EuXFEL 인턴십</p>
+            독일 함부르크</h6>
+          <p>2015 EuXFEL 인턴십</p>
         </div>
         <div class="tooltip" style="top:54%; left: 41%;">
           <h6><img src="images/flag_fr.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              프랑스 파리</h6>
-              <p>2016 ENPC 인턴십</p>
+            프랑스 파리</h6>
+          <p>2016 ENPC 인턴십</p>
         </div>
 
         <div class="tooltip" style="top:60%; left: 70%;">
           <h6><img src="images/flag_de.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              독일 뮌헨</h6>
-              <p>2015-16 TUM 및 LMU 마스터</p>
-              <p>2021-23 R&D 엔지니어</p>
+            독일 뮌헨</h6>
+          <p>2015-16 TUM 및 LMU 마스터</p>
+          <p>2021-23 R&D 엔지니어</p>
         </div>
         <div class="tooltip" style="top:58%; left: 39%;">
           <h6><img src="images/flag_fr.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              프랑스 렌</h6>
-              <p>2014-15 UR1 마스터</p>
+            프랑스 렌</h6>
+          <p>2014-15 UR1 마스터</p>
         </div>
         <div class="tooltip" style="top:64%; left: 68%;">
           <h6><img src="images/flag_ch.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              스위스 취리히</h6>
-              <p>2017-21 ETH 박사</p>
-              <p>2016-21 PSI 펠로우</p>
-              <p>2019-20 UZH 교환학생 </p>
+            스위스 취리히</h6>
+          <p>2017-21 ETH 박사</p>
+          <p>2016-21 PSI 펠로우</p>
+          <p>2019-20 UZH 교환학생 </p>
         </div>
         <div class="tooltip" style="top:60%; left: 80%;">
           <h6><img src="images/flag_cn.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              중국 베이징</h6>
-              <p>2009-13 BJTU 학부</p>
+            중국 베이징</h6>
+          <p>2009-13 BJTU 학부</p>
         </div>
         <div class="tooltip" style="top:80%; left: 80%;">
           <h6><img src="images/flag_cn.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              중국 안칭</h6>
-              <p>1993-2009 고향</p>
+            중국 안칭</h6>
+          <p>1993-2009 고향</p>
         </div>
         <div class="tooltip" style="top:55%; left: 35%;">
           <h6><img src="images/flag_us.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
-              미국 워싱턴 D.C.</h6>
-              <p>2019-21 QSB MBA</p>
+            미국 워싱턴 D.C.</h6>
+          <p>2019-21 QSB MBA</p>
         </div>
       </div>
 
@@ -421,7 +435,7 @@
       <div class="topnav">
         <a href="kr.html" class="active">
           <h3 class="display-mobile"><ruby>徐<rt>쉬</rt></ruby> <ruby>泓<rt>홍</rt></ruby> <small><ruby>博 士<rt>에너지박사</rt>
-                </ruby></small></h3>
+              </ruby></small></h3>
         </a>
         <div id="myLinks">
           <ul>
@@ -476,14 +490,30 @@
       <p align="justify">
         <span class="display-mobile"><span id="location2"></span> 에서 온 친구들을 환영합니다 :-)</br></br></span>
 
-        현재, 쉬홍 (<script id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>세) 홍서는 <strong><a href="https://oxfordenergy.org" target="_blank">옥스퍼드 에너지 연구소</a></strong>에서 방문 연구원으로 재직 중이며 중유럽 수소 전략 및 경제 연구에 전념하고 있으며, <strong>에너지와 교통</strong> 분야에서 <strong>탄소 중립</strong>을 실현하기 위해 노력하고 있습니다. 또한 <strong>유엔 본 클라임트 컨퍼런스</strong>에서 "중국 에너지 전환과 기술 혁신" 주제의 세션을 주최하였으며 유엔 유럽 경제위원회 내륙 교통 및 기후 변화 전문가 그룹 회의에 참석한 경험이 있습니다. 학위 과정 중에 해외 기업 및 중유럽 학술 기관과 협력하여 <strong>제1 저자 및 공동 저자로 논문 10 편 이상</strong>을 발표하고 <strong>다수의 특허를 획득</strong>하였습니다. 동시에 그는 에너지와 교통 분야에서 고영향 저널의 <strong>심사자</strong>로 활동하고 있으며, 세인트 갈렌 국제 경제 포럼의 <strong>학술 심사원</strong> 역시 맡고 있습니다. 그는 미국 화학 협회 논문 초청 및 여행 상, 인텔 엣지 AI 장학금, EU 에라스무스 장학금 등을 수상한 경력이 있습니다.
+        현재, 쉬홍 (
+        <script
+          id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>세)
+        홍서는 <strong><a href="https://oxfordenergy.org" target="_blank">옥스퍼드 에너지 연구소</a></strong>에서 방문 연구원으로 재직 중이며 중유럽
+        수소 전략 및 경제 연구에 전념하고 있으며, <strong>에너지와 교통</strong> 분야에서 <strong>탄소 중립</strong>을 실현하기 위해 노력하고 있습니다. 또한 <strong>유엔
+          본 클라임트 컨퍼런스</strong>에서 "중국 에너지 전환과 기술 혁신" 주제의 세션을 주최하였으며 유엔 유럽 경제위원회 내륙 교통 및 기후 변화 전문가 그룹 회의에 참석한 경험이 있습니다. 학위
+        과정 중에 해외 기업 및 중유럽 학술 기관과 협력하여 <strong>제1 저자 및 공동 저자로 논문 10 편 이상</strong>을 발표하고 <strong>다수의 특허를 획득</strong>하였습니다.
+        동시에 그는 에너지와 교통 분야에서 고영향 저널의 <strong>심사자</strong>로 활동하고 있으며, 세인트 갈렌 국제 경제 포럼의 <strong>학술 심사원</strong> 역시 맡고 있습니다.
+        그는 미국 화학 협회 논문 초청 및 여행 상, 인텔 엣지 AI 장학금, EU 에라스무스 장학금 등을 수상한 경력이 있습니다.
       </p>
 
       <p align="justify">
 
-        그는 2021년 초에 <strong><a href="https://ethz.ch/en.html" target="_blank">취리히 연방 공과대학교</a></strong>에서 박사 학위를 받았으며, 석사 학위는 <strong><a href="https://tum.de" target="_blank">뮌헨 공과대학교</a></strong>에서 취득하였습니다. 학위 과정 중에는 <strong>탄소 중립/신 에너지</strong> 분야에 집중하였으며 <strong><a href="https://psi.ch" target="_blank">스위스 연방 폴셰러 연구소</a></strong>, <strong><a href="https://xfel.eu" target="_blank">유럽 X선 전자 레이저</a></strong>와 같은 국제 연구 기관, 그리고 <strong>일본 토요타 자동차</strong>, <strong>독일 인피니온 테크놀로지</strong>, <strong>독일 프로이덴베르크 그룹</strong> 등의 글로벌 기업과 깊은 연구 협력을 진행하였습니다. 또한 미국의 <strong><a href="https://quantic.edu/mba" target="_blank">퀀틱 비즈니스 스쿨</a></strong>에서 전액 장학금을 받아 원격으로 MBA 학위를 취득한 경험이 있으며, <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">케임브리지 대학교 제지 비즈니스 스쿨</a></strong>에서 "그린 트랜스포메이션" 기업 경영 강의를 수강하였으며, 주요 증권 연구 기관 (A 주식 및 미국 주식)에서 개별 주식 및 산업 연구 보고서를 작성하였으며 이중 통화 펀드 (시드 라운드➔A 라운드)에서 신 에너지 분야의 벤처 투자를 수행한 경험이 있습니다.
+        그는 2021년 초에 <strong><a href="https://ethz.ch/en.html" target="_blank">취리히 연방 공과대학교</a></strong>에서 박사 학위를 받았으며,
+        석사 학위는 <strong><a href="https://tum.de" target="_blank">뮌헨 공과대학교</a></strong>에서 취득하였습니다. 학위 과정 중에는 <strong>탄소
+          중립/신 에너지</strong> 분야에 집중하였으며 <strong><a href="https://psi.ch" target="_blank">스위스 연방 폴셰러 연구소</a></strong>,
+        <strong><a href="https://xfel.eu" target="_blank">유럽 X선 전자 레이저</a></strong>와 같은 국제 연구 기관, 그리고 <strong>일본 토요타
+          자동차</strong>, <strong>독일 인피니온 테크놀로지</strong>, <strong>독일 프로이덴베르크 그룹</strong> 등의 글로벌 기업과 깊은 연구 협력을 진행하였습니다. 또한
+        미국의 <strong><a href="https://quantic.edu/mba" target="_blank">퀀틱 비즈니스 스쿨</a></strong>에서 전액 장학금을 받아 원격으로 MBA 학위를
+        취득한 경험이 있으며, <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">케임브리지 대학교 제지 비즈니스 스쿨</a></strong>에서
+        "그린 트랜스포메이션" 기업 경영 강의를 수강하였으며, 주요 증권 연구 기관 (A 주식 및 미국 주식)에서 개별 주식 및 산업 연구 보고서를 작성하였으며 이중 통화 펀드 (시드 라운드➔A 라운드)에서
+        신 에너지 분야의 벤처 투자를 수행한 경험이 있습니다.
 
-    </p>
+      </p>
 
       </p>
       <p style="text-align:left;">
@@ -540,72 +570,74 @@
                 width="100px" alt="booked.net" style="margin-left: 110px; margin-top: -10px;" /></a>
             <!-- weather widget end -->
           </h3>
-        </div>      
-      <span class="chemicals hidden-mobile">
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>H</h2>
-            <p>수소</br>에너지</p>
-          </div>
         </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Li</h2>
-            <p>리튬</br>배터리</p>
+        <span class="chemicals hidden-mobile">
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>H</h2>
+              <p>수소</br>에너지</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>C</h2>
-            <p>탄소</br>중립성</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Li</h2>
+              <p>리튬</br>배터리</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Si</h2>
-            <p>실리콘</br>태양광/PV</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>C</h2>
+              <p>탄소</br>중립성</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Re</h2>
-            <p>연구</br>혁신</p>
-            <a href="#research-interests"></a>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Si</h2>
+              <p>실리콘</br>태양광/PV</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>In</h2>
-            <p>산업</br>업그레이드</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Re</h2>
+              <p>연구</br>혁신</p>
+              <a href="#research-interests"></a>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Po</h2>
-            <p>정책</br>안내</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>In</h2>
+              <p>산업</br>업그레이드</p>
+            </div>
           </div>
-        </div>
-        <div class="box-wrapper hidden-mobile">
-          <div class="box hidden-mobile">
-            <h2>Sc</h2>
-            <p>사회의</br>약혼</p>
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Po</h2>
+              <p>정책</br>안내</p>
+            </div>
           </div>
-        </div>
-      </span>
-    </div> 
+          <div class="box-wrapper hidden-mobile">
+            <div class="box hidden-mobile">
+              <h2>Sc</h2>
+              <p>사회의</br>약혼</p>
+            </div>
+          </div>
+        </span>
+      </div>
 
       <hr class="hidden-mobile">
       <div class="video-container hidden-mobile">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -615,25 +647,33 @@
       <div class="doc-section" id="education">
         <h3>교육</h3>
         <ul class="square">
-          <li>2017-2021 | <strong>박사, 신재생 에너지 기술</strong> <div style="float: right"></div><br />
+          <li>2017-2021 | <strong>박사, 신재생 에너지 기술</strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://ethz.ch/en.html" target="_blank">스위스 · 취리히 연방 공과대학</a></strong> (직무제/전액 장학금)<br />
           </li>
-          <li>2014-2016 | <strong>석사, 재료 과학/물리학</strong><div style="float: right"></div><br />
+          <li>2014-2016 | <strong>석사, 재료 과학/물리학</strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://www.tum.de/en/" target="_blank">독일 · 뮌헨 공과대학</a></strong> (EU/EM 장학금) <br />
           </li>
-          <li>2009-2013 | <strong>학사, 재료 화학</strong> <div style="float: right"></div><br />
+          <li>2009-2013 | <strong>학사, 재료 화학</strong>
+            <div style="float: right"></div><br />
             <strong><a href="http://bjtu.edu.cn/" target="_blank">중국 · 북경 교통대학</a></strong> (특허 획득)<br />
           </li>
-            <p>____</p>
-            <li>2023-현재 | <strong>방문 학자, 에너지 경제 및 정책</strong> <div style="float: right"></div><br />
-              <strong><a href="https://oxfordenergy.org" target="_blank">영국 · 옥스퍼드 에너지 연구소</a></strong> (싱크탱크/Fellow)<br />
-            </li>
-            <li>2023-2023 | <strong>경영 교육 과정, 녹색 전환</strong> <div style="float: right"></div><br />
-              <strong><a href="https://quantic.edu/mba" target="_blank">영국 · 케임브리지 대학교 비즈니스 스쿨</a></strong> (산탄데르 은행 장학금)<br />
-            </li>
-            <li>2019-2021 | <strong>MBA, 경영 관리/지속 가능한 발전</strong> <div style="float: right"></div><br />
-              <strong><a href="https://quantic.edu/mba" target="_blank">미국 · 콴틱 비즈니스 스쿨</a></strong> (전액 장학금/Fellow)<br />
-            </li>
+          <p>____</p>
+          <li>2023-현재 | <strong>방문 학자, 에너지 경제 및 정책</strong>
+            <div style="float: right"></div><br />
+            <strong><a href="https://oxfordenergy.org" target="_blank">영국 · 옥스퍼드 에너지 연구소</a></strong>
+            (싱크탱크/Fellow)<br />
+          </li>
+          <li>2023-2023 | <strong>경영 교육 과정, 녹색 전환</strong>
+            <div style="float: right"></div><br />
+            <strong><a href="https://quantic.edu/mba" target="_blank">영국 · 케임브리지 대학교 비즈니스 스쿨</a></strong> (산탄데르 은행
+            장학금)<br />
+          </li>
+          <li>2019-2021 | <strong>MBA, 경영 관리/지속 가능한 발전</strong>
+            <div style="float: right"></div><br />
+            <strong><a href="https://quantic.edu/mba" target="_blank">미국 · 콴틱 비즈니스 스쿨</a></strong> (전액 장학금/Fellow)<br />
+          </li>
 
         </ul>
       </div>
@@ -643,7 +683,7 @@
         <h3>연구 관심사</h3>
         <ul class="square">
           <li><strong>재생 에너지</strong>, 수소, 연료전지, 전해질, 태양광, 배터리<br />
-            <li><strong>에너지 경제학</strong>, 에너지 정책, ESG 투자, 지속 가능성<br />
+          <li><strong>에너지 경제학</strong>, 에너지 정책, ESG 투자, 지속 가능성<br />
           <li><strong>기능성 물질</strong>, 반도체, 폴리머, 금속 산화물<br />
           <li><strong>컴퓨터 비전</strong>, X선 기술, 컴퓨터 비전<br />
           <li><strong>주식 연구</strong>, 빅데이터 분석, 비즈니스 분석<br />
@@ -1122,7 +1162,8 @@
         <h3>스킬</h3>
         <ul class="square">
           <li><strong>영어</strong> (유창함, C1), <strong>중국어</strong> (네이티브, C2), <strong>독일어</strong> (진행 중, B1),
-            <strong>프랑스어</strong> (기본, A2)</strong><br /></li>
+            <strong>프랑스어</strong> (기본, A2)</strong><br />
+          </li>
           <li><a href="https://xgraphy.github.io" target="_blank">사진</a>, 글쓰기, 동영상 편집, 하이킹, 사이클링, 탁구, 중국 요리<br /></li>
         </ul>
       </div>
@@ -1147,15 +1188,17 @@
       <h3 class="hidden-mobile" style="display:inline-block">박사 학위 수여식</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1167,18 +1210,20 @@
         <h3>저에게 연락</h3>
         <ul class="square">
           <li><strong>이메일</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu
-                [at] tum.de</span></a><br />협업, 토론, 미디어 관련 문의 사항이 있으시면 언제든지 이메일을 보내 주세요 :- )</li>
+                [at] tum.de</span></a><br />협업이나 요청이 있으시면 언제든지 저에게 연락 주시기 바랍니다 :- )</li>
           <li><strong>링크드인</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span
                 class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
           <li><strong>구글 학자 아이디</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
-           <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->        </ul>
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+        </ul>
 
 
-          <!--
+        <!--
               <div id="findipwidget"></div><div class="findiplink" id="findipurl">  <a href="http://www.find-ip.net/" target="_blank"> </a></div><script defer src="https://api.find-ip.net/widget.js?width=380&bg=white&border=white&textcol=black&region=0&language=0&browser=0&system=0&flag=0&"></script> -->
         </ul>
       </div>
@@ -1196,27 +1241,43 @@
 
       <div class="flex-container">
         <div id="date-display"></div>
-        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock - San Francisco" target="_blank" rel="nofollow">밴쿠버</a></div>
-        
-
-        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">뉴욕</a></div>
-      
-
-        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">런던</a></div>
-       
-        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">파리</a></div>
-    
-
-        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">모스크바</a></div>
+        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Clock - San Francisco" target="_blank" rel="nofollow">밴쿠버</a></div>
 
 
-        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">베이징</a></div>
+        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+            title="時間 紐約市" target="_blank" rel="nofollow">뉴욕</a></div>
+
+
+        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="time in London" target="_blank" rel="nofollow">런던</a></div>
+
+        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Paris current time" target="_blank" rel="nofollow">파리</a></div>
+
+
+        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="current time in Moscow" target="_blank" rel="nofollow">모스크바</a></div>
+
+
+        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Beijing time now" target="_blank" rel="nofollow">베이징</a></div>
         <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
-    </div>
+      </div>
 
       <hr class="large" />
-      <p>이기기 위해 유한 게임을 하고, 플레이를 계속하기 위해 무한 게임을 합니다. <br /><small>저작권 © 2016-<script id="second-script">const currentYear2 = new Date().getFullYear(); document.write(currentYear2);</script> | 홍쉬 박사 | 업데이트 날짜:
+      <p>이기기 위해 유한 게임을 하고, 플레이를 계속하기 위해 무한 게임을 합니다. <br /><small>저작권 © 2016-
+          <script
+            id="second-script">const currentYear2 = new Date().getFullYear(); document.write(currentYear2);</script> |
+          홍쉬 박사 | 업데이트 날짜:
           2023년 3월
         </small>
 
@@ -1274,76 +1335,76 @@
     }
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('date-display').innerHTML = getCurrentDateFormatted('ko-KR');
-  });
+    });
 
-  function getCurrentDateFormatted(locale) {
+    function getCurrentDateFormatted(locale) {
       const options = {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          weekday: 'long'
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long'
       };
 
       const currentDate = new Date().toLocaleDateString(locale, options);
       // The format is typically "YYYY년 MM월 DD일 weekday". We need to separate the weekday.
       const datePattern = /(\d{4}년 \d{1,2}월 \d{1,2}일) (\S+)/; // Adjusted regex for Korean date format
       const matches = currentDate.match(datePattern);
-      if(matches && matches.length === 3) {
-          const date = matches[1];
-          const weekday = matches[2];
+      if (matches && matches.length === 3) {
+        const date = matches[1];
+        const weekday = matches[2];
 
-          // Construct the date as "Weekday - Date".
-          return `<span style="color:#f35212;">${weekday}</span> - ${date}`;
+        // Construct the date as "Weekday - Date".
+        return `<span style="color:#f35212;">${weekday}</span> - ${date}`;
       } else {
-          return 'Date format error';
+        return 'Date format error';
       }
-  }
-</script>
+    }
+  </script>
 
 
-<script type="text/javascript">
-  window.onload = function () {
-    // Block certain keyboard shortcuts
-    document.onkeydown = function (e) {
-      e = e || window.event;
+  <script type="text/javascript">
+    window.onload = function () {
+      // Block certain keyboard shortcuts
+      document.onkeydown = function (e) {
+        e = e || window.event;
 
-      // Block F12
-      if (e.keyCode == 123) {
+        // Block F12
+        if (e.keyCode == 123) {
+          return false;
+        }
+        // Block Ctrl+Shift+I
+        else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+        // Block Shift+F10
+        else if (e.shiftKey && e.keyCode == 121) {
+          return false;
+        }
+        // Block Ctrl+S (Save As)
+        else if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+        // Block Ctrl+C (Copy)
+        else if (e.ctrlKey && e.keyCode == 67) {
+          return false;
+        }
+      };
+
+      // Block right-click context menu
+      document.oncontextmenu = function () {
         return false;
-      }
-      // Block Ctrl+Shift+I
-      else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      };
+
+      // Block text selection (Copy action)
+      document.onselectstart = function () {
         return false;
-      }
-      // Block Shift+F10
-      else if (e.shiftKey && e.keyCode == 121) {
-        return false;
-      }
-      // Block Ctrl+S (Save As)
-      else if (e.ctrlKey && e.keyCode == 83) {
-        e.preventDefault();
-        return false;
-      }
-      // Block Ctrl+C (Copy)
-      else if (e.ctrlKey && e.keyCode == 67) {
-        return false;
-      }
+      };
     };
-
-    // Block right-click context menu
-    document.oncontextmenu = function () {
-      return false;
-    };
-
-    // Block text selection (Copy action)
-    document.onselectstart = function () {
-      return false;
-    };
-  };
-</script>
+  </script>
 
   <!-- End Document
 ================================================== -->

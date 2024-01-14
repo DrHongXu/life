@@ -52,71 +52,85 @@
   -->
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
   <script type="module">
     async function fetchCountries() {
@@ -256,7 +270,7 @@
   ================================================== -->
 
   <!-- Delete everything in this .container and get started on your own site! -->
-  <img class="display-mobile" src="images/banner_mobile_jp3.png" width="800" style="margin-top: -10px;"/>
+  <img class="display-mobile" src="images/banner_mobile_jp3.png" width="800" style="margin-top: -10px;" />
 
   <div class="container">
 
@@ -313,7 +327,7 @@
     <!-- Content -->
     <div class="twelve columns offset-by-four content">
 
-     
+
       <!--<img class="hidden-mobile" src="images/banner_jp2.png" width="800" />-->
 
       <div class="image-wrapper hidden-mobile">
@@ -326,7 +340,7 @@
         <div class="orange-dot" alt="Beijing" style="top: 43.6%; left: 90.2%;"></div>
         <div class="orange-dot" alt="Anqing" style="top: 54.9%; left: 90.8%;"></div>
         <div class="orange-dot" alt="DC" style="top: 44.9%; left: 18%;"></div>
-<div class="red-dot" alt="Oxford" style="top: 26.7%; left: 46.7%;"></div>
+        <div class="red-dot" alt="Oxford" style="top: 26.7%; left: 46.7%;"></div>
         <div class="tooltip" style="top:50%; left: 65%;">
           <h6><img src="images/flag_de.png" alt="flag"
               style="height:20px;display:inline-block;top:6px;position:relative;">
@@ -466,11 +480,23 @@
       <p align="justify">
         <span class="display-mobile"><span id="location2"></span>からの友人を歓迎します:-)</br></br></span>
 
-        現在、徐泓博士 (<script id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>歲) は<strong><a href="https://oxfordenergy.org" target="_blank">オックスフォードエネルギー研究所</a></strong>で客員研究員を務め、中欧の水素戦略と経済研究に専念し、<strong>エネルギーと交通</strong>分野で<strong>炭素中和</strong>を実現することに取り組んでいます。また、<strong>国際連合ボン気候変動会議</strong>で「中国のエネルギー転換と技術革新」セッションを主催し、国際連合欧州経済委員会内陸交通と気候変動専門家グループ会議に参加しています。学位取得時に、海外企業と中欧の学術機関と共同で<strong>論文を10本以上</strong>執筆し、多数の<strong>特許を取得</strong>しました。また、エネルギーと交通分野の高い被引用論文の<strong>査読者</strong>およびサンクトガレン国際経済フォーラムの<strong>学術審査員</strong>も務めています。アメリカ化学会の論文招待および旅行賞、インテル・エッジAI奨学金、EUエラスムス奨学金などを受賞しています。
+        現在、徐泓博士 (
+        <script
+          id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>歲)
+        は<strong><a href="https://oxfordenergy.org"
+            target="_blank">オックスフォードエネルギー研究所</a></strong>で客員研究員を務め、中欧の水素戦略と経済研究に専念し、<strong>エネルギーと交通</strong>分野で<strong>炭素中和</strong>を実現することに取り組んでいます。また、<strong>国際連合ボン気候変動会議</strong>で「中国のエネルギー転換と技術革新」セッションを主催し、国際連合欧州経済委員会内陸交通と気候変動専門家グループ会議に参加しています。学位取得時に、海外企業と中欧の学術機関と共同で<strong>論文を10本以上</strong>執筆し、多数の<strong>特許を取得</strong>しました。また、エネルギーと交通分野の高い被引用論文の<strong>査読者</strong>およびサンクトガレン国際経済フォーラムの<strong>学術審査員</strong>も務めています。アメリカ化学会の論文招待および旅行賞、インテル・エッジAI奨学金、EUエラスムス奨学金などを受賞しています。
       </p>
 
       <p align="justify">
-        彼は2021年に<strong><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ連邦工科大学</a></strong>で博士号を取得し、マスター号は<strong><a href="https://tum.de" target="_blank">ミュンヘン工科大学</a></strong>で取得しました。学位取得中、彼の学術研究は<strong>炭素中和/新エネルギー</strong>分野に焦点を当て、<strong><a href="https://psi.ch" target="_blank">スイス連邦ポールシェラー研究所</a></strong>、<strong><a href="https://xfel.eu" target="_blank">ヨーロッパX線自由電子レーザー</a></strong>などの国際研究機関、および<strong>トヨタ自動車</strong>、<strong>インフィニオン・テクノロジーズ</strong>、<strong>フロイデンベルク・グループ</strong>などのグローバル企業と深い研究協力を行いました。さらに、彼はアメリカの<strong><a href="https://quantic.edu/mba" target="_blank">クアンティックビジネススクール</a></strong>から全額奨学金を受けてリモートでMBA学位を取得し、<strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">ケンブリッジ大学ジャッジ・ビジネス・スクール</a></strong>で「緑の転換」企業経営コースを学んだ経験があり、また、証券研究所（A株式と米国株式）で個別株と業界の研究レポートを執筆し、デュアルカレンシー基金（シードラウンド➔Aラウンド）で新エネルギー分野のベンチャー投資に従事しました。
+        彼は2021年に<strong><a href="https://ethz.ch/en.html"
+            target="_blank">チューリッヒ連邦工科大学</a></strong>で博士号を取得し、マスター号は<strong><a href="https://tum.de"
+            target="_blank">ミュンヘン工科大学</a></strong>で取得しました。学位取得中、彼の学術研究は<strong>炭素中和/新エネルギー</strong>分野に焦点を当て、<strong><a
+            href="https://psi.ch" target="_blank">スイス連邦ポールシェラー研究所</a></strong>、<strong><a href="https://xfel.eu"
+            target="_blank">ヨーロッパX線自由電子レーザー</a></strong>などの国際研究機関、および<strong>トヨタ自動車</strong>、<strong>インフィニオン・テクノロジーズ</strong>、<strong>フロイデンベルク・グループ</strong>などのグローバル企業と深い研究協力を行いました。さらに、彼はアメリカの<strong><a
+            href="https://quantic.edu/mba"
+            target="_blank">クアンティックビジネススクール</a></strong>から全額奨学金を受けてリモートでMBA学位を取得し、<strong><a
+            href="https://www.jbs.cam.ac.uk/"
+            target="_blank">ケンブリッジ大学ジャッジ・ビジネス・スクール</a></strong>で「緑の転換」企業経営コースを学んだ経験があり、また、証券研究所（A株式と米国株式）で個別株と業界の研究レポートを執筆し、デュアルカレンシー基金（シードラウンド➔Aラウンド）で新エネルギー分野のベンチャー投資に従事しました。
       </p>
       <p style="text-align:left;">
         PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT?
@@ -519,11 +545,11 @@
       <div class="doc-section " id="Carbon-Neutral" style="width:113%">
         <h3 style="display:inline-block">持続可能な開発目標・2030</h3>
       </div>
-      
+
       <div class="doc-section" id="sdgs">
 
-      
-        <div class="slideshow-container" >
+
+        <div class="slideshow-container">
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
@@ -531,14 +557,14 @@
             <img class="display-mobile" src="images/slider_sdg_jp_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-           
+
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img class="hidden-mobile" src="images/slider_sdg7_jp.png" style="width:100%">
             <img class="display-mobile" src="images/slider_sdg7_jp_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-          
+
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img class="hidden-mobile" src="images/slider_sdg8_jp.png" style="width:100%">
@@ -573,35 +599,35 @@
             <img class="display-mobile" src="images/slider_sdg14_jp_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-          
+
           <a class="prev" onclick="plusSlides(-1)">❮</a>
           <a class="next" onclick="plusSlides(1)">❯</a>
-          
-          </div>
-          
-          
 
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
-            <span class="dot" onclick="currentSlide(5)"></span> 
-            <span class="dot" onclick="currentSlide(6)"></span> 
-            <span class="dot" onclick="currentSlide(7)"></span> 
-          </div>
+        </div>
+
+
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
 
 
 
         <!---<img class="hidden-mobile" src="images/SDG_all.png" style="width:100%" alt="">
           <img class="display-mobile" src="images/SDG_all.png" style="width:100%" alt="">--->
-    
 
-        </div>
 
- 
-    <hr class="display-mobile" style="width:113%">
-    <hr class="hidden-mobile">
+      </div>
+
+
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
 
 
 
@@ -620,16 +646,18 @@
             <strong><a href="http://en.bjtu.edu.cn/" target="_blank">中 · 北京交通大学</a></strong><br />
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">論文</a>]-->
             <p>____</p>
-          <li>2023-現在 | <strong>訪問学者、エネルギー経済と政策</strong> <div style="float: right"></div><br />
-              <strong><a href="https://oxfordenergy.org" target="_blank">英・オックスフォードエネルギー研究所</a></strong>（シンクタンク/Fellow）<br />
-            </li>
+          <li>2023-現在 | <strong>訪問学者、エネルギー経済と政策</strong>
+            <div style="float: right"></div><br />
+            <strong><a href="https://oxfordenergy.org"
+                target="_blank">英・オックスフォードエネルギー研究所</a></strong>（シンクタンク/Fellow）<br />
+          </li>
           <li>2023-2023 | <strong>エグゼクティブ教育, グリーン転換</strong> (奨学金)<br />
-              <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">英 · ケンブリッジ大学ビジネススクール</a></strong><br />
+            <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">英 · ケンブリッジ大学ビジネススクール</a></strong><br />
           <li>2020-2021 | <strong>修士号、経営管理</strong> (フルアワード)<br />
             <strong><a href="https://quantic.edu/mba" target="_blank">米 · クアンティックビジネススクール</a></strong><br /></p>
 
         </ul>
-        
+
       </div>
 
       <hr />
@@ -688,7 +716,7 @@
         </span>
         <ul class="square">
           <li><strong>再生可能エネルギー</strong>、水素、燃料電池、電解装置、光発電、バッテリー<br />
-            <li><strong>エネルギー経済学</strong>、エネルギー政策、ESG投資、持続可能性<br />
+          <li><strong>エネルギー経済学</strong>、エネルギー政策、ESG投資、持続可能性<br />
           <li><strong>機能材料</strong>、半導体、ポリマー、金属酸化物<br />
           <li><strong>コンピュータビジョン</strong>、X線技術、画像処理<br />
           <li><strong>株式調査</strong>、ビッグデータ分析、ビジネスアナリティクス<br />
@@ -723,20 +751,22 @@
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
-      
+
       <h3>国連気候変動会議での生演説</h3>
       <div class="video-container hidden-mobile">
-        
+
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Bonn_Climate_v1_8MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -946,15 +976,17 @@
       <h3 class="hidden-mobile" style="display:inline-block">スイスの博士号授与式</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls>
-            <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="https://github.com/DrHongXu/DrHongXu.github.io/raw/main/images/Graduation_Ceremony_25MB.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1035,7 +1067,7 @@
           </li>
         </ol>
       </div>
-      
+
       <!---
 <div class="doc-section" id="equity-research">
   <h3>研究報告</h3>
@@ -1195,8 +1227,8 @@
 
 --->
 
-<hr class="display-mobile" style="width:113%">
-<hr class="hidden-mobile">
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
 
       <div class="doc-section" id="visiting">
         <h3>訪問</h3>
@@ -1256,17 +1288,19 @@
         <h3>私に連絡して</h3>
         <ul class="square">
           <li><strong>メール</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span class='blue'>h.xu
-                [at] tum.de</span></a><br />コラボレーション、ディスカッション、メディア関連のお問い合わせの場合は、お気軽にメールを送ってください :- )</li>
+                [at] tum.de</span></a><br />何か協力やリクエストがある場合は、お気軽にご連絡ください :- )</li>
           <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
               target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
           <li><strong>Google 学者</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
-           <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->        </ul>
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+        </ul>
 
-          </ul>
+        </ul>
       </div>
 
 
@@ -1276,26 +1310,47 @@
       <!--<img src="images/logoline.png" width="80%" />-->
       <div class="flex-container hidden-mobile">
         <div id="date-display" class="hidden-mobile"></div>
-        <div class="hidden-mobile"><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock - San Francisco" target="_blank" rel="nofollow">バンクーバー</a></div>
-        
-
-        <div class="hidden-mobile"><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">ニューヨーク</a></div>
-      
-
-        <div class="hidden-mobile"><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">ロンドン</a></div>
-       
-        <div class="hidden-mobile"><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">パリ</a></div>
-    
-
-        <div class="hidden-mobile"><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">モスクワ</a></div>
+        <div class="hidden-mobile"><a href="//24timezones.com/San-Francisco/time"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Clock - San Francisco" target="_blank" rel="nofollow">バンクーバー</a></div>
 
 
-        <div class="hidden-mobile"><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">北京</a></div>
+        <div class="hidden-mobile"><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+            title="時間 紐約市" target="_blank" rel="nofollow">ニューヨーク</a></div>
+
+
+        <div class="hidden-mobile"><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212"
+            class="clock24"
+            id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="time in London" target="_blank" rel="nofollow">ロンドン</a></div>
+
+        <div class="hidden-mobile"><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212"
+            class="clock24"
+            id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Paris current time" target="_blank" rel="nofollow">パリ</a></div>
+
+
+        <div class="hidden-mobile"><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212"
+            class="clock24"
+            id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="current time in Moscow" target="_blank" rel="nofollow">モスクワ</a></div>
+
+
+        <div class="hidden-mobile"><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212"
+            class="clock24"
+            id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Beijing time now" target="_blank" rel="nofollow">北京</a></div>
         <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-    </div>
+      </div>
 
       <hr class="large" />
-      <p><strong>有限のゲーム</strong>は勝つこと、<strong>無限のゲーム</strong>は継続すること。<br /><small>著作権 © 2016-<script id="second-script">const currentYear2 = new Date().getFullYear(); document.write(currentYear2);</script> | 徐泓
+      <p><strong>有限のゲーム</strong>は勝つこと、<strong>無限のゲーム</strong>は継続すること。<br /><small>著作権 © 2016-
+          <script
+            id="second-script">const currentYear2 = new Date().getFullYear(); document.write(currentYear2);</script> |
+          徐泓
           <small>博士</small> | 最終更新: 2023年12月
         </small></p>
     </footer>
@@ -1354,117 +1409,117 @@
 
 
 
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  // Auto transition the slides every 1.5 seconds
-  let slideInterval = setInterval(() => {
-    plusSlides(1);
-  }, 3500);
-  
-  function plusSlides(n) {
-    clearInterval(slideInterval);
-    showSlides(slideIndex += n);
-    slideInterval = setInterval(() => {
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Auto transition the slides every 1.5 seconds
+    let slideInterval = setInterval(() => {
       plusSlides(1);
     }, 3500);
-  }
-  
-  function currentSlide(n) {
-    clearInterval(slideInterval);
-    showSlides(slideIndex = n);
-    slideInterval = setInterval(() => {
-      plusSlides(1);
-    }, 3500);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+
+    function plusSlides(n) {
+      clearInterval(slideInterval);
+      showSlides(slideIndex += n);
+      slideInterval = setInterval(() => {
+        plusSlides(1);
+      }, 3500);
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+
+    function currentSlide(n) {
+      clearInterval(slideInterval);
+      showSlides(slideIndex = n);
+      slideInterval = setInterval(() => {
+        plusSlides(1);
+      }, 3500);
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('date-display').innerHTML = getCurrentDateFormatted('ja-JP');
-  });
+    });
 
-  function getCurrentDateFormatted(locale) {
+    function getCurrentDateFormatted(locale) {
       const options = {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          weekday: 'long'
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long'
       };
 
       const currentDate = new Date().toLocaleDateString(locale, options);
       // The format is "YYYY年M月D日Weekday". We need to separate the weekday.
       const datePattern = /(\d{4}年\d{1,2}月\d{1,2}日)(.+)/;
       const matches = currentDate.match(datePattern);
-      if(matches && matches.length === 3) {
-          const date = matches[1];
-          const weekday = matches[2];
+      if (matches && matches.length === 3) {
+        const date = matches[1];
+        const weekday = matches[2];
 
-          // Construct the date as "Weekday - Date".
-          return `<span style="color:#f35212;">${weekday}</span> - ${date}`;
+        // Construct the date as "Weekday - Date".
+        return `<span style="color:#f35212;">${weekday}</span> - ${date}`;
       } else {
-          return 'Date format error';
+        return 'Date format error';
       }
-  }
-</script>
+    }
+  </script>
 
-<script type="text/javascript">
-  window.onload = function () {
-    // Block certain keyboard shortcuts
-    document.onkeydown = function (e) {
-      e = e || window.event;
+  <script type="text/javascript">
+    window.onload = function () {
+      // Block certain keyboard shortcuts
+      document.onkeydown = function (e) {
+        e = e || window.event;
 
-      // Block F12
-      if (e.keyCode == 123) {
+        // Block F12
+        if (e.keyCode == 123) {
+          return false;
+        }
+        // Block Ctrl+Shift+I
+        else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+        // Block Shift+F10
+        else if (e.shiftKey && e.keyCode == 121) {
+          return false;
+        }
+        // Block Ctrl+S (Save As)
+        else if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+        // Block Ctrl+C (Copy)
+        else if (e.ctrlKey && e.keyCode == 67) {
+          return false;
+        }
+      };
+
+      // Block right-click context menu
+      document.oncontextmenu = function () {
         return false;
-      }
-      // Block Ctrl+Shift+I
-      else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      };
+
+      // Block text selection (Copy action)
+      document.onselectstart = function () {
         return false;
-      }
-      // Block Shift+F10
-      else if (e.shiftKey && e.keyCode == 121) {
-        return false;
-      }
-      // Block Ctrl+S (Save As)
-      else if (e.ctrlKey && e.keyCode == 83) {
-        e.preventDefault();
-        return false;
-      }
-      // Block Ctrl+C (Copy)
-      else if (e.ctrlKey && e.keyCode == 67) {
-        return false;
-      }
+      };
     };
-
-    // Block right-click context menu
-    document.oncontextmenu = function () {
-      return false;
-    };
-
-    // Block text selection (Copy action)
-    document.onselectstart = function () {
-      return false;
-    };
-  };
-</script>
+  </script>
 
   <!-- End Document
 ================================================== -->

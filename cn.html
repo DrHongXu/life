@@ -56,102 +56,115 @@
 
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
 
 
   <!-- block save as
       ================================================== -->
-      <script type="text/javascript">
-        window.onload = function () {
-          document.onkeydown = function () {
-            var e = window.event || arguments[0];
-            //屏蔽F12
-            if (e.keyCode == 123) {
-    
-              return false;
-              //屏蔽Ctrl+Shift+I
-            } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-    
-              return false;
-              //屏蔽Shift+F10
-            } else if ((e.shiftKey) && (e.keyCode == 121)) {
-    
-              return false;
-            }
-          };
-          //屏蔽右键单击
-          document.oncontextmenu = function () {
-    
-            return false;
-          }
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
         }
-      </script>
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
+
+        return false;
+      }
+    }
+  </script>
 
 
   <nav class="display-mobile">
@@ -339,7 +352,6 @@
         <div class="orange-dot" alt="Beijing" style="top: 43.6%; left: 90.2%;"></div>
         <div class="orange-dot" alt="Anqing" style="top: 54.9%; left: 90.8%;"></div>
         <div class="orange-dot" alt="DC" style="top: 44.9%; left: 18%;"></div>
-
         <div class="red-dot" alt="Oxford" style="top: 26.7%; left: 46.7%;"></div>
 
 
@@ -402,7 +414,7 @@
           <p>2023 牛津能源研究所</p>
         </div>
 
-      
+
       </div>
 
 
@@ -424,7 +436,9 @@
               href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
               class="d-inline-block p-3">简</a> / <img src="images/flag_hk.png" alt="flag"
               style="height:23px;display:inline-block;top:7px;position:relative;"> <img src="images/flag_mc.png"
-              alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();' class="d-inline-block p-3">繁</a></span>&nbsp;<select id="languages" name="languages"
+              alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> <a
+              href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
+              class="d-inline-block p-3">繁</a></span>&nbsp;<select id="languages" name="languages"
             style="width:62px;display:inline-block;color:inherit;margin-bottom:0px;"
             onchange="window.location.href=this.options [this.selectedIndex].value">
             <option value="cn.html" select>中文</option>
@@ -510,11 +524,21 @@
 
         <p align="justify">
           <span class="display-mobile">欢迎来自<span id="location2"></span>的朋友 :-）</br></br></span>
-          目前，徐泓博士在<strong><a href="https://oxfordenergy.org" target="_blank">牛津能源研究所</a></strong>担任访问学者，专注于中欧氢能战略与经济研究，致力于实现<strong>能源与交通</strong>领域<strong>碳中和</strong>。曾在<strong>联合国波恩气候变化大会</strong>主持“中国能源转型与技术创新”主题的分会，参与联合国欧洲经济委员会内陆交通与气候变化专家组会议。攻读学位期间与海外企业及中欧学术机构合作发表一作和共同作者<strong>论文10余篇</strong>，并获得<strong>多项专利授权</strong>。同时他还担任多项能源和交通领域高引期刊的<strong>审稿人</strong>, 以及圣加仑国际经济论坛的<strong>学术评审</strong>。曾获得美国电化学学会论文邀请及旅行奖、英特尔边缘AI奖学金、欧盟伊拉斯谟奖学金等。
+          目前，徐泓博士在<strong><a href="https://oxfordenergy.org"
+              target="_blank">牛津能源研究所</a></strong>担任访问学者，专注于中欧氢能战略与经济研究，致力于实现<strong>能源与交通</strong>领域<strong>碳中和</strong>。曾在<strong>联合国波恩气候变化大会</strong>主持“中国能源转型与技术创新”主题的分会，参与联合国欧洲经济委员会内陆交通与气候变化专家组会议。攻读学位期间与海外企业及中欧学术机构合作发表一作和共同作者<strong>论文10余篇</strong>，并获得<strong>多项专利授权</strong>。同时他还担任多项能源和交通领域高引期刊的<strong>审稿人</strong>,
+          以及圣加仑国际经济论坛的<strong>学术评审</strong>。曾获得美国电化学学会论文邀请及旅行奖、英特尔边缘AI奖学金、欧盟伊拉斯谟奖学金等。
         </p>
 
         <p align="justify">
-          他于2021年初获得<strong><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></strong>博士学位，硕士毕业于<strong><a href="https://tum.de" target="_blank">慕尼黑工业大学</a></strong>。本硕博期间学术研究专注于<strong>碳中和/新能源</strong>领域，与<strong><a href="https://psi.ch" target="_blank">瑞士联邦-保罗谢尔研究院</a></strong>以及<strong><a href="https://xfel.eu" target="_blank">欧洲X射线电子激光器</a></strong>等国际研究机构，以及<strong>日本丰田汽车</strong>、<strong>德国英飞凌科技</strong>、<strong>德国科德宝集团</strong>等全球化公司开展深度研发合作。此外，他被美国<strong><a href="https://quantic.edu/mba" target="_blank">量化商学院</a></strong>全奖录取远程学习并颁发<strong>MBA</strong>学位，曾获桑坦德银行奖学金赴<strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学嘉治商学院</a></strong>学习"绿色转型"企业管理课程，并曾在头部证券研究所 (A股&美股) 撰写个股深度/行业研究报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实践。
+          他于2021年初获得<strong><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></strong>博士学位，硕士毕业于<strong><a
+              href="https://tum.de"
+              target="_blank">慕尼黑工业大学</a></strong>。本硕博期间学术研究专注于<strong>碳中和/新能源</strong>领域，与<strong><a
+              href="https://psi.ch" target="_blank">瑞士联邦-保罗谢尔研究院</a></strong>以及<strong><a href="https://xfel.eu"
+              target="_blank">欧洲X射线电子激光器</a></strong>等国际研究机构，以及<strong>日本丰田汽车</strong>、<strong>德国英飞凌科技</strong>、<strong>德国科德宝集团</strong>等全球化公司开展深度研发合作。此外，他被美国<strong><a
+              href="https://quantic.edu/mba"
+              target="_blank">量化商学院</a></strong>全奖录取远程学习并颁发<strong>MBA</strong>学位，曾获桑坦德银行奖学金赴<strong><a
+              href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学嘉治商学院</a></strong>学习"绿色转型"企业管理课程，并曾在头部证券研究所 (A股&美股)
+          撰写个股深度/行业研究报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实践。
         </p>
 
         <p style="text-align:left;">
@@ -575,19 +599,19 @@
 
 
       <!---<hr class="display-mobile" style="width:113%">--->
-       <!---<hr class="hidden-mobile">--->
+      <!---<hr class="hidden-mobile">--->
 
       <div class="doc-section display-mobile" id="Carbon-Neutral" style="width:113%">
         <h3 class="display-mobile" style="display:inline-block">可持续发展目标 2030</h3>
-        
+
         <!---
 -->
       </div>
 
-     <div class="doc-section" id="sdgs">
+      <div class="doc-section" id="sdgs">
 
 
-        <div class="slideshow-container" >
+        <div class="slideshow-container">
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
@@ -595,14 +619,14 @@
             <img class="display-mobile" src="images/slider_sdg_cn_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-           
+
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img class="hidden-mobile" src="images/slider_sdg7_cn.png" style="width:100%">
             <img class="display-mobile" src="images/slider_sdg7_cn_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-          
+
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img class="hidden-mobile" src="images/slider_sdg8_cn.png" style="width:100%">
@@ -637,105 +661,119 @@
             <img class="display-mobile" src="images/slider_sdg14_cn_mobi.png" style="width:100%">
             <div class="text"></div>
           </div>
-          
+
           <a class="prev" onclick="plusSlides(-1)">❮</a>
           <a class="next" onclick="plusSlides(1)">❯</a>
-          
-          </div>
-          
-          
 
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
-            <span class="dot" onclick="currentSlide(5)"></span> 
-            <span class="dot" onclick="currentSlide(6)"></span> 
-            <span class="dot" onclick="currentSlide(7)"></span> 
-          </div>
+        </div>
+
+
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
 
 
 
         <!---<img class="hidden-mobile" src="images/SDG_all.png" style="width:100%" alt="">
           <img class="display-mobile" src="images/SDG_all.png" style="width:100%" alt="">--->
-    
-
-        </div>
 
 
-        <hr class="display-mobile" style="width:113%">
-        <hr class="hidden-mobile">
+      </div>
+
+
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
 
       <div class="doc-section display-mobile" id="education">
 
         <h3 style="display:inline-block">教育背景</h3>
 
         <ul class="square">
-          <li>2023-至今 | <strong>访问学者, 能源经济与政策</strong> <div style="float: right"></div><br />
+          <li>2023-至今 | <strong>访问学者, 能源经济与政策</strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://oxfordenergy.org" target="_blank">英国 · 牛津能源研究所</a></strong> (智库/Fellow)<br />
             <!--<strong><a href="https://www.uzh.ch/cmsssl/en.html" target="_blank">瑞士 · 苏黎世大学</a></strong> (银行金融系/交换)</p>-->
-          <p>____</p>
-          <li>2017-2021 | <strong>博士, 新能源科技</strong> <div style="float: right"></div><br />
+            <p>____</p>
+          <li>2017-2021 | <strong>博士, 新能源科技</strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://ethz.ch/en.html" target="_blank">瑞士 · 苏黎世联邦理工大学</a></strong> (岗位制/全奖)<br />
             <!--<strong><a href="https://www.uzh.ch/cmsssl/en.html" target="_blank">瑞士 · 苏黎世大学</a></strong> (银行金融系/交换)</p>-->
 
-          <li>2014-2016 | <strong>硕士, 材料学/物理学 </strong><div style="float: right"></div><br />
+          <li>2014-2016 | <strong>硕士, 材料学/物理学 </strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://www.tum.de/en/" target="_blank">德国 · 慕尼黑工业大学</a></strong> (欧盟/EM奖学金) <!--<br />
             <strong><a href="https://www.lmu.de/en/" target="_blank">德国 · 慕尼黑大学</a></strong> (M2/课程) <br/>-->
-            <!--<strong><a href="https://www.univ-rennes1.fr/" target="_blank">法国 · 雷恩第一大学</a></strong> (伊拉斯谟学者) <br />--></p>
+            <!--<strong><a href="https://www.univ-rennes1.fr/" target="_blank">法国 · 雷恩第一大学</a></strong> (伊拉斯谟学者) <br />-->
+            </p>
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Thesis</a>]-->
 
-          <li>2009-2013 | <strong>本科, 材料化学</strong> <div style="float: right"></div><br />
+          <li>2009-2013 | <strong>本科, 材料化学</strong>
+            <div style="float: right"></div><br />
             <strong><a href="http://bjtu.edu.cn/" target="_blank">中国 · 北京交通大学</a></strong> (专利授权)<br />
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Thesis</a>]-->
             <p>____</p>
-          <li>2023-2023 | <strong>高级管理教育, 绿色转型</strong> <div style="float: right"></div><br />
-              <strong><a href="https://quantic.edu/mba" target="_blank">英国 · 剑桥大学商学院</a></strong> (桑坦德银行奖学金)<br />
-          <li>2019-2021 | <strong>MBA, 工商管理/可持续发展</strong> <div style="float: right"></div><br />
+          <li>2023-2023 | <strong>高级管理教育, 绿色转型</strong>
+            <div style="float: right"></div><br />
+            <strong><a href="https://quantic.edu/mba" target="_blank">英国 · 剑桥大学商学院</a></strong> (桑坦德银行奖学金)<br />
+          <li>2019-2021 | <strong>MBA, 工商管理/可持续发展</strong>
+            <div style="float: right"></div><br />
             <strong><a href="https://quantic.edu/mba" target="_blank">美国 · 量化商学院</a></strong> (全奖/Fellow)<br /></p>
 
         </ul>
       </div>
 
       <div class="doc-section hidden-mobile" id="education-2col">
-      <h3 style="display:inline-block" >教育背景</h3>
-      <div class="education-columns">
-       
-        <div class="column-edu">
-          <div class="doc-section" id="education">
+        <h3 style="display:inline-block">教育背景</h3>
+        <div class="education-columns">
 
-            <ul class="square">
-              <li>2017-2021 | <strong>博士, 新能源科技</strong> <div style="float: right"></div><br />
-                <strong><a href="https://ethz.ch/en.html" target="_blank">瑞士 · 苏黎世联邦理工大学</a></strong> (岗位制/全奖)<br />
-              </li>
-              <li>2014-2016 | <strong>硕士, 材料学/物理学</strong><div style="float: right"></div><br />
-                <strong><a href="https://www.tum.de/en/" target="_blank">德国 · 慕尼黑工业大学</a></strong> (欧盟/EM奖学金) <br />
-              </li>
-              <li>2009-2013 | <strong>本科, 材料化学</strong> <div style="float: right"></div><br />
-                <strong><a href="http://bjtu.edu.cn/" target="_blank">中国 · 北京交通大学</a></strong> (专利授权)<br />
-              </li>
-            </ul>
+          <div class="column-edu">
+            <div class="doc-section" id="education">
+
+              <ul class="square">
+                <li>2017-2021 | <strong>博士, 新能源科技</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="https://ethz.ch/en.html" target="_blank">瑞士 · 苏黎世联邦理工大学</a></strong> (岗位制/全奖)<br />
+                </li>
+                <li>2014-2016 | <strong>硕士, 材料学/物理学</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="https://www.tum.de/en/" target="_blank">德国 · 慕尼黑工业大学</a></strong> (欧盟/EM奖学金) <br />
+                </li>
+                <li>2009-2013 | <strong>本科, 材料化学</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="http://bjtu.edu.cn/" target="_blank">中国 · 北京交通大学</a></strong> (专利授权)<br />
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      
-        <div class="column-edu">
-          <div class="doc-section" id="education">
-            <ul class="square">
-              <li>2023-至今 | <strong>访问学者, 能源经济与政策</strong> <div style="float: right"></div><br />
-                <strong><a href="https://oxfordenergy.org" target="_blank">英国 · 牛津能源研究所</a></strong> (智库/Fellow)<br />
-              </li>
-              <li>2023-2023 | <strong>企业管理课程, 绿色转型</strong> <div style="float: right"></div><br />
-                <strong><a href="https://quantic.edu/mba" target="_blank">英国 · 剑桥大学商学院</a></strong> (桑坦德银行奖学金)<br />
-              </li>
-              <li>2019-2021 | <strong>MBA, 工商管理/可持续发展</strong> <div style="float: right"></div><br />
-                <strong><a href="https://quantic.edu/mba" target="_blank">美国 · 量化商学院</a></strong> (全奖/Fellow)<br /></p>
-              </li>
-            </ul>
+
+          <div class="column-edu">
+            <div class="doc-section" id="education">
+              <ul class="square">
+                <li>2023-至今 | <strong>访问学者, 能源经济与政策</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="https://oxfordenergy.org" target="_blank">英国 · 牛津能源研究所</a></strong> (智库/Fellow)<br />
+                </li>
+                <li>2023-2023 | <strong>企业管理课程, 绿色转型</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="https://quantic.edu/mba" target="_blank">英国 · 剑桥大学商学院</a></strong> (桑坦德银行奖学金)<br />
+                </li>
+                <li>2019-2021 | <strong>MBA, 工商管理/可持续发展</strong>
+                  <div style="float: right"></div><br />
+                  <strong><a href="https://quantic.edu/mba" target="_blank">美国 · 量化商学院</a></strong> (全奖/Fellow)<br />
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
@@ -794,7 +832,7 @@
         </span>
 
         <span class="chemicals hidden-mobile" style="margin-top: -7px;">
-          <div class="box-wrapper hidden-mobile" >
+          <div class="box-wrapper hidden-mobile">
             <div class="box hidden-mobile">
               <h2>H</h2>
               <p>Hydrogen</br>氢 (能源)</p>
@@ -867,9 +905,9 @@
             - <strong>联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组</strong> 专家组成员 (UNECE-ITC-GE3, 2023)<br />
             <hr>
           <li><strong>智库: </strong><br />
-              - <strong>英国牛津能源研究所</strong> 访问研究员 (Oxford Institute for Energy Studies, 2023)<br />
-              - <strong>瑞士圣加仑国际经济论坛</strong> 学术评审 (St. Gallen Symposium, 2023)<br />
-                <hr>
+            - <strong>英国牛津能源研究所</strong> 访问研究员 (Oxford Institute for Energy Studies, 2023)<br />
+            - <strong>瑞士圣加仑国际经济论坛</strong> 学术评审 (St. Gallen Symposium, 2023)<br />
+            <hr>
           <li><strong>审稿人 (35+篇): </strong><br />
             - <strong>能源转换与管理杂志</strong> (Energy Conversion & Management, 影响因子: 11.2, 2021) <br />
             - <strong>应用能源杂志</strong> (Applied Energy, 影响因子: 11.4, 2022)<br />
@@ -934,10 +972,10 @@
           <li><strong>能源经济 / 政策 / 战略: </strong><br />
         </ul>
         <ol>
-           <li>
+          <li>
             <strong>H. Xu*</strong> [OIES]<br />
             Envisioning Sustainable Hydrogen Economy: A Comparative Analysis of China and the EU Strategies [A] <br />
-            译文: 展望可持续氢经济: 中国与欧盟氢能战略对比分析<br/>
+            译文: 展望可持续氢经济: 中国与欧盟氢能战略对比分析<br />
             2024 | <em><strong>OIES Working Paper (in progress)</strong></em> [<a href="" target="_blank">N/A</a>] <text
               style="color:rgb(6, 35, 91)">[牛津能源研究所]</text> <text style="color:red">[新!]</text>
           </li>
@@ -948,9 +986,11 @@
         <ol>
           <li>
             S. N. Artigas, <strong>H. Xu*</strong> [FDB], F. Mack<br />
-            In-situ PEM fuel cell diagostic tool: Application of distribution of relaxation times analysis for water management [J] <br />
-            译文: 原位质子交换膜燃料电池诊断工具: 弛豫时间分布在水管理中的应用<br/>
-            2024 | <em><strong>Submitted to J. Power Sources</strong></em> [<a href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">N/A</a>] <text
+            In-situ PEM fuel cell diagostic tool: Application of distribution of relaxation times analysis for water
+            management [J] <br />
+            译文: 原位质子交换膜燃料电池诊断工具: 弛豫时间分布在水管理中的应用<br />
+            2024 | <em><strong>Submitted to J. Power Sources</strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">N/A</a>] <text
               style="color:rgb(0, 103, 159)">[科德宝集团]</text> <text style="color:red">[新!]</text>
           </li>
 
@@ -984,9 +1024,9 @@
             2021 | <em><strong>J. Power Sources </strong></em> [<a
               href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>] <text
               style="color:rgb(8, 114, 31)">[瑞士光源]</text> <text style="color:rgb(250, 49, 14)">[丰田汽车]</text>
-          
-            </li>
-            
+
+          </li>
+
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
             [PSI]<br />
@@ -1025,12 +1065,13 @@
 
 
         </ol>
-       
-        <ul class="square"><hr>
+
+        <ul class="square">
+          <hr>
           <li><strong>AI / 计算机视觉 / 四维成像:</strong><br />
         </ul>
 
-         <ol>
+        <ol>
           <li>
             M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni [ETH],
             F. Marone [SLS]<br />
@@ -1083,12 +1124,13 @@
           </li>
 
         </ol>
-       
-        <ul class="square"> <hr>
+
+        <ul class="square">
+          <hr>
           <li><strong>材料科学 / 化学工程:</strong><br />
         </ul>
 
-         <ol>
+        <ol>
 
 
           <li>
@@ -1096,7 +1138,9 @@
             A simple spray reaction synthesis and characterization of hierarchically porous SnO2 microspheres for an
             enhanced dye sensitized solar cell. [J] <br />
             译文: 用于增强染料敏化太阳能电池的分级多孔二氧化锡微球的简单雾化反应合成和表征<br />
-            2017 | <em><strong>RSC Advances</strong></em> [<a href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract" target="_blank">PDF</Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+            2017 | <em><strong>RSC Advances</strong></em> [<a
+              href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract" target="_blank">PDF
+              </Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
           </li>
 
 
@@ -1193,15 +1237,15 @@
       <h3 class="hidden-mobile" style="display:inline-block">博士毕业典礼</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1232,59 +1276,56 @@
           <li>
             <strong>H. Xu</strong>, 联合国欧洲经济委员会-内陆运输污染与能源工作组会议 <br />
             Working Party on Pollution and Energy (90th session)<br />
-            <em>2024 | 联合国日内瓦万国宫</em>, 日内瓦, 瑞士. <strong>[参会]</strong> [<a
-              href="" target="_blank">链接</a>]
+            <em>2024 | 联合国日内瓦万国宫</em>, 日内瓦, 瑞士. <strong>[参会]</strong> [<a href="" target="_blank">链接</a>]
           </li>
           <li>
             <strong>H. Xu</strong>, 维也纳国际能源与气候论坛 <br />
             International Vienna Energy and Climate Forum<br />
-            <em>2023 | 维也纳霍夫堡皇宫会议中心</em>, 维也纳, 奥地利. <strong>[参会]</strong> [<a
-              href="" target="_blank">链接</a>]
+            <em>2023 | 维也纳霍夫堡皇宫会议中心</em>, 维也纳, 奥地利. <strong>[参会]</strong> [<a href="" target="_blank">链接</a>]
           </li>
           <li>
             <strong>H. Xu</strong>, 联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组会议 <br />
             Group of Experts on Assessment of Climate Change Impacts and Adaptation for Inland Transport<br />
-            <em>2023 | 联合国日内瓦万国宫</em>, 日内瓦, 瑞士. <strong>[参会]</strong> [<a
-              href="" target="_blank">链接</a>]
+            <em>2023 | 联合国日内瓦万国宫</em>, 日内瓦, 瑞士. <strong>[参会]</strong> [<a href="" target="_blank">链接</a>]
           </li>
           <li>
             <strong>H. Xu</strong>, 中国能源转型和技术创新 (分会场) <br />
             Chinese Energy Transition and Technology Innovation<br />
-            <em>2023 | 联合国波恩气候变化大会</em>, 波恩, 德国. <strong>[主持人/演讲者]</strong> [<a
-              href="https://unfccc.int/sb58" target="_blank">链接</a>]
+            <em>2023 | 联合国波恩气候变化大会</em>, 波恩, 德国. <strong>[主持人/演讲者]</strong> [<a href="https://unfccc.int/sb58"
+              target="_blank">链接</a>]
           </li>
-           <li>
+          <li>
             <strong>H. Xu</strong>, 全球科技大会：商业创新如何产生影响<br />
             Global Tech Conference: Where Business Innovation Makes a Difference<br />
-            <em>2023 | 信息通信技术(ICT)春季会议</em>, 卢森堡. <strong>[参会]</strong> [<a
-              href="https://www.ictspring.com/" target="_blank">链接</a>]
+            <em>2023 | 信息通信技术(ICT)春季会议</em>, 卢森堡. <strong>[参会]</strong> [<a href="https://www.ictspring.com/"
+              target="_blank">链接</a>]
           </li>
           <li>
             <strong>H. Xu</strong>, 重修契约：重新定义世代契约责任<br />
             A New Generational Contract: Redefining What We Owe Each Other<br />
-            <em>2023 | 第52届圣加仑研讨会</em>, 圣加仑, 瑞士. <strong>[学术评审]</strong> [<a
-              href="https://symposium.org/" target="_blank">链接</a>]
+            <em>2023 | 第52届圣加仑研讨会</em>, 圣加仑, 瑞士. <strong>[学术评审]</strong> [<a href="https://symposium.org/"
+              target="_blank">链接</a>]
           </li>
           <li>
             <strong>H. Xu</strong>, 创新与创业：公共科学对企业研发的影响<br />
             Innovation & Entrepreneurship: The Effect of Public Science on Corporate R&D<br />
-            <em>2023 | 马克斯·普朗克创新与竞争研究所</em>, 慕尼黑, 德国. <strong>[参会]</strong> [<a
-              href="#" target="_blank">链接</a>]
+            <em>2023 | 马克斯·普朗克创新与竞争研究所</em>, 慕尼黑, 德国. <strong>[参会]</strong> [<a href="#" target="_blank">链接</a>]
           </li>
-           <li>
+          <li>
             <strong>H. Xu</strong>, 2022年转型交通：以气候为中心的流动性，以实现可持续复苏<br />
             Transforming Transportation 2022: Climate-centered Mobility for a Sustainable Recovery<br />
-            <em>2022 | 交通转型论坛</em>, 在线，美国. <strong>[参会]</strong> [<a
-              href="https://www.transformingtransportation.org/" target="_blank">链接</a>]
+            <em>2022 | 交通转型论坛</em>, 在线，美国. <strong>[参会]</strong> [<a href="https://www.transformingtransportation.org/"
+              target="_blank">链接</a>]
           </li>
-    
+
         </ol>
-       
-        <ul class="square"><hr>
+
+        <ul class="square">
+          <hr>
           <li><strong>电化学 / 物理学 / 材料科学:</strong><br />
         </ul>
 
-         <ol>
+        <ol>
 
           <li>
             <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller <br />
@@ -1383,7 +1424,8 @@
         <h3>演讲 & 主持</h3>
         <ol>
           <li>
-            2023 | <strong>联合国波恩气候变化大会</strong> 分会场主持人: 中国能源转型与技术创新（全球直播）<br /> <!---https://unfccc-events.azureedge.net/SB58_91701/agenda-->
+            2023 | <strong>联合国波恩气候变化大会</strong> 分会场主持人: 中国能源转型与技术创新（全球直播）<br />
+            <!---https://unfccc-events.azureedge.net/SB58_91701/agenda-->
           </li>
           <li>
             2022 | <strong>IN3 资本沙龙</strong> 受邀嘉宾: 举足"氢"重, 下重注的“氢能源”到底好在哪里 (第8场, 100+线上参会)<br />
@@ -1406,15 +1448,15 @@
       <h3 class="hidden-mobile" style="display:inline-block">联合国公开演讲</h3>
       <div class="video-container hidden-mobile">
         <video controls poster="images/Bonn_preview_cn.png">
-            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 63.25%;">
         <video controls poster="images/Bonn_preview_cn.png">
-            <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="/images/Bonn_Climate_v1_8MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1450,9 +1492,7 @@
         <h3>荣誉</h3>
         <ol>
           <li>
-            2023 | <strong>桑坦德银行奖学金</strong> [<a
-              href=""
-              target="_blank">链接</Link></a>],
+            2023 | <strong>桑坦德银行奖学金</strong> [<a href="" target="_blank">链接</Link></a>],
             <em></em>绿色转型项目-剑桥大学嘉治商学院, 英国.
           </li>
           <li>
@@ -1470,7 +1510,8 @@
             <em>美国电化学学会期刊 (JES)</em>, 美国.
           </li>
           <li>
-            2019 | <strong>ECS会议旅行奖</strong> [<a href="https://unknown/files/ECS_Travel_Grant.pdf" target="_blank">证明</Link></a>],
+            2019 | <strong>ECS会议旅行奖</strong> [<a href="https://unknown/files/ECS_Travel_Grant.pdf" target="_blank">证明
+              </Link></a>],
             <em>美国电化学学会资助</em>, 华盛顿特区, 美国.
           </li>
           <li>
@@ -1581,9 +1622,11 @@
       <div class="doc-section" id="visiting">
         <h3>参访</h3>
         <ul class="square">
-          <li><strong>政府/国际机构</strong>：联合国欧洲总部 (日内瓦, 2023)、联合国维也纳分部 (维也纳, 2023)、联合国波恩分部 (波恩, 2023)、联合国总部 (纽约, 2019)、法国塞纳河-诺曼底水务局 (巴黎, 2016)、苏州市城市规划局 (江苏, 2016)、郑州市生态环境局 (河南,
+          <li><strong>政府/国际机构</strong>：联合国欧洲总部 (日内瓦, 2023)、联合国维也纳分部 (维也纳, 2023)、联合国波恩分部 (波恩, 2023)、联合国总部 (纽约,
+            2019)、法国塞纳河-诺曼底水务局 (巴黎, 2016)、苏州市城市规划局 (江苏, 2016)、郑州市生态环境局 (河南,
             2014)、开封市环境保护局 (河南, 2014)</li>
-          <li><strong>同步辐射加速器</strong>：欧洲核子研究中心/CERN (日内瓦, 2023)、瑞士光源/SLS (菲利根, 2017)、意大利同步加速器/Elettra (的里雅斯特, 2016)、欧盟自由电子激光器/EUXFEL (汉堡, 2016)、德国电子加速器/DESY (汉堡, 2016)、法国同步辐射加速器/SOLEIL (巴黎, 2015)</li>
+          <li><strong>同步辐射加速器</strong>：欧洲核子研究中心/CERN (日内瓦, 2023)、瑞士光源/SLS (菲利根, 2017)、意大利同步加速器/Elettra (的里雅斯特,
+            2016)、欧盟自由电子激光器/EUXFEL (汉堡, 2016)、德国电子加速器/DESY (汉堡, 2016)、法国同步辐射加速器/SOLEIL (巴黎, 2015)</li>
           <li><strong>核能反应堆</strong>：瑞士贝茨瑙核电站 (阿尔高州, 2018)、法国萨克雷核研究中心 (巴黎, 2015)、海因茨·莱布尼茨中子源研究院 (慕尼黑, 2016)</li>
         </ul>
       </div>
@@ -1598,7 +1641,8 @@
         <ul class="square">
           <li><strong>亚洲</strong>：中国大陆 (13+ 省/市)、台湾、俄罗斯、土耳其、泰国</li>
           <li><strong>欧洲</strong>：奥地利、比利时、波斯尼亚和黑塞哥维那、克罗地亚、
-            捷克、丹麦、爱沙尼亚、法国 (5+ 城市)、芬兰、德国 (25+ 城市)、匈牙利、冰岛、爱尔兰、意大利、列支敦士登、卢森堡、马耳他、荷兰、挪威、葡萄牙、波兰、塞尔维亚、斯洛伐克、斯洛文尼亚、西班牙、瑞典、瑞士 (30+
+            捷克、丹麦、爱沙尼亚、法国 (5+ 城市)、芬兰、德国 (25+ 城市)、匈牙利、冰岛、爱尔兰、意大利、列支敦士登、卢森堡、马耳他、荷兰、挪威、葡萄牙、波兰、塞尔维亚、斯洛伐克、斯洛文尼亚、西班牙、瑞典、瑞士
+            (30+
             城市)、英国</li>
           <li><strong>北美</strong>：加拿大、美国</li>
           <li><strong>非洲</strong>：大加那利群岛 (西属)</li>
@@ -1642,58 +1686,73 @@
                 class='blue'>linkedin.com/in/xuhong/</span></a> (关注者: 1800+)<br /></li>
           <li><strong>谷歌学术</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a> (引用数: 245+)<br /></li>
-          <li><strong>知乎</strong>: <a href="https://www.zhihu.com/people/dr.of.nothing"
-                target="_blank" target="_blank"><span class='blue'>zhihu.com/people/dr.of.nothing</span></a> (关注者: 13500+)<br /></li>
-        
-        
+          <li><strong>知乎</strong>: <a href="https://www.zhihu.com/people/dr.of.nothing" target="_blank"
+              target="_blank"><span class='blue'>zhihu.com/people/dr.of.nothing</span></a> (关注者: 13500+)<br /></li>
 
 
 
 
 
-       <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+
+
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
 
 
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
 
-          </ul>
-       
+        </ul>
+
       </div>
 
 
     </div><!-- Content -->
     <div>
       <footer class="eleven center-column">
-       
 
 
-        
-       
+
+
+
 
         <div class="flex-container">
           <div id="date-display"></div>
-          <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock - San Francisco" target="_blank" rel="nofollow">温哥华</a></div>
-          
-
-          <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">纽约</a></div>
-        
-
-          <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">伦敦</a></div>
-         
-          <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">巴黎</a></div>
-      
-
-          <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">莫斯科</a></div>
+          <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212"
+              class="clock24"
+              id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="Clock - San Francisco" target="_blank" rel="nofollow">温哥华</a></div>
 
 
-          <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">北京</a></div>
+          <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+              style="text-decoration: none;color:#f35212" class="clock24"
+              id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+              title="時間 紐約市" target="_blank" rel="nofollow">纽约</a></div>
+
+
+          <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24"
+              id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="time in London" target="_blank" rel="nofollow">伦敦</a></div>
+
+          <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24"
+              id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="Paris current time" target="_blank" rel="nofollow">巴黎</a></div>
+
+
+          <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24"
+              id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="current time in Moscow" target="_blank" rel="nofollow">莫斯科</a></div>
+
+
+          <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24"
+              id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+              title="Beijing time now" target="_blank" rel="nofollow">北京</a></div>
           <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
-      </div>
+        </div>
 
-      <hr class="large" />
+        <hr class="large" />
 
         <!--<div style="filter: grayscale(100%) opacity(85%) brightness(100%);"><div class="hidden-mobile"><img src="images/logoline.png" width="85%" /></div></div>-->
         <p><strong>有限游戏</strong>以<strong>取胜</strong>为目的，<strong>无限游戏</strong>以<strong>延续</strong>游戏为宗旨。<br /><small>版权 ©
@@ -1761,221 +1820,221 @@
     </script>
 
 
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  // Auto transition the slides every 1.5 seconds
-  let slideInterval = setInterval(() => {
-    plusSlides(1);
-  }, 3500);
-  
-  function plusSlides(n) {
-    clearInterval(slideInterval);
-    showSlides(slideIndex += n);
-    slideInterval = setInterval(() => {
-      plusSlides(1);
-    }, 3500);
-  }
-  
-  function currentSlide(n) {
-    clearInterval(slideInterval);
-    showSlides(slideIndex = n);
-    slideInterval = setInterval(() => {
-      plusSlides(1);
-    }, 3500);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
-  </script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-<script>
-  function loadScript(scriptUrl, scriptId) {
-      var existingScript = document.getElementById(scriptId);
-      if (existingScript != null) {
+      // Auto transition the slides every 1.5 seconds
+      let slideInterval = setInterval(() => {
+        plusSlides(1);
+      }, 3500);
+
+      function plusSlides(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex += n);
+        slideInterval = setInterval(() => {
+          plusSlides(1);
+        }, 3500);
+      }
+
+      function currentSlide(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex = n);
+        slideInterval = setInterval(() => {
+          plusSlides(1);
+        }, 3500);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <script>
+      function loadScript(scriptUrl, scriptId) {
+        var existingScript = document.getElementById(scriptId);
+        if (existingScript != null) {
           document.body.removeChild(existingScript);
+        }
+
+        var script = document.createElement("script");
+        script.language = "javascript";
+        script.type = "text/javascript";
+        script.src = scriptUrl;
+        script.id = scriptId;
+
+        document.body.appendChild(script);
       }
 
-      var script = document.createElement("script");
-      script.language = "javascript";
-      script.type = "text/javascript";
-      script.src = scriptUrl;
-      script.id = scriptId;
+      function loadAppropriateScript() {
+        var userLang = navigator.language || navigator.userLanguage;
 
-      document.body.appendChild(script);
-  }
-
-  function loadAppropriateScript() {
-      var userLang = navigator.language || navigator.userLanguage;
-
-      if (["zh-TW", "zh-HK", "zh-MO"].includes(userLang)) {
+        if (["zh-TW", "zh-HK", "zh-MO"].includes(userLang)) {
           loadScript("https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js", "tongwenlet_tw");
-      } else if (userLang === "zh-CN") {
+        } else if (userLang === "zh-CN") {
           loadScript("https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js", "tongwenlet_cn");
+        }
       }
-  }
 
-  window.onload = loadAppropriateScript;
-</script>
+      window.onload = loadAppropriateScript;
+    </script>
 
 
-<script>
-  let holidays = [
-  // Fixed-date holidays
-  { date: '01-01', greeting: '元旦快乐, 万事顺意！<br>', range: 5 },
-  { date: '01-06', greeting: '博士毕业周年纪念！<br>', range: 1 },
-  { date: '04-05', greeting: '今天是我的生日！<br>', range: 1 },
-  { date: '05-01', greeting: '五一劳动节快乐！<br>', range: 1 },
-  { date: '10-31', greeting: '万圣节快乐！<br>', range: 2 },
-  { date: '12-25', greeting: '圣诞节快乐！<br>', range: 5 },
-  // Lunar calendar holidays for specific years
-  { date: '2024-02-10', greeting: '新年快乐, 龙行天下！<br>', range: 7, lunar: true },
-  { date: '2025-01-29', greeting: '新年快乐, 银蛇劲舞！<br>', range: 7, lunar: true },
-  { date: '2026-02-17', greeting: '新年快乐, 马到成功！<br>', range: 7, lunar: true },
-  { date: '2027-02-06', greeting: '新年快乐, 三羊开泰！<br>', range: 7, lunar: true },
-  { date: '2028-01-26', greeting: '新年快乐, 金猴送福！<br>', range: 7, lunar: true },
-  { date: '2029-02-13', greeting: '新年快乐, 雄鸡晓唱！<br>', range: 7, lunar: true },
-  { date: '2030-02-03', greeting: '新年快乐, 狗年旺旺！！<br>', range: 7, lunar: true },
+    <script>
+      let holidays = [
+        // Fixed-date holidays
+        { date: '01-01', greeting: '元旦快乐, 万事顺意！<br>', range: 5 },
+        { date: '01-06', greeting: '博士毕业周年纪念！<br>', range: 1 },
+        { date: '04-05', greeting: '今天是我的生日！<br>', range: 1 },
+        { date: '05-01', greeting: '五一劳动节快乐！<br>', range: 1 },
+        { date: '10-31', greeting: '万圣节快乐！<br>', range: 2 },
+        { date: '12-25', greeting: '圣诞节快乐！<br>', range: 5 },
+        // Lunar calendar holidays for specific years
+        { date: '2024-02-10', greeting: '新年快乐, 龙行天下！<br>', range: 7, lunar: true },
+        { date: '2025-01-29', greeting: '新年快乐, 银蛇劲舞！<br>', range: 7, lunar: true },
+        { date: '2026-02-17', greeting: '新年快乐, 马到成功！<br>', range: 7, lunar: true },
+        { date: '2027-02-06', greeting: '新年快乐, 三羊开泰！<br>', range: 7, lunar: true },
+        { date: '2028-01-26', greeting: '新年快乐, 金猴送福！<br>', range: 7, lunar: true },
+        { date: '2029-02-13', greeting: '新年快乐, 雄鸡晓唱！<br>', range: 7, lunar: true },
+        { date: '2030-02-03', greeting: '新年快乐, 狗年旺旺！！<br>', range: 7, lunar: true },
 
-  { date: '2024-02-24', greeting: '元宵节快乐！<br>', range: 1, lunar: true },
+        { date: '2024-02-24', greeting: '元宵节快乐！<br>', range: 1, lunar: true },
 
-  { date: '2024-03-29', greeting: '复活节快乐！<br>', range: 4, lunar: true },
-  { date: '2025-04-18', greeting: '复活节快乐！<br>', range: 4, lunar: true },
-  { date: '2026-04-03', greeting: '复活节快乐！<br>', range: 4, lunar: true },
+        { date: '2024-03-29', greeting: '复活节快乐！<br>', range: 4, lunar: true },
+        { date: '2025-04-18', greeting: '复活节快乐！<br>', range: 4, lunar: true },
+        { date: '2026-04-03', greeting: '复活节快乐！<br>', range: 4, lunar: true },
 
-  { date: '2024-06-10', greeting: '端午节快乐！<br>', range: 3, lunar: true },
+        { date: '2024-06-10', greeting: '端午节快乐！<br>', range: 3, lunar: true },
 
-  { date: '2024-09-15', greeting: '中秋快乐！<br>', range: 3, lunar: true },
-  { date: '2025-10-06', greeting: '中秋快乐！<br>', range: 3, lunar: true },
-  { date: '2026-09-25', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+        { date: '2024-09-15', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+        { date: '2025-10-06', greeting: '中秋快乐！<br>', range: 3, lunar: true },
+        { date: '2026-09-25', greeting: '中秋快乐！<br>', range: 3, lunar: true },
 
-  { date: '2024-10-01', greeting: '国庆快乐！<br>', range: 1, lunar: true },
+        { date: '2024-10-01', greeting: '国庆快乐！<br>', range: 1, lunar: true },
 
-  { date: '2024-08-27', greeting: '留欧十年纪念日！<br>', range: 1, lunar: true },
+        { date: '2024-08-27', greeting: '留欧十年纪念日！<br>', range: 1, lunar: true },
 
       ];
 
-  function isHolidayNear(today, holiday) {
-      const todayDate = new Date(today);
-      let holidayDate = new Date(holiday.date);
+      function isHolidayNear(today, holiday) {
+        const todayDate = new Date(today);
+        let holidayDate = new Date(holiday.date);
 
-      if (!holiday.lunar) {
+        if (!holiday.lunar) {
           holidayDate.setFullYear(todayDate.getFullYear());
+        }
+
+        const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
+        const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
+
+        return todayDate >= startRange && todayDate <= endRange;
       }
 
-      const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
-      const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
+      function checkHoliday() {
+        const today = new Date().toISOString().slice(0, 10);
+        let greetingElement = document.getElementById("greetings");
+        greetingElement.style.display = 'none'; // Initially hide the greeting
 
-      return todayDate >= startRange && todayDate <= endRange;
-  }
-
-  function checkHoliday() {
-      const today = new Date().toISOString().slice(0, 10);
-      let greetingElement = document.getElementById("greetings");
-      greetingElement.style.display = 'none'; // Initially hide the greeting
-
-      // Check lunar holidays first
-      for (let holiday of holidays) {
+        // Check lunar holidays first
+        for (let holiday of holidays) {
           if (holiday.lunar && isHolidayNear(today, holiday)) {
-              greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
-              greetingElement.style.display = 'block'; // Show the greeting
-              return;
+            greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+            greetingElement.style.display = 'block'; // Show the greeting
+            return;
           }
-      }
+        }
 
-      // Check fixed-date holidays
-      for (let holiday of holidays) {
+        // Check fixed-date holidays
+        for (let holiday of holidays) {
           if (!holiday.lunar && isHolidayNear(today, holiday)) {
-              greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
-              greetingElement.style.display = 'block'; // Show the greeting
-              return;
+            greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+            greetingElement.style.display = 'block'; // Show the greeting
+            return;
           }
+        }
       }
-  }
 
-  window.onload = checkHoliday;
-</script>
+      window.onload = checkHoliday;
+    </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('date-display').innerHTML = getCurrentDateFormatted('zh-CN');
-  });
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('date-display').innerHTML = getCurrentDateFormatted('zh-CN');
+      });
 
-  function getCurrentDateFormatted(locale) {
-      const options = {
+      function getCurrentDateFormatted(locale) {
+        const options = {
           year: 'numeric',
           month: '2-digit',
           day: '2-digit',
           weekday: 'long'
-      };
+        };
 
-      const currentDate = new Date().toLocaleDateString(locale, options);
-      const dateParts = currentDate.match(/(\d{4})年(\d{2})月(\d{2})日/);
-      const weekday = currentDate.match(/星期.+/)[0];
+        const currentDate = new Date().toLocaleDateString(locale, options);
+        const dateParts = currentDate.match(/(\d{4})年(\d{2})月(\d{2})日/);
+        const weekday = currentDate.match(/星期.+/)[0];
 
-      if (dateParts && dateParts.length === 4) {
+        if (dateParts && dateParts.length === 4) {
           const formattedDate = `${dateParts[1]}年${dateParts[2]}月${dateParts[3]}日`;
           return `<span style="color:#f35212;">${weekday}</span> - ${formattedDate}`;
-      } else {
+        } else {
           return '日期格式解析错误';
+        }
       }
-  }
-</script>
+    </script>
 
-<script type="text/javascript">
-  window.onload = function () {
-    // Block certain keyboard shortcuts
-    document.onkeydown = function (e) {
-      e = e || window.event;
+    <script type="text/javascript">
+      window.onload = function () {
+        // Block certain keyboard shortcuts
+        document.onkeydown = function (e) {
+          e = e || window.event;
 
-      // Block F12
-      if (e.keyCode == 123) {
-        return false;
-      }
-      // Block Ctrl+Shift+I
-      else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        return false;
-      }
-      // Block Shift+F10
-      else if (e.shiftKey && e.keyCode == 121) {
-        return false;
-      }
-      // Block Ctrl+S (Save As)
-      else if (e.ctrlKey && e.keyCode == 83) {
-        e.preventDefault();
-        return false;
-      }
-      // Block Ctrl+C (Copy)
-      else if (e.ctrlKey && e.keyCode == 67) {
-        return false;
-      }
-    };
+          // Block F12
+          if (e.keyCode == 123) {
+            return false;
+          }
+          // Block Ctrl+Shift+I
+          else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            return false;
+          }
+          // Block Shift+F10
+          else if (e.shiftKey && e.keyCode == 121) {
+            return false;
+          }
+          // Block Ctrl+S (Save As)
+          else if (e.ctrlKey && e.keyCode == 83) {
+            e.preventDefault();
+            return false;
+          }
+          // Block Ctrl+C (Copy)
+          else if (e.ctrlKey && e.keyCode == 67) {
+            return false;
+          }
+        };
 
-    // Block right-click context menu
-    document.oncontextmenu = function () {
-      return false;
-    };
+        // Block right-click context menu
+        document.oncontextmenu = function () {
+          return false;
+        };
 
-    // Block text selection (Copy action)
-    document.onselectstart = function () {
-      return false;
-    };
-  };
-</script>
+        // Block text selection (Copy action)
+        document.onselectstart = function () {
+          return false;
+        };
+      };
+    </script>
 
     <!-- End Document
 ================================================== -->
