@@ -52,72 +52,85 @@
 
   <style>
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
-        overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+      overflow: hidden;
     }
-    
+
     .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .red-dot {
-  position: absolute;
-  top: 23.1%;
-  left: 50.9%;
-  width: 5px; /* 减小红点尺寸 */
-  height: 5px; /* 减小红点尺寸 */
-  background-color: rgb(255, 77, 0);
-  border-radius: 50%;
-  animation: ripple 2s infinite ease-out; /* 更新动画时序函数 */
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
-                0 0 0 10px rgba(255, 0, 0, 0),
-                0 0 0 20px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
-                0 0 0 15px rgba(255, 102, 0, 0.306),
-                0 0 0 25px rgba(255, 0, 0, 0.1);
-  }
-}
-
-
-
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap; /* 防止元素换行 */
-    padding: 0; /* 移除内边距 */
-    margin: 0; /* 移除外边距 */
-    list-style: none; /* 如果是列表项，移除列表样式 */
-}
-
-.flex-container > div, .flex-container > a {
-    margin: 0; /* 移除外边距 */
-    padding: 0; /* 移除内边距 */
-    white-space: nowrap; /* 防止内容换行 */
-}
-
-/* Mobile styles - hide .flex-container */
-@media (max-width: 768px) {
-    .flex-container {
-        display: none;
+      position: absolute;
+      top: 23.1%;
+      left: 50.9%;
+      width: 5px;
+      /* 减小红点尺寸 */
+      height: 5px;
+      /* 减小红点尺寸 */
+      background-color: rgb(255, 77, 0);
+      border-radius: 50%;
+      animation: ripple 2s infinite ease-out;
+      /* 更新动画时序函数 */
     }
-}
 
-    </style>
+    @keyframes ripple {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 128, 0, 0.765),
+          0 0 0 10px rgba(255, 0, 0, 0),
+          0 0 0 20px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+          0 0 0 15px rgba(255, 102, 0, 0.306),
+          0 0 0 25px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      /* 或者可以使用 flex-start 来左对齐 */
+      align-items: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* 防止元素换行 */
+      padding: 0;
+      /* 移除内边距 */
+      margin: 0;
+      /* 移除外边距 */
+      list-style: none;
+      /* 如果是列表项，移除列表样式 */
+    }
+
+    .flex-container>div,
+    .flex-container>a {
+      margin: 0;
+      /* 移除外边距 */
+      padding: 0;
+      /* 移除内边距 */
+      white-space: nowrap;
+      /* 防止内容换行 */
+    }
+
+    /* Mobile styles - hide .flex-container */
+    @media (max-width: 768px) {
+      .flex-container {
+        display: none;
+      }
+    }
+  </style>
 
   <script type="module">
     async function fetchCountries() {
@@ -148,34 +161,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', displayCountryName);
-  </script>
-
-  <!-- block save as
-      ================================================== -->
-  <script type="text/javascript">
-    window.onload = function () {
-      document.onkeydown = function () {
-        var e = window.event || arguments[0];
-        //屏蔽F12
-        if (e.keyCode == 123) {
-
-          return false;
-          //屏蔽Ctrl+Shift+I
-        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-
-          return false;
-          //屏蔽Shift+F10
-        } else if ((e.shiftKey) && (e.keyCode == 121)) {
-
-          return false;
-        }
-      };
-      //屏蔽右键单击
-      document.oncontextmenu = function () {
-
-        return false;
-      }
-    }
   </script>
 
   <script src="js/language.js"></script>
@@ -274,7 +259,7 @@
             <li><a href="#"> <span class='blue'>Researcher</span> :: <span class='blue'>Engineer</span> :: <span
                   class='blue'>Analyst</span></a></li>
 
-           <p>____</p>
+            <p>____</p>
             <!--<li><a href="#whoami">Researcher</a></li>
         <li><a href="#whoami">Engineer</a></li>
         <li><a href="#whoami">Analyst</a></li>-->
@@ -471,17 +456,34 @@
       <p align="justify">
 
         <span class="display-mobile">Greetings, friends from <span id="location2"></span>! </br></br></span>
-        Dr. Hong Xu is a passionate Green Tech <strong>Researcher</strong>, e-Power System <strong>Engineer</strong>, and <strong>Analyst</strong> specializing in Energy Economics and Policy. He chaired a parallel session at the <strong><a href="" target="_blank">United Nations Climate Change Conference</a></strong></strong> (UNFCCC), and contributed his expertise as an <strong>Academic Jury</strong> at the <strong><a href="https://symposium.org/" target="_blank">St. Gallen Symposium</a></strong> (Swiss Think-tank). He is serving as Peer Reviewer for several high impact journals across <strong>Energy, Transport</strong>, and <strong>Sustainability</strong> sectors. As an interdisciplinary scholar, Dr. Xu's efforts were rewarded with Santander Bank Scholarship, ECS Travel Grant, Intel Edge AI Scholarship, Erasmus Scholarship, Chinese patent grants, and etc.
+        Dr. Hong Xu is a passionate Green Tech <strong>Researcher</strong>, e-Power System <strong>Engineer</strong>,
+        and <strong>Analyst</strong> specializing in Energy Economics and Policy. He chaired a parallel session at the
+        <strong><a href="" target="_blank">United Nations Climate Change Conference</a></strong></strong> (UNFCCC), and
+        contributed his expertise as an <strong>Academic Jury</strong> at the <strong><a href="https://symposium.org/"
+            target="_blank">St. Gallen Symposium</a></strong> (Swiss Think-tank). He is serving as Peer Reviewer for
+        several high impact journals across <strong>Energy, Transport</strong>, and <strong>Sustainability</strong>
+        sectors. As an interdisciplinary scholar, Dr. Xu's efforts were rewarded with Santander Bank Scholarship, ECS
+        Travel Grant, Intel Edge AI Scholarship, Erasmus Scholarship, Chinese patent grants, and etc.
       </p>
 
       <p align="justify">
-        He received his PhD in <strong>Renewable Energy</strong> from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> and Masters' Degree in Materials Science from the <strong><a href="https://tum.de" target="_blank">Technical University of Munich</a></strong>, in collaboration with the <strong><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></strong> in Switzerland and the <strong><a href="https://xfel.eu" target="_blank">European XFEL</a></strong> in Germany. His passion for impactful research in energy and transport fields, has led to extensive R&D collaborations with industry leaders such as <strong>Toyota</strong> and <strong>Infineon</strong>. Beyond his research endeavors, he pursued an <strong>MBA</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong> and received grant-based Executive Education at the <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></strong>, encompassing practical experience at dual-currency venture capital firm and top securities company in China.
+        He received his PhD in <strong>Renewable Energy</strong> from <strong><a href="https://ethz.ch/en.html"
+            target="_blank">ETH Zurich</a></strong> and Masters' Degree in Materials Science from the <strong><a
+            href="https://tum.de" target="_blank">Technical University of Munich</a></strong>, in collaboration with the
+        <strong><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></strong> in Switzerland and the
+        <strong><a href="https://xfel.eu" target="_blank">European XFEL</a></strong> in Germany. His passion for
+        impactful research in energy and transport fields, has led to extensive R&D collaborations with industry leaders
+        such as <strong>Toyota</strong> and <strong>Infineon</strong>. Beyond his research endeavors, he pursued an
+        <strong>MBA</strong> at the <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of
+            Business</a></strong> and received grant-based Executive Education at the <strong><a
+            href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></strong>, encompassing
+        practical experience at dual-currency venture capital firm and top securities company in China.
       </p>
 
       <p style="text-align:left;">
-        
+
         PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> NEXT??
-       
+
       </p>
 
       <!---
@@ -660,14 +662,14 @@
               <p>Social</br>Engaging</p>
             </div>
           </div>
-      
+
         </span>
       </div>
 
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
-      
+
       <div class="doc-section" id="education" style="width:113%">
         <h3 style="display:inline-block">Education</h3>
         <ul class="square">
@@ -688,8 +690,9 @@
             <!--[<a href="https://unknown/files/Master_Thesis_LMU_TUM-Xu_Hong.pdf" target="_blank">Thesis</a>]-->
             <p>____</p>
           <li>2023-2023 | <strong>Exec. Education, Green Transition</strong> (Scholarship)<br />
-              <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">University of Cambridge - Judge Business School</a></strong>,
-              UK<br />
+            <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">University of Cambridge - Judge Business
+                School</a></strong>,
+            UK<br />
           <li>2020-2021 | <strong>MBA, Business Administration </strong>(part-time)<br />
             <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong>,
             Washington D.C.<br /></p>
@@ -805,49 +808,30 @@
         </div>
         <hr />
 -->
-
       <div class="doc-section" id="publications">
         <h3>Publications</h3>
-        <ol>
 
+        <ul class="square">
+          <li><strong>Clean Energy Tech / Electrochemistry</strong></li>
+        </ul>
+        <ol>
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br />
             Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ liquid water
             desaturation via evaporation [J] <br />
             2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
               href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">PDF</a>] <text
-              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:red">[New!]</text>
+              style="color:rgb(8, 114, 31)">[SLS]</text>
           </li>
-
-
-          <li>
-            S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S.
-            Haussener
-            [EPFL]<br />
-            Conductive heat transfer in partially saturated gas diffusion layers with evaporative cooling [J] <br />
-            2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
-              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>] <text
-              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[EPFL]</text>
-          </li>
-
           <li>
             <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J.
             Eller [PSI]<br />
-            Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond
-            operando
+            Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond operando
             X-ray tomographic microscopy. [J] <br />
             2021 | <em><strong>J. Power Sources </strong></em> [<a
-              href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>]
-            <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
-          </li>
-          <li>
-            M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni
-            [ETH],
-            F. Marone<br />
-            Deep learning based classification of dynamic processes in time-resolved XTM [J] <br />
-            2021 | <em><strong>Scientific Reports </strong></em> [<a
-              href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>] <text
-              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(191, 9, 228)">[CWI.Amsterdam]</text>
+              href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
+
           </li>
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
@@ -861,6 +845,51 @@
           </li>
 
 
+          <li>
+            C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br />
+            Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell Performance [J] <br />
+            2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a
+              href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">Link</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text>
+          </li>
+          <li>
+            S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S. Haussener
+            [EPFL]<br />
+            Conductive heat transfer in partially saturated gas diffusion layers with evaporative cooling [J] <br />
+            2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+              href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[EPFL]</text>
+          </li>
+          <li>
+            Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, A. Kato, F. Marone, <strong>H.
+              Xu*</strong>
+            [PSI], F. N. Büchi. <br />
+            Improving water management in fuel cells through microporous layer modifications: Fast operando
+            tomographic
+            imaging of liquid water. [J] <br />
+            2019 | <em><strong>J. Power Sources </strong></em> [<a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943" target="_blank">Link</a>]
+            <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
+          </li>
+
+
+        </ol>
+
+
+        <ul class="square">
+          <li><strong>Computational Imaging / Deep Learning</strong></li>
+        </ul>
+
+        <ol>
+
+          <li>
+            M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni [ETH],
+            F. Marone [SLS]<br />
+            Deep learning based classification of dynamic processes in time-resolved XTM [J] <br />
+            2021 | <em><strong>Scientific Reports </strong></em> [<a
+              href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>] <text
+              style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(191, 9, 228)">[CWI.Amsterdam]</text>
+          </li>
 
           <li>
             M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, J. Sijbers, Prof. M. Stampanoni [ETH], F. Marone
@@ -872,13 +901,7 @@
           </li>
 
 
-          <li>
-            C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br />
-            Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell Performance [J] <br />
-            2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a
-              href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">Link</a>] <text
-              style="color:rgb(8, 114, 31)">[SLS]</text>
-          </li>
+
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
             [PSI]<br />
@@ -900,17 +923,6 @@
               style="color:rgb(14, 97, 250)">[ECS Travel Grant]</text>
           </li>
 
-          <li>
-            Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, A. Kato, F. Marone, <strong>H.
-              Xu*</strong>
-            [PSI], F. N. Büchi. <br />
-            Improving water management in fuel cells through microporous layer modifications: Fast operando
-            tomographic
-            imaging of liquid water. [J] <br />
-            2019 | <em><strong>J. Power Sources </strong></em> [<a
-              href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943" target="_blank">Link</a>]
-            <text style="color:rgb(8, 114, 31)">[SLS]</text> <text style="color:rgb(250, 49, 14)">[Toyota]</text>
-          </li>
 
           <li>
             <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
@@ -922,6 +934,14 @@
               Award]</text>
           </li>
 
+
+        </ol>
+
+        <ul class="square">
+          <li><strong>Materials Science / Chemical Engineering</strong></li>
+        </ul>
+
+        <ol>
           <li>
             Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT], T. Zhang <br />
             A simple spray reaction synthesis and characterization of hierarchically porous SnO2 microspheres for an
@@ -1017,15 +1037,15 @@
       <h3 class="hidden-mobile" style="display:inline-block">Doctoral Awards Ceremony</h3>
       <div class="video-container hidden-mobile" style="padding-bottom: 48.25%">
         <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="video-container display-mobile" style="width:113%;padding-bottom: 55.25%;">
         <video controls poster="images/graduation_preview.png">
-            <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4" >
-            Your browser does not support the video tag.
+          <source src="/images/Graduation_Ceremony_25MB.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
@@ -1036,7 +1056,7 @@
       <div class="doc-section" id="presentations">
         <h3>Conferences</h3>
         <ol>
-           <!---
+          <!---
           <li>
             <strong>H. Xu</strong>, Chinese Energy Transition and Technology Innovation <br />
             <em>United Nations Climate Change Conference</em>, Bonn, Germany. 2023. <strong>[Moderator/Speaker]</strong> [<a
@@ -1071,11 +1091,12 @@
           -->
           <li>
             <strong>H. Xu</strong>, Innovation & Entrepreneurship: The Effect of Public Science on Corporate R&D<br />
-            <em>Max Planck Institute for Innovation and Competition</em>, Munich, Germany. 2023. <strong>[Participant]</strong> [<a
-              href="#" target="_blank">Link</a>]
+            <em>Max Planck Institute for Innovation and Competition</em>, Munich, Germany. 2023.
+            <strong>[Participant]</strong> [<a href="#" target="_blank">Link</a>]
           </li>
-           <li>
-            <strong>H. Xu</strong>, Transforming Transportation 2022: Climate-centered Mobility for a Sustainable Recovery<br />
+          <li>
+            <strong>H. Xu</strong>, Transforming Transportation 2022: Climate-centered Mobility for a Sustainable
+            Recovery<br />
             <em>Transforming Transportation 2022 Forum</em>, Online, USA. 2022. <strong>[Attendee]</strong> [<a
               href="https://www.transformingtransportation.org/" target="_blank">Link</a>]
           </li>
@@ -1334,10 +1355,14 @@
       <div class="doc-section" id="visiting">
         <h3>Visiting</h3>
         <ul class="square">
-          <li><strong>Organization</strong>: United Nations (Geneva, 2023), United Nations (New York, 2019), Water Agency Seine-Normandy
-            (Paris, 2016), Suzhou City Urban Planning Bureau (Jiangsu, 2016), Zhengzhou City Ecological Environment Bureau
+          <li><strong>Organization</strong>: United Nations (Geneva, 2023), United Nations (New York, 2019), Water
+            Agency Seine-Normandy
+            (Paris, 2016), Suzhou City Urban Planning Bureau (Jiangsu, 2016), Zhengzhou City Ecological Environment
+            Bureau
             (Henan, 2014), Kaifeng City Environment Protection Bureau (Henan, 2014)</li>
-          <li><strong>Synchrotron</strong>: CERN (Geneva, 2023), Swiss Light Source (Villigen, 2017), SOLEIL (Paris, 2015), German Electron Synchrotron (Hamburg, 2016), European XFEL (Hamburg, 2016), ELETTRA (Trieste, 2016)</li>
+          <li><strong>Synchrotron</strong>: CERN (Geneva, 2023), Swiss Light Source (Villigen, 2017), SOLEIL (Paris,
+            2015), German Electron Synchrotron (Hamburg, 2016), European XFEL (Hamburg, 2016), ELETTRA (Trieste, 2016)
+          </li>
           <li><strong>Reactor</strong>: Nuclear Power Plant Beznau (Aargau, 2018), Research Neutron Source
             Heinz Maier-Leibnitz (Munich, 2016), CEA Saclay Nuclear Research Centre (Paris, 2015) </li>
         </ul>
@@ -1361,22 +1386,23 @@
       <hr class="hidden-mobile">
       <div class="doc-section" id="travel">
         <h3>Travel History</h3>
-        
+
         <ul class="square">
           <li><strong>Asia</strong>: China (Mainland), Taiwan, Russia, Turkey, Thailand</li>
           <li><strong>Europe</strong>: Austria, Belgium, Bosnia and Herzegovina, Croatia,
             Czech Republic, Denmark, Estonia, Finland, France, Germany (25+ cities), Hungary, Iceland, Ireland, Italy,
-            Liechtenstein, Luxembourg, Malta, Netherlands, Norway, Portugal, Poland, Serbia, Slovakia, Slovenia, Spain, Sweden,
+            Liechtenstein, Luxembourg, Malta, Netherlands, Norway, Portugal, Poland, Serbia, Slovakia, Slovenia, Spain,
+            Sweden,
             Switzerland (30+ cities), United Kingdom</li>
           <li><strong>North America</strong>: United States, Canada</li>
           <li><strong>Africa</strong>: Gran Canaria (Spain)</li>
           <li><strong>In total</strong>: Visited 35 out of 197 Countries/Regions Worldwide</li>
         </ul>
-        
+
         <img src="images/travel.png" width="100%" alt="">
         <!--<div style="max-width:540px; text-align: center;margin:0px auto 0px auto;font-size:10px;"><div style="position:relative;padding: 0 0 67% 0;height:0;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="//www.fla-shop.com/visited-countries/embed/?st=AT%2CBA%2CBE%2CCA%2CCH%2CCN%2CCY%2CCZ%2CDE%2CDK%2CEE%2CES%2CFI%2CFR%2CGB%2CGI%2CGR%2CHK%2CHR%2CHU%2CIE%2CIS%2CIT%2CLI%2CLU%2CMC%2CMO%2CMT%2CNL%2CNO%2CPL%2CPT%2CRS%2CRU%2CSE%2CSI%2CSK%2CSM%2CTH%2CTW%2CUS%2CVA&vc=f9761f&uc=b3c3ca&hc=0977ec&bc=ffffff&ss=on" frameborder="0" scrolling="no"></iframe></div><a href="https://www.fla-shop.com/visited-countries/"></a></div>--->
 
-       
+
       </div>
 
 
@@ -1390,18 +1416,21 @@
         <h3>Contact Me</h3>
         <ul class="square">
           <li><strong>Email</strong>: <a href="mailto:h.xu@tum.de" target="_blank" target="_blank"><span
-                class='blue'>h.xu [at] tum.de</span></a><br />Please feel free to send me an email in case of collaborations, discussions, and media-related inquiries :- )</li>
+                class='blue'>h.xu [at] tum.de</span></a><br />Please feel free to send me an email in case of
+            collaborations, discussions, and media-related inquiries :- )</li>
           <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
               target="_blank"><span class='blue'>linkedin.com/in/xuhong/</span></a><br /></li>
           <li><strong>Google Scholar ID</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
               target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a><br /></li>
-           <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
+          <!-- <a href="https://info.flagcounter.com/D897" target="_blank"><img
             src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
             border="0"></a> -->
-            <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/" alt="Flag Counter"></a> <!---Pass: AHlUufteU-->        </ul>
+          <a href="https://www.flagcounter.me/details/enB"><img src="https://www.flagcounter.me/enB/"
+              alt="Flag Counter"></a> <!---Pass: AHlUufteU-->
+        </ul>
 
-      
-          <!--<br />
+
+        <!--<br />
               <div id="findipwidget"></div><div class="findiplink" id="findipurl">  <a href="http://www.find-ip.net/" target="_blank"> </a></div><script defer src="https://api.find-ip.net/widget.js?width=380&bg=white&border=white&textcol=black&region=0&language=0&browser=0&system=0&flag=0&"></script> -->
         </ul>
       </div>
@@ -1410,7 +1439,7 @@
 
 
 
-      
+
 
 
     </div><!-- Content -->
@@ -1421,30 +1450,45 @@
 
       <div class="flex-container">
         <div id="date-display"></div>
-        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Clock - San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
-        
-
-        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0=" title="時間 紐約市" target="_blank" rel="nofollow">New York</a></div>
-      
-
-        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="time in London" target="_blank" rel="nofollow">London</a></div>
-       
-        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Paris current time" target="_blank" rel="nofollow">Paris</a></div>
-    
-
-        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="current time in Moscow" target="_blank" rel="nofollow">Moscow</a></div>
+        <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207058-c1224-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Clock - San Francisco" target="_blank" rel="nofollow">Vancouver</a></div>
 
 
-        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24" id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time now" target="_blank" rel="nofollow">Beijing</a></div>
+        <div><a href="//24timezones.com/%E7%B4%90%E7%B4%84%E5%B8%82/%E6%97%B6%E9%97%B4"
+            style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206204-c1179-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InpoIn0="
+            title="時間 紐約市" target="_blank" rel="nofollow">New York</a></div>
+
+
+        <div><a href="//24timezones.com/London/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206827-c1136-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="time in London" target="_blank" rel="nofollow">London</a></div>
+
+        <div><a href="//24timezones.com/Paris/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206628-c1195-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Paris current time" target="_blank" rel="nofollow">Paris</a></div>
+
+
+        <div><a href="//24timezones.com/Moscow/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705207393-c1166-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="current time in Moscow" target="_blank" rel="nofollow">Moscow</a></div>
+
+
+        <div><a href="//24timezones.com/Beijing/time" style="text-decoration: none;color:#f35212" class="clock24"
+            id="tz24-1705206677-c133-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+            title="Beijing time now" target="_blank" rel="nofollow">Beijing</a></div>
         <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
-    </div>
+      </div>
 
       <hr class="large" />
       </hr>
       <p>A <strong>finite game</strong> is played for <strong>winning</strong>, while an <strong>infinite
           game</strong> is played for <strong>continuing</strong> the play.<br />
-          <small>Copyright © 2016-<script>const currentYear = new Date().getFullYear(); document.write(currentYear);</script> | Dr. Hong Xu | Updated: 11.2023 <a href="https://www.sigmatraffic.com?ref=232975"></a>
+        <small>Copyright © 2016-
+          <script>const currentYear = new Date().getFullYear(); document.write(currentYear);</script> | Dr. Hong Xu |
+          Updated: 11.2023 <a href="https://www.sigmatraffic.com?ref=232975"></a>
         </small>
       </p>
     </footer>
@@ -1453,7 +1497,7 @@
   </div><!-- container -->
 
 
-  
+
   <!-- js partial -->
   <script>
     const orangeDots = document.querySelectorAll('.orange-dot');
@@ -1505,93 +1549,93 @@
   </script>
 
 
-    <script>
-      let holidays = [
-          // Fixed-date holidays
-          { date: '01-01', greeting: 'Happy New Year!<br>', range: 5 },
-          { date: '01-06', greeting: 'Happy PhD Graduation Anniversary!<br>', range: 1 },
-          { date: '04-05', greeting: 'Today is My Birthday!<br>', range: 1 },
-          { date: '05-01', greeting: 'Happy International Labor Day!<br>', range: 1 },
-          { date: '10-31', greeting: 'Happy Halloween!<br>', range: 2 },
-          { date: '12-25', greeting: 'Merry Christmas!<br>', range: 5 },
-          // Lunar calendar holidays for specific years
-          { date: '2024-02-10', greeting: 'Happy Chinese New Year of Dragon!<br>', range: 7, lunar: true },
-          { date: '2025-01-29', greeting: 'Happy Chinese New Year of Snake!<br>', range: 7, lunar: true },
-          { date: '2026-02-17', greeting: 'Happy Chinese New Year of Horse!<br>', range: 7, lunar: true },
-          { date: '2027-02-06', greeting: 'Happy Chinese New Year of Goat!<br>', range: 7, lunar: true },
-          { date: '2028-01-26', greeting: 'Happy Chinese New Year of Monday!<br>', range: 7, lunar: true },
-          { date: '2029-02-13', greeting: 'Happy Chinese New Year of Rooster!<br>', range: 7, lunar: true },
-          { date: '2030-02-03', greeting: 'Happy Chinese New Year of Dog!<br>', range: 7, lunar: true },
+  <script>
+    let holidays = [
+      // Fixed-date holidays
+      { date: '01-01', greeting: 'Happy New Year!<br>', range: 5 },
+      { date: '01-06', greeting: 'Happy PhD Graduation Anniversary!<br>', range: 1 },
+      { date: '04-05', greeting: 'Today is My Birthday!<br>', range: 1 },
+      { date: '05-01', greeting: 'Happy International Labor Day!<br>', range: 1 },
+      { date: '10-31', greeting: 'Happy Halloween!<br>', range: 2 },
+      { date: '12-25', greeting: 'Merry Christmas!<br>', range: 5 },
+      // Lunar calendar holidays for specific years
+      { date: '2024-02-10', greeting: 'Happy Chinese New Year of Dragon!<br>', range: 7, lunar: true },
+      { date: '2025-01-29', greeting: 'Happy Chinese New Year of Snake!<br>', range: 7, lunar: true },
+      { date: '2026-02-17', greeting: 'Happy Chinese New Year of Horse!<br>', range: 7, lunar: true },
+      { date: '2027-02-06', greeting: 'Happy Chinese New Year of Goat!<br>', range: 7, lunar: true },
+      { date: '2028-01-26', greeting: 'Happy Chinese New Year of Monday!<br>', range: 7, lunar: true },
+      { date: '2029-02-13', greeting: 'Happy Chinese New Year of Rooster!<br>', range: 7, lunar: true },
+      { date: '2030-02-03', greeting: 'Happy Chinese New Year of Dog!<br>', range: 7, lunar: true },
 
-          { date: '2024-03-29', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
-          { date: '2025-04-18', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
-          { date: '2026-04-03', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+      { date: '2024-03-29', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+      { date: '2025-04-18', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
+      { date: '2026-04-03', greeting: 'Happy Easter!<br>', range: 4, lunar: true },
 
-          { date: '2024-06-10', greeting: 'Happy Dragon Boat Festival!<br>', range: 3, lunar: true },
+      { date: '2024-06-10', greeting: 'Happy Dragon Boat Festival!<br>', range: 3, lunar: true },
 
-          { date: '2024-09-15', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
-          { date: '2025-10-06', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
-          { date: '2026-09-25', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+      { date: '2024-09-15', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+      { date: '2025-10-06', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
+      { date: '2026-09-25', greeting: 'Happy Moon Festival!<br>', range: 3, lunar: true },
 
-          { date: '2024-02-24', greeting: 'Happy Lantern Festival!<br>', range: 1, lunar: true },
+      { date: '2024-02-24', greeting: 'Happy Lantern Festival!<br>', range: 1, lunar: true },
 
-          { date: '2024-10-01', greeting: 'Happy Chinese National Day!<br>', range: 1, lunar: true },
+      { date: '2024-10-01', greeting: 'Happy Chinese National Day!<br>', range: 1, lunar: true },
 
-          { date: '2024-08-27', greeting: 'Today Marks My 10th Year in Europe!<br>', range: 1, lunar: true },
-          ];
+      { date: '2024-08-27', greeting: 'Today Marks My 10th Year in Europe!<br>', range: 1, lunar: true },
+    ];
 
-      function isHolidayNear(today, holiday) {
-          const todayDate = new Date(today);
-          let holidayDate = new Date(holiday.date);
+    function isHolidayNear(today, holiday) {
+      const todayDate = new Date(today);
+      let holidayDate = new Date(holiday.date);
 
-          if (!holiday.lunar) {
-              holidayDate.setFullYear(todayDate.getFullYear());
-          }
-
-          const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
-          const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
-
-          return todayDate >= startRange && todayDate <= endRange;
+      if (!holiday.lunar) {
+        holidayDate.setFullYear(todayDate.getFullYear());
       }
 
-      function checkHoliday() {
-          const today = new Date().toISOString().slice(0, 10);
-          let greetingElement = document.getElementById("greetings");
-          greetingElement.style.display = 'none'; // Initially hide the greeting
+      const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
+      const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
 
-          // Check lunar holidays first
-          for (let holiday of holidays) {
-              if (holiday.lunar && isHolidayNear(today, holiday)) {
-                  greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
-                  greetingElement.style.display = 'block'; // Show the greeting
-                  return;
-              }
-          }
+      return todayDate >= startRange && todayDate <= endRange;
+    }
 
-          // Check fixed-date holidays
-          for (let holiday of holidays) {
-              if (!holiday.lunar && isHolidayNear(today, holiday)) {
-                  greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
-                  greetingElement.style.display = 'block'; // Show the greeting
-                  return;
-              }
-          }
+    function checkHoliday() {
+      const today = new Date().toISOString().slice(0, 10);
+      let greetingElement = document.getElementById("greetings");
+      greetingElement.style.display = 'none'; // Initially hide the greeting
+
+      // Check lunar holidays first
+      for (let holiday of holidays) {
+        if (holiday.lunar && isHolidayNear(today, holiday)) {
+          greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+          greetingElement.style.display = 'block'; // Show the greeting
+          return;
+        }
       }
 
-      window.onload = checkHoliday;
-    </script>
+      // Check fixed-date holidays
+      for (let holiday of holidays) {
+        if (!holiday.lunar && isHolidayNear(today, holiday)) {
+          greetingElement.innerHTML = holiday.greeting + '<br>'; // Include the greeting and line break
+          greetingElement.style.display = 'block'; // Show the greeting
+          return;
+        }
+      }
+    }
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+    window.onload = checkHoliday;
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('date-display').innerHTML = getCurrentDateFormatted('en-US');
-  });
+    });
 
-  function getCurrentDateFormatted(locale) {
+    function getCurrentDateFormatted(locale) {
       const options = {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          weekday: 'short'
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        weekday: 'short'
       };
 
       const currentDate = new Date().toLocaleDateString(locale, options);
@@ -1605,8 +1649,51 @@
       const formattedDate = date.replace(/\//g, '/');
 
       return `<span style="color:#f35212;">${weekday}</span> - ${formattedDate}`;
-  }
-</script>
+    }
+  </script>
+
+
+
+  <script type="text/javascript">
+    window.onload = function () {
+      // Block certain keyboard shortcuts
+      document.onkeydown = function (e) {
+        e = e || window.event;
+
+        // Block F12
+        if (e.keyCode == 123) {
+          return false;
+        }
+        // Block Ctrl+Shift+I
+        else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+        // Block Shift+F10
+        else if (e.shiftKey && e.keyCode == 121) {
+          return false;
+        }
+        // Block Ctrl+S (Save As)
+        else if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+        // Block Ctrl+C (Copy)
+        else if (e.ctrlKey && e.keyCode == 67) {
+          return false;
+        }
+      };
+
+      // Block right-click context menu
+      document.oncontextmenu = function () {
+        return false;
+      };
+
+      // Block text selection (Copy action)
+      document.onselectstart = function () {
+        return false;
+      };
+    };
+  </script>
 
   <!-- End Document
 ================================================== -->
