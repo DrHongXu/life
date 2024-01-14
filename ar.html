@@ -91,6 +91,31 @@
 }
 
 
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* 或者可以使用 flex-start 来左对齐 */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* 防止元素换行 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+    list-style: none; /* 如果是列表项，移除列表样式 */
+}
+
+.flex-container > div, .flex-container > a {
+    margin: 0; /* 移除外边距 */
+    padding: 0; /* 移除内边距 */
+    white-space: nowrap; /* 防止内容换行 */
+}
+
+/* Mobile styles - hide .flex-container */
+@media (max-width: 768px) {
+    .flex-container {
+        display: none;
+    }
+}
+
     </style>
 
 
