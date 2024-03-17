@@ -775,6 +775,14 @@
         </div>
       </div>
 
+
+      <hr class="display-mobile" style="width:113%">
+      <hr class="hidden-mobile">
+
+      <div class="doc-section" id="news">
+      <h3>News Contents</h3>
+
+
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
 
@@ -900,9 +908,9 @@
         <h3>学术职能</h3>
         <ul class="square">
           <li><strong>国际组织: </strong><br />
-            - <strong>联合国欧洲经济委员会-世界车辆法规协调论坛&污染与能源工作组会议</strong> 会议成员 (UNECE-GRPE, 2024)<br />
+            - <strong>联合国欧洲经济委员会-可持续能源-氢能工作组</strong> 会议成员 (UNECE-CSE-H2TaskForce, 2024)<br />
             - <strong>联合国波恩气候变化大会</strong> 青年代表/分会主持人/演讲人 (UNFCCC, 2023)<br />
-            - <strong>联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组</strong> 专家组成员 (UNECE-ITC-GE3, 2023)<br />
+            - <strong>联合国欧洲经济委员会-内陆运输-气候变化影响评估及适应专家组</strong> 专家组成员 (UNECE-ITC-GE3, 2023)<br />
             <hr>
           <li><strong>智库: </strong><br />
             - <strong>英国牛津能源研究所</strong> 访问研究员 (Oxford Institute for Energy Studies, 2023)<br />
@@ -1278,27 +1286,15 @@
             Creating the environment for a hydrogen economy: policies and regulations<br />
             <em>2024 | 牛津大学圣凯瑟琳学院</em>, 牛津郡, 英国. <strong>[演讲]</strong> [<a href="" target="_blank">链接</a>]
           </li>
+
+
           <li>
-            <strong>H. Xu</strong>, 直面稀缺：挑战国际发展中的稀缺性<br />
-            Confronting Scarcity in International Development<br />
-            <em>2024 | 第53届圣加仑研讨会</em>, 圣加仑, 瑞士. <strong>[学术评审]</strong> [<a href="https://symposium.org/"
+            <strong>H. Xu</strong>, 气候适应背景下能源与交通之间的相互依存关系<br />
+            Interdependencies between energy and transport in the context of climate adaptation<br />
+            <em>2024 | 联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组会议</em>, 日内瓦, 瑞士. <strong>[演讲者]</strong> [<a href=""
               target="_blank">链接</a>]
           </li>
-          <li>
-            <strong>H. Xu</strong>, 联合国欧洲经济委员会-内陆运输委员会气候与交通专家组会议 <br />
-            Interdependency Between Energy and Transport in The Context of Climate Adaptation<br />
-            <em>2024 | 联合国日内瓦万国宫</em>, 日内瓦, 瑞士. <strong>[演讲]</strong> [<a href="" target="_blank">链接</a>]
-          </li>
-          <li>
-            <strong>H. Xu</strong>, 牛津能源研究所氢能研讨会: 氢及其衍生物贸易实现的要求<br />
-            Hydrogen Programme Workshop: Requirements to enable trade in hydrogen and derivatives<br />
-            <em>2023 | 牛津大学圣休学院</em>, 牛津郡, 英国. <strong>[演讲]</strong> [<a href="" target="_blank">链接</a>]
-          </li>
-          <li>
-            <strong>H. Xu</strong>, 维也纳国际能源与气候论坛 <br />
-            International Vienna Energy and Climate Forum<br />
-            <em>2023 | 维也纳霍夫堡皇宫会议中心 & 联合国工业发展机构</em>, 维也纳, 奥地利. <strong>[参会]</strong> [<a href="" target="_blank">链接</a>]
-          </li>
+
           <li>
             <strong>H. Xu</strong>, 中国能源转型和技术创新 (分会场) <br />
             Chinese Energy Transition and Technology Innovation<br />
@@ -1919,6 +1915,36 @@
 
       window.onload = loadAppropriateScript;
     </script>
+
+
+<script>
+  // 获取当前日期
+  var currentDate = new Date();
+  var currentMonth = currentDate.getMonth() + 1; // 月份从0开始，所以需要加1
+  var currentDay = currentDate.getDate();
+
+  // 保存不同日期对应的问候语
+  var greetings = {
+      "1/1": "元旦快乐！",
+      "3/4": "五一节快乐！"
+      // 可以继续添加其他日期和对应的问候语
+  };
+
+  // 格式化日期
+  function formatDate(month, day) {
+      return month.toString().padStart(2, '0') + '/' + day.toString().padStart(2, '0');
+  }
+
+  // 获取今天的日期对应的问候语
+  var today = formatDate(currentMonth, currentDay);
+  var greeting = greetings[today];
+
+  // 显示问候语
+  if (greeting) {
+      document.getElementById('greetings').innerText = greeting;
+      document.getElementById('greetings').style.display = 'inline'; // 显示问候语
+  }
+</script>
 
 
     <script>
