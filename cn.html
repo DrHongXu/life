@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="stylesheets/footer.css">
   <link rel="stylesheet" href="stylesheets/type.css">
   <link rel="stylesheet" href="stylesheets/slider.css">
+  <link rel="stylesheet" href="stylesheets/navi-mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -267,13 +268,37 @@
     document.addEventListener('DOMContentLoaded', displayCountryName);
   </script>
 
+
 </head>
 
+
 <body>
+  <!-- Top Navigation Menu -->
+<!-- partial:index.partial.html -->
+<div class="float-nav">
+  <a href="#" class="menu-btn">
+    <ul>
+      <li class="line"></li>
+      <li class="line"></li>
+      <li class="line"></li>
+    </ul>
+    <div class="menu-txt">导航</div>
+  </a>
+</div>
+
+<div class="main-nav">
+  <ul>
+    <li><a href="cn.html">关于我</a></li>
+    <li><a href="cn-research.html">研究进展</a></li>
+    <li><a href="cn-resume.html">简历</a></li>
+    <li><a href="cn-activities.html">兴趣爱好</a></li>
+    <li><a href="#contact">联系我</a></li>
+  </ul>
+</div>
+
+
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
-
-  <!-- Top Navigation Menu -->
 
 
   <!-- partial:index.partial.html -->
@@ -288,7 +313,8 @@
   </div>
   
 
-
+ 
+ <!-- Container -->
   <div class="container">
 
     <!-- Sidebar -->
@@ -730,6 +756,9 @@
       </div>
 
 
+
+
+
     </div><!-- Content -->
     <div>
       <footer class="eleven center-column">
@@ -783,10 +812,6 @@
             <small>博士</small> | 更新: 2024年3月 <a href="https://www.sigmatraffic.com?ref=232975"></a>
           </small></p>
       </footer>
-
-
-
-
 
     </div><!-- container -->
     <!-- js partial -->
@@ -1100,7 +1125,8 @@
   displayCitationCount();
 </script>
 
-
+<!-- partial -->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/navi-mobile.js"></script>
 
 
     <!-- End Document
