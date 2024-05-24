@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 样式 */
+        #nav li a.active {
+            color: orange;
+            position: relative;
+        }
+
+        #nav li a.active::after {
+            content: ' ➡️';
+            position: absolute;
+            right: -20px; /* 根据需要调整 */
+        }
+
+        .doc-section {
+            padding: 50px 0; /* 添加一些内边距，便于测试滚动 */
+            border-bottom: 1px solid #ddd; /* 添加边框，便于区分每个板块 */
+        }
+
+        /* 示例高度，确保每个 section 都有足够的高度进行测试 */
+        #education, #publications, #awards, #contact {
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="hidden-mobile three columns sidebar">
+      <nav>
+        <h3 id="logo" style="text-align:center;">
+          <img class="hidden-mobile" src="images/hong8.png" width="155" />
+          <div style="margin-bottom: 15px;"></div>
+          <h3 class="hidden-mobile" align="left"><ruby>徐<rt><text style="letter-spacing: -5px;">ㄒㄩˊ</text></rt></ruby>
+            <ruby>泓<rt><text style="letter-spacing: -4px;">ㄏㄨㄥˊ</text></rt></ruby> <small><ruby>博 士<rt>科学 / Dr.</rt>
+              </ruby></small>
+          </h3>
+        <ul id="nav">
+            <span style="display: block; height: 6px;"></span>
+            <li><a href="#"> <span class='blue'>研究员</span> :: <span class='blue'>工程师</span> :: <span class='blue'>分析师</span></a></li>
+            <p>____</p>
+            <li><a href="#education">教育背景</a></li>
+            <li><a href="#publications">出版物</a></li>
+            <li><a href="#awards">荣誉</a></li>
+            <li><a href="#contact">联系我</a></li>
+            <p>____</p>
+            <li><a href="https://www.linkedin.com/in/xuhong/" target="_blank"><span class='blue'>领英</span></a></li>
+            <li><a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en" target="_blank"><span class='blue'>谷歌学术</span></a></li>
+            <li><a href="mailto:h.xu@tum.de" target="_blank"><span class='blue'>h.xu [at] tum.de</span></a></li>
+            <img src="images/logo.png" width="45" />
+            <span id="greetings" style="color: rgb(253, 93, 7); font-weight: bold;"></span>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="doc-section" id="education">
+        <h3>教育背景</h3>
+        <p>内容...</p>
+    </div>
+
+    <div class="doc-section" id="publications">
+        <h3>出版物</h3>
+        <p>内容...</p>
+    </div>
+
+    <div class="doc-section" id="awards">
+        <h3>荣誉</h3>
+        <p>内容...</p>
+    </div>
+
+    <div class="doc-section" id="contact">
+        <h3>联系我</h3>
+        <span class="chemicals display-mobile">
+            <div class="box-wrapper-mobile display-mobile">
+                <div class="box-mobile display-mobile">
+                    <h2>H</h2>
+                    <p>氢 (能源)</p>
+                </div>
+            </div>
+        </span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.doc-section');
+            const navLinks = document.querySelectorAll('#nav li a');
+
+            window.addEventListener('scroll', function() {
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 50 && pageYOffset < sectionTop + sectionHeight - 50) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
