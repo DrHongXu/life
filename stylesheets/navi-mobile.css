@@ -1,23 +1,26 @@
 .float-nav {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 10000;
+    z-index: 10001;
+    opacity: 1;
   }
   .float-nav > a.menu-btn {
     text-decoration: none;
     display: block;
     background-color: #f2991b;
     color: white;
-    padding: 17px 19px 12px 19px;
+    padding: 13px 13px 13px 13px;
     text-align: center;
     box-shadow: 2px 2px 8px #777;
     border-radius: 300px;
+    opacity: 1;
   }
   .float-nav > a.menu-btn.active {
     transition: background-color 250ms linear;
     background-color: transparent;
     box-shadow: none;
+    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(1) {
     border-width: 2px;
@@ -25,9 +28,11 @@
     -ms-transform: rotate(45deg) translate(4px, 6px);
     -webkit-transform: rotate(45deg) translate(4px, 6px);
     transform: rotate(45deg) translate(4px, 6px);
+    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(2) {
     visibility: hidden;
+    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(3) {
     border-width: 2px;
@@ -40,6 +45,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    opacity: 1;
   }
   .float-nav > a.menu-btn > ul > li.line {
     border: 1px solid white;
@@ -49,46 +55,51 @@
     -o-transition-duration: 0.1s;
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
+    opacity: 1;
   }
   .float-nav > a.menu-btn > .menu-txt {
     width: 100%;
     text-align: center;
     font-size: 12px;
     font-family: sans-serif;
+    opacity: 1;
   }
   
   .main-nav {
     display: none;
     font-family: sans-serif;
-    position: absolute;
+    position: fixed;
     opacity: 1;
     bottom: 20px;
     right: 20px;
-    transition: opacity 250ms;
+    z-index: 10000;
+    /* transition: opacity 250ms; */
   }
   .main-nav.active {
     display: block;
     opacity: 1;
-    transition: opacity 250ms;
+    /* transition: opacity 250ms; */
   }
-  .main-nav > ul {
+.main-nav > ul {
     width: 100%;
-    display: block;
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #f78b17;
     opacity: 1;
+    background-color: #f78b17;
     box-shadow: 2px 2px 8px #777;
     border-radius: 3px 3px 33.5px 3px;
-  }
+}
   .main-nav > ul > li > a {
     text-decoration: none;
     display: block;
-    font-weight: 200;
-    padding: 18px 80px 18px 18px;
+    font-weight: 700;
+    opacity: 1;
+    padding: 5px 80px 1px 18px;
     color: white;
   }
   .main-nav > ul > li > a:hover {
-    font-weight: 400;
+    font-weight: 800;
+    opacity: 1;
   }
