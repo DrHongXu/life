@@ -1,26 +1,24 @@
 .float-nav {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10001;
-    opacity: 1;
   }
   .float-nav > a.menu-btn {
     text-decoration: none;
     display: block;
-    background-color: #f88818;
+    background-color: #f66d11;
     color: white;
-    padding: 13px 13px 13px 13px;
+    padding: 10px 33px 10px 33px;
     text-align: center;
     box-shadow: 2px 2px 8px #777;
     border-radius: 300px;
-    opacity: 1;
   }
   .float-nav > a.menu-btn.active {
     transition: background-color 250ms linear;
     background-color: transparent;
     box-shadow: none;
-    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(1) {
     border-width: 2px;
@@ -28,11 +26,9 @@
     -ms-transform: rotate(45deg) translate(4px, 6px);
     -webkit-transform: rotate(45deg) translate(4px, 6px);
     transform: rotate(45deg) translate(4px, 6px);
-    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(2) {
     visibility: hidden;
-    opacity: 1;
   }
   .float-nav > a.menu-btn.active > ul > li.line:nth-child(3) {
     border-width: 2px;
@@ -45,7 +41,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    opacity: 1;
   }
   .float-nav > a.menu-btn > ul > li.line {
     border: 1px solid white;
@@ -55,14 +50,12 @@
     -o-transition-duration: 0.1s;
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
-    opacity: 1;
   }
   .float-nav > a.menu-btn > .menu-txt {
     width: 100%;
     text-align: center;
     font-size: 12px;
     font-family: sans-serif;
-    opacity: 1;
   }
   
   .main-nav {
@@ -71,13 +64,13 @@
     position: fixed;
     opacity: 1;
     bottom: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10000;
     /* transition: opacity 250ms; */
   }
   .main-nav.active {
     display: block;
-    opacity: 1;
     /* transition: opacity 250ms; */
   }
 .main-nav > ul {
@@ -86,20 +79,26 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    opacity: 1;
     background-color: #f99224;
-    box-shadow: 2px 2px 8px #777;
-    border-radius: 3px 3px 33.5px 3px;
+    color: transparent;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 23.5px 23.5px 23.5px 23.5px;
 }
+
+.main-nav > ul > li {
+  margin: 0; /* 去掉 li 元素之间的默认 margin */
+  padding: 0; /* 去掉 li 元素之间的默认 padding */
+  background-color: transparent; /* 确保 li 元素没有背景颜色 */
+}
+
   .main-nav > ul > li > a {
     text-decoration: none;
     display: block;
     font-weight: 700;
     opacity: 1;
-    padding: 3px 0px 2px 18px;
+    padding: 10px 15px; /* 添加内边距以增加点击区域 */
     color: white;
   }
   .main-nav > ul > li > a:hover {
     font-weight: 800;
-    opacity: 1;
   }
