@@ -596,10 +596,10 @@
           </ul>
         </div>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-top: 22px;">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-top: 22px; display: inline-block;">
           <div style="display: flex; align-items: center;">
-            <span style=""><small>导航</small></span>
-            <i class="fa fa-bars" style="margin-left: 5px;"></i>
+            <span style="display: inline-block; height: 20px; line-height: 20px;"><small>导航</small></span>
+            <i class="fa fa-bars" style="margin-left: 5px; display: inline-block; height: 20px;"></i>
           </div>
         </a>
 
@@ -609,10 +609,10 @@
         <text style="color:rgb(237, 118, 7);font-size:15px;">➔ 嗨！你好！ </text>
 
         <span style="float:right; font-family:verdana">
-          <select id="languages" name="languages"
+          <select id="languages1" name="languages1"
               style="width:55px;display:inline-block;color:inherit;margin-bottom:0px;"
-              onchange="window.location.href=this.options [this.selectedIndex].value">
-              <option value='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' select>简体</option><option value='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'>繁體</option></select><select id="languages" name="languages" style="width:75px;display:inline-block;color:inherit;margin-bottom:0px;" onchange="window.location.href=this.options [this.selectedIndex].value">
+              onchange="window.location.href=this.options[this.selectedIndex].value">
+              <option value='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();' select>简体</option><option value='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'>繁體</option></select><select id="languages2" name="languages2" style="width:75px;display:inline-block;color:inherit;margin-bottom:0px;" onchange="window.location.href=this.options[this.selectedIndex].value">
             <option value="cn.html" select>🇨🇳 中文</option>
             <option value="jp.html">🇯🇵 日本語</option>
             <option value="kr.html">🇰🇷 한국어</option>
@@ -625,6 +625,14 @@
             <option value="ar.html">🇸🇦 اللغة العربية</option>
           </select>
         </span>
+        
+        <script>
+          // 获取第二个下拉菜单的高度
+          var secondSelectHeight = document.getElementById('languages2').offsetHeight;
+          // 将第二个下拉菜单的高度应用到第一个下拉菜单的样式中
+          document.getElementById('languages1').style.height = secondSelectHeight + 'px';
+        </script>
+
       </p>
       <div>
 
