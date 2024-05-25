@@ -335,13 +335,15 @@
                 <img src="images/banner_cns3.png" width="800" alt="banner Image" />
                 <div class="orange-dot" alt="Hamburg" style="top: 23.1%; left: 50.9%;"></div>
                 <div class="orange-dot" alt="Paris" style="top: 29.5%; left: 48.4%;"></div>
-                <div class="red-dot" alt="Munich" style="top: 31.3%; left: 51.6%;"></div>
+                <div class="orange-dot" alt="Munich" style="top: 31.3%; left: 51.6%;"></div>
                 <div class="orange-dot" alt="Rennes" style="top: 32.3%; left: 47.2%;"></div>
                 <div class="orange-dot" alt="Zurich" style="top: 33.5%; left: 50.6%;"></div>
                 <div class="orange-dot" alt="Beijing" style="top: 43.6%; left: 90.2%;"></div>
                 <div class="orange-dot" alt="Anqing" style="top: 54.9%; left: 90.8%;"></div>
                 <div class="orange-dot" alt="DC" style="top: 44.9%; left: 18%;"></div>
                 <div class="orange-dot" alt="Oxford" style="top: 26.7%; left: 46.7%;"></div>
+                
+                <div class="red-dot" alt="Munich" style="top: 31.3%; left: 51.6%; z-index: 9999;"></div>
 
 
                 <div class="tooltip" style="top:50%; left: 65%;">
@@ -387,7 +389,7 @@
                 <div class="tooltip" style="top:80%; left: 80%;">
                     <h6><img src="images/flag_cn.png" alt="flag"
                             style="height:20px;display:inline-block;top:6px;position:relative;">
-                        中国 安庆</h6>
+                        中国 安徽</h6>
                     <p>1993-2009 故乡</p>
                 </div>
                 <div class="tooltip" style="top:55%; left: 35%;">
@@ -419,19 +421,17 @@
                 </span>
 
                 <span style="float:right; font-family:verdana">
-                    <span style="display:inline-block;margin-top:13px;margin-bottom:0px;font-size:small"
-                        for="languages">
-                        <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
-                            class="d-inline-block p-3"><img src="images/flag_cn.png" alt="flag"
-                                style="height:23px;display:inline-block;top:7px;position:relative;">&nbsp;简</a> / <a
-                            href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
-                            class="d-inline-block p-3"><img src="images/flag_hk.png" alt="flag"
-                                style="height:23px;display:inline-block;top:7px;position:relative;"> <img
-                                src="images/flag_mc.png" alt="flag"
-                                style="height:23px;display:inline-block;top:7px;position:relative;">
-                            繁</a></span>&nbsp;<select id="languages" name="languages"
-                        style="width:62px;display:inline-block;color:inherit;margin-bottom:0px;"
-                        onchange="window.location.href=this.options [this.selectedIndex].value">
+                    <span style="display:inline-block;margin-top:13px;margin-bottom:0px;font-size:small" for="languages">
+                      <a
+                        href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
+                        class="d-inline-block p-3"><img src="images/flag_cn.png" alt="flag"
+                        style="height:23px;display:inline-block;top:7px;position:relative;">&nbsp;简</a> / <a
+                        href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
+                        class="d-inline-block p-3"><img src="images/flag_hk.png" alt="flag"
+                        style="height:23px;display:inline-block;top:7px;position:relative;"> <img src="images/flag_mc.png"
+                        alt="flag" style="height:23px;display:inline-block;top:7px;position:relative;"> 繁</a></span>&nbsp;<select id="languages" name="languages"
+                      style="width:62px;display:inline-block;color:inherit;margin-bottom:0px;"
+                      onchange="window.location.href=this.options [this.selectedIndex].value">
                         <option value="cn.html" select>中文</option>
                         <option value="jp.html">日本語</option>
                         <option value="kr.html">한국어</option>
