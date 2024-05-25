@@ -369,21 +369,24 @@ img.with_border{
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 7px;
   right: 10px;
   z-index: 99;
   font-size: 12px;
   border: none;
   outline: none;
-  background-color: rgb(237, 118, 7);
+  background-color: #f66d11;
   color: white;
   cursor: pointer;
   padding: 7px;
   border-radius: 4px;
+  background-image: none; /* Remove gradient background */
+
 }
 
 #myBtn:hover {
-  background-color: rgb(14, 18, 93);
+  background-color: rgb(246, 183, 46);
+  background-image: none; /* Remove gradient background */
 }
 
 
