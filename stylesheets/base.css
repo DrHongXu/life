@@ -370,16 +370,16 @@ img.with_border{
   display: none;
   position: fixed;
   bottom: 7px;
-  right: 10px;
+  right: 16px;
   z-index: 99;
-  font-size: 12px;
+  font-size: 15px;
   border: none;
   outline: none;
   background-color: #f66d11;
   color: white;
   cursor: pointer;
   padding: 7px;
-  border-radius: 4px;
+  border-radius: 25px;
   background-image: none; /* Remove gradient background */
 
 }
