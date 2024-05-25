@@ -8,7 +8,7 @@
   .float-nav > a.menu-btn {
     text-decoration: none;
     display: block;
-    background-color: #f2991b;
+    background-color: #f88818;
     color: white;
     padding: 13px 13px 13px 13px;
     text-align: center;
@@ -87,7 +87,7 @@
     margin: 0;
     padding: 0;
     opacity: 1;
-    background-color: #f78b17;
+    background-color: #f99224;
     box-shadow: 2px 2px 8px #777;
     border-radius: 3px 3px 33.5px 3px;
 }
@@ -96,7 +96,7 @@
     display: block;
     font-weight: 700;
     opacity: 1;
-    padding: 3px 80px 2px 18px;
+    padding: 3px 0px 2px 18px;
     color: white;
   }
   .main-nav > ul > li > a:hover {
