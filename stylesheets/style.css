@@ -498,3 +498,92 @@ ul ul ul li {
 .right {
   text-align: right;
 }
+
+
+
+
+
+
+/* Copied from the cn.html, the rest of <style> */
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* This value is for a 16:9 aspect ratio. Adjust as needed for your video */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.red-dot {
+  position: absolute;
+  top: 23.1%;
+  left: 50.9%;
+  width: 5px;
+  /* 减小红点尺寸 */
+  height: 5px;
+  /* 减小红点尺寸 */
+  background-color: rgb(255, 77, 0);
+  border-radius: 50%;
+  animation: ripple 2s infinite ease-out;
+  /* 更新动画时序函数 */
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.765),
+      0 0 0 10px rgba(255, 0, 0, 0),
+      0 0 0 20px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0),
+      0 0 0 15px rgba(255, 102, 0, 0.306),
+      0 0 0 25px rgba(255, 0, 0, 0.1);
+  }
+}
+
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  /* 或者可以使用 flex-start 来左对齐 */
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  /* 防止元素换行 */
+  padding: 0;
+  /* 移除内边距 */
+  margin: 0;
+  /* 移除外边距 */
+  list-style: none;
+  /* 如果是列表项，移除列表样式 */
+}
+
+.flex-container>div,
+.flex-container>a {
+  margin: 0;
+  /* 移除外边距 */
+  padding: 0;
+  /* 移除内边距 */
+  white-space: nowrap;
+  /* 防止内容换行 */
+}
+
+/* Mobile styles - hide .flex-container */
+@media (max-width: 768px) {
+  .flex-container {
+    display: none;
+  }
+}
+
