@@ -539,7 +539,7 @@
         <p align="justify">
           <span class="display-mobile">欢迎来自<span id="location2"></span>的朋友 :-）</br></br></span>
 
-          目前，徐泓博士在德国工业界担任<strong>新能源动力系统</strong>专家工程师，致力于实现<strong>能源与交通</strong>领域<strong>碳中和</strong>。曾在<strong>联合国波恩气候变化大会</strong>主持“中国能源转型与技术创新”主题的分会，参与联合国欧洲经济委员会交通与气候<strong>专家组会议</strong>。攻读学位期间与跨国企业及中欧学术机构合作发表<strong>论文15余篇</strong>、<strong>引用280余次</strong>, 并获得<strong>3项专利授权</strong>。同时他还担任7项能源和交通领域高引期刊的<strong>审稿人</strong>,
+          目前，徐泓博士在德国工业界担任<strong>新能源动力系统</strong>专家工程师，致力于实现<strong>能源与交通</strong>领域<strong>碳中和</strong>。曾在<strong>联合国波恩气候变化大会</strong>主持“中国能源转型与技术创新”主题的分会，参与联合国欧洲经济委员会交通与气候<strong>专家组会议</strong>。攻读学位期间与跨国企业及中欧学术机构合作发表<strong>论文15余篇</strong>、<strong>引用290余次</strong>, 并获得<strong>3项专利授权</strong>。同时他还担任7项能源和交通领域高引期刊的<strong>审稿人</strong>,
           以及<strong>瑞士圣加仑国际经济论坛</strong>的<strong>学术评审</strong>。曾获得美国电化学学会论文邀请及旅行奖、英特尔边缘AI奖学金、欧盟伊拉斯谟奖学金、“挑战杯”创业全国铜奖等。
         </p>
 
@@ -706,9 +706,9 @@
           <li><strong>领英</strong>: <a href="https://www.linkedin.com/in/xuhong/" target="_blank" target="_blank"><span
                 class='blue'>linkedin.com/in/xuhong/</span></a> (关注者: 1800+)<br></li>
           <li><strong>谷歌学术</strong>: <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en"
-              target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a> (引用数: 280+)<br></li>
+              target="_blank" target="_blank"><span class='blue'>UNchM2kAAAAJ&hl</span></a> (引用数: <span id="citation-count">290+</span>)<br></li>
           <li><strong>知乎</strong>: <a href="https://www.zhihu.com/people/dr.of.nothing" target="_blank"
-              target="_blank"><span class='blue'>zhihu.com/people/dr.of.nothing</span></a> (关注者: 13500+)<br></li>
+              target="_blank"><span class='blue'>zhihu.com/people/dr.of.nothing</span></a> (关注者: 13700+)<br></li>
           <li><strong>摄影</strong>: <a href="https://photo.h-xu.com/" target="_blank"
                 target="_blank"><span class='blue'>photo.h-xu.com</span></a> (X-graphy)<br></li>
 
@@ -1060,46 +1060,7 @@
 </script> 
 
 
-<script>
-  const proxyUrl = 'https://api.allorigins.win/get?url=';
-  const scholarUrl = 'https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en';
-
-  async function fetchScholarMeta() {
-      try {
-          const response = await fetch(proxyUrl + encodeURIComponent(scholarUrl));
-          if (response.ok) {
-              const data = await response.json();
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(data.contents, 'text/html');
-              return doc.querySelector('meta[name="description"]').getAttribute('content');
-          } else {
-              console.error('Failed to fetch the page:', response.status, response.statusText);
-              return null;
-          }
-      } catch (error) {
-          console.error('Error fetching the HTML:', error);
-          return null;
-      }
-  }
-
-  function extractCitationCount(metaContent) {
-      const match = metaContent.match(/Cited by (\d+)/);
-      return match ? match[1] : 'N/A';
-  }
-
-  async function displayCitationCount() {
-      const metaContent = await fetchScholarMeta();
-      if (metaContent) {
-          const citationCount = extractCitationCount(metaContent);
-          document.getElementById('citation-count').textContent = `${citationCount}`;
-      } else {
-          document.getElementById('citation-count').textContent = 'N/A';
-      }
-  }
-
-  // Initiate the fetch and display process
-  displayCitationCount();
-</script>
+<script type="text/javascript" src="/js/scholar_fetch.js"></script>
 
 <!-- partial -->
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
