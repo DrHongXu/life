@@ -320,7 +320,7 @@
                         <p>____</p>
                         <p></p>
                         <img src="images/logo.png" width="45" />
-
+                        <br>
                         <span id="greetings" style="color: rgb(253, 93, 7); font-weight: bold;"></span>
 
                     </ul>
@@ -1006,8 +1006,13 @@
                     <li><strong>能源与气候 / 低碳交通 / 政策与经济:</strong><br>
                 </ul>
 
-
                 <ol>
+                    <li>
+                        <strong>H. Xu</strong>, 联合国气候变化框架公约科学和技术咨询附属机构第六十届会议 <br>
+                        Sixtieth session of the Subsidiary Body for Scientific and Technological Advice<br>
+                        <em>2024 | 联合国波恩气候变化大会</em>, 波恩, 德国. <strong>[参会]</strong> [<a
+                            href="https://unfccc.int/sb58" target="_blank">链接</a>]
+                    </li>
                     <li>
                         <strong>H. Xu</strong>, 联合国欧洲经济委员会电动交通非正式工作小组首次会议<br>
                         First session of the UNECE Informal Task Force on E-mobility<br>
@@ -1039,7 +1044,6 @@
                         <em>2024 | 联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组会议</em>, 日内瓦, 瑞士. <strong>[演讲者]</strong> [<a href=""
                             target="_blank">链接</a>]
                     </li>
-
                     <li>
                         <strong>H. Xu</strong>, 中国能源转型和技术创新 (分会场) <br>
                         Chinese Energy Transition and Technology Innovation<br>
@@ -1289,7 +1293,7 @@
                         ©
                         2016-
                         <script>const currentYear = new Date().getFullYear(); document.write(currentYear);</script> | 徐泓
-                        <small>博士</small> | 更新: 2024年3月 <a href="https://www.sigmatraffic.com?ref=232975"></a>
+                        <small>博士</small> | 更新: 2024年6月 <a href="https://www.sigmatraffic.com?ref=232975"></a>
                     </small></p>
             </footer>
 
@@ -1451,189 +1455,14 @@
             }
         </script>
 
-        <script type="text/javascript">
-            window.onload = function () {
-                // Block certain keyboard shortcuts
-                document.onkeydown = function (e) {
-                    e = e || window.event;
+<script type="text/javascript" src="/js/block_save_as.js"></script>
 
-                    // Block F12
-                    if (e.keyCode == 123) {
-                        return false;
-                    }
-                    // Block Ctrl+Shift+I
-                    else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                        return false;
-                    }
-                    // Block Shift+F10
-                    else if (e.shiftKey && e.keyCode == 121) {
-                        return false;
-                    }
-                    // Block Ctrl+S (Save As)
-                    else if (e.ctrlKey && e.keyCode == 83) {
-                        e.preventDefault();
-                        return false;
-                    }
-                    // Block Ctrl+C (Copy)
-                    else if (e.ctrlKey && e.keyCode == 67) {
-                        return false;
-                    }
-                };
+<script type="text/javascript" src="/js/scholar_fetch.js"></script>
 
-                // Block right-click context menu
-                document.oncontextmenu = function () {
-                    return false;
-                };
+<script type="text/javascript" src="/js/cn_fanti_translate.js"></script>
 
-                // Block text selection (Copy action)
-                document.onselectstart = function () {
-                    return false;
-                };
-            };
-        </script>
+<script type="text/javascript" src="/js/cn_holiday_display.js"></script>
 
-        <script>
-            let recurringHolidays = [
-                { date: '01-01', greeting: '元旦快乐, 万事顺意！<br>', range: 5 },
-                { date: '01-06', greeting: '博士毕业周年纪念！<br>', range: 1 },
-                { date: '03-01', greeting: '我的生日！<br>', range: 5 },
-                { date: '04-05', greeting: '今天是我的生日！<br>', range: 1 },
-                { date: '05-01', greeting: '五一劳动节快乐！<br>', range: 1 },
-                { date: '10-31', greeting: '万圣节快乐！<br>', range: 2 },
-                { date: '12-25', greeting: '圣诞节快乐！<br>', range: 5 },
-            ];
-
-            let fixedYearHolidays = [
-                { date: '2024-05-23', greeting: '度假中...<br>', range: 5 },
-                { date: '2024-02-10', greeting: '新年快乐, 龙行天下！<br>', range: 7 },
-                { date: '2025-01-29', greeting: '新年快乐, 银蛇劲舞！<br>', range: 7 },
-                { date: '2026-02-17', greeting: '新年快乐, 马到成功！<br>', range: 7 },
-                { date: '2027-02-06', greeting: '新年快乐, 三羊开泰！<br>', range: 7 },
-                { date: '2028-01-26', greeting: '新年快乐, 金猴送福！<br>', range: 7 },
-                { date: '2029-02-13', greeting: '新年快乐, 雄鸡晓唱！<br>', range: 7 },
-                { date: '2030-02-03', greeting: '新年快乐, 狗年旺旺！！<br>', range: 7 },
-                { date: '2024-02-24', greeting: '元宵节快乐！<br>', range: 1 },
-                { date: '2024-03-29', greeting: '复活节快乐！<br>', range: 4 },
-                { date: '2025-04-18', greeting: '复活节快乐！<br>', range: 4 },
-                { date: '2026-04-03', greeting: '复活节快乐！<br>', range: 4 },
-                { date: '2024-06-10', greeting: '端午节快乐！<br>', range: 3 },
-                { date: '2024-09-15', greeting: '中秋快乐！<br>', range: 3 },
-                { date: '2025-10-06', greeting: '中秋快乐！<br>', range: 3 },
-                { date: '2026-09-25', greeting: '中秋快乐！<br>', range: 3 },
-                { date: '2024-10-01', greeting: '国庆快乐！<br>', range: 1 },
-                { date: '2024-08-27', greeting: '留欧十年纪念日！<br>', range: 1 }
-            ];
-
-            function isHolidayNear(today, holiday) {
-                const todayDate = new Date(today);
-                let holidayDate;
-
-                // Check if the holiday date includes one or two '-'
-                if (holiday.date.split('-').length === 3) { // Fixed-year date
-                    holidayDate = new Date(holiday.date);
-                } else { // Recurring date
-                    holidayDate = new Date(todayDate.getFullYear(), parseInt(holiday.date.split('-')[0]) - 1, parseInt(holiday.date.split('-')[1]));
-                }
-
-                const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
-                const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
-
-                return todayDate >= startRange && todayDate <= endRange;
-            }
-
-            function checkHoliday() {
-                const today = new Date();
-                const todayFormatted = today.toISOString().slice(5, 10);
-                let greetingElement = document.getElementById("greetings");
-
-                let greetings = [];
-
-                let holidaysToCheck = recurringHolidays.concat(fixedYearHolidays);
-
-                for (let holiday of holidaysToCheck) {
-                    if (isHolidayNear(todayFormatted, holiday)) {
-                        greetings.push(holiday.greeting);
-                    }
-                }
-
-                if (greetings.length > 0) {
-                    greetingElement.innerHTML = greetings.join('<br>') + '<br>';
-                    greetingElement.style.display = 'block';
-                } else {
-                    greetingElement.style.display = 'none';
-                }
-            }
-
-            window.onload = checkHoliday;
-        </script>
-
-
-        <script>
-            const proxyUrl = 'https://api.allorigins.win/get?url=';
-            const scholarUrl = 'https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en';
-
-            async function fetchScholarMeta() {
-                try {
-                    const response = await fetch(proxyUrl + encodeURIComponent(scholarUrl));
-                    if (response.ok) {
-                        const data = await response.json();
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(data.contents, 'text/html');
-                        return doc.querySelector('meta[name="description"]').getAttribute('content');
-                    } else {
-                        console.error('Failed to fetch the page:', response.status, response.statusText);
-                        return null;
-                    }
-                } catch (error) {
-                    console.error('Error fetching the HTML:', error);
-                    return null;
-                }
-            }
-
-            function extractCitationCount(metaContent) {
-                const match = metaContent.match(/Cited by (\d+)/);
-                return match ? match[1] : 'N/A';
-            }
-
-            async function displayCitationCount() {
-                const metaContent = await fetchScholarMeta();
-                if (metaContent) {
-                    const citationCount = extractCitationCount(metaContent);
-                    document.getElementById('citation-count').textContent = `${citationCount}`;
-                } else {
-                    document.getElementById('citation-count').textContent = 'N/A';
-                }
-            }
-
-            // Initiate the fetch and display process
-            displayCitationCount();
-        </script>
-
-
-<script>
-    function runFanTiJavaScript() {
-        var s = document.getElementById("tongwenlet_tw");
-        if (s != null) {
-            document.body.removeChild(s);
-        }
-        var s = document.createElement("script");
-        s.language = "javascript";
-        s.type = "text/javascript";
-        s.src = "https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";
-        s.id = "tongwenlet_tw";
-        document.body.appendChild(s);
-    }
-  
-    function handleChange(select) {
-        var selectedOption = select.options[select.selectedIndex];
-        var value = selectedOption.value;
-        if (value.startsWith("javascript:")) {
-            eval(value.substring(11));
-        } else {
-            window.location.href = value;
-        }
-    }
-  </script>
   
 
         <!-- End Document

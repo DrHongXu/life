@@ -319,7 +319,7 @@
             <p>____</p>
             <p></p>
             <img src="images/logo.png" width="45" />
-
+            <br>
             <span id="greetings" style="color: rgb(253, 93, 7); font-weight: bold;"></span>
 
         </ul>
@@ -942,11 +942,6 @@
     <div>
       <footer class="eleven center-column">
 
-
-
-
-
-
         <div class="flex-container">
           <div id="date-display"></div>
           <div><a href="//24timezones.com/San-Francisco/time" style="text-decoration: none;color:#f35212"
@@ -988,7 +983,7 @@
         <p><strong>有限游戏</strong>以<strong>取胜</strong>为目的，<strong>无限游戏</strong>以<strong>延续</strong>游戏为宗旨。<br><small>版权 ©
             2016-
             <script>const currentYear = new Date().getFullYear(); document.write(currentYear);</script> | 徐泓
-            <small>博士</small> | 更新: 2024年3月 <a href="https://www.sigmatraffic.com?ref=232975"></a>
+            <small>博士</small> | 更新: 2024年6月 <a href="https://www.sigmatraffic.com?ref=232975"></a>
           </small></p>
       </footer>
 
@@ -1149,191 +1144,16 @@
       }
     </script>
 
-    <script type="text/javascript">
-      window.onload = function () {
-        // Block certain keyboard shortcuts
-        document.onkeydown = function (e) {
-          e = e || window.event;
 
-          // Block F12
-          if (e.keyCode == 123) {
-            return false;
-          }
-          // Block Ctrl+Shift+I
-          else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-            return false;
-          }
-          // Block Shift+F10
-          else if (e.shiftKey && e.keyCode == 121) {
-            return false;
-          }
-          // Block Ctrl+S (Save As)
-          else if (e.ctrlKey && e.keyCode == 83) {
-            e.preventDefault();
-            return false;
-          }
-          // Block Ctrl+C (Copy)
-          else if (e.ctrlKey && e.keyCode == 67) {
-            return false;
-          }
-        };
-
-        // Block right-click context menu
-        document.oncontextmenu = function () {
-          return false;
-        };
-
-        // Block text selection (Copy action)
-        document.onselectstart = function () {
-          return false;
-        };
-      };
-    </script>
-
-    <script>
-      let holidays = [
-        // 固定日期节日
-        { date: '01-01', greeting: '元旦快乐, 万事顺意！<br>', range: 5 },
-        { date: '01-06', greeting: '博士毕业周年纪念！<br>', range: 1 },
-        { date: '03-01', greeting: '我的生日！<br>', range: 5 },
-        { date: '04-05', greeting: '今天是我的生日！<br>', range: 1 },
-        { date: '05-01', greeting: '五一劳动节快乐！<br>', range: 1 },
-        { date: '10-31', greeting: '万圣节快乐！<br>', range: 2 },
-        { date: '12-25', greeting: '圣诞节快乐！<br>', range: 5 },
-
-        // 具体年份日期节日   
-        { date: '2024-02-10', greeting: '新年快乐, 龙行天下！<br>', range: 7 },
-        { date: '2025-01-29', greeting: '新年快乐, 银蛇劲舞！<br>', range: 7 },
-        { date: '2026-02-17', greeting: '新年快乐, 马到成功！<br>', range: 7 },
-        { date: '2027-02-06', greeting: '新年快乐, 三羊开泰！<br>', range: 7 },
-        { date: '2028-01-26', greeting: '新年快乐, 金猴送福！<br>', range: 7 },
-        { date: '2029-02-13', greeting: '新年快乐, 雄鸡晓唱！<br>', range: 7 },
-        { date: '2030-02-03', greeting: '新年快乐, 狗年旺旺！！<br>', range: 7 },
-
-        { date: '2024-02-24', greeting: '元宵节快乐！<br>', range: 1 },
-        { date: '2024-03-29', greeting: '复活节快乐！<br>', range: 4 },
-        { date: '2025-04-18', greeting: '复活节快乐！<br>', range: 4 },
-        { date: '2026-04-03', greeting: '复活节快乐！<br>', range: 4 },
-
-        { date: '2024-06-10', greeting: '端午节快乐！<br>', range: 3 },
-
-        { date: '2024-09-15', greeting: '中秋快乐！<br>', range: 3 },
-        { date: '2025-10-06', greeting: '中秋快乐！<br>', range: 3 },
-        { date: '2026-09-25', greeting: '中秋快乐！<br>', range: 3 },
-
-        { date: '2024-10-01', greeting: '国庆快乐！<br>', range: 1 },
-
-        { date: '2024-08-27', greeting: '留欧十年纪念日！<br>', range: 1 }
-      ];
-
-      function isHolidayNear(today, holiday) {
-        const todayDate = new Date(today);
-        let holidayDate;
-
-        // Check if the holiday date includes one or two '-'
-        if (holiday.date.split('-').length === 2) {
-          holidayDate = new Date(todayDate.getFullYear(), holiday.date.split('-')[0] - 1, holiday.date.split('-')[1]);
-        } else {
-          holidayDate = new Date(holiday.date);
-        }
-
-        const startRange = new Date(holidayDate.getTime() - holiday.range * 24 * 60 * 60 * 1000);
-        const endRange = new Date(holidayDate.getTime() + holiday.range * 24 * 60 * 60 * 1000);
-
-        return todayDate >= startRange && todayDate <= endRange;
-      }
-
-      function checkHoliday() {
-        const today = new Date();
-        const todayFormatted = today.toISOString().slice(5, 10);
-        let greetingElement = document.getElementById("greetings");
-
-        let greetings = [];
-
-        for (let holiday of holidays) {
-          if (isHolidayNear(todayFormatted, holiday)) {
-            greetings.push(holiday.greeting);
-          }
-        }
-
-        if (greetings.length > 0) {
-          greetingElement.innerHTML = greetings.join('<br>') + '<br>';
-          greetingElement.style.display = 'block';
-        } else {
-          greetingElement.style.display = 'none';
-        }
-      }
-
-      window.onload = checkHoliday;
-    </script>
+<script type="text/javascript" src="/js/block_save_as.js"></script>
 
 
-    <script>
-      const proxyUrl = 'https://api.allorigins.win/get?url=';
-      const scholarUrl = 'https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en';
-
-      async function fetchScholarMeta() {
-        try {
-          const response = await fetch(proxyUrl + encodeURIComponent(scholarUrl));
-          if (response.ok) {
-            const data = await response.json();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data.contents, 'text/html');
-            return doc.querySelector('meta[name="description"]').getAttribute('content');
-          } else {
-            console.error('Failed to fetch the page:', response.status, response.statusText);
-            return null;
-          }
-        } catch (error) {
-          console.error('Error fetching the HTML:', error);
-          return null;
-        }
-      }
-
-      function extractCitationCount(metaContent) {
-        const match = metaContent.match(/Cited by (\d+)/);
-        return match ? match[1] : 'N/A';
-      }
-
-      async function displayCitationCount() {
-        const metaContent = await fetchScholarMeta();
-        if (metaContent) {
-          const citationCount = extractCitationCount(metaContent);
-          document.getElementById('citation-count').textContent = `${citationCount}`;
-        } else {
-          document.getElementById('citation-count').textContent = 'N/A';
-        }
-      }
-
-      // Initiate the fetch and display process
-      displayCitationCount();
-    </script>
+<script type="text/javascript" src="/js/scholar_fetch.js"></script>
 
 
-<script>
-  function runFanTiJavaScript() {
-      var s = document.getElementById("tongwenlet_tw");
-      if (s != null) {
-          document.body.removeChild(s);
-      }
-      var s = document.createElement("script");
-      s.language = "javascript";
-      s.type = "text/javascript";
-      s.src = "https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";
-      s.id = "tongwenlet_tw";
-      document.body.appendChild(s);
-  }
+<script type="text/javascript" src="/js/cn_fanti_translate.js"></script>
 
-  function handleChange(select) {
-      var selectedOption = select.options[select.selectedIndex];
-      var value = selectedOption.value;
-      if (value.startsWith("javascript:")) {
-          eval(value.substring(11));
-      } else {
-          window.location.href = value;
-      }
-  }
-</script>
+<script type="text/javascript" src="/js/cn_holiday_display.js"></script>
 
 
     <!-- End Document
