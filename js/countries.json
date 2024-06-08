@@ -2318,7 +2318,7 @@
     "abbr": "GB",
     "chinese": "英国",
     "code": "44",
-    "english": "United Kiongdom",
+    "english": "the United Kingdom",
     "spell": "yingguo",
     "state": "欧洲",
     "french": "Royaume-Uni",
@@ -2326,7 +2326,7 @@
     "spanish": "Reino Unido",
     "japanese": "イギリス",
     "russian": "Объединенное Королевство",
-    "germen": "Vereinigtes Königreich"
+    "germen": "dem UK"
 },
 {
     "abbr": "US",
@@ -2340,7 +2340,7 @@
     "spanish": "Estados Unidos",
     "japanese": "アメリカ合衆国",
     "russian": "Соединенные Штаты Америки",
-    "germen": "Vereinigte Staaten von Amerika"
+    "germen": "den USA"
 },
 {
     "abbr": "UY",
