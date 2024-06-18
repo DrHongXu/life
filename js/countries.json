@@ -89,12 +89,12 @@
     "english": "Australia",
     "spell": "aodaliya",
     "state": "大洋洲",
-    "french": "Îles Cocos",
-    "italian": "Isole Cocos e Keeling",
-    "spanish": "Islas Cocos o Islas Keeling",
-    "japanese": "ココス（キーリング）諸島",
+    "french": "Australie",
+    "italian": "Australia",
+    "spanish": "Australia",
+    "japanese": "オーストラリア",
     "russian": "Австралия",
-    "germen": "Kokosinseln"
+    "germen": "Australien"
 },
 {
     "abbr": "AT",
@@ -236,7 +236,7 @@
 },
 {
     "abbr": "BA",
-    "chinese": "波斯尼亚和黑塞哥维那",
+    "chinese": "波黑",
     "code": "387",
     "english": "Bosnia and Herzegovina",
     "spell": "bosiniyaheheisaigeweinei",
@@ -378,12 +378,12 @@
     "english": "Canada",
     "spell": "jianada",
     "state": "北美洲",
-    "french": "États-Unis",
-    "italian": "Stati Uniti D\u0027America",
-    "spanish": "Estados Unidos",
-    "japanese": "アメリカ合衆国",
+    "french": "Canada",
+    "italian": "Canada",
+    "spanish": "Canadá",
+    "japanese": "カナダ",
     "russian": "Канада",
-    "germen": "Vereinigte Staaten von Amerika"
+    "germen": "Kanada"
 },
 {
     "abbr": "CV",
@@ -498,7 +498,7 @@
     "abbr": "CG",
     "chinese": "刚果(布)",
     "code": "242",
-    "english": "Congo - Brazzaville",
+    "english": "Congo-Brazzaville",
     "spell": "gangguo(bu)",
     "state": "非洲",
     "french": "Congo",
@@ -512,7 +512,7 @@
     "abbr": "CD",
     "chinese": "刚果(金)",
     "code": "243",
-    "english": "Congo - Kinshasa",
+    "english": "Congo-Kinshasa",
     "spell": "gangguo(jin)",
     "french": "Congo (Rép. dém.)",
     "italian": "Congo (Rep. Dem.)",
@@ -923,9 +923,9 @@
 },
 {
     "abbr": "HK",
-    "chinese": "中国香港特别行政区",
+    "chinese": "香港",
     "code": "852",
-    "english": "Hongkong SAR China",
+    "english": "Hong Kong SAR China",
     "spell": "zhongguoxianggangtebiexingzhengqu",
     "state": "亚洲",
     "french": "Hong Kong",
@@ -1001,7 +1001,7 @@
     "french": "Iran",
     "italian": "Iran",
     "spanish": "Iran",
-    "japanese": "イラン・イスラム共和国",
+    "japanese": "イラン",
     "russian": "Иран",
     "germen": "dem Iran"
 },
@@ -1044,7 +1044,7 @@
     "spanish": "Reino Unido",
     "japanese": "イギリス",
     "russian": "Остров Мэн",
-    "germen": "Vereinigtes Königreich"
+    "germen": "Insel Man"
 },
 {
     "abbr": "IL",
@@ -1136,12 +1136,12 @@
     "english": "Kazakstan",
     "spell": "hasakesitan",
     "state": "亚洲",
-    "french": "Russie",
-    "italian": "Russia",
-    "spanish": "Rusia",
-    "japanese": "ロシア連邦",
+    "french": "Kazakhstan",
+    "italian": "Kazakistan",
+    "spanish": "Kazajstán",
+    "japanese": "カザフスタン",
     "russian": "Казахстан",
-    "germen": "Russland"
+    "germen": "Kasachstan"
 },
 {
     "abbr": "KE",
@@ -1167,7 +1167,7 @@
     "french": "Corée du Sud",
     "italian": "Corea del Sud",
     "spanish": "Corea del Sur",
-    "japanese": "大韓民国",
+    "japanese": "韓国",
     "russian": "Корея",
     "germen": "Südkorea"
 },
@@ -1208,7 +1208,7 @@
     "french": "Laos",
     "italian": "Laos",
     "spanish": "Laos",
-    "japanese": "ラオス人民民主共和国",
+    "japanese": "ラオス",
     "russian": "Лаос",
     "germen": "Laos"
 },
@@ -1310,7 +1310,7 @@
 },
 {
     "abbr": "MO",
-    "chinese": "中国澳门特别行政区",
+    "chinese": "澳门",
     "code": "853",
     "english": "Macao SAR China",
     "spell": "zhongguoaomentebiexingzhengqu",
@@ -1331,7 +1331,7 @@
     "french": "Macédoine",
     "italian": "Macedonia",
     "spanish": "Macedonia",
-    "japanese": "マケドニア旧ユーゴスラビア共和国",
+    "japanese": "マケドニア",
     "russian": "Македония",
     "germen": "Mazedonien"
 },
@@ -1522,12 +1522,12 @@
     "english": "Morocco",
     "spell": "moluoge",
     "state": "非洲",
-    "french": "Sahara Occidental",
-    "italian": "Sahara Occidentale",
-    "spanish": "Sahara Occidental",
-    "japanese": "西サハラ",
+    "french": "Maroc",
+    "italian": "Marocco",
+    "spanish": "Marruecos",
+    "japanese": "モロッコ",
     "russian": "Марокко",
-    "germen": "Westsahara"
+    "germen": "Marokko"
 },
 {
     "abbr": "MZ",
@@ -1547,13 +1547,13 @@
     "abbr": "MM",
     "chinese": "缅甸",
     "code": "95",
-    "english": "Myanmar(Burma)",
+    "english": "Myanmar",
     "spell": "miandian",
     "french": "Myanmar",
     "italian": "Birmania",
     "spanish": "Myanmar",
     "japanese": "ミャンマー",
-    "russian": "Мьянма (Бирма)",
+    "russian": "Мьянма",
     "germen": "Myanmar"
 },
 {
@@ -1605,12 +1605,12 @@
     "english": "New Zealand",
     "spell": "xinxilan",
     "state": "大洋洲",
-    "french": "Îles Pitcairn",
-    "italian": "Isole Pitcairn",
-    "spanish": "Islas Pitcairn",
-    "japanese": "ピトケアン",
+    "french": "Nouvelle-Zélande",
+    "italian": "Nuova Zelanda",
+    "spanish": "Nueva Zelanda",
+    "japanese": "ニュージーランド",
     "russian": "Новая Зеландия",
-    "germen": "Pitcairn"
+    "germen": "Neuseeland"
 },
 {
     "abbr": "NI",
@@ -1664,7 +1664,7 @@
     "french": "Corée du Nord",
     "italian": "Corea del Nord",
     "spanish": "Corea del Norte",
-    "japanese": "朝鮮民主主義人民共和国",
+    "japanese": "朝鮮",
     "russian": "Северная Корея",
     "germen": "Nordkorea"
 },
@@ -2008,10 +2008,10 @@
     "state": "非洲",
     "french": "Afrique du Sud",
     "italian": "Sud Africa",
-    "spanish": "República de Sudáfrica",
+    "spanish": "Sudáfrica",
     "japanese": "南アフリカ",
-    "russian": "Южно-Африканская Республика (ЮАР)",
-    "germen": "Republik Südafrika"
+    "russian": "Южная Африка",
+    "germen": "Südafrika"
 },
 {
     "abbr": "ES",
@@ -2071,7 +2071,7 @@
     "abbr": "SZ",
     "chinese": "斯威士兰",
     "code": "268",
-    "english": "Swaziland",
+    "english": "Eswatini",
     "spell": "siweishilan",
     "french": "Swaziland",
     "italian": "Swaziland",
@@ -2118,13 +2118,13 @@
     "french": "Syrie",
     "italian": "Siria",
     "spanish": "Siria",
-    "japanese": "シリア・アラブ共和国",
+    "japanese": "シリア",
     "russian": "Сирия",
     "germen": "Syrien"
 },
 {
     "abbr": "TW",
-    "chinese": "中国台湾",
+    "chinese": "台湾",
     "code": "886",
     "english": "Taiwan",
     "spell": "zhongguotaiwan",
@@ -2132,7 +2132,7 @@
     "french": "Taïwan",
     "italian": "Taiwan",
     "spanish": "Taiwán",
-    "japanese": "台湾（中華民国）",
+    "japanese": "台湾",
     "russian": "Тайвань",
     "germen": "Taiwan"
 },
@@ -2236,7 +2236,7 @@
     "abbr": "TR",
     "chinese": "土耳其",
     "code": "90",
-    "english": "Turkey",
+    "english": "Türkiye",
     "spell": "tuerqi",
     "french": "Turquie",
     "italian": "Turchia",
@@ -2302,17 +2302,17 @@
 },
 {
     "abbr": "AE",
-    "chinese": "阿拉伯联合酋长国",
+    "chinese": "阿联酋",
     "code": "971",
-    "english": "United Arab Emirates",
+    "english": "the UAE",
     "spell": "alabolianheqiuzhangguo",
     "state": "亚洲",
     "french": "Émirats arabes unis",
     "italian": "Emirati Arabi Uniti",
     "spanish": "Emiratos Árabes Unidos",
     "japanese": "アラブ首長国連邦",
-    "russian": "Объединённые Арабские Эмираты (ОАЭ)",
-    "germen": "Vereinigte Arabische Emirate"
+    "russian": "Ара́бские Эмира́ты",
+    "germen": "der Emirate"
 },
 {
     "abbr": "GB",
@@ -2325,21 +2325,21 @@
     "italian": "Regno Unito",
     "spanish": "Reino Unido",
     "japanese": "イギリス",
-    "russian": "Объединенное Королевство",
+    "russian": "Великобрита́ния",
     "germen": "dem UK"
 },
 {
     "abbr": "US",
     "chinese": "美国",
     "code": "1",
-    "english": "USA",
+    "english": "the USA",
     "spell": "meiguo",
     "state": "北美洲",
     "french": "États-Unis",
-    "italian": "Stati Uniti D\u0027America",
+    "italian": "Stati Uniti",
     "spanish": "Estados Unidos",
     "japanese": "アメリカ合衆国",
-    "russian": "Соединенные Штаты Америки",
+    "russian": "Соединённые Шта́ты",
     "germen": "den USA"
 },
 {
@@ -2394,7 +2394,7 @@
     "french": "Venezuela",
     "italian": "Venezuela",
     "spanish": "Venezuela",
-    "japanese": "ベネズエラ・ボリバル共和国",
+    "japanese": "ベネズエラ",
     "russian": "Венесуэла",
     "germen": "Venezuela"
 },
