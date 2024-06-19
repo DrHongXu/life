@@ -170,6 +170,40 @@
     .item-10 {background-image: url(images/gallery/10.jpg);}
 
 
+
+  .image-container2 {
+	position: relative;
+	width: 100%;
+	height: 60vh;
+  }
+  
+  .image-text {
+	position: absolute;
+	top: 50.5vh;
+	left: 0;
+	width: 100%;
+	color: white; /* 根据背景图片选择合适的文字颜色 */
+	background: rgba(0, 0, 0, 0.332); /* 可选：添加半透明背景，以提高文字可读性 */
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center; /* 可选：居中文本 */
+	font-size: 1.3em; /* 可选：设置文字大小 */
+  }
+
+  .image-text-2 {
+	position: absolute;
+	top: 55.3vh;
+	left: 0;
+	width: 100%;
+	color: white; /* 根据背景图片选择合适的文字颜色 */
+	background: rgba(0, 0, 0, 0.332); /* 可选：添加半透明背景，以提高文字可读性 */
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center; /* 可选：居中文本 */
+	font-size: 1.3em; /* 可选：设置文字大小 */
+  }
+
+
   </style>
 
 
@@ -922,39 +956,63 @@
   
             <div class="mySlides fade">
               <div class="numbertext"></div>
-              <img class="display-mobile" src="images/gallery/1.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
-              <img class="hidden-mobile" src="images/gallery/1-1.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
+              <div class="image-container">
+                <img class="display-mobile" src="images/gallery/1.jpg" alt="Image"  style="width: 100%; height: 60vh; object-fit: cover;">
+                <img class="hidden-mobile" src="images/gallery/1-1.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
+                <div class="image-text hidden-mobile">马略卡岛/海角灯塔 🇪🇸 西班牙 </div>
+                <div class="image-text-2 display-mobile">马略卡岛/海角灯塔 🇪🇸 西班牙 </div>
+              </div>
+              
               <div class="text"></div>
             </div>
             <div class="mySlides fade">
-              <div class="numbertext"></div>
+              <div class="numbertext">🇩</div>
+              <div class="image-container">
               <img class="display-mobile" src="images/gallery/2.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
               <img class="hidden-mobile" src="images/gallery/2.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
-              <div class="text"></div>
+              <div class="image-text hidden-mobile">慕尼黑/啤酒节广场 🇩🇪 德国 </div>
+              <div class="image-text-2 display-mobile">慕尼黑/啤酒节广场 🇩🇪 德国 </div>
+              </div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext"></div>
+              <div class="image-container">
               <img class="display-mobile" src="images/gallery/3.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
               <img class="hidden-mobile" src="images/gallery/3.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
+              <div class="image-text hidden-mobile">环苏黎世湖/70KM骑行 🇨🇭 瑞士  </div>
+              <div class="image-text-2 display-mobile">环苏黎世湖/70KM骑行 🇨🇭 瑞士  </div>
               <div class="text"></div>
+            </div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext"></div>
+              <div class="image-container">
               <img class="display-mobile" src="images/gallery/4.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
               <img class="hidden-mobile" src="images/gallery/4.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
               <div class="text"></div>
+              <div class="image-text hidden-mobile">欧洲核子中心/CERN 🇨🇭 瑞士  </div>
+              <div class="image-text-2 display-mobile">欧洲核子中心/CERN 🇨🇭 瑞士  </div>
+            </div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext"></div>
+              <div class="image-container">
               <img class="display-mobile" src="images/gallery/5.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
               <img class="hidden-mobile" src="images/gallery/5.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
               <div class="text"></div>
+              <div class="image-text hidden-mobile">塞维利亚/橘子红了 🇪🇸 西班牙 </div>
+              <div class="image-text-2 display-mobile">塞维利亚/橘子红了 🇪🇸 西班牙  </div>
+            </div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext"></div>
+              <div class="image-container">
               <img class="display-mobile" src="images/gallery/6.jpg" style="width: 100%; height: 60vh; object-fit: cover;">
               <img class="hidden-mobile" src="images/gallery/6.jpg" style="width: 100%; height: 55vh; object-fit: cover;">
               <div class="text"></div>
+              <div class="image-text hidden-mobile">直布罗陀海峡/巨岩石猴 🇬🇮 直布罗陀</div>
+              <div class="image-text-2 display-mobile">直布罗陀海峡/巨岩石猴 🇬🇮 直布罗陀</div>
+            </div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext"></div>
