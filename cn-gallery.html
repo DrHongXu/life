@@ -98,15 +98,20 @@
   clear: both;
 }
 
-/* img {
-  vertical-align: middle;
-} */
 
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+
+.grid {
+    width: 100%; /* 设置grid的初始宽度为100% */
+        }
+/* img {
+  vertical-align: middle;
+} */
 
 .grid article {
   background-color: #FFFFFF;
@@ -127,6 +132,10 @@
     width: 48%;
     margin: 1%;
   }
+
+  #grid-container {
+            width: 113%;
+        }
 }
 
 @media (max-width: 479px) {
@@ -554,7 +563,7 @@
     <hr class="display-mobile" style="width:113%">
     <hr class="hidden-mobile">
     
-    <div id="grid-container" class="transitions-enabled fluid masonry js-masonry grid" style="width:102%">
+    <div id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
         <article class="travel people europe">
             <a href="images/gallery/1.jpg" class="popup-link">
             <img src="images/gallery/1.jpg" class="img-responsive" />
