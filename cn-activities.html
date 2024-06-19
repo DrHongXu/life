@@ -931,7 +931,8 @@
 
       <hr class="display-mobile" style="width:113%">
       <hr class="hidden-mobile">
-      <h3>摄影 <small><small>「<span id="subsection-title">以光之名</span>」</small></small></h3>
+      <h3 class="hidden-mobile">影像 <small><small>「<span id="subsection-title">以光之名</span>」</small></small></h3>
+      <h3 class="display-mobile">影像<br><small><small>▷ <span id="subsection-title-mobile">以光之名</span></small></small></h3>
 
       <!-- <div class="doc-section hidden-mobile" id="photography">
           <div class="gallery-wrap">
@@ -950,7 +951,6 @@
 
 
         <div class="doc-section" id="gallery">
-
 
           <div class="slideshow-container">
   
@@ -1551,13 +1551,19 @@
   function updateSlideTitle(index) {
     let titleElement = document.getElementById('img-title-' + index);
     let subsectionTitle = document.getElementById('subsection-title');
+    let subsectionTitleMobile = document.getElementById('subsection-title-mobile');
 
     if (titleElement) {
       subsectionTitle.textContent = titleElement.textContent;
+      subsectionTitleMobile.textContent = titleElement.textContent;
+
     } else {
       subsectionTitle.textContent = '以光之名'; // 处理没有找到标题的情况
+      subsectionTitleMobile.textContent = '以光之名';
     }
-  }
+  } 
+
+
     </script>
 
     <script>
